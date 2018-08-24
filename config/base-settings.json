@@ -1,0 +1,214 @@
+{
+  "app": {
+    "locale": "en-GB"
+  },
+  "walletCurrency": "GBP",
+  "api": {
+    "client": "mjackpots_web",
+    "url": "https://qa02-mjackpots.bedegaming.net/api/v5"
+  },
+  "auth": {
+    "clientId": "mjackpots_web",
+    "scope": "spine"
+  },
+  "banking": {
+    "addCard": {
+      "useCodeForBonus": true
+    },
+    "gatewayEnabled": false,
+    "deposit": {
+      "defaultAmount": 50,
+      "enablePromotions": true,
+      "hideWithdrawals": false,
+      "isModal": true,
+      "quickAmounts": [
+        10,
+        50,
+        100,
+        500
+      ]
+    }
+  },
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaKeywords": "",
+  "features": {
+    "bonusToolContentPromos": true,
+    "logoutOnIdleSession": false
+  },
+  "feeds": {
+    "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
+  },
+  "games": {
+    "categories": [
+      {
+        "name": "live_le_club"
+      },
+      {
+        "name": "live_casino"
+      },
+      {
+        "name": "featured"
+      },
+      {
+        "name": "new-games"
+      },
+      {
+        "name": "5-reel-slots"
+      },
+      {
+        "name": "3-reel-slots"
+      },
+      {
+        "name": "progressive-jackpots"
+      },
+      {
+        "name": "other-games"
+      }
+    ],
+    "categoriesHome": [
+      {
+        "name": "live_le_club"
+      },
+      {
+        "name": "live_casino"
+      }
+    ],
+    "categoriesGames": [
+      {
+        "name": "featured"
+      },
+      {
+        "name": "new-games"
+      },
+      {
+        "name": "5-reel-slots"
+      },
+      {
+        "name": "3-reel-slots"
+      },
+      {
+        "name": "progressive-jackpots"
+      },
+      {
+        "name": "other-games"
+      }
+    ],
+    "showSearchOnGamesPageCategories": true,
+    "noIndex": true,
+    "gamesPagePromoArea": true,
+    "showRelatedGames": true
+  },
+  "hasFlashDestroyTimer": true,
+  "isLandingEnabled": false,
+  "languageCode": "EN",
+  "locale": "en_GB",
+  "promotionBanners": [
+    {
+      "type": "AUTHED",
+      "headline": "£500 Welcome Package",
+      "headline2": "Across your first 3 deposits",
+      "images": [
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-6",
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-3",
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-7"
+      ]
+    },
+    {
+      "type": "UNAUTHED",
+      "headline": "£500 Welcome Package",
+      "headline2": "Across your first 3 deposits",
+      "images": [
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-6",
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-3",
+        "https://az868739.vo.msecnd.net/promotions/mjackpots/banner-7"
+      ]
+    },
+    {
+      "type": "deposit",
+      "image": "/assets/images/promotions/deposit-bonus"
+    },
+    {
+      "type": "depositoverperiod",
+      "image": "/assets/images/promotions/deposit-over-period"
+    },
+    {
+      "type": "instant",
+      "image": "/assets/images/promotions/instant-bonus"
+    },
+    {
+      "type": "optin",
+      "image": "/assets/images/promotions/opt-in-bonus"
+    },
+    {
+      "type": "cashbackonnetlosses",
+      "image": "/assets/images/promotions/cashback-net-losses"
+    },
+    {
+      "type": "cashbackontotalstake",
+      "image": "/assets/images/promotions/cashback-total-stake"
+    },
+    {
+      "type": "playerregistration",
+      "image": "/assets/images/promotions/deposit-bonus"
+    },
+    {
+      "type": "cardregistration",
+      "image": "/assets/images/promotions/card-bonus"
+    }
+  ],
+  "promotions": [],
+  "registration": {
+    "defaultGender": "Undisclosed",
+    "genderEnabled": false,
+    "telephoneEnabled": true,
+    "regSuccess": true
+  },
+  "siteCode": "mjackpots.com",
+  "siteName": "Bede Casino",
+  "siteRoot": "http://localhost:3000",
+  "slider": {
+    "speed": 3000,
+    "items": [
+      {
+        "imgPath": "/assets/images/slider/slide-one",
+        "markup": "<h1></h1>",
+        "states": [
+          "isUnauthenticated",
+          "isAuthenticated"
+        ],
+        "hideTerms": true,
+        "hideAction": true
+      }, {
+        "imgPath": "/assets/images/slider/slide-two",
+        "markup": "<h1></h1>",
+        "states": [
+          "isUnauthenticated",
+          "isAuthenticated"
+        ],
+        "hideTerms": true,
+        "hideAction": true
+      }, {
+        "imgPath": "/assets/images/slider/slide-three",
+        "markup": "<h1></h1>",
+        "states": [
+          "isUnauthenticated",
+          "isAuthenticated"
+        ],
+        "hideTerms": true,
+        "hideAction": true
+      }
+    ]
+  },
+  "tenancyVars": {
+    "minWithdraw": 20,
+    "maxWithdraw": 5000,
+    "minDeposit": 10,
+    "maxDeposit": 5000,
+    "activeCardBalanceThreshold": 11
+  },
+  "transactionHistory": {
+    "rangeSlider": false
+  },
+  "twitterHandle": "@"
+}

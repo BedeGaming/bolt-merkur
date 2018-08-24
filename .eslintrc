@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "@bedegaming/eslint-config-bede",
+    "plugin:inferno/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./src",
+          "./node_modules/@bedegaming/bolt/src",
+          "./node_modules"
+        ]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  extends: "@bedegaming/eslint-config-bede",
+  env: {
+    mocha: true,
+    jquery: true
+  },
+  globals: {
+    expect: true,
+    stub: true,
+    spy: true,
+    Orchestra: true,
+    proxyquire: true,
+    globalChannel: true,
+    Radio: true
+  },
+  rules: {
+   'func-names': 0,
+   'prefer-arrow-callback': 0
+  },
+  settings: {
+    import/resolver: {
+      node: {
+        paths: [
+          './src',
+          './node_modules/@bedegaming/bolt/src',
+          './node_modules'
+        ]
+      }
+    }
+  }
+}
