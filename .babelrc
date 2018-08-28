@@ -1,0 +1,12 @@
+{
+  "presets": ["es2015", "stage-0", "react"],
+  "plugins": [
+    "inferno",
+    "add-module-exports",
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
+}
