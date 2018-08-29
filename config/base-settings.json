@@ -42,25 +42,16 @@
   "games": {
     "categories": [
       {
-        "name": "live_le_club"
-      },
-      {
-        "name": "live_casino"
-      },
-      {
         "name": "featured"
       },
       {
         "name": "new-games"
       },
       {
-        "name": "5-reel-slots"
+        "name": "slots"
       },
       {
-        "name": "3-reel-slots"
-      },
-      {
-        "name": "progressive-jackpots"
+        "name": "jackpots"
       },
       {
         "name": "other-games"
@@ -68,10 +59,10 @@
     ],
     "categoriesHome": [
       {
-        "name": "live_le_club"
+        "name": "slots"
       },
       {
-        "name": "live_casino"
+        "name": "jackpots"
       }
     ],
     "categoriesGames": [
@@ -82,14 +73,11 @@
         "name": "new-games"
       },
       {
-        "name": "5-reel-slots"
+        "name": "slots"
       },
       {
-        "name": "3-reel-slots"
-      },
-      {
-        "name": "progressive-jackpots"
-      },
+        "name": "jackpots"
+      },      
       {
         "name": "other-games"
       }
