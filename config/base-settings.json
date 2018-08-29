@@ -45,7 +45,38 @@
         "name": "featured"
       },
       {
+        "name": "new-games"
+      },
+      {
         "name": "slots"
+      },
+      {
+        "name": "jackpots"
+      },
+      {
+        "name": "other-games"
+      }
+    ],
+    "categoriesHome": [
+      {
+        "name": "slots"
+      },
+      {
+        "name": "jackpots"
+      }
+    ],
+    "categoriesGames": [
+      {
+        "name": "featured"
+      },
+      {
+        "name": "new-games"
+      },
+      {
+        "name": "slots"
+      },
+      {
+        "name": "jackpots"
       },
       {
         "name": "table"
