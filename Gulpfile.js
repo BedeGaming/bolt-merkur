@@ -163,7 +163,7 @@ boltTasks.ContentTasksRegistry.prototype.getConfig = function getConfig() {
   return {
     settings: {
       content: {
-        siteDir: 'mjackpots'
+        siteDir: 'bedecasino'
       }
     }
   };
