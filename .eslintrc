@@ -1,7 +1,7 @@
 {
   "extends": [
     "@bedegaming/eslint-config-bede",
-    "plugin:inferno/recommended"
+    "plugin:react/recommended"
   ],
   "settings": {
     "import/resolver": {

@@ -20,9 +20,9 @@
   "author": "Bede Gaming",
   "license": "ISC",
   "dependencies": {
-    "@bedegaming/bolt": "^66.5.4",
-    "@bedegaming/bolt-content": "^1.20.65",
-    "@bedegaming/bolt-tasks": "^17.0.0",
+    "@bedegaming/bolt": "^67.0.0",
+    "@bedegaming/bolt-content": "^2.0.0",
+    "@bedegaming/bolt-tasks": "^18.0.0",
     "babel-polyfill": "^6.16.0",
     "marked": "^0.3.5",
     "sitemap": "^1.8.2"
