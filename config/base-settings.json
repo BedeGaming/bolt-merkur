@@ -40,6 +40,7 @@
     "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
   },
   "games": {
+    "react": true,
     "categories": [
       {
         "name": "featured"

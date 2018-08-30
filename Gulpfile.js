@@ -37,15 +37,15 @@ gulp.registry(new boltTasks.ScriptTasksRegistry());
 /**
  * Font Tasks
  */
-// tasks.FontTasksRegistry.prototype.getConfig = function getConfig() {
-//   return {
-//     fonts: {
-//       src: './src/resources/fonts/**/*.woff',
-//       dest: './dist/assets/fonts/',
-//       cssFilename: 'main.css'
-//     }
-//   };
-// };
+tasks.FontTasksRegistry.prototype.getConfig = function getConfig() {
+  return {
+    fonts: {
+      src: './src/resources/fonts/**/*.woff',
+      dest: './dist/assets/fonts/',
+      cssFilename: 'main.css'
+    }
+  };
+};
 gulp.registry(new tasks.FontTasksRegistry());
 
 /**
