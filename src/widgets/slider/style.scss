@@ -1,0 +1,56 @@
+promo-slider {
+  slider-content-wrap {
+    article-wrap {
+      display: none;
+    }
+  }
+
+  image-container {
+    display: block;
+    max-height: 48rem;
+    overflow: hidden;
+  }
+
+  .prev,
+  .next {
+    background: transparentize($secondary-color-500, 0.5);
+    border-radius: 2rem;
+    display: none;
+    fill: $white;
+    height: 3rem;
+    justify-content: center;
+    padding: 0;
+    width: 3rem;
+
+    @media ($medium) {
+      display: flex;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  .prev {
+    left: 1rem;
+    transform: $slider-backward-transform;
+
+    @media($medium) {
+      left: 3rem;
+    }
+  }
+
+  .next {
+    right: 1rem;
+    transform: $slider-forward-transform;
+
+    @media($medium) {
+      right: 3rem;
+    }
+  }
+}
