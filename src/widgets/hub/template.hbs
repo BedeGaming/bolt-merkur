@@ -13,18 +13,17 @@
   </a>
 </div>
 
-{{#if wallets}}
-  <div class="balance"></div>
-{{/if}}
-
 <nav-container>
   <nav role="navigation"></nav>
 </nav-container>
 
 <div>
   {{#if wallets}}
-    <button class="btn deposit">
-      <span>{{translate "deposit"}}</span>
-    </button>
+    <div class="balance"></div>
+  {{else}}
+    <div class="button-container">
+      <button class="btn register" type="button">{{translate "log_in"}}</button>
+      <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
+    </div>
   {{/if}}
 </div>

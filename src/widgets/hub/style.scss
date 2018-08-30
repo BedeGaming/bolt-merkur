@@ -1,13 +1,36 @@
 @import '../../../node_modules/@bedegaming/bolt/src/widgets/hub/style';
 
 app-hub {
+  margin: 0;
+  max-width: none;
+  padding: 0 2rem;
+
   nav-container {
+    .main-nav {
+      width: auto;
+
+      a {
+        padding: 1rem 2rem;
+      }
+    }
 
     .item-text {
       color: #3E3135;
       font-weight: 900;
       text-transform: uppercase;
     }
+  }
 
+  .button-container {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .btn {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
