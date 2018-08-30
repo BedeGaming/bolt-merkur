@@ -1,0 +1,130 @@
+.game-item {
+  border-radius: $game-item-border-radius;
+  cursor: pointer;
+  flex: $game-item-flex-small;
+  min-width: 0; // Fix issue with long names making game items bigger
+  position: relative;
+
+  @media (min-width: $game-item-large-breakpoint) {
+    flex: $game-item-flex-large;
+  }
+
+  &.featured {
+    align-self: auto;
+    grid-column-end: 1;
+    grid-column-start: 1;
+    /* autoprefixer: off */
+    grid-row-end: 3;
+    /* autoprefixer: on */
+    grid-row-start: 1;
+    justify-self: center;
+    width: 100%;
+
+    @media (min-width: 320px) {
+      grid-column-end: 3;
+      grid-row-end: 3;
+    }
+
+    @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      // styles scoped to ie
+      order: -1;
+    }
+
+    .display-name {
+      justify-content: center;
+    }
+
+    .featured-no-thumb {
+      padding-bottom: $game-item-featured-image-padding-bottom;
+
+      img,
+      svg {
+        margin-left: -5%;
+        width: 110%;
+      }
+
+      @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        // styles scoped to ie
+        padding-bottom: $game-item-image-padding-bottom;
+
+        img,
+        svg {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .display-name-container {
+      font-size: 1.8rem;
+      padding: $game-item-featured-display-name-padding;
+
+      @media ($small) {
+        padding-left: 2rem;
+      }
+
+      @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        // styles scoped to ie
+        font-size: inherit;
+        font-weight: inherit;
+        padding: $game-item-display-name-padding;
+      }
+    }
+  }
+
+  > div {
+    border-radius: $game-item-border-radius;
+    box-shadow: $game-item-box-shadow;
+    display: flex;
+    flex-direction: column;
+    margin: $game-item-margin;
+    position: relative;
+  }
+}
+
+.ghost {
+  align-self: stretch;
+  background: transparent;
+  border: 0;
+  cursor: default;
+  order: 10;
+  padding: 0;
+}
+
+// Checking for support of `grid-gap` as older IE does support `grid` but the older
+// implementation which requires other properties be used (not covered by Autoprefixer)
+@supports (grid-gap: 1rem) {
+  .ghost {
+    display: none;
+  }
+
+  .game-item {
+    > div {
+      margin: 0;
+    }
+  }
+}
+
+.landscape {
+  .game-item {
+    &.featured {
+      grid-column-end: 1;
+      grid-row-end: 1;
+
+      .featured-no-thumb {
+        padding-bottom: $game-item-image-padding-bottom;
+
+        img,
+        svg {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+
+      .display-name-container {
+        font-size: $game-item-display-font-size;
+        padding: $game-item-display-name-padding;
+      }
+    }
+  }
+}

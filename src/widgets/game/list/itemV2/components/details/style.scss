@@ -1,0 +1,19 @@
+.game-item {
+  .display-name-container {
+    align-items: $game-item-display-name-align-items;
+    background: $game-item-display-name-background;
+    border-radius: $game-item-display-name-border-radius;
+    display: flex;
+    flex-grow: 1;
+    padding: $game-item-display-name-padding;
+
+    .display-name {
+      color: pink;
+      font-size: $game-item-display-font-size;
+      font-weight: $game-item-display-font-weight;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

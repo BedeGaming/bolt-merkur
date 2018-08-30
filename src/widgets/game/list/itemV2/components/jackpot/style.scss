@@ -1,0 +1,37 @@
+.game-item {
+  .jackpot-amount {
+    background: $game-item-jackpot-background;
+    border-radius: $game-item-jackpot-border-radius;
+    bottom: $game-item-jackpot-bottom;
+    color: $game-item-jackpot-color;
+    font-size: $game-item-jackpot-font-size;
+    font-weight: $game-item-jackpot-font-weight;
+    left: $game-item-jackpot-left;
+    padding: $game-item-jackpot-padding;
+    position: absolute;
+    right: $game-item-jackpot-right;
+    text-align: center;
+    width: $game-item-jackpot-width;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      bottom: $game-item-jackpot-pseudo-bottom;
+      content: '';
+    }
+
+    &::before {
+      @include arrow($game-item-jackpot-pseudo-arrow-color, right, $game-item-jackpot-pseudo-arrow-size);
+
+      left: $game-item-jackpot-pseudo-before-left;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      @include arrow($game-item-jackpot-pseudo-arrow-color, left, $game-item-jackpot-pseudo-arrow-size);
+
+      right: $game-item-jackpot-pseudo-before-right;
+      transform: rotate(-45deg);
+    }
+  }
+}

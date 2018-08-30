@@ -1,0 +1,63 @@
+.game-item {
+  figure {
+    background: $game-item-image-background;
+    height: 0;
+    margin-top: 0;
+    padding-bottom: $game-item-image-padding-bottom;
+
+    img {
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .image-container {
+    border-radius: $game-item-image-border-radius;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      background: $game-item-image-before-background;
+      background-size: $game-item-image-before-background-size;
+      border-radius: $game-item-image-border-radius;
+      content: $game-item-image-before-content;
+      height: 100%;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &::before,
+    .info {
+      opacity: 0;
+      transition: opacity 0.2s ease, visibility 0.2s ease 0.2s;
+      visibility: hidden;
+    }
+
+    .info {
+      display: none;
+
+      @media (min-width: 769px) {
+        display: block;
+      }
+    }
+
+    &:hover {
+      @media (min-width: 769px) {
+        &::before,
+        .info {
+          opacity: 1;
+          transition: opacity 0.2s ease;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+games-container,
+games-area,
+games {
+  display: block;
+}
+
+game-list {
+  &,
+  .loading {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: $games-list-grid-gap;
+    grid-template-columns: $games-list-grid-template-columns-small;
+    justify-content: space-between;
+    margin: $games-list-margin;
+
+    @media (min-width: $games-list-large-breakpoint) {
+      grid-template-columns: $games-list-grid-template-columns-large;
+    }
+  }
+
+  .no-games {
+    grid-column: -1 / 1;
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+
+  .loading {
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+}
+
+// Checking for support of `grid-gap` as older IE does support `grid` but the older
+// implementation which requires other properties be used (not covered by Autoprefixer)
+@supports (grid-gap: 1rem) {
+  game-list {
+    &,
+    .loading {
+      display: grid;
+      margin: 0;
+    }
+  }
+}
