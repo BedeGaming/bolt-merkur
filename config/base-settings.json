@@ -40,12 +40,44 @@
     "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
   },
   "games": {
+    "react": true,
     "categories": [
       {
         "name": "featured"
       },
       {
+        "name": "new-games"
+      },
+      {
         "name": "slots"
+      },
+      {
+        "name": "jackpots"
+      },
+      {
+        "name": "other-games"
+      }
+    ],
+    "categoriesHome": [
+      {
+        "name": "slots"
+      },
+      {
+        "name": "jackpots"
+      }
+    ],
+    "categoriesGames": [
+      {
+        "name": "featured"
+      },
+      {
+        "name": "new-games"
+      },
+      {
+        "name": "slots"
+      },
+      {
+        "name": "jackpots"
       },
       {
         "name": "table"

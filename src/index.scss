@@ -56,8 +56,9 @@
 // Game Views
 // ------------------------------------------
 
-@import 'widgets/game/list/grid-view';
 @import 'widgets/game/list/search';
+@import 'widgets/game/list/itemV2/list-view';
+@import 'widgets/game/list/itemV2/style';
 @import 'widgets/game/play/style';
 @import 'widgets/game/info/style';
 @import 'widgets/game/banner/style';

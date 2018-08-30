@@ -186,8 +186,8 @@
     lodash "^4.0.0"
 
 "@bedegaming/bolt-content@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@bedegaming/bolt-content/-/bolt-content-2.0.1.tgz#5de8f614490fb8b269653080033ad9cdb32b1c8a"
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@bedegaming/bolt-content/-/bolt-content-2.0.0.tgz#0d1cd0a6be12e36137f1dc8612dc0829c412f2ee"
 
 "@bedegaming/bolt-loyalty@^3.0.0":
   version "3.0.0"
