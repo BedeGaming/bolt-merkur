@@ -5,9 +5,20 @@
   border: 3px solid #e21455;
   border-radius: 5px;
   color: #e21455;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
+  overflow: hidden;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+  transition: all 200ms ease;
+  min-width: 16rem;
   white-space: nowrap;
+
+  &:hover {
+    border-color: lighten(#e21455, 10%);
+    color: lighten(#e21455, 10%);
+  }
 
   &.btn-primary {
     background-image: linear-gradient(90deg, #FF345F 0%, #FF9268 100%);

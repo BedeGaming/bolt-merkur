@@ -18,25 +18,9 @@ const nav = () => {
   ];
 
   if (AuthService.player()) {
-    const authNavItems = navItems.slice(0, 4);
+    const authNavItems = navItems.slice(0, navItems.length - 1);
 
     authNavItems.push(
-      {
-        className: 'control-group',
-        isContainer: true,
-        children: [
-          {
-            displayName: 'search',
-            className: 'search-item',
-            linkClassName: 'search',
-            isButton: true,
-            icon: {
-              id: 'search',
-              viewbox: '0 0 32 32'
-            }
-          }
-        ]
-      },
       {
         displayName: 'showUsername',
         route: '/account/profile',

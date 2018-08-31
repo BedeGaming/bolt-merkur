@@ -5,19 +5,48 @@ app-hub {
   max-width: none;
   padding: 0 2rem;
 
+  .logo {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+
   nav-container {
     .main-nav {
       width: auto;
 
-      a {
-        padding: 1rem 2rem;
-      }
-    }
+      .nav-item {
 
-    .item-text {
-      color: #3E3135;
-      font-weight: 900;
-      text-transform: uppercase;
+        a {
+          font-size: 1.8rem;
+          padding: 2rem 3rem;
+
+          .item-text {
+            color: #3E3135;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+
+          &.account-link {
+
+            .item-icon {
+              svg {
+                height: 0.8rem;
+                width: 1.5rem;
+              }
+            }
+
+            .item-text {
+              color: #E21455;
+              font-weight: bold;
+            }
+
+          }
+        }
+
+        .sub-menu {
+          position: absolute;
+        }
+      }
     }
   }
 

@@ -1,0 +1,58 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/balance/style';
+
+app-hub {
+  .balance-list {
+    align-items: center;
+    background-color: #ECF3FC;
+    border-radius: 3px;
+    color: #3C4466;
+    font-size: 1.6rem;
+    padding-left: 4rem;
+
+    svg {
+      fill: #3C4466;
+    }
+
+    .wallets {
+      position: absolute;
+      top: 100%;
+
+      wallet-name {
+        color: #3C4466;
+      }
+    }
+  }
+
+  .balance-group {
+    display: flex;
+  }
+
+  .hide-balance {
+    align-items: center;
+    background-color: #C9E2FF;
+    border-radius: 3px 0 0 3px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    padding: 0 0.3rem;
+    position: absolute;
+    top: 0;
+
+    svg {
+      fill: #3C4466;
+      pointer-events: none;
+      width: 2.2rem;
+    }
+
+    &:hover {
+      svg {
+        fill: $primary-color-500;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}
