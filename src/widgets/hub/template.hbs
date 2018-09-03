@@ -1,6 +1,6 @@
-<div>
+<header-left>
   <hamburger-trigger></hamburger-trigger>
-</div>
+</header-left>
 
 <div>
   <a href="/" class="logo">
@@ -14,14 +14,14 @@
   <nav role="navigation"></nav>
 </nav-container>
 
-<div class="nav-buttons">
+<header-right>
   {{#if wallets}}
     <div class="balance"></div>
     <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
   {{else}}
     <div class="button-container">
-      <button class="btn register" type="button">{{translate "log_in"}}</button>
+      <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
       <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
     </div>
   {{/if}}
-</div>
+</header-right>
