@@ -1,5 +1,11 @@
 ## Bolt Bede Casino
 
+## 0.2.0
+- added favicons
+- added initial styles for the header
+- added initial styles for the balance
+- added classes for buttons (btn and btn-primary)
+
 ## 0.1.0
 - added 'Work Space' as site font family
 - enabled V2 (react) for Games Grid

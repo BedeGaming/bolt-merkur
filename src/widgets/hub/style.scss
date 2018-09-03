@@ -1,0 +1,70 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/hub/style';
+
+app-hub {
+  margin: 0;
+  max-width: none;
+  padding: 0 2rem;
+
+  .logo {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+
+  nav-container {
+    .main-nav {
+      width: auto;
+
+      .nav-item {
+        a {
+          font-size: 1.8rem;
+          padding: 2rem 3rem;
+
+          .item-text {
+            color: $nav-item-color;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+
+          &.account-link {
+            .item-icon {
+              svg {
+                height: 0.8rem;
+                width: 1.5rem;
+              }
+            }
+
+            .item-text {
+              color: $primary-base;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .sub-menu {
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .nav-buttons {
+    display: flex;
+
+    .btn:last-child {
+      margin-left: 2rem;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .btn {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

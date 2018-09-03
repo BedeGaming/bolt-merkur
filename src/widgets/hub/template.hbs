@@ -1,0 +1,27 @@
+<div>
+  <hamburger-trigger></hamburger-trigger>
+</div>
+
+<div>
+  <a href="/" class="logo">
+    <svg width='148' height='51' viewBox='0 0 148 51' xmlns='http://www.w3.org/2000/svg'>
+      <use xlink:href="#icon-logo"/>
+    </svg>
+  </a>
+</div>
+
+<nav-container>
+  <nav role="navigation"></nav>
+</nav-container>
+
+<div class="nav-buttons">
+  {{#if wallets}}
+    <div class="balance"></div>
+    <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
+  {{else}}
+    <div class="button-container">
+      <button class="btn register" type="button">{{translate "log_in"}}</button>
+      <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
+    </div>
+  {{/if}}
+</div>

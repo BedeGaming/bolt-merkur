@@ -1,0 +1,103 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/balance/style';
+
+app-hub {
+
+  total-balance {
+    margin: 0;
+  }
+
+  .balance-list {
+    align-items: center;
+    background-color: #ECF3FC;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    height: 100%;
+    padding-left: 4rem;
+
+    svg {
+      fill: #3C4466;
+      transition: fill 200ms ease;
+      width: 0.825rem;
+    }
+
+    .wallets {
+      background-color: #ECF3FC;
+      max-height: 0;
+      padding: 2rem;
+      position: absolute;
+      top: 100%;
+      transition: max-height 300ms ease;
+      visibility: visible;
+    }
+
+    &.open {
+      height: 100%;
+
+      .wallets {
+        max-height: 30rem;
+      }
+    }
+  }
+
+  .balance-group {
+    color: #3C4466;
+    display: flex;
+
+    &:hover {
+      color: #7C91E9;
+    }
+  }
+
+  .hide-balance {
+    align-items: center;
+    background-color: #C9E2FF;
+    border-radius: 3px 0 0 3px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 0;
+
+    svg {
+      fill: #3C4466;
+      pointer-events: none;
+      width: 2rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    &:hover {
+      svg {
+        fill: #7C91E9;
+      }
+    }
+  }
+
+  main-balance {
+    &:hover {
+      color: #7C91E9;
+
+      svg {
+        fill: #7C91E9;
+      }
+    }
+  }
+
+  sub-balance {
+    color: $tertiary-base;
+    flex-direction: column;
+    font-size: 1.6rem;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  wallet-name {
+    color: $tertiary-base;
+  }
+}

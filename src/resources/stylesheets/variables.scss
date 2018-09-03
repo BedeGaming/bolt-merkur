@@ -1,13 +1,13 @@
-$primary-base: #a18f61;
+$primary-base: #E21455;
 $secondary-base: #999;
-$tertiary-base: #63152d;
+$tertiary-base: #3C4466;
 $white: #fff;
 $black: #010101;
 
 $primary-color-50: scale-color($primary-base, $lightness: 90%);
 $primary-color-100: scale-color($primary-base, $lightness: 80%);
 $primary-color-200: scale-color($primary-base, $lightness: 65%);
-$primary-color-300: #c3b89f;
+$primary-color-300: #E64E6C;
 $primary-color-400: scale-color($primary-base, $lightness: 20%);
 $primary-color-500: $primary-base;
 $primary-color-600: scale-color($primary-base, $lightness: -10%);
@@ -18,7 +18,7 @@ $primary-color-900: scale-color($primary-base, $lightness: -35%);
 $secondary-color-50: scale-color($secondary-base, $lightness: 85%);
 $secondary-color-100: scale-color($secondary-base, $lightness: 75%);
 $secondary-color-200: scale-color($secondary-base, $lightness: 65%);
-$secondary-color-300: #d9d9d8;
+$secondary-color-300: #3C4466;
 $secondary-color-400: scale-color($secondary-base, $lightness: 20%);
 $secondary-color-500: $secondary-base;
 $secondary-color-600: darken($secondary-color-500, 10%);
@@ -63,6 +63,7 @@ $dialog-overlay-background: transparentize($black, 0.2);
 $dialog-border: .5rem solid $primary-base;
 
 $nav-container-box-shadow: 0.2rem 0 2rem 0 transparentize($black, 0.1);
+$nav-item-color: #3E3135;
 
 $body-font-weight: 500;
 $body-font-size: 1.4rem;
@@ -85,11 +86,13 @@ $input-border: 1px solid $black;
 $input-border-radius: 0;
 $input-outline: none;
 
-$app-hub-logo-large-width: 10.3rem;
-$app-hub-logo-large-height: 5.5rem;
+$app-hub-logo-height: 1.9rem;
+$app-hub-logo-width: 5.6rem;
+$app-hub-logo-large-width: 11.1rem;
+$app-hub-logo-large-height: 3.8rem;
 $heading-color: $secondary-color-800;
 
-$header-background: $black;
+$header-background: $white;
 
 $transaction-history-button-active-color: $black;
 $transaction-history-background-color: $secondary-color-300;
