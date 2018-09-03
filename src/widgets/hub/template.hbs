@@ -17,9 +17,10 @@
   <nav role="navigation"></nav>
 </nav-container>
 
-<div>
+<div class="nav-buttons">
   {{#if wallets}}
     <div class="balance"></div>
+    <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
   {{else}}
     <div class="button-container">
       <button class="btn register" type="button">{{translate "log_in"}}</button>

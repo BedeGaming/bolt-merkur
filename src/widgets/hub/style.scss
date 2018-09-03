@@ -47,6 +47,14 @@ app-hub {
     }
   }
 
+  .nav-buttons {
+    display: flex;
+
+    .btn:last-child {
+      margin-left: 2rem;
+    }
+  }
+
   .button-container {
     display: flex;
     flex-wrap: nowrap;
