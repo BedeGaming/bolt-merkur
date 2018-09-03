@@ -66,10 +66,13 @@
     ],
     "categoriesHome": [
       {
+        "name": "featured"
+      },
+      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
+        "name": "tables"
       }
     ],
     "categoriesGames": [
@@ -92,7 +95,18 @@
     "showSearchOnGamesPageCategories": true,
     "noIndex": true,
     "gamesPagePromoArea": true,
-    "showRelatedGames": true
+    "showRelatedGames": true,
+    "tags": [
+      {
+        "name": "recommended",
+        "active": "active",
+        "key": "priority"
+      },
+      {
+        "name": "alphabetical",
+        "key": "displayName"
+      }
+    ]
   },
   "paymentProviderIcons": [
     {
