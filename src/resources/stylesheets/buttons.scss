@@ -7,12 +7,12 @@
   color: #e21455;
   font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
+  min-width: 14rem;
   overflow: hidden;
   padding: 1.5rem 2.5rem;
   position: relative;
-  transition: all 200ms ease;
-  min-width: 14rem;
+  text-transform: uppercase;
+  transition: border-color 200ms ease, color 200ms ease;
   white-space: nowrap;
 
   &:hover {

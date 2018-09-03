@@ -60,7 +60,6 @@ describe('navItems', function () {
           className: 'desktop-only inbox-container'
         }
       ];
-      console.log(this.navItems());
       expect(this.navItems()).to.eql(expected);
     });
   });

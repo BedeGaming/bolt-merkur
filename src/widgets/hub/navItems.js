@@ -18,7 +18,6 @@ const nav = () => {
   ];
 
   if (AuthService.player()) {
-
     navItems.push(
       {
         displayName: 'showUsername',
@@ -55,7 +54,6 @@ const nav = () => {
         className: 'desktop-only inbox-container'
       }
     );
-
   }
 
   return navItems;
