@@ -20,7 +20,7 @@ app-hub {
           padding: 2rem 3rem;
 
           .item-text {
-            color: #3E3135;
+            color: $nav-item-color;
             font-weight: 900;
             text-transform: uppercase;
           }
@@ -34,7 +34,7 @@ app-hub {
             }
 
             .item-text {
-              color: #E21455;
+              color: $primary-base;
               font-weight: bold;
             }
           }
