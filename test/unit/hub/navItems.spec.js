@@ -26,22 +26,6 @@ describe('navItems', function () {
           className: 'support'
         },
         {
-          className: 'control-group',
-          isContainer: true,
-          children: [
-            {
-              displayName: 'search',
-              className: 'search-item',
-              linkClassName: 'search',
-              isButton: true,
-              icon: {
-                id: 'search',
-                viewbox: '0 0 32 32'
-              }
-            }
-          ]
-        },
-        {
           displayName: 'showUsername',
           route: '/account/profile',
           linkClassName: 'account-link',
@@ -76,6 +60,7 @@ describe('navItems', function () {
           className: 'desktop-only inbox-container'
         }
       ];
+      console.log(this.navItems());
       expect(this.navItems()).to.eql(expected);
     });
   });
@@ -105,39 +90,6 @@ describe('navItems', function () {
           route: '/support',
           displayName: 'support',
           className: 'support'
-        },
-        {
-          className: 'control-group',
-          isContainer: true,
-          children: [
-            {
-              displayName: 'search',
-              className: 'search-item',
-              linkClassName: 'search',
-              isButton: true,
-              icon: {
-                id: 'search',
-                viewbox: '0 0 32 32'
-              }
-            }
-          ]
-        },
-        {
-          isContainer: true,
-          children: [
-            {
-              displayName: 'log_in',
-              linkClassName: 'login-modal desktop-only',
-              isButton: true,
-              userAction: 'deposit'
-            },
-            {
-              displayName: 'join_now',
-              linkClassName: 'register desktop-only',
-              isButton: true,
-              userAction: 'register'
-            }
-          ]
         }
       ];
       expect(this.navItems()).to.eql(expected);

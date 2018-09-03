@@ -31,6 +31,8 @@ app-hub {
     }
 
     &.open {
+      height: 100%;
+      
       .wallets {
         max-height: 30rem;
       }

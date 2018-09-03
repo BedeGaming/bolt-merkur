@@ -18,9 +18,8 @@ const nav = () => {
   ];
 
   if (AuthService.player()) {
-    const authNavItems = navItems.slice(0, navItems.length - 1);
 
-    authNavItems.push(
+    navItems.push(
       {
         displayName: 'showUsername',
         route: '/account/profile',
@@ -57,7 +56,6 @@ const nav = () => {
       }
     );
 
-    return authNavItems;
   }
 
   return navItems;
