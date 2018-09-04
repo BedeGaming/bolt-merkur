@@ -1,6 +1,6 @@
 {
   "name": "@bedegaming/bolt-demo-site",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Bolt demo site",
   "private": true,
   "main": "index.js",
@@ -15,7 +15,9 @@
     "scripts": "gulp scripts",
     "build": "gulp build --production",
     "compress": "gulp compress",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "images": "gulp images",
+    "icons": "gulp icons"
   },
   "author": "Bede Gaming",
   "license": "ISC",
