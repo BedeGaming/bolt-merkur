@@ -15,13 +15,15 @@
 </nav-container>
 
 <header-right>
-  {{#if wallets}}
-    <div class="balance"></div>
-    <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
-  {{else}}
-    <div class="button-container">
-      <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
-      <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
-    </div>
-  {{/if}}
+  <div class="nav-buttons">
+    {{#if wallets}}
+      <div class="balance"></div>
+      <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
+    {{else}}
+      <div class="button-container">
+        <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
+        <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
+      </div>
+    {{/if}}
+  </div>
 </header-right>
