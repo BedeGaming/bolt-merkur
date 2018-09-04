@@ -88,6 +88,43 @@
     "gamesPagePromoArea": true,
     "showRelatedGames": true
   },
+  "footer": {
+    "links": [
+      {
+        "href": "/terms-and-conditions",
+        "textKey": "compliance_link_terms"
+      },
+      {
+        "href": "/responsible-gambling",
+        "textKey": "responsible_gambling"
+      },
+      {
+        "href": "/privacy-policy",
+        "textKey": "compliance_link_privacy"
+      },
+      {
+        "href": "/account/deposit-limits",
+        "textKey": "deposit_limits_title"
+      },
+      {
+        "href": "/promotional-terms",
+        "textKey": "promotional_terms"
+      },
+      {
+        "href": "/support",
+        "textKey": "support"
+      }
+    ],
+    "articles": [
+      {
+        "textKey": "footer_paragraph1"
+      }
+    ],
+    "brandLogo": {
+      "name": "logo",
+      "viewBox": "0 0 112 38"
+    }
+  },
   "hasFlashDestroyTimer": true,
   "isLandingEnabled": false,
   "languageCode": "EN",

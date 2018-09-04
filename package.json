@@ -15,7 +15,9 @@
     "scripts": "gulp scripts",
     "build": "gulp build --production",
     "compress": "gulp compress",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "images": "gulp images",
+    "icons": "gulp icons"
   },
   "author": "Bede Gaming",
   "license": "ISC",

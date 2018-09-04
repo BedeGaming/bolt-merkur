@@ -1,7 +1,7 @@
-$primary-base: #E21455;
+$primary-base: #e21455;
 $secondary-base: #999;
 $tertiary-base: #3C4466;
-$white: #fff;
+$white: #ecf3fc;
 $black: #010101;
 
 $primary-color-50: scale-color($primary-base, $lightness: 90%);
@@ -96,5 +96,10 @@ $transaction-history-font-size: 1.2rem;
 $date-range-slider-knob-color: $primary-color-500;
 $date-range-slider-track-color: $secondary-color-300;
 $date-range-slider-range-color: $tertiary-color-500;
+
+// Footer
+$footer-background: $primary-base;
+$footer-colour: $white;
+$anchor-color: $white;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';
