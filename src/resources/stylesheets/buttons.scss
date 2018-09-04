@@ -1,6 +1,7 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/buttons';
 
-.btn {
+.btn,
+%btn {
   background-color: transparent;
   border: 3px solid #e21455;
   border-radius: 5px;
@@ -20,7 +21,8 @@
     color: lighten(#e21455, 10%);
   }
 
-  &.btn-primary {
+  &.btn-primary,
+  &%btn-primary {
     background-image: linear-gradient(90deg, #FF345F 0%, #FF9268 100%);
     border: 0;
     color: #fff;
