@@ -64,7 +64,6 @@ tasks.HtmlTasksRegistry.prototype.getConfig = function getConfig() {
 };
 gulp.registry(new boltTasks.HtmlTasksRegistry());
 
-
 /**
  * Image Tasks
  */
@@ -87,7 +86,6 @@ tasks.LintTasksRegistry.prototype.getConfig = function getConfig() {
   };
 };
 gulp.registry(new tasks.LintTasksRegistry());
-
 
 /**
  * Test Tasks

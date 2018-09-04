@@ -1,9 +1,15 @@
 filter {
   background: $white;
 
-  tabs-wrapper {
+  .tabs-wrapper {
     display: flex;
     justify-content: center;
+
+    div {
+      background: $grey;
+      height: 7.2rem;
+      width: 100%;
+    }
 
     .subnav {
       background: $grey;
