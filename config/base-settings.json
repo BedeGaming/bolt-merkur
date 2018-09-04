@@ -94,16 +94,16 @@
       "viewbox": "0 0 39.4 13"
     },
     {
-      "viewbox": "0 0 77.8 37.4",
-      "name": "visa-debit-flat"
+      "name": "visa-debit-flat",
+      "viewbox": "0 0 77.8 37.4"
     },
     {
-      "viewbox": "0 0 79.5 39.7",
-      "name": "visa-electron-flat"
+      "name": "visa-electron-flat",
+      "viewbox": "0 0 79.5 39.7"
     },
     {
-      "viewbox": "0 0 121.2 70.6",
-      "name": "mastercard-flat"
+      "name": "mastercard-flat",
+      "viewbox": "0 0 121.2 70.6"
     }
   ],
   "compliance": {
