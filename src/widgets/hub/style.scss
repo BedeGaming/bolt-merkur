@@ -7,7 +7,15 @@ app-hub {
 
   .logo {
     display: inline-block;
-    margin-right: 3rem;
+
+    svg {
+      height: 3.8rem;
+      width: 11.1rem;
+    }
+
+    @media($hub-min-width) {
+      margin-right: 3rem;
+    }
   }
 
   nav-container {
@@ -64,6 +72,22 @@ app-hub {
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+
+  header-right {
+    .button-container {
+      display: none;
+    }
+  }
+
+  @media($hub-min-width) {
+    header-right {
+      width: auto;
+
+      .button-container {
+        display: flex;
       }
     }
   }
