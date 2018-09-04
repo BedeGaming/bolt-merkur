@@ -69,6 +69,10 @@ site-footer {
       justify-content: center;
       width: 100%;
 
+      ul {
+        justify-content: center;
+      }
+
       &:first-child {
         display: none;
       }

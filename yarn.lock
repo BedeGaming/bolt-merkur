@@ -247,8 +247,8 @@
     wreck "^10.0.0"
 
 "@bedegaming/bolt@^67.0.0":
-  version "67.1.0"
-  resolved "https://registry.npmjs.org/@bedegaming/bolt/-/bolt-67.1.0.tgz#27a705352d890b04ada95c79c8e9415fde31c2ce"
+  version "67.1.1"
+  resolved "https://registry.npmjs.org/@bedegaming/bolt/-/bolt-67.1.1.tgz#8b49bacb13ff0f2e4b3c85d0ad8953951191acf2"
   dependencies:
     "@bedegaming/backbone.fetch" "^0.2.4"
     "@bedegaming/backbone.paginator" "^2.0.5"
@@ -319,7 +319,7 @@
 
 "@bedegaming/payment@^2.3.2":
   version "2.3.2"
-  resolved "https://registry.npmjs.org/@bedegaming/payment/-/payment-2.3.2.tgz#186cddbcff02ce85fd793634b9a0d77ed45b48bf"
+  resolved "http://registry.npmjs.org/@bedegaming/payment/-/payment-2.3.2.tgz#186cddbcff02ce85fd793634b9a0d77ed45b48bf"
   dependencies:
     qj "~2.0.0"
 
@@ -380,7 +380,7 @@
 
 "@bedegaming/spine-player-client-js@^0.4.3":
   version "0.4.3"
-  resolved "https://registry.npmjs.org/@bedegaming/spine-player-client-js/-/spine-player-client-js-0.4.3.tgz#7e4ba04223d0ff6da1f26487efc4d79f6d95e0f0"
+  resolved "http://registry.npmjs.org/@bedegaming/spine-player-client-js/-/spine-player-client-js-0.4.3.tgz#7e4ba04223d0ff6da1f26487efc4d79f6d95e0f0"
   dependencies:
     node-uuid "^1.4.8"
 
