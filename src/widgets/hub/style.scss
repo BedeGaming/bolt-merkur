@@ -1,6 +1,7 @@
 @import '../../../node_modules/@bedegaming/bolt/src/widgets/hub/style';
 
 app-hub {
+  background: none;
   margin: 0;
   max-width: none;
   padding: 0 2rem;
@@ -9,6 +10,7 @@ app-hub {
     display: inline-block;
 
     svg {
+      color: #db0e17;
       height: 3.8rem;
       width: 11.1rem;
     }
@@ -19,11 +21,16 @@ app-hub {
   }
 
   nav-container {
+    background: none;
+
     .main-nav {
       width: auto;
 
       .nav-item {
+        position: relative;
+
         a {
+          display: flex;
           font-size: 1.8rem;
           padding: 2rem 3rem;
 
@@ -34,7 +41,14 @@ app-hub {
           }
 
           &.account-link {
+            padding-right: 4rem;
+
             .item-icon {
+              right: 2rem;
+              top: 50%;
+              transform: translateY(-50%);
+              position: absolute;
+
               svg {
                 height: 0.8rem;
                 width: 1.5rem;
@@ -49,7 +63,52 @@ app-hub {
         }
 
         .sub-menu {
+          align-items: stretch;
+          background-color: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(5px);
+          box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          left: 50%;
+          opacity: 0;
+          padding: 2rem;
+          pointer-events: none;
           position: absolute;
+          transform: translateX(-50%) scale(0.95);
+          transform-origin: top;
+          transition: transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms ease;
+          width: 20rem;
+
+          .sub-menu-item {
+            margin: 0;
+
+            a {
+              color: $nav-item-color;
+              font-size: 1.6rem;
+              padding: 0.5rem 2rem;
+              transition: color 300ms ease, padding 300ms cubic-bezier(0.165, 0.84, 0.44, 1), border 300ms ease;
+            }
+          }
+        }
+
+        &:hover {
+          .sub-menu {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateX(-50%) scale(1);
+
+            .sub-menu-item {
+              a {
+                color: darken($nav-item-color, 10%);
+                padding: 0.8rem 2rem;
+
+                &:hover {
+                  padding-left: 2.5rem;
+                }
+              }
+            }
+          }
         }
       }
     }

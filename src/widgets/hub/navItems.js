@@ -25,7 +25,7 @@ const nav = () => {
         linkClassName: 'account-link',
         className: 'account',
         icon: {
-          id: 'arrow',
+          id: 'arrow-down',
           viewbox: '0 0 15 8'
         },
         children: [
