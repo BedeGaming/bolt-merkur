@@ -1,10 +1,4 @@
 promo-slider {
-  slider-content-wrap {
-    article-wrap {
-      display: none;
-    }
-  }
-
   image-container {
     display: block;
     max-height: 48rem;
@@ -51,6 +45,76 @@ promo-slider {
 
     @media($medium) {
       right: 3rem;
+    }
+  }
+
+  .secondary-action {
+    display: none;
+  }
+
+  slider-content-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+  }
+
+  article {
+    margin-left: 2rem;
+    max-width: 22rem;
+
+    @media($small) {
+      max-width: 42rem;
+    }
+
+    @media($medium) {
+      margin-left: 8rem;
+    }
+
+    h1,
+    p {
+      margin-bottom: $padding / 2;
+
+      @media($small) {
+        margin-bottom: $gutter * 2;
+      }
+    }
+
+    h1 {
+      @include responsive-type(14, 52);
+
+      font-family: $body-font;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    p {
+      @include responsive-type(12, 20);
+    }
+
+    .primary-action {
+      @extend %btn-primary;
+      @extend %btn;
+      @include responsive-type(10, 16);
+    }
+  }
+
+  .slider__item--1 {
+    h1 {
+      color: #ab4fe2;
+    }
+  }
+
+  .slider__item--2 {
+    h1 {
+      color: #E6506E;
+    }
+  }
+
+  .slider__item--3 {
+    h1 {
+      color: #5BC64F;
     }
   }
 }
