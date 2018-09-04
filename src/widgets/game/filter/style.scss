@@ -1,0 +1,45 @@
+filter {
+  background: $white;
+
+  tabs-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .subnav {
+      background: $grey;
+    }
+  }
+
+  [role='tablist'] {
+    border: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  [role='tab'] {
+    display: flex;
+    flex: none;
+    // font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    width: 18rem;
+
+    &[aria-selected='true'] {
+      background-color: $white;
+      border-bottom: 0.4rem solid $red;
+      border-top: 0.4rem solid $white;
+      color: $red;
+      font-weight: 900;
+    }
+
+    &[aria-selected='false'] {
+      border-bottom: 0.4rem solid $white;
+      border-top: 0.4rem solid $white;
+    }
+  }
+
+  button {
+    border: 0;
+  }
+}

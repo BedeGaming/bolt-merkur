@@ -52,16 +52,10 @@
         "name": "featured"
       },
       {
-        "name": "new-games"
-      },
-      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
-      },
-      {
-        "name": "other-games"
+        "name": "tables"
       }
     ],
     "categoriesHome": [
@@ -80,16 +74,10 @@
         "name": "featured"
       },
       {
-        "name": "new-games"
-      },
-      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
-      },
-      {
-        "name": "table"
+        "name": "tables"
       }
     ],
     "showSearchOnGamesPageCategories": true,
