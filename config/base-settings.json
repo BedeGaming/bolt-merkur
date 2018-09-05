@@ -88,6 +88,61 @@
     "gamesPagePromoArea": true,
     "showRelatedGames": true
   },
+  "paymentProviderIcons": [
+    {
+      "name": "visa-flat",
+      "viewbox": "0 0 39.4 13"
+    },
+    {
+      "name": "visa-debit-flat",
+      "viewbox": "0 0 77.8 37.4"
+    },
+    {
+      "name": "visa-electron-flat",
+      "viewbox": "0 0 79.5 39.7"
+    },
+    {
+      "name": "mastercard-flat",
+      "viewbox": "0 0 121.2 70.6"
+    }
+  ],
+  "compliance": {
+    "complianceLinks": [
+      {
+        "svgClass": "svg-logo square",
+        "svgId": "18plus-flat",
+        "viewbox": "0 0 25 25"
+      },
+      {
+        "link": "http://www.gambleaware.co.uk/",
+        "svgClass": "svg-logo wide",
+        "svgId": "gambleaware-flat",
+        "target": "_blank",
+        "viewbox": "0 0 93.5 10.6"
+      },
+      {
+        "link": "https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/44819",
+        "svgClass": "svg-logo wide",
+        "svgId": "gamblingcommision-flat",
+        "target": "_blank",
+        "viewbox": "0 0 32 8.69"
+      },
+      {
+        "link": "http://www.gamcare.org.uk/",
+        "svgClass": "svg-logo square",
+        "svgId": "gamcare-square-flat",
+        "target": "_blank",
+        "viewbox": "0 0 500 500"
+      },
+      {
+        "link": "http://www.gamstop.co.uk/",
+        "svgClass": "svg-logo wide",
+        "svgId": "gamstop",
+        "target": "_blank",
+        "viewbox": "0 0 503.5 109"
+      }
+    ]
+  },
   "footer": {
     "links": [
       {
