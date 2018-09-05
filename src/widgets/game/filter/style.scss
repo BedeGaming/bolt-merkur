@@ -23,10 +23,17 @@ filter {
         border: 2px solid $dark-grey;
         border-radius: 3px;
         color: $dark-grey;
-        font-size: 1.4rem;
-        margin: 2rem 1rem;
-        min-width: 15.2rem;
-        padding: 1.3rem 1.8rem;
+        font-size: 1rem;
+        margin: 2rem 0.6rem;
+        min-width: 11rem;
+        padding: 1rem 1.4rem;
+
+        @media ($small) {
+          font-size: 1.4rem;
+          margin: 2rem 1rem;
+          min-width: 15.2rem;
+          padding: 1.3rem 1.8rem;
+        }
 
         &:hover {
           border-color: lighten($dark-grey, 20%);
