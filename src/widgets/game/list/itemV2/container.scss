@@ -6,16 +6,25 @@
 
 games-container {
   border: 1px solid $pale-grey;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
   flex: 1;
-  margin: 3rem 0;
+  margin: 2rem 0;
   max-width: 130rem;
-  width: calc(100% - 6rem);
+  width: calc(100% - 4rem);
+
+  @media ($small) {
+    margin: 3rem 0;
+    width: calc(100% - 6rem);
+  }
 }
 
 .games-page {
   max-width: 130rem;
-  width: calc(100% - 6rem);
+  width: calc(100% - 4rem);
+
+  @media ($small) {
+    width: calc(100% - 6rem);
+  }
 
   games-container {
     max-width: none;
@@ -24,5 +33,38 @@ games-container {
 }
 
 games-area {
-  padding: 0 3rem 3rem;
+  padding: 0 2rem 2rem;
+
+  @media ($small) {
+    padding: 0 3rem 3rem;
+  }
+}
+
+game-list {
+  &,
+  .loading {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-content: space-between;
+    margin: 0;
+
+    @media (min-width: 50rem) {
+      grid-gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    }
+  }
+}
+
+// Checking for support of `grid-gap` as older IE does support `grid` but the older
+// implementation which requires other properties be used (not covered by Autoprefixer)
+@supports (grid-gap: 1rem) {
+  game-list {
+    &,
+    .loading {
+      display: grid;
+      margin: 0;
+    }
+  }
 }
