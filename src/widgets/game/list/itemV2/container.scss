@@ -1,44 +1,28 @@
-games-container,
-games-area,
-games {
-  display: block;
+// ------------------------------------------
+// Styles for Games Container
+// ------------------------------------------
+
+@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/container';
+
+games-container {
+  border: 1px solid $pale-grey;
+  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+  flex: 1;
+  margin: 3rem 0;
+  max-width: 130rem;
+  width: calc(100% - 6rem);
 }
 
-game-list {
-  &,
-  .loading {
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: $games-list-grid-gap;
-    grid-template-columns: $games-list-grid-template-columns-small;
-    justify-content: space-between;
-    margin: $games-list-margin;
+.games-page {
+  max-width: 130rem;
+  width: calc(100% - 6rem);
 
-    @media (min-width: $games-list-large-breakpoint) {
-      grid-template-columns: $games-list-grid-template-columns-large;
-    }
-  }
-
-  .no-games {
-    grid-column: -1 / 1;
-    margin: 2rem auto 0;
-    text-align: center;
-  }
-
-  .loading {
-    grid-column: 1 / -1;
-    padding: 0;
+  games-container {
+    max-width: none;
+    width: 100%;
   }
 }
 
-// Checking for support of `grid-gap` as older IE does support `grid` but the older
-// implementation which requires other properties be used (not covered by Autoprefixer)
-@supports (grid-gap: 1rem) {
-  game-list {
-    &,
-    .loading {
-      display: grid;
-      margin: 0;
-    }
-  }
+games-area {
+  padding: 0 3rem 3rem;
 }

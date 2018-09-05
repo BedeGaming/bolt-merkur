@@ -1,18 +1,48 @@
 filter {
-  background: $white;
-
   .tabs-wrapper {
+    background: $white;
     display: flex;
     justify-content: center;
 
     div {
-      background: $grey;
-      height: 7.2rem;
+      align-items: center;
+      background: $pale-grey;
+      display: flex;
+      // height: 7.8rem;
+      justify-content: center;
       width: 100%;
     }
 
     .subnav {
-      background: $grey;
+      background: $pale-grey;
+      padding: 0;
+
+      .subnav-item {
+        @extend %btn;
+
+        border: 2px solid $dark-grey;
+        border-radius: 3px;
+        color: $dark-grey;
+        font-size: 1.4rem;
+        margin: 2rem 1rem;
+        min-width: 15.2rem;
+        padding: 1.3rem 1.8rem;
+
+        &:hover {
+          border-color: lighten($dark-grey, 20%);
+          color: lighten($dark-grey, 20%);
+        }
+
+        &.active {
+          border-color: $primary-base;
+          color: $primary-base;
+
+          &:hover {
+            border-color: lighten($primary-base, 30%);
+            color: lighten($primary-base, 30%);
+          }
+        }
+      }
     }
   }
 
@@ -28,20 +58,30 @@ filter {
     // font-size: 1.2rem;
     font-weight: bold;
     justify-content: center;
-    padding: 2.5rem 1.5rem;
+    padding: 3.1rem 1.5rem;
     width: 18rem;
 
     &[aria-selected='true'] {
       background-color: $white;
-      border-bottom: 0.4rem solid $red;
-      border-top: 0.4rem solid $white;
-      color: $red;
+      border-bottom: 4px solid $primary-base;
+      border-top: 4px solid $white;
+      color: $primary-base;
       font-weight: 900;
+
+      // &:hover {
+      //   border-bottom: 4px solid lighten($primary-base, 30%);
+      //   color: lighten($primary-base, 30%);
+      // }
     }
 
     &[aria-selected='false'] {
-      border-bottom: 0.4rem solid $white;
-      border-top: 0.4rem solid $white;
+      border-bottom: 4px solid $white;
+      border-top: 4px solid $white;
+
+      &:hover {
+        border-bottom: 4px solid lighten($primary-base, 30%);
+        color: lighten($primary-base, 30%);
+      }
     }
   }
 

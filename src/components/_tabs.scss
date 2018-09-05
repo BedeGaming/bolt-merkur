@@ -8,7 +8,7 @@ filter {
   justify-content: center;
 
   .subnav {
-    background: $grey;
+    background: $pale-grey;
   }
 }
 
@@ -24,21 +24,38 @@ filter {
   flex: none;
   font-weight: bold;
   justify-content: center;
-  padding: 2.5rem 1.5rem;
+  padding: 3.1rem 1.5rem;
   width: 18rem;
+
+
+
+  &:hover {
+    border-bottom: 0.4rem solid $primary-base;
+    color: $primary-base;
+  }
 
   &[aria-selected='true'] {
     background-color: $white;
-    border-bottom: 0.4rem solid $red;
-    border-top: 0.4rem solid $white;
-    color: $red;
+    border-bottom: 4px solid $primary-base;
+    border-top: 4px solid $white;
+    color: $primary-base;
     font-weight: 900;
+
+    &:hover {
+      border-bottom: 0.4rem solid $primary-base;
+      color: $primary-base;
+    }
   }
 
   &[aria-selected='false'] {
-    border-bottom: 0.4rem solid $white;
-    border-top: 0.4rem solid $white;
+    border-bottom: 4px solid $white;
+    border-top: 4px solid $white;
     color: $black;
+
+    &:hover {
+      border-bottom: 4px solid $primary-base;
+      color: $primary-base;
+    }
   }
 }
 
