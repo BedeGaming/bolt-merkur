@@ -5,6 +5,8 @@ app-hub {
   margin: 0;
   max-width: none;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 
   .logo {
     display: inline-block;
@@ -21,11 +23,9 @@ app-hub {
   }
 
   nav-container {
-    background: none;
+    background-color: $white;
 
     .main-nav {
-      justify-content: flex-start;
-
       .nav-item {
         position: relative;
 
@@ -112,24 +112,6 @@ app-hub {
           }
         }
 
-        &.account {
-          margin: 0;
-          position: absolute;
-          right: 6.25rem;
-        }
-
-        &.inbox-container {
-          bottom: 0;
-          margin: 0;
-          position: absolute;
-          right: 0;
-          top: 0;
-
-          span {
-            display: flex;
-          }
-        }
-
         &:hover {
           .sub-menu {
             opacity: 1;
@@ -164,6 +146,35 @@ app-hub {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+
+    @media($hub-min-width) {
+      background: none;
+
+      .main-nav {
+        justify-content: flex-start;
+
+        .nav-item {
+
+          &.account {
+            margin: 0;
+            position: absolute;
+            right: 6.25rem;
+          }
+
+          &.inbox-container {
+            bottom: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            span {
+              display: flex;
             }
           }
         }
