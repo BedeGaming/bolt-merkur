@@ -89,13 +89,15 @@ app-hub {
           width: 20rem;
 
           .sub-menu-item {
+            line-height: 1rem;
             margin: 0;
+            transition: line-height 300ms cubic-bezier(0, 0.85, 0.45, 1);
 
             a {
               color: $nav-item-color;
               font-size: 1.6rem;
               opacity: 0;
-              padding: 0rem 2rem;
+              padding: 0.8rem 2rem;
               transition: color 300ms ease, padding 300ms cubic-bezier(0.165, 0.84, 0.44, 1), border 300ms ease, opacity 400ms ease;
             }
           }
@@ -120,12 +122,13 @@ app-hub {
             transform: translateX(-50%) scale(1);
 
             .sub-menu-item {
+              line-height: 2.5rem;
+
               a {
                 align-items: center;
                 color: darken($nav-item-color, 10%);
                 display: flex;
                 opacity: 1;
-                padding: 0.8rem 2rem;
                 position: relative;
 
                 &:before {
