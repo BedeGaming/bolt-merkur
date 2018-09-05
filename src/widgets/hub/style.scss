@@ -47,6 +47,7 @@ app-hub {
               display: flex;
               justify-content: center;
               position: absolute;
+              height: 8px;
               right: 2.5rem;
               top: 50%;
               transform: translateY(-50%);
@@ -63,6 +64,14 @@ app-hub {
           }
 
           &.inbox-link {
+            height: 100%;
+            padding: 2rem;
+
+            svg {
+              fill: $tertiary-base;
+              width: 2.25rem;
+            }
+
             &.inbox-badge::after {
               margin-left: 1rem;
               position: static;
@@ -106,13 +115,19 @@ app-hub {
         &.account {
           margin: 0;
           position: absolute;
-          right: 5.5rem;
+          right: 6.25rem;
         }
 
         &.inbox-container {
+          bottom: 0;
+          margin: 0;
           position: absolute;
-          right: 1rem;
+          right: 0;
           top: 0;
+
+          span {
+            display: flex;
+          }
         }
 
         &:hover {
