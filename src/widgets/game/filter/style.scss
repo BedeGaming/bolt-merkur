@@ -59,7 +59,8 @@ filter {
     justify-content: center;
   }
 
-  [role='tab'] {
+  .category,
+  .search {
     display: flex;
     flex: none;
     // font-size: 1.2rem;
@@ -74,21 +75,39 @@ filter {
       border-top: 4px solid $white;
       color: $primary-base;
       font-weight: 900;
-
-      // &:hover {
-      //   border-bottom: 4px solid lighten($primary-base, 30%);
-      //   color: lighten($primary-base, 30%);
-      // }
     }
 
     &[aria-selected='false'] {
       border-bottom: 4px solid $white;
       border-top: 4px solid $white;
+    }
+  }
 
+  .category {
+    &[aria-selected='false'] {
       &:hover {
         border-bottom: 4px solid lighten($primary-base, 30%);
         color: lighten($primary-base, 30%);
       }
+    }
+  }
+
+  .search {
+    &[aria-selected='false'] {
+      &:hover {
+        border-bottom: 4px solid $white;
+        color: lighten($primary-base, 30%);
+
+        svg {
+          fill: lighten($primary-base, 30%);
+        }
+      }
+    }
+
+    svg {
+      fill: $black;
+      height: 2rem;
+      width: 2rem;
     }
   }
 
