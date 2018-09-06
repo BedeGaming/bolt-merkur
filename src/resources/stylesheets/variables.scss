@@ -1,8 +1,14 @@
 $primary-base: #e21455;
 $secondary-base: #999;
-$tertiary-base: #3C4466;
-$white: #ecf3fc;
+$tertiary-base: #3c4466;
+$white: #fff;
 $black: #010101;
+$blue: #9ccaff;
+$light-blue: #ecf3fc;
+$dark-blue: #7c7f8c;
+$primary-gradient-from: #ff345f;
+$primary-gradient-to: #ff9268;
+$logo-color: #db0e17;
 
 $primary-color-50: scale-color($primary-base, $lightness: 90%);
 $primary-color-100: scale-color($primary-base, $lightness: 80%);
@@ -103,3 +109,5 @@ $footer-colour: $white;
 $anchor-color: $white;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';
+
+$hub-min-width: $large;

@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 0.3.0
+- header styles have now been updated for authed and unauthed users
+- added colour variables
+
 ## 0.2.0
 - added favicons
 - added initial styles for the header

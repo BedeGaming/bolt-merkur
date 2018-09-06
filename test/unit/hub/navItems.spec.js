@@ -31,8 +31,8 @@ describe('navItems', function () {
           linkClassName: 'account-link',
           className: 'account',
           icon: {
-            id: 'arrow',
-            viewbox: '0 0 15 8'
+            id: 'arrow-down',
+            viewbox: '0 0 8 5'
           },
           children: [
             {

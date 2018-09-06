@@ -18,7 +18,9 @@
   <div class="nav-buttons">
     {{#if wallets}}
       <div class="balance"></div>
-      <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
+      <div class="button-container">
+        <button class="btn btn-primary" type="button">{{translate "deposit"}}</button>
+      </div>
     {{else}}
       <div class="button-container">
         <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
