@@ -8,6 +8,7 @@
     padding: 0 2rem;
     transform: scale(0.95);
   }
+
   to {
     line-height: 2rem;
     max-height: 50rem;
@@ -48,8 +49,8 @@ app-hub {
       left: 0;
       overflow: hidden;
       position: absolute;
-      transform-origin: top;
       top: 100%;
+      transform-origin: top;
       visibility: visible;
     }
 
