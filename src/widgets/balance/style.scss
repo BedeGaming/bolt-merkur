@@ -26,14 +26,14 @@ app-hub {
 
   .balance-list {
     align-items: center;
-    background-color: #ECF3FC;
+    background-color: $light-blue;
     border-radius: 3px;
     font-size: 1.6rem;
     height: 100%;
     padding: 1rem 2rem;
 
     svg {
-      fill: #3C4466;
+      fill: $tertiary-base;
       transition: fill 200ms ease;
       width: 0.8rem;
     }
@@ -41,7 +41,7 @@ app-hub {
     .wallets {
       animation: menuToggle 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 both;
       animation-direction: reverse;
-      background-color: #ECF3FC;
+      background-color: $light-blue;
       border-radius: 0 0 5px 5px;
       box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
       font-weight: normal;
@@ -79,17 +79,17 @@ app-hub {
   }
 
   .balance-group {
-    color: #3C4466;
+    color: $tertiary-base;
     display: flex;
 
     &:hover {
-      color: #7C91E9;
+      color: darken($tertiary-base, 10%);
     }
   }
 
   .hide-balance {
     align-items: center;
-    background-color: #C9E2FF;
+    background-color: darken($tertiary-base, 10%);
     border-radius: 3px 0 0 3px;
     bottom: 0;
     display: flex;
@@ -100,7 +100,7 @@ app-hub {
     top: 0;
 
     svg {
-      fill: #3C4466;
+      fill: $tertiary-base;
       pointer-events: none;
       width: 2rem;
     }
