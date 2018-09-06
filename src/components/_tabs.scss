@@ -84,7 +84,7 @@
     color: $black;
 
     &::before {
-      background: $dark-grey;
+      background: lighten($dark-grey, 20%);
       bottom: -4px;
       content: "";
       height: 4px;
@@ -122,7 +122,6 @@
       fill: $dark-grey;
     }
   }
-
 
   svg {
     fill: $black;
