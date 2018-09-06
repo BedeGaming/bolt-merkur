@@ -1,4 +1,4 @@
-$primary-base: #E21455;
+$primary-base: #e21455;
 $secondary-base: #999;
 $tertiary-base: #63152d;
 $white: #fff;
@@ -6,10 +6,11 @@ $black: #010101;
 $blue: #9ccaff;
 $light-blue: #ecf3fc;
 $dark-blue: #7c7f8c;
-$dark-grey: #333;
 $primary-gradient-from: #ff345f;
 $primary-gradient-to: #ff9268;
 $logo-color: #db0e17;
+$pale-grey: #f9f9f9;
+$dark-grey: #7c7f8c;
 
 $primary-color-50: scale-color($primary-base, $lightness: 90%);
 $primary-color-100: scale-color($primary-base, $lightness: 80%);
@@ -53,12 +54,8 @@ $heading-font: serif;
 $banner-heading-font: $heading-font;
 
 // breakpoints
-$x-small-val: 320px;
-$small-val: 460px;
-$medium-val: 760px;
-$large-val: 960px;
-$x-large-val: 1250px;
-$xx-large-val: 1400px;
+$large-val: 1250px;
+$large: 'min-width: #{$large-val}';
 
 // buttons
 $btn-text-color: $black;
@@ -74,6 +71,7 @@ $dialog-overlay-background: transparentize($black, 0.2);
 $dialog-border: .5rem solid $primary-base;
 
 $nav-container-box-shadow: 0.2rem 0 2rem 0 transparentize($black, 0.1);
+$nav-item-color: #3e3135;
 
 $body-font-weight: 500;
 $body-font-size: 1.4rem;
