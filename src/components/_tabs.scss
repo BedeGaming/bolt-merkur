@@ -1,14 +1,57 @@
-filter {
-  background: $white;
-}
+// ------------------------------------------
+// Styles for the tabs
+// ------------------------------------------
 
 .tabs-wrapper {
   background: $white;
   display: flex;
   justify-content: center;
 
+  div {
+    align-items: center;
+    background: $pale-grey;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .subnav {
     background: $pale-grey;
+    padding: 0;
+
+    .subnav-item {
+      @extend %btn;
+
+      border: 2px solid $dark-grey;
+      border-radius: 3px;
+      color: $dark-grey;
+      font-size: 1rem;
+      margin: 2rem 0.6rem;
+      min-width: 11rem;
+      padding: 1rem 1.4rem;
+
+      @media ($small) {
+        font-size: 1.4rem;
+        margin: 2rem 1rem;
+        min-width: 15.2rem;
+        padding: 1.3rem 1.8rem;
+      }
+
+      &:hover {
+        border-color: lighten($dark-grey, 20%);
+        color: lighten($dark-grey, 20%);
+      }
+
+      &.active {
+        border-color: $primary-base;
+        color: $primary-base;
+
+        &:hover {
+          border-color: lighten($primary-base, 30%);
+          color: lighten($primary-base, 30%);
+        }
+      }
+    }
   }
 }
 
@@ -18,33 +61,21 @@ filter {
   justify-content: center;
 }
 
-[role='tab'] {
-  background: $white;
+.category {
+  background-color: $white;
+  color: $black;
   display: flex;
   flex: none;
   font-weight: bold;
   justify-content: center;
   padding: 3.1rem 1.5rem;
+  position: relative;
   width: 18rem;
 
-
-
-  &:hover {
-    border-bottom: 0.4rem solid $primary-base;
-    color: $primary-base;
-  }
-
   &[aria-selected='true'] {
-    background-color: $white;
     border-bottom: 4px solid $primary-base;
     border-top: 4px solid $white;
     color: $primary-base;
-    font-weight: 900;
-
-    &:hover {
-      border-bottom: 0.4rem solid $primary-base;
-      color: $primary-base;
-    }
   }
 
   &[aria-selected='false'] {
@@ -52,10 +83,51 @@ filter {
     border-top: 4px solid $white;
     color: $black;
 
-    &:hover {
-      border-bottom: 4px solid $primary-base;
-      color: $primary-base;
+    &::before {
+      background: $dark-grey;
+      bottom: -4px;
+      content: "";
+      height: 4px;
+      left: 51%;
+      position: absolute;
+      right: 51%;
+      transition-duration: 0.3s;
+      transition-property: left, right;
+      transition-timing-function: ease-out;
     }
+
+    &:hover::before {
+      left: 0;
+      right: 0;
+    }
+  }
+
+}
+
+.search {
+  background-color: $white;
+  color: $black;
+  display: flex;
+  flex: none;
+  font-weight: bold;
+  justify-content: center;
+  padding: 3.1rem 1.5rem;
+  position: relative;
+  width: 18rem;
+
+  &:hover {
+    color: $dark-grey;
+
+    svg {
+      fill: $dark-grey;
+    }
+  }
+
+
+  svg {
+    fill: $black;
+    height: 2rem;
+    width: 2rem;
   }
 }
 
