@@ -46,12 +46,20 @@ app-hub {
       box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
       font-weight: normal;
       height: auto;
-      left: 0;
+      left: auto;
+      min-width: 100%;
       overflow: hidden;
       position: absolute;
       top: 100%;
       transform-origin: top;
+      right: 0;
       visibility: visible;
+      width: auto;
+
+      @media ($large) {
+        left: 0;
+        right: auto;
+      }
     }
 
     &.open {
@@ -118,7 +126,7 @@ app-hub {
 
   sub-balance {
     color: $tertiary-base;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 1.6rem;
     margin-bottom: 1rem;
 
@@ -128,6 +136,10 @@ app-hub {
 
     &:last-child {
       margin: 0;
+    }
+
+    @media ($medium) {
+      flex-direction: column;
     }
   }
 
