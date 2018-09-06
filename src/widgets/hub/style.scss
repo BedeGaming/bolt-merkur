@@ -1,7 +1,7 @@
 @import '../../../node_modules/@bedegaming/bolt/src/widgets/hub/style';
 
 app-hub {
-  background: none;
+  background-color: $white;
   margin: 0;
   max-width: none;
   padding: 0 2rem;
@@ -15,10 +15,6 @@ app-hub {
       color: #db0e17;
       height: 3.8rem;
       width: 11.1rem;
-    }
-
-    @media($hub-min-width) {
-      margin-right: 3rem;
     }
   }
 
@@ -152,7 +148,7 @@ app-hub {
       }
     }
 
-    @media($hub-min-width) {
+    @media($large) {
       background: none;
 
       .main-nav {
@@ -203,19 +199,30 @@ app-hub {
     }
   }
 
+  header-left {
+    flex: 1;
+  }
+
   header-right {
+    flex: 1;
+    justify-content: flex-end;
+
     .button-container {
       display: none;
     }
   }
 
-  @media($hub-min-width) {
+  @media($large) {
     header-right {
       width: auto;
 
       .button-container {
         display: flex;
       }
+    }
+
+    .logo {
+      margin-right: 3rem;
     }
   }
 }
