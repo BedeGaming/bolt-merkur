@@ -26,7 +26,7 @@ const nav = () => {
         className: 'account',
         icon: {
           id: 'arrow-down',
-          viewbox: '0 0 9 6'
+          viewbox: '0 0 8 5'
         },
         children: [
           {

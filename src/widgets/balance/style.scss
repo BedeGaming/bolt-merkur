@@ -35,7 +35,7 @@ app-hub {
     svg {
       fill: #3C4466;
       transition: fill 200ms ease;
-      width: 0.825rem;
+      width: 0.8rem;
     }
 
     .wallets {
@@ -64,7 +64,6 @@ app-hub {
     }
 
     &.secret {
-
       .wallets {
         visibility: hidden;
       }

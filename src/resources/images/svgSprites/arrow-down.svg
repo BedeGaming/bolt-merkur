@@ -1,6 +1,16 @@
-<svg width='9' height='6' viewBox='0 0 9 6' xmlns='http://www.w3.org/2000/svg'>
-    <g fill='none' fillRule='evenodd'>
-        <polygon id='Combined-Shape' fill='#3C4466' fillRule='nonzero' points='4.1915172 3.05583898 7.0307128 0.21664348 8.2530484 1.43897907 4.844658 4.84736948 4.2763371 5.06743228 3.6856827 4.82136088 0 1.13567821 1.1356782 0'
-        />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-unauth-menu" transform="translate(-284.000000, -48.000000)" fill="#3C4466">
+            <g id="header">
+                <g id="navigation" transform="translate(182.000000, 20.000000)">
+                    <g transform="translate(29.000000, 21.000000)" id="games">
+                        <g>
+                            <polygon id="Combined-Shape" points="77.0630003 10.015175 79.8151427 7.2137606 81 8.41983059 77.6961149 11.7828656 77.1452194 12 76.5726752 11.757203 73 8.12056575 74.100857 7"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
     </g>
 </svg>
