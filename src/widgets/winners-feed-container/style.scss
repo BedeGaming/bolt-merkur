@@ -2,5 +2,9 @@
 
 feed-content {
   background-color: $dark-grey;
-  min-height: 7rem;
+  min-height: 4.5rem;
+
+  @media ($medium) {
+    min-height: 7rem;
+  }
 }
