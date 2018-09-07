@@ -1,0 +1,23 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/winners-feed/style';
+
+.recent-winners {
+  li {
+    min-width: 20%;
+  }
+
+  .winner-prize,
+  .winner-name,
+  .win-amount {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .winner-prize {
+    display: flex;
+  }
+
+  .win-amount {
+    color: $white;
+    margin-left: 0.4rem;
+  }
+}
