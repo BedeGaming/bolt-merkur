@@ -1,0 +1,10 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/winners-feed-container/style';
+
+feed-content {
+  background-color: $dark-grey;
+  min-height: 4.5rem;
+
+  @media ($medium) {
+    min-height: 7rem;
+  }
+}

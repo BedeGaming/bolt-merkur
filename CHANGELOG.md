@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.4.0
+- added winners feed to homepage
+
 ## 0.3.0
 - header styles have now been updated for authed and unauthed users
 - added colour variables

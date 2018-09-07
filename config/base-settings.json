@@ -34,7 +34,13 @@
   "metaKeywords": "",
   "features": {
     "bonusToolContentPromos": true,
-    "logoutOnIdleSession": false
+    "logoutOnIdleSession": false,
+    "winnersFeed": {
+      "minWin": 10,
+      "minWinners": 6,
+      "take": 25,
+      "maxItems": 6
+    }
   },
   "feeds": {
     "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
