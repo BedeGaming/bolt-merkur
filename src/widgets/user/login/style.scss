@@ -1,0 +1,140 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/login/style';
+
+dialog {
+  border: 0.5rem solid $white;
+  border-radius: 5px;
+
+  close-modal {
+    display: none;
+  }
+
+  user-login {
+    h1 {
+      color: #e6506e;
+      font-family: $body-font;
+      font-size: 3rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    form {
+      height: auto;
+      margin-top: 20px;
+
+      div.input-container {
+        $input-height: 60px;
+        height: 80px;
+        min-height: 80px;
+
+        input {
+          border-color: $secondary-base;
+          border-radius: 3px;
+          color: $secondary-color-700;
+          font-family: $body-font;
+          font-size: 1.5rem;
+          font-weight: bold;
+          height: $input-height;
+          padding-top: 15px;
+          vertical-align: 5px;
+        }
+
+        input:focus {
+          color: $secondary-color-700;
+        }
+
+        label {
+          color: $secondary-color-700;
+          display: flex;
+          font-family: $body-font;
+          font-size: 1.5rem;
+          font-weight: bold;
+          height: $input-height;
+          pointer-events: none;
+          position: absolute;
+          width: 100%;
+
+          span {
+            margin: auto;
+            margin-left: 10px;
+          }
+        }
+
+        @mixin minimized-label {
+          color: $secondary-color-500;
+          font-size: 1.1rem;
+
+          span {
+            margin-top: 5px;
+          }
+        }
+
+        input:focus + label {
+          @include minimized-label
+        }
+
+        input:valid + label {
+          @include minimized-label;
+        }
+
+        input:not[value=''] + label {
+          @include minimized-label
+        }
+
+        input:focus + button.peeky-password + label {
+          @include minimized-label
+        }
+
+        input:valid + button.peeky-password + label {
+          @include minimized-label
+        }
+
+        input:not[value=''] + button.peeky-password + label {
+          @include minimized-label
+        }
+
+        button.peeky-password {
+          height: $input-height;
+          position: absolute;
+          right: 10px;
+          top: 0;
+
+          svg {
+            margin: auto;
+          }
+        }
+      }
+
+      p.forgot-password {
+        color: #cc1f55;
+        cursor: pointer;
+        font-family: $body-font;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-left: 2px;
+      }
+
+      footer {
+        button.primary-action {
+          @extend %btn;
+          @extend %btn-primary;
+          @include responsive-type(10, 16);
+        }
+      }
+
+      button.register {
+        span {
+          color: #cc1f55;
+          font-family: $body-font;
+          font-size: 1.3rem;
+          font-weight: bold;
+
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
