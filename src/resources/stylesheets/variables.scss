@@ -54,8 +54,12 @@ $heading-font: serif;
 $banner-heading-font: $heading-font;
 
 // breakpoints
-$large-val: 1250px;
-$large: 'min-width: #{$large-val}';
+$x-small-val: 320px default;
+$small-val: 460px !default;
+$medium-val: 760px !default;
+$large-val: 960px !default;
+$x-large-val: 1250px !default;
+$xx-large-val: 1400px !default;
 
 // buttons
 $btn-text-color: $black;
