@@ -1,0 +1,46 @@
+@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/inputs';
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.input-container {
+  margin-bottom: 2rem;
+
+  &.invalid {
+    flex-direction: column;
+
+    &::after {
+      animation: enter 300ms ease 0s 1 both;
+      background-color: #f33057;
+      border: 1px solid #c8173a;
+      border-radius: 3px;
+      bottom: 90%;
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      left: 50%;
+      padding: 1rem 2rem;
+      position: absolute;
+      text-align: center;
+      width: 90%;
+    }
+  }
+
+  input {
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 100px #fffdf5 inset;
+    }
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+}
