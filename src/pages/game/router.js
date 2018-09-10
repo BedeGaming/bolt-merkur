@@ -13,7 +13,7 @@ export default Router.extend({
     'games/:category(/)?category=:urlCat': 'redirectCategory',
     'games/:category': 'gamesCategory',
     'home/:category': 'homeCategory',
-    'games-a-to-z': 'gamesAZ',
+    'games-a-to-z': 'gamesAZ'
   },
 
   games(activeCategory = false) {
