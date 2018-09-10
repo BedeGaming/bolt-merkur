@@ -15,22 +15,11 @@
   margin-bottom: 2rem;
 
   &.invalid {
-    flex-direction: column;
+    flex-flow: column;
 
     &::after {
-      animation: enter 300ms ease 0s 1 both;
-      background-color: #f33057;
-      border: 1px solid #c8173a;
-      border-radius: 3px;
-      bottom: 90%;
-      color: $white;
-      font-size: 1.4rem;
-      font-weight: bold;
-      left: 50%;
-      padding: 1rem 2rem;
-      position: absolute;
-      text-align: center;
-      width: 90%;
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
     }
   }
 

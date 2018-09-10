@@ -26,8 +26,7 @@ dialog {
       height: auto;
 
       div.input-container {
-        height: $input-height;
-        min-height: unset;
+        min-height: $input-height;
         position: relative;
 
         input {
@@ -134,7 +133,6 @@ dialog {
         button.primary-action {
           @extend %btn;
           @extend %btn-primary;
-          @include responsive-type(10, 16);
         }
 
         > * {
