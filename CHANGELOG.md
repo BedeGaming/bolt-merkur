@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.5.0
+- added Games Grid to Homepage and Games category pages
+
 ## 0.4.0
 - added winners feed to homepage
 

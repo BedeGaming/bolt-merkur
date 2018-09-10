@@ -1,0 +1,10 @@
+// ------------------------------------------
+// Home page base styles
+// ------------------------------------------
+
+@import '../../../node_modules/@bedegaming/bolt/src/pages/home/style';
+
+home-view {
+  align-items: center;
+  justify-content: flex-end;
+}

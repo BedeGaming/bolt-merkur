@@ -1,0 +1,49 @@
+{{#if categories}}
+  <div class="tabs-wrapper">
+    <nav role="tablist">
+      {{#each categories}}
+        <button role="tab" aria-selected="{{active}}" data-name="{{name}}" class="category">
+          <span>
+            {{#if icon}}
+              <svg class="category-icon" viewBox="{{icon.viewbox}}">
+                <use xlink:href="#icon-{{icon.id}}"/>
+              </svg>
+            {{/if}}
+            <span>{{translate displayName}}</span>
+          </span>
+        </button>
+      {{/each}}
+      <button role="tab" aria-selected="false" data-name="search" class="search" aria-label="{{translate 'search_games'}}">
+        <span>
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#icon-search"/>
+          </svg>
+          <span>{{translate "search"}}</span>
+        </span>
+      </button>
+    </nav>
+    {{#if toggleView}}
+      <div class="grid-list-switch-region"></div>
+    {{/if}}
+  </div>
+{{/if}}
+<div class="tabs-wrapper">
+  {{#if toggleView}}
+    <div class="grid-list-switch-region"></div>
+  {{/if}}
+<div>
+
+{{#if tags}}
+  <nav class="subnav game-tags">
+    {{#each tags}}
+      <button class="subnav-item sort {{active}}" data-sort="{{key}}" data-sort-method="{{sortMethod}}">{{translate name}}</button>
+    {{/each}}
+    {{#if searchInTags}}
+      <button role="tab" aria-selected="false" data-name="search" class="search">
+        <svg viewBox="0 0 32 32">
+          <use xlink:href="#icon-search"/>
+        </svg>
+      </button>
+    {{/if}}
+  </nav>
+{{/if}}

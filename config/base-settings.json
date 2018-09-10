@@ -52,24 +52,21 @@
         "name": "featured"
       },
       {
-        "name": "new-games"
-      },
-      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
-      },
-      {
-        "name": "other-games"
+        "name": "tables"
       }
     ],
     "categoriesHome": [
       {
+        "name": "featured"
+      },
+      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
+        "name": "tables"
       }
     ],
     "categoriesGames": [
@@ -77,22 +74,27 @@
         "name": "featured"
       },
       {
-        "name": "new-games"
-      },
-      {
         "name": "slots"
       },
       {
-        "name": "jackpots"
-      },
-      {
-        "name": "table"
+        "name": "tables"
       }
     ],
     "showSearchOnGamesPageCategories": true,
     "noIndex": true,
     "gamesPagePromoArea": true,
-    "showRelatedGames": true
+    "showRelatedGames": true,
+    "tags": [
+      {
+        "name": "recommended",
+        "active": "active",
+        "key": "priority"
+      },
+      {
+        "name": "alphabetical",
+        "key": "displayName"
+      }
+    ]
   },
   "paymentProviderIcons": [
     {

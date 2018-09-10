@@ -1,5 +1,16 @@
+// ------------------------------------------
+// Basic styles for document view
+// ------------------------------------------
+
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/document';
 
 body {
-  background-color: #f9f9f9;
+  background-color: $light-grey;
+}
+
+site-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,0 +1,19 @@
+// ------------------------------------------
+// Styles for Search icon
+// ------------------------------------------
+
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/search';
+
+[role='tablist'] {
+  .search {
+    span {
+      span {
+        display: none;
+
+        @media ($large) {
+          display: block;
+        }
+      }
+    }
+  }
+}
