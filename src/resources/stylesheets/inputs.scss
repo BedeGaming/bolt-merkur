@@ -12,14 +12,14 @@
 }
 
 .input-container {
-  margin-bottom: 2rem;
+  margin-bottom: 0.2rem;
 
   &.invalid {
     flex-flow: column;
 
     &::after {
-      font-size: 1.2rem;
-      padding: 0.5rem 0;
+      font-size: 1.1rem;
+      padding: 0.2rem 0.2rem;
     }
   }
 

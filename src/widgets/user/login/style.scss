@@ -26,7 +26,7 @@ dialog {
       height: auto;
 
       div.input-container {
-        min-height: $input-height;
+        height: $input-height + 2rem;
         position: relative;
 
         input {
@@ -89,16 +89,14 @@ dialog {
         }
 
         button.peeky-password {
-          height: auto;
-          line-height: normal;
+          display: flex;
+          height: $input-height;
+          position: absolute;
           right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
+          top: 0;
 
           svg {
             margin: auto;
-            position: relative;
-            transform: none;
           }
 
           &:focus {
@@ -117,8 +115,10 @@ dialog {
         color: $primary-base;
         cursor: pointer;
         font-size: 1.3rem;
-        margin-bottom: 2rem;
-        padding-left: 2px;
+        font-weight: bold;
+        margin-bottom: 3rem;
+        margin-top: -0.75rem;
+        padding-left: 0.2rem;
 
         &:focus {
           text-decoration: underline;
