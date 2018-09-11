@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.6.0
+- added styling to Login modal
+
 ## 0.5.0
 - added Games Grid to Homepage and Games category pages
 
