@@ -1,0 +1,59 @@
+
+
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/profile/style';
+
+profile-area {
+  padding: 0;
+
+  user-info {
+    margin: 0 auto;
+    max-width: 130rem;
+    width: calc(100% - 6rem);
+  }
+
+  h2 {
+    color: $grey;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+  personal-section {
+    background: $white;
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    flex: 1;
+    margin: 3rem 1.5rem 3rem 0;
+    padding: 3rem;
+    width: 50%;
+
+    .user-details {
+      background: $white;
+      padding: 0;
+    }
+  }
+
+  marketing-prefs {
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    flex: 1;
+    margin: 3rem 0 3rem 1.5rem;
+    width: 50%;
+  }
+
+  .balance-section {
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  pending-withdrawals {
+
+  }
+
+  user-wallets {
+
+  }
+}
