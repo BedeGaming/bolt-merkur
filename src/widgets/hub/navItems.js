@@ -14,24 +14,6 @@ const nav = () => {
       route: '/support',
       displayName: 'support',
       className: 'support'
-    },
-    {
-      isContainer: true,
-      className: 'unauthenticated',
-      children: [
-        {
-          displayName: 'log_in',
-          linkClassName: 'login-modal desktop-only',
-          isButton: true,
-          userAction: 'deposit'
-        },
-        {
-          displayName: 'join_now',
-          linkClassName: 'register desktop-only',
-          isButton: true,
-          userAction: 'register'
-        }
-      ]
     }
   ];
 
