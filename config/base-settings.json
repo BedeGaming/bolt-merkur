@@ -250,6 +250,7 @@
   "registration": {
     "defaultGender": "Undisclosed",
     "genderEnabled": false,
+    "marketing": true,
     "telephoneEnabled": true,
     "regSuccess": true
   },
