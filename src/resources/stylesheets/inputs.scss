@@ -17,10 +17,10 @@
     flex-flow: column;
 
     &::after {
-      top: 100%;
       font-size: 1.1rem;
       padding: 0.2rem;
       position: absolute;
+      top: 100%;
     }
   }
 
