@@ -9,14 +9,22 @@ profile-area {
     width: calc(100% - 6rem);
   }
 
-  personal-section {
-    // background: $white;
-    margin: 3rem 1.5rem 3rem 0;
-    width: 50%;
+  h2 {
+    color: $grey;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
 
-    h2 {
-      display: none;
-    }
+  personal-section {
+    background: $white;
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    flex: 1;
+    margin: 3rem 1.5rem 3rem 0;
+    padding: 3rem;
+    width: 50%;
 
     .user-details {
       background: $white;
@@ -24,13 +32,21 @@ profile-area {
     }
   }
 
-  marketing-preferences {
+  marketing-prefs {
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    flex: 1;
+    margin: 3rem 0 3rem 1.5rem;
     width: 50%;
   }
 
   .balance-section {
+    border: 1px solid $light-grey;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    margin-bottom: 3rem;
     width: 100%;
   }
+
   pending-withdrawals {
 
   }
