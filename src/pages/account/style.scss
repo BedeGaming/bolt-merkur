@@ -5,6 +5,10 @@
 @import '../../../node_modules/@bedegaming/bolt/src/pages/account/style';
 
 account-page {
+  .tabs-wrapper {
+    background: $light-grey;
+  }
+  
   .tab-list {
     border: 0;
     display: flex;
@@ -18,10 +22,9 @@ account-page {
   }
 
   .nav-item {
-    background-color: $white;
-    border-bottom: 4px solid $white;
-    border-top: 4px solid $white;
-    // cursor: pointer;
+    background-color: $light-grey;
+    border-bottom: 4px solid $light-grey;
+    border-top: 4px solid $light-grey;
     display: flex;
     flex: none;
     font-size: 1.2rem;

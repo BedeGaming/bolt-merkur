@@ -1,0 +1,41 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/profile/style';
+
+profile-area {
+  padding: 0;
+
+  user-info {
+    margin: 0 auto;
+    max-width: 130rem;
+    width: calc(100% - 6rem);
+  }
+
+  personal-section {
+    // background: $white;
+    margin: 3rem 1.5rem 3rem 0;
+    width: 50%;
+
+    h2 {
+      display: none;
+    }
+
+    .user-details {
+      background: $white;
+      padding: 0;
+    }
+  }
+
+  marketing-preferences {
+    width: 50%;
+  }
+
+  .balance-section {
+    width: 100%;
+  }
+  pending-withdrawals {
+
+  }
+
+  user-wallets {
+
+  }
+}
