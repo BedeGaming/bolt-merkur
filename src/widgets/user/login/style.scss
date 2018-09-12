@@ -6,6 +6,7 @@ $input-height: 8rem;
   from {
     transform: scale(0) translate(-50%, -50%);
   }
+
   to {
     transform: scale(1) translate(-50%, -50%);
   }
@@ -21,15 +22,6 @@ dialog {
 
   user-login {
     overflow: visible;
-
-    h1 {
-      @include responsive-type(30, 36);
-      color: #e6506e;
-      font-weight: 900;
-      margin-bottom: 3rem;
-      text-align: center;
-      text-transform: uppercase;
-    }
 
     form {
       height: auto;
@@ -62,39 +54,20 @@ dialog {
           padding-left: 2rem;
           pointer-events: none;
           position: absolute;
-          transition: all 300ms ease;
+          transition-duration: 300ms;
+          transition-property: color, font-size, font-weight, transform;
+          transition-timing-function: ease;
           width: 100%;
         }
 
-        @mixin minimized-label {
+        input:focus + label,
+        input:valid + label,
+        input:focus + button.peeky-password + label,
+        input:valid + button.peeky-password + label {
           color: $secondary-color-500;
           font-size: 1.4rem;
           font-weight: normal;
           transform: translateY(-20%);
-        }
-
-        input:focus + label {
-          @include minimized-label
-        }
-
-        input:valid + label {
-          @include minimized-label;
-        }
-
-        input:not[value=''] + label {
-          @include minimized-label
-        }
-
-        input:focus + button.peeky-password + label {
-          @include minimized-label
-        }
-
-        input:valid + button.peeky-password + label {
-          @include minimized-label
-        }
-
-        input:not[value=''] + button.peeky-password + label {
-          @include minimized-label
         }
 
         button.peeky-password {
@@ -127,8 +100,8 @@ dialog {
 
           svg {
             fill: $white;
-            transition: transform 300ms ease;
             transform: scale(0);
+            transition: transform 300ms ease;
             width: 55%;
             z-index: 1;
           }
@@ -157,12 +130,9 @@ dialog {
               width: 100%;
             }
 
-            &::before {
-            }
-
             &::after {
               animation-delay: 200ms;
-              background-color: darken($green,10%);
+              background-color: darken($green, 10%);
               height: 75%;
               width: 75%;
             }

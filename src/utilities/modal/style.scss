@@ -1,0 +1,13 @@
+@import '../../../node_modules/@bedegaming/bolt/src/utilities/modal/style';
+
+dialog {
+  h1 {
+    @include responsive-type(30, 36);
+
+    color: lighten($primary-base, 10%);
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

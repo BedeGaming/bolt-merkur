@@ -11,7 +11,7 @@ const enGB = {
       forgot_password: 'Forgot your password?',
       log_in: 'Log In',
       password_placeholder: 'Password',
-      username_placeholder: 'Username',
+      username_placeholder: 'Username'
     }
   }
 };
