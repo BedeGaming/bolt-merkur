@@ -1,0 +1,36 @@
+@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/inputs';
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.input-container {
+  &.invalid {
+    flex-flow: column;
+
+    &::after {
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      position: absolute;
+      top: 100%;
+    }
+  }
+
+  input {
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 100px #fffdf5 inset;
+    }
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+}

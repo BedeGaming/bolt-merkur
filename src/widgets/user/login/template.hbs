@@ -1,0 +1,54 @@
+<h1>{{translate "log_in"}}</h1>
+<form novalidate>
+  <div class="input-container login-field">
+    <input name="username"
+           type="text"
+           autocomplete="off"
+           autocorrect="off"
+           autocapitalize="off"
+           spellcheck="false"
+           value="{{username}}"
+           placeholder=""
+           aria-label="{{translate 'username_placeholder'}}"
+           required />
+    <label><span>{{translate "username_placeholder"}}</span></label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+  <div class="input-container password-field">
+    <input name="password"
+           type="password"
+           autocomplete="off"
+           autocorrect="off"
+           autocapitalize="off"
+           class="peeky"
+           spellcheck="false"
+           placeholder=""
+           aria-label="{{translate 'password_placeholder'}}"
+           data-hj-masked
+           required />
+    <button type="button" class="peeky-password" aria-label="{{translate 'toggle_show_password'}}">
+      <svg focusable="false" class="open" viewBox="0 0 17.2 10.3"><use xlink:href="#icon-eye-open-icon"/></svg>
+      <svg focusable="false" class="close" viewBox="0 -5 32 25"><use xlink:href="#icon-eye-closed-icon"/></svg>
+    </button>
+    <label><span>{{translate "password_placeholder"}}</span></label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+  <div>
+    <a type="button" class="forgot-password">{{translate "forgot_password"}}</a>
+  </div>
+
+  <terms-updated></terms-updated>
+
+  <footer>
+    <button type="submit" class="primary-action">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        {{translate "log_in"}}
+      </span>
+    </button>
+  </footer>
+  <button class="register">{{{translate "register_new_user"}}}</button>
+  <a href="/close-my-account" class="close-account" target="_blank">{{translate "terms_i_dont_agree"}}</a>
+</form>

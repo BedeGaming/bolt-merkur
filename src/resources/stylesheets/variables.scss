@@ -12,6 +12,7 @@ $logo-color: #db0e17;
 $light-grey: #f9f9f9;
 $grey: #7c7f8c;
 $dark-grey: #333;
+$green: #56e165;
 
 $game-page-btn-accent-colour: $primary-base;
 $game-page-btn-span-margin: 0 0 0 1rem;
@@ -22,9 +23,8 @@ $game-page-home-background: $grey;
 
 $max-width: 132rem;
 
-$body-font: 'worksans';
-$heading-font: serif;
-$banner-heading-font: $heading-font;
+$body-font: 'worksans', helvetica, arial, sans-serif;
+$heading-font: 'worksans';
 
 // breakpoints
 $x-small-val: 320px default;
