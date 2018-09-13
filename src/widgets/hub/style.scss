@@ -6,28 +6,31 @@ nav-container {
   flex-direction: column;
 
   @media ($large) {
-    @if $isSidebar == false {
-      flex-direction: row;
-    }
+    flex-direction: row;
   }
 }
 
 app-hub {
   align-items: center;
   animation: none;
-  background: $header-background;
+  background-color: $white;
   display: flex;
-  height: $header-height;
   justify-content: space-between;
-  margin: auto;
-  max-width: $max-width;
-  padding: 0 $padding;
+  height: auto;
+  margin: 0;
+  max-width: none;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 
-  @media ($large) {
-    justify-content: $app-hub-large-justify-content;
+  .logo {
+    display: inline-block;
+    margin: 1rem 0;
 
-    @if $isSidebar == true {
-      padding: $padding-large;
+    svg {
+      color: $logo-color;
+      height: 3.8rem;
+      width: 11.1rem;
     }
   }
 
@@ -55,8 +58,9 @@ app-hub {
 
   nav-container {
     animation: disableAnim $nav-container-drawer-transition-time;
-    background: $nav-container-drawer-background;
+    background-color: $white;
     bottom: 0;
+    justify-content: center;
     left: $nav-container-drawer-left;
     min-width: $nav-container-drawer-min-width;
     position: fixed;
@@ -78,42 +82,11 @@ app-hub {
       transform: none;
       transition: none;
       width: $nav-container-width;
-
-      @if $isSidebar == true {
-        flex-direction: column;
-      }
     }
-  }
-
-  .main-nav {
-    width: 100%;
-  }
-}
-
-app-hub {
-  background-color: $white;
-  margin: 0;
-  max-width: none;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 1;
-
-  .logo {
-    display: inline-block;
-
-    svg {
-      color: $logo-color;
-      height: 3.8rem;
-      width: 11.1rem;
-    }
-  }
-
-  nav-container {
-    background-color: $white;
-    justify-content: center;
 
     .main-nav {
       margin-bottom: 1rem;
+      width: 100%;
 
       @media ($large) {
         margin-bottom: 0;
@@ -128,7 +101,7 @@ app-hub {
           padding: 2rem;
 
           @media ($x-large) {
-            padding: 2rem 3rem;
+            padding: 2.6rem 3rem;
           }
 
           .item-text {

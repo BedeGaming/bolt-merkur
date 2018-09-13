@@ -1,14 +1,26 @@
 @import '../../../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/components/details/style';
 
 .game-item {
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+  overflow: hidden;
+
   .display-name-container {
     align-items: center;
-    background: $white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     border-radius: 0;
+    bottom: 0;
     display: flex;
     flex-grow: 1;
+    height: 5rem;
     justify-content: center;
-    padding: 0.8rem 1rem;
+    left: 0;
+    padding: 0 1rem;
+    position: absolute;
+    transition: height 300ms ease;
+    width: 100%;
 
     .display-name {
       color: $black;
@@ -19,6 +31,24 @@
       text-overflow: ellipsis;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+  }
+
+  .image-container {
+    &::before {
+      content: none;
+    }
+  }
+
+  &:hover {
+    .image-container {
+      .game-thumb {
+
+      }
+    }
+
+    .display-name-container {
+      height: 10rem;
     }
   }
 }
