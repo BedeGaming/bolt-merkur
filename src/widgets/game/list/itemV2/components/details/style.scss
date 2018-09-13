@@ -34,19 +34,7 @@
     }
   }
 
-  .image-container {
-    &::before {
-      content: none;
-    }
-  }
-
   &:hover {
-    .image-container {
-      .game-thumb {
-
-      }
-    }
-
     .display-name-container {
       height: 10rem;
     }

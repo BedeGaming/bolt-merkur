@@ -1,0 +1,9 @@
+@import '../../../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/components/image/style';
+
+.game-item {
+  .image-container {
+    &::before {
+      content: none;
+    }
+  }
+}
