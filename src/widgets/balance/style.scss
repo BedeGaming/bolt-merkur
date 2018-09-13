@@ -18,6 +18,8 @@
   }
 }
 
+$dark-blue: #3c4466;
+
 app-hub {
 
   total-balance {
@@ -33,26 +35,32 @@ app-hub {
     padding: 1rem 2rem;
 
     svg {
-      fill: $tertiary-base;
+      fill: darken($blue, 10%);
       transition: fill 200ms ease;
       width: 0.8rem;
     }
 
     .wallets {
-      animation: menuToggle 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 both;
-      animation-direction: reverse;
       background-color: $light-blue;
       border-radius: 0 0 5px 5px;
       box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
       font-weight: normal;
       height: auto;
       left: auto;
+      line-height: 1rem;
+      max-height: 0;
       min-width: 100%;
+      opacity: 0;
       overflow: hidden;
+      padding: 0 2rem;
       position: absolute;
       right: 0;
       top: 100%;
+      transform: scale(0.95);
       transform-origin: top;
+      transition-duration: 300ms;
+      transition-property: line-height, max-height, opacity, padding, transform;
+      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
       visibility: visible;
       width: auto;
 
@@ -67,7 +75,11 @@ app-hub {
       height: 100%;
 
       .wallets {
-        animation: menuToggle 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 both;
+        line-height: 2rem;
+        max-height: 50rem;
+        opacity: 1;
+        padding: 2rem;
+        transform: scale(1);
       }
     }
 
@@ -79,17 +91,17 @@ app-hub {
   }
 
   .balance-group {
-    color: $tertiary-base;
+    color: $dark-blue;
     display: flex;
 
     &:hover {
-      color: darken($tertiary-base, 10%);
+      color: darken($blue, 20%);
     }
   }
 
   .hide-balance {
     align-items: center;
-    background-color: darken($tertiary-base, 10%);
+    background-color: darken($blue, 10%);
     border-radius: 3px 0 0 3px;
     bottom: 0;
     display: flex;
@@ -100,7 +112,7 @@ app-hub {
     top: 0;
 
     svg {
-      fill: $tertiary-base;
+      fill: $dark-blue;
       pointer-events: none;
       width: 2rem;
     }
@@ -117,6 +129,7 @@ app-hub {
   }
 
   main-balance {
+    margin-right: 0.5rem;
     transition: color 300ms ease;
 
     &:hover {
@@ -125,7 +138,7 @@ app-hub {
   }
 
   sub-balance {
-    color: $tertiary-base;
+    color: darken($blue, 10%);
     flex-direction: row;
     font-size: 1.6rem;
     margin-bottom: 1rem;
@@ -144,11 +157,11 @@ app-hub {
   }
 
   wallet-name {
-    color: $tertiary-base;
+    color: $dark-grey;
   }
 
   wallet-value {
-    color: $tertiary-base;
+    color: $dark-blue;
     font-weight: bold;
   }
 }

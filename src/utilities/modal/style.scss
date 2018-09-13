@@ -1,6 +1,9 @@
 @import '../../../node_modules/@bedegaming/bolt/src/utilities/modal/style';
 
 dialog {
+  padding: 3rem;
+  width: 45rem;
+
   h1 {
     @include responsive-type(30, 36);
 

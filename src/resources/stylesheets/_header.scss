@@ -1,4 +1,28 @@
-@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/_header';
+header {
+  &-left,
+  &-right,
+  &-center {
+    display: flex;
+  }
+
+  &-left {
+    align-items: center;
+    height: 100%;
+    width: $header-left-width;
+
+    @media ($large) {
+      display: none;
+    }
+  }
+
+  &-right {
+    width: $header-right-width;
+  }
+}
+
+hamburger-trigger {
+  width: 100%;
+}
 
 .site-header {
   background-color: rgba(255, 255, 255, 0.95);
