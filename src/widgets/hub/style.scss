@@ -1,5 +1,95 @@
 @import '../../../node_modules/@bedegaming/bolt/src/widgets/hub/style';
 
+nav-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media ($large) {
+    @if $isSidebar == false {
+      flex-direction: row;
+    }
+  }
+}
+
+app-hub {
+  align-items: center;
+  animation: none;
+  background: $header-background;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
+  margin: auto;
+  max-width: $max-width;
+  padding: 0 $padding;
+
+  @media ($large) {
+    justify-content: $app-hub-large-justify-content;
+
+    @if $isSidebar == true {
+      padding: $padding-large;
+    }
+  }
+
+  ul {
+    align-items: $nav-container-ul-align-items;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: $nav-container-ul-text-align;
+    width: 100%;
+
+    @media ($large) {
+      justify-content: space-between;
+      @if $isSidebar == true {
+        flex-direction: column;
+      } @else {
+        flex-direction: row;
+
+        li {
+          margin-left: $gutter;
+        }
+      }
+    }
+  }
+
+  nav-container {
+    animation: disableAnim $nav-container-drawer-transition-time;
+    background: $nav-container-drawer-background;
+    bottom: 0;
+    left: $nav-container-drawer-left;
+    min-width: $nav-container-drawer-min-width;
+    position: fixed;
+    top: 0;
+    transform: $nav-container-drawer-transform;
+    transition: $nav-container-drawer-transition;
+    width: $nav-container-drawer-width;
+    z-index: 3;
+
+    .nav-open & {
+      transform: translateX(0);
+    }
+
+    @media ($large) {
+      animation: none;
+      left: $nav-container-left;
+      min-width: 0;
+      position: relative;
+      transform: none;
+      transition: none;
+      width: $nav-container-width;
+
+      @if $isSidebar == true {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+}
+
 app-hub {
   background-color: $white;
   margin: 0;
@@ -25,7 +115,7 @@ app-hub {
     .main-nav {
       margin-bottom: 1rem;
 
-      @media ($medium) {
+      @media ($large) {
         margin-bottom: 0;
       }
 
@@ -35,7 +125,11 @@ app-hub {
         a {
           display: flex;
           font-size: 1.8rem;
-          padding: 2rem 3rem;
+          padding: 2rem 2rem;
+
+          @media ($x-large) {
+            padding: 2rem 3rem;
+          }
 
           .item-text {
             color: $nav-item-color;
@@ -46,16 +140,16 @@ app-hub {
           &.account-link {
             display: none;
 
-            @media ($medium) {
+            @media ($large) {
               display: inline-block;
-              padding-right: 4rem;
+              padding-right: 2rem;
 
               .item-icon {
                 display: flex;
                 height: 8px;
                 justify-content: center;
                 position: absolute;
-                right: 2.5rem;
+                right: 1rem;
                 top: 50%;
                 transform: translateY(-50%);
 
@@ -67,6 +161,14 @@ app-hub {
               .item-text {
                 color: $primary-base;
                 font-weight: bold;
+              }
+            }
+
+            @media ($x-large) {
+              padding-right: 4rem;
+
+              .item-icon {
+                right: 2.5rem;
               }
             }
           }
@@ -97,7 +199,7 @@ app-hub {
           }
         }
 
-        @media ($medium) {
+        @media ($large) {
           .sub-menu {
             align-items: stretch;
             backdrop-filter: blur(5px);
@@ -124,8 +226,10 @@ app-hub {
               a {
                 color: $nav-item-color;
                 font-size: 1.6rem;
+                font-weight: normal;
                 opacity: 0;
                 padding: 0.8rem 2rem;
+                text-transform: none;
                 transition: color 300ms ease, padding 300ms cubic-bezier(0.165, 0.84, 0.44, 1), border 300ms ease, opacity 400ms ease;
               }
             }
@@ -204,7 +308,7 @@ app-hub {
   .nav-buttons {
     display: flex;
 
-    @media ($medium) {
+    @media ($large) {
       &.is-mobile {
         display: none;
       }
@@ -221,7 +325,7 @@ app-hub {
       margin: 0 0 2rem;
     }
 
-    @media ($medium) {
+    @media ($large) {
       flex-direction: row;
 
       .btn {
@@ -239,7 +343,7 @@ app-hub {
     flex: 1;
     height: auto;
 
-    @media ($medium) {
+    @media ($large) {
       flex: 1;
     }
   }
@@ -259,6 +363,7 @@ app-hub {
 
       .button-container {
         display: flex;
+        flex-direction: row;
       }
     }
 

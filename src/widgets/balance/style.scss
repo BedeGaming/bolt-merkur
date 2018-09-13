@@ -41,20 +41,26 @@ app-hub {
     }
 
     .wallets {
-      animation: menuToggle 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 both;
-      animation-direction: reverse;
       background-color: $light-blue;
       border-radius: 0 0 5px 5px;
       box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
       font-weight: normal;
       height: auto;
       left: auto;
+      line-height: 1rem;
+      max-height: 0;
       min-width: 100%;
+      opacity: 0;
       overflow: hidden;
+      padding: 0 2rem;
       position: absolute;
       right: 0;
       top: 100%;
+      transform: scale(0.95);
       transform-origin: top;
+      transition-duration: 300ms;
+      transition-property: line-height, max-height, opacity, padding, transform;
+      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
       visibility: visible;
       width: auto;
 
@@ -69,7 +75,11 @@ app-hub {
       height: 100%;
 
       .wallets {
-        animation: menuToggle 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 both;
+        line-height: 2rem;
+        max-height: 50rem;
+        opacity: 1;
+        padding: 2rem;
+        transform: scale(1);
       }
     }
 
