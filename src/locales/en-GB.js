@@ -13,6 +13,7 @@ const enGB = {
       profile_balance_title: 'Account Balance',
       profile_details_title: 'Your Details',
       register_new_user: 'Not a member? <span>Create Account</span>',
+      total_balance: 'Total Balance',
       username_placeholder: 'Username'
     }
   }
