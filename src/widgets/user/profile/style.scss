@@ -1,14 +1,15 @@
-
-
 @import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/profile/style';
 
 profile-area {
   padding: 0;
 
   user-info {
-    margin: 0 auto;
+    margin: 1.5rem auto;
     max-width: 130rem;
-    width: calc(100% - 6rem);
+
+    @media ($small) {
+      width: calc(100% - 6rem);
+    }
   }
 
   h2 {
@@ -19,41 +20,161 @@ profile-area {
     text-transform: uppercase;
   }
 
-  personal-section {
+  personal-section,
+  marketing-prefs {
     background: $white;
     border: 1px solid $light-grey;
     box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
     flex: 1;
-    margin: 3rem 1.5rem 3rem 0;
-    padding: 3rem;
-    width: 50%;
+    margin: 1rem 2rem;
+    padding: 2rem;
+    width: 100%;
 
-    .user-details {
-      background: $white;
-      padding: 0;
+    @media($small) {
+      margin: 1.5rem 0;
+      min-width: 100%;
+      padding: 3rem;
+    }
+
+    @media($medium) {
+      margin: 3rem 1.5rem 3rem 0;
+      min-width: 32rem;
+      width: 50%;
+    }
+
+    .btn {
+      border-radius: 4px;
+      border-width: 2px;
+      flex: 1;
+      font-size: 1.4rem;
+      margin: 0 1rem 2rem;
+      max-width: 27rem;
+      min-width: 22rem;
+      padding: 1.5rem;
+      width: 50%;
+
+      @media ($small) {
+        font-size: 1.6rem;
+        margin: 0 1.5rem 3rem;
+        max-width: 27rem;
+        min-width: 22rem;
+      }
     }
   }
 
+  .user-details {
+    background: $white;
+    margin-bottom: 3rem;
+    padding: 0;
+
+    h3 {
+      color: $grey;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .updates-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
   marketing-prefs {
-    border: 1px solid $light-grey;
-    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
-    flex: 1;
-    margin: 3rem 0 3rem 1.5rem;
-    width: 50%;
+    @media($medium) {
+      margin: 3rem 0 3rem 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .input-container {
+      align-items: center;
+      margin-bottom: 2rem;
+      min-height: auto;
+      padding-top: 1.5rem;
+
+      @media ($small) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .input-group {
+      flex-flow: column wrap;
+      width: 12rem;
+    }
+
+    label {
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+
+      .btn {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .balance-section {
+    background: $white;
     border: 1px solid $light-grey;
     box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
-    margin-bottom: 3rem;
+    margin: 1rem 2rem 2rem;
+    padding: 2rem;
     width: 100%;
-  }
 
-  pending-withdrawals {
+    @media ($small) {
+      margin: 1.5rem 0;
+      padding: 3rem;
+    }
 
+    @media ($medium) {
+      margin: 0 0 1.5rem;
+      padding: 3rem;
+    }
   }
 
   user-wallets {
+    section {
+      background: $white;
+      border-bottom: 1px solid $grey;
+      padding: 0 0 3rem;
+    }
+
+    wallet-name {
+      color: $grey;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    wallet-value {
+      font-size: 1.8rem;
+    }
+
+    total-balance {
+      border: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    sub-balance {
+      margin-bottom: 0;
+
+      wallet-name {
+        color: lighten($grey, 20%);
+      }
+
+      wallet-value {
+        color: $grey;
+      }
+    }
+  }
+
+  pending-withdrawals {
 
   }
 }

@@ -6,11 +6,6 @@
   <div>
     <h3>{{translate "name"}}</h3>
     <p>{{firstname}} {{lastname}}</p>
-
-    <h3>{{translate "dob_label"}}</h3>
-    <p>{{dateOfBirth}}</p>
-  </div>
-  <div>
     <h3>{{translate "address"}}</h3>
     <p>{{addressLine1}}</p>
     {{#if addressLine2}}
@@ -21,16 +16,18 @@
       <p>{{county}}</p>
     {{/if}}
     <p>{{postCode}}</p>
-  </div>
-  <div>
     <h3>{{translate "telephone"}}</h3>
     <p class="{{telephoneClass}}">
       {{#if telephone}}
-        {{telephone}}
+      {{telephone}}
       {{else}}
-        {{translate "undisclosed"}}
+      {{translate "undisclosed"}}
       {{/if}}
     </p>
+  </div>
+  <div>
+    <h3>{{translate "dob_label"}}</h3>
+    <p>{{dateOfBirth}}</p>
     <h3>{{translate "gender"}}</h3>
     <p class="{{genderClass}}">
       {{#if gender}}
@@ -42,14 +39,12 @@
   </div>
 </section>
 <section class="user-updates">
-  <div>
-    <button class="updated-contacts">{{translate "update_details"}}</button>
-    <button class="change-password">{{translate "change_password"}}</button>
-    <small>
-      {{translate "change_address_contact"}} <a href="{{supportUrl}}" rel="{{supportRel}}" title="{{translate
-      "support"}}">{{translate "support"}}</a>.
-      {{translate "set_limits"}} <a href="/account/responsible-gambling" title="{{translate
-      "responsible_gambling"}}">{{translate "responsible_gambling"}}.</a>
-    </small>
+  <div class="updates-buttons">
+    <button class="btn updated-contacts">{{translate "update_details"}}</button>
+    <button class="btn change-password">{{translate "change_password"}}</button>
   </div>
+  <small>
+    {{translate "change_address_contact"}} <a href="{{supportUrl}}" rel="{{supportRel}}" title="{{translate
+      "support"}}">{{translate "support"}}</a>. {{translate "set_limits"}} <a href="/account/responsible-gambling" title="{{translate "responsible_gambling"}}">{{translate "responsible_gambling"}}.</a>
+  </small>
 </section>
