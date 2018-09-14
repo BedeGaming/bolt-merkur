@@ -4,30 +4,41 @@
   },
   "walletCurrency": "GBP",
   "api": {
-    "client": "mjackpots_web",
-    "url": "https://qa02-mjackpots.bedegaming.net/api/v5"
+    "client": "bededemo",
+    "url": "https://qa02-bedecasino.bedegaming.net/api/v5"
   },
   "auth": {
-    "clientId": "mjackpots_web",
+    "clientId": "bededemo",
     "scope": "spine"
   },
   "banking": {
     "addCard": {
-      "useCodeForBonus": true
+      "depositWithAddCard": true
     },
-    "gatewayEnabled": false,
     "deposit": {
       "defaultAmount": 50,
       "enablePromotions": true,
       "hideWithdrawals": false,
-      "isModal": true,
+      "isModal": false,
       "quickAmounts": [
-        10,
+        25,
         50,
         100,
         500
-      ]
-    }
+      ],
+      "useCodeForBonus": false
+    },
+    "paymentMethods": {
+      "isHubDefault": true
+    },
+    "providers": [
+      {
+        "provider": "card",
+        "localeKey": "debit_credit",
+        "iconId": "card"
+      }
+    ],
+    "validateCard": true
   },
   "metaTitle": "",
   "metaDescription": "",
@@ -43,7 +54,7 @@
     }
   },
   "feeds": {
-    "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
+    "url": "https://qa02-bedecasino.bedegaming.net/feeds/v1"
   },
   "games": {
     "react": true,
@@ -254,7 +265,7 @@
     "telephoneEnabled": true,
     "regSuccess": true
   },
-  "siteCode": "mjackpots.com",
+  "siteCode": "bedecasino",
   "siteName": "Bede Casino",
   "siteRoot": "http://localhost:3000",
   "slider": {

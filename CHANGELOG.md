@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.7.0
+- changed sitecode and spine call from mjackpots to bedecasino
+
 ## 0.6.0
 - added styling to Login modal
 
