@@ -7,3 +7,15 @@
     }
   }
 }
+
+@media ($medium) {
+  .game-item {
+    .image-container {
+      &:hover {
+        .game-thumb {
+          transform: none;
+        }
+      }
+    }
+  }
+}
