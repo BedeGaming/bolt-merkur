@@ -29,7 +29,8 @@ profile-area {
   }
 
   personal-section,
-  marketing-prefs {
+  marketing-prefs,
+  .balance-section {
     background: $white;
     border: 1px solid $light-grey;
     box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
@@ -135,23 +136,18 @@ profile-area {
   }
 
   .balance-section {
-    background: $white;
-    border: 1px solid $light-grey;
-    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
     margin: 1rem 2rem 2rem;
     order: 1;
-    padding: 2rem;
-    width: 100%;
 
     @media ($small) {
+      flex: none;
       margin: 1.5rem 0;
-      padding: 3rem;
     }
 
     @media ($medium) {
       margin: 0 0 1.5rem;
       order: 2;
-      padding: 3rem;
+      width: 100%;
     }
   }
 
