@@ -12,9 +12,20 @@ $input-height: 8rem;
   }
 }
 
+@keyframes animate {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 dialog {
-  border: 0.5rem solid $white;
+  animation: animate 300ms ease 0s 1 both;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(22, 20, 20, 0.15);
   padding: 3rem;
   width: 45rem;
 
