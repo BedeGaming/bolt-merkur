@@ -55,6 +55,10 @@ game-list {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     }
 
+    @media ($medium) {
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
+
     @media ($large) {
       grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
     }

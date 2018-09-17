@@ -6,14 +6,43 @@
       content: none;
     }
   }
-}
 
-@media ($medium) {
-  .game-item {
+  figure {
+    height: 25rem;
+    padding-bottom: 0;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media ($medium) {
     .image-container {
-      &:hover {
-        .game-thumb {
-          transform: none;
+      .info {
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        display: flex;
+        height: 3.2rem;
+        justify-content: center;
+        pointer-events: none;
+        visibility: visible;
+        top: 1rem;
+        transform: scale(0.8);
+        transition-duration: 500ms;
+        transition-property: opacity, transform;
+        right: 1rem;
+        width: 3.2rem;
+      }
+    }
+
+    &:hover {
+      .image-container {
+        .info {
+          opacity: 1;
+          pointer-events: all;
+          transform: scale(1);
         }
       }
     }
