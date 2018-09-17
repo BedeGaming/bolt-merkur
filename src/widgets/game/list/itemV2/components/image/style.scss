@@ -8,7 +8,7 @@
   }
 
   figure {
-    height: 25rem;
+    height: 20rem;
     padding-bottom: 0;
 
     img {
@@ -18,6 +18,10 @@
   }
 
   @media ($medium) {
+    figure {
+      height: 25rem;
+    }
+
     .image-container {
       .info {
         align-items: center;
