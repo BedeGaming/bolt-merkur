@@ -1,12 +1,6 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/spinner';
 
 button.waiting {
-  // background-color: $primary-base;
-
-  &.btn.btn-primary {
-    color: transparent;
-  }
-
   span {
     position: relative;
 
@@ -56,10 +50,10 @@ button.waiting {
 
     span {
       > .spinner {
-        border-bottom: 4px solid lighten($white, 40%);
+        border-bottom: 4px solid rgba(255, 255, 255, 0.5);
         border-left: 4px solid $white;
-        border-right: 4px solid lighten($white, 40%);
-        border-top: 4px solid lighten($white, 40%);
+        border-right: 4px solid rgba(255, 255, 255, 0.5);
+        border-top: 4px solid rgba(255, 255, 255, 0.5);
       }
     }
   }
