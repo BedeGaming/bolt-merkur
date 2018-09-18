@@ -1,0 +1,28 @@
+<h1>{{translate "password_reset_title"}}</h1>
+<form novalidate>
+  <p>{{translate "request_password_text"}}</p>
+  <div class="input-container">
+  	<input name="username"
+           id="username"
+           type="text"
+           placeholder=""
+           aria-label="{{translate 'username_placeholder'}}"
+           required>
+    <label for="username">{{translate "username"}}</label>
+    <svg class="spinner-dark" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <title>spinner</title>
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+  <footer>
+    <button type="submit" class="request-password">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <title>spinner</title>
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        {{translate "request_password"}}
+      </span>
+    </button>
+  </footer>
+</form>
