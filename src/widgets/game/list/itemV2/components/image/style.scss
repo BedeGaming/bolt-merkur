@@ -1,0 +1,59 @@
+@import '../../../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/components/image/style';
+
+.game-item {
+  .image-container {
+    &::before {
+      content: none;
+    }
+  }
+
+  figure {
+    height: 20rem;
+    padding-bottom: 0;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media ($medium) {
+    figure {
+      height: 20rem;
+    }
+
+    .image-container {
+      .info {
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        display: flex;
+        height: 3.2rem;
+        justify-content: center;
+        pointer-events: none;
+        right: 1rem;
+        top: 1rem;
+        transform: scale(0.8);
+        transition-duration: 500ms;
+        transition-property: opacity, transform;
+        visibility: visible;
+        width: 3.2rem;
+        z-index: 2;
+      }
+    }
+
+    &:hover {
+      .image-container {
+        .info {
+          opacity: 1;
+          pointer-events: all;
+          transform: scale(1);
+        }
+
+        &::before {
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
