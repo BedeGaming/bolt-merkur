@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.8.0
+- game items are now correctly styled
+
 ## 0.7.0
 - changed sitecode and spine call from mjackpots to bedecasino
 

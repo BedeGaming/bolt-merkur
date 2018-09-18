@@ -7,20 +7,6 @@ import Info from 'widgets/game/list/itemV2/components/info/info.jsx';
 import JackpotContainer from 'widgets/game/list/itemV2/components/jackpot/jackpotContainer.jsx';
 import TagContainer from 'widgets/game/list/itemV2/components/tag/tagContainer.jsx';
 
-/**
- * @param {string} displayName Display name of the game
- * @param {string} friendlyUrlPrefix URL to the game – /game/game-name
- * @param {string} id Model ID of the game – /game/game-name
- * @param {array} images Array of images for the game
- * @param {number} isNativeAppGame If the game is a native app game
- * @param {string} jackpotId Jackpot ID of the game if applicable
- * @param {number} maxBet Max bet for game
- * @param {number} minBet Min bet for game
- * @param {number} numberOfLines Number of paylines for game
- * @param {number} rtp RTP of game
- * @param {array} tags Tags the game has
- * @param {Mn Model} model Mn model of the game
- */
 export default ({
   displayName,
   friendlyUrlPrefix,
