@@ -38,7 +38,7 @@ export default ({
   tags,
   model
 }) => (
-  <div className={options.showExtraInfo ? 'info-enabled' : ''} onClick={fullItemHandler}>
+  <div className={options.showExtraInfo ? 'info-enabled item-container' : 'item-container'} onClick={fullItemHandler}>
     <TagContainer
       isNativeAppGame={isNativeAppGame}
       tags={tags}

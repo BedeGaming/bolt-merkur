@@ -19,7 +19,7 @@
 
   @media ($medium) {
     figure {
-      height: 25rem;
+      height: 20rem;
     }
 
     .image-container {
@@ -31,13 +31,14 @@
         height: 3.2rem;
         justify-content: center;
         pointer-events: none;
-        visibility: visible;
+        right: 1rem;
         top: 1rem;
         transform: scale(0.8);
         transition-duration: 500ms;
         transition-property: opacity, transform;
-        right: 1rem;
+        visibility: visible;
         width: 3.2rem;
+        z-index: 2;
       }
     }
 
@@ -47,6 +48,10 @@
           opacity: 1;
           pointer-events: all;
           transform: scale(1);
+        }
+
+        &::before {
+          height: 3rem;
         }
       }
     }
