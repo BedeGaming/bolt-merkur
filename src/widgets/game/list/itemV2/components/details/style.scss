@@ -32,13 +32,15 @@
     .display-name-container {
       background: none;
       flex: none;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-bottom: 0.5rem;
       padding: 0;
       transition: margin 500ms ease;
     }
 
     .display-name {
-      @include responsive-type(16, 20);
+      @include responsive-type(14, 16);
 
       color: $black;
       font-weight: bold;
