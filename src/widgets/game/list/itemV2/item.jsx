@@ -39,13 +39,13 @@ export default ({
     <JackpotContainer jackpotId={jackpotId}></JackpotContainer>
     <div className="display-container">
       <div className="display-name-container">
-        <Details
-          displayName={displayName}
-          friendlyUrlPrefix={friendlyUrlPrefix}
-        />
         <TagContainer
           isNativeAppGame={isNativeAppGame}
           tags={tags}
+        />
+        <Details
+          displayName={displayName}
+          friendlyUrlPrefix={friendlyUrlPrefix}
         />
       </div>
       <Buttons playClickHandler={playClickHandler} />
