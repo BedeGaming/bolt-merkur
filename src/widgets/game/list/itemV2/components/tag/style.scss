@@ -1,0 +1,19 @@
+.game-item {
+  .featured-tag {
+    align-items: center;
+    border: 2px solid $dark-green;
+    border-radius: 5px;
+    color: $dark-green;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: 0.2rem 0.4rem;
+
+    span {
+      line-height: normal;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

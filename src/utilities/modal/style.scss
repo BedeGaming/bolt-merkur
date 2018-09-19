@@ -154,7 +154,7 @@ dialog {
 
           &::after {
             animation-delay: 200ms;
-            background-color: darken($green, 10%);
+            background-color: $dark-green;
             height: 75%;
             width: 75%;
           }
