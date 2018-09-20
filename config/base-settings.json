@@ -105,6 +105,10 @@
         "name": "alphabetical",
         "key": "displayName"
       }
+    ],
+    "tagsToHighlight": [
+      "new",
+      "jackpot"
     ]
   },
   "paymentProviderIcons": [
