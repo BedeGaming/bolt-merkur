@@ -33,8 +33,7 @@ profile-area {
   .balance-section {
     background: $white;
     border: 1px solid $light-grey;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
     flex: 1;
     margin: 1rem 2rem;
     padding: 2rem;
@@ -93,60 +92,6 @@ profile-area {
 
   personal-section {
     order: 0;
-    position: relative;
-
-    .spinner {
-      -ms-transform: translateZ(0);
-      -webkit-animation: spinload 1.1s infinite linear;
-      -webkit-transform: translateZ(0);
-      animation: spinload 1.1s infinite linear;
-      border-bottom: 4px solid lighten($primary-base, 40%);
-      border-left: 4px solid $primary-base;
-      border-radius: 50%;
-      border-right: 4px solid lighten($primary-base, 40%);
-      border-top: 4px solid lighten($primary-base, 40%);
-      bottom: 43rem;
-      font-size: 1.5rem;
-      height: 2.5rem;
-      left: 0;
-      margin: auto;
-      position: absolute;
-      right: 0;
-      text-indent: -9999em;
-      top: 0;
-      transform: translateZ(0);
-      width: 2.5rem;
-    }
-
-    .spinner::after {
-      border-radius: 50%;
-      height: 2.5rem;
-      width: 2.5rem;
-    }
-
-    @-webkit-keyframes spinload {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spinload {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
   }
 
   marketing-prefs {
@@ -204,10 +149,6 @@ profile-area {
       order: 2;
       width: 100%;
     }
-
-    .btn {
-      margin-bottom: 0;
-    }
   }
 
   user-wallets {
@@ -261,6 +202,23 @@ profile-area {
   pending-withdrawals {
     &.account-pending-withdrawals {
       margin: 0;
+
+      &.large {
+        grid-content {
+          @media ($medium) {
+            padding: 1.5rem 3rem;
+          }
+        }
+
+        .amount {
+          font-size: 2.2rem;
+          font-weight: normal;
+        }
+
+        .time {
+          margin-bottom: 0;
+        }
+      }
     }
 
     h2 {
@@ -299,6 +257,59 @@ profile-area {
           font-size: 1.6rem;
           width: 25rem;
         }
+      }
+    }
+
+    .pending-withdrawals-grid {
+      flex-flow: column nowrap;
+
+      grid-content {
+        flex-flow: column nowrap;
+        padding: 2rem;
+
+        @media ($small) {
+          flex-flow: row nowrap;
+        }
+      }
+
+      li {
+        margin: 0 0 1.5rem;
+        max-width: none;
+        padding: 0;
+
+        &:only-child {
+          margin-bottom: 0;
+          max-width: none;
+        }
+      }
+
+      .btn.btn-primary {
+        margin: 0;
+        min-width: 14rem;
+        padding: 1.5rem;
+
+        @media ($small) {
+          font-size: 1.4rem;
+          margin: 0 0 0 1.5rem;
+        }
+
+        @media ($medium) {
+          font-size: 1.6rem;
+          min-width: 22rem;
+          padding: 1.7rem;
+        }
+      }
+    }
+
+    .pending-details {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      @media ($small) {
+        align-items: flex-start;
+        margin-bottom: 0;
       }
     }
 
