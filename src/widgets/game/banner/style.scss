@@ -1,0 +1,273 @@
+//-------------------------------
+// Game Banner
+//-------------------------------
+
+game-info-header {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+game-banner {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .rg-logos {
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: center;
+
+    @media ($game-info-banner-play-buttons-breakpoint) {
+      left: $gutter;
+      position: absolute;
+      top: calc(50% - 1rem);
+    }
+
+    svg {
+      background: none;
+      fill: $white;
+      height: 2rem;
+      position: relative;
+      width: auto;
+    }
+
+    .gambleaware {
+      height: 3rem;
+      width: auto;
+    }
+
+    .eighteenplus {
+      height: 2rem;
+      margin: 0.5rem 0 0 0.5rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .play-buttons-region {
+    display: none;
+  }
+
+  .play-buttons {
+    align-items: stretch;
+    background: $game-info-banner-btn-background-mobile;
+    border-radius: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 1rem 2rem 2rem;
+    position: relative;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    @media ($game-info-banner-play-buttons-breakpoint) {
+      background: $game-info-banner-btn-background;
+      border-radius: $game-info-banner-btn-background-border-radius;
+      padding: $game-info-banner-btn-background-padding;
+      position: absolute;
+      right: $game-info-banner-btn-background-right;
+    }
+  }
+
+  button {
+    width: 100%;
+
+    @media ($small) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      width: auto;
+    }
+  }
+
+  .play {
+    @extend %btn-primary;
+  }
+
+  .demo {
+    @extend %#{$game-info-banner-btn-demoplay-type};
+
+    margin-left: $gutter;
+  }
+
+  &.game-screenshot {
+    overflow: visible;
+    padding: 2rem 1rem 1rem;
+
+    .play-buttons {
+      align-items: center;
+      flex-direction: column;
+
+      @media ($small) {
+        position: relative;
+      }
+    }
+
+    h1 {
+      @include responsive-type(25, 40);
+
+      padding: 0 2rem;
+    }
+
+    .game-screenshot-wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 2rem 2rem 0;
+
+      @include breakpoint(small) {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+    }
+
+    .game-screenshot-section {
+      background: transparentize($black, 0.9);
+      min-height: 0;
+      position: relative;
+      width: 100%;
+
+      @include breakpoint(small) {
+        width: 70%;
+      }
+
+      @include breakpoint(medium) {
+        width: 70%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .game-thumb-section {
+      flex: none;
+      margin-right: 0;
+      max-width: 100%;
+      min-width: 20rem;
+      width: 75%;
+
+      @include breakpoint(small) {
+        margin-right: 1rem;
+        width: 30%;
+      }
+
+      @include breakpoint(medium) {
+        margin-right: 2rem;
+        width: 30%;
+      }
+    }
+
+    game-item {
+      cursor: default;
+
+      &::before {
+        content: none;
+      }
+
+      &:hover {
+        // Don't use hover on mobile/tablet
+        opacity: 1;
+
+        @include breakpoint(1024px) {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .play,
+    .demo {
+      min-width: 18rem;
+      width: 80%;
+    }
+
+    .demo {
+      @extend %btn-invert-primary;
+
+      margin: 1rem 0 0;
+    }
+
+    .game-thumb {
+      margin: 0;
+    }
+
+    .game-name-info {
+      display: none;
+    }
+
+    .game-details {
+      align-items: center;
+      bottom: 0;
+      display: none;
+      left: 0;
+      padding: 2rem;
+      width: 100%;
+    }
+  }
+}
+
+game-info-header {
+  display: block;
+
+  &.related-games {
+    display: flex;
+
+    game-related {
+      @include breakpoint(reverse-large) {
+        display: none;
+      }
+    }
+  }
+
+  game-related {
+    background: $game-info-banner-related-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: $game-info-banner-related-padding;
+    width: 20%;
+
+    h2 {
+      color: $game-info-banner-related-heading-color;
+      font-size: $game-info-banner-related-heading-font-size;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    game-item {
+      margin: 0.6rem;
+      overflow: visible;
+
+      &::after {
+        padding-top: 61.9%;
+      }
+
+      .game-name-info {
+        display: none;
+      }
+    }
+
+    .ghost {
+      margin: 0;
+    }
+
+    .game-thumb {
+      border: 2px solid $white;
+    }
+  }
+}

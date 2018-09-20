@@ -1,0 +1,10 @@
+{{#if banner}}
+  {{#if hasPromo}}
+    <img src="{{path}}" alt="{{translate "promotions"}}" onerror="this.src='/assets/images/svgSprites/fallback.svg'; this.srcset='/assets/images/svgSprites/fallback.svg'" />
+  {{else}}
+    <img src="{{banner}}" srcset="{{largeBanner}} 1400w, {{banner}} 700w" alt="{{translate "play"}} {{name}}" onerror="this.src='/assets/images/svgSprites/fallback.svg'; this.srcset='/assets/images/svgSprites/fallback.svg'" />
+  {{/if}}
+{{else}}
+  <svg width="100%" viewBox="0 0 3 1"><use xlink:href="#icon-fallback"/></svg>
+{{/if}}
+<div class="play-buttons-region"></div>
