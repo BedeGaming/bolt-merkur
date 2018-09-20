@@ -1,0 +1,27 @@
+@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/mixins';
+
+@mixin breakpoint($point) {
+  $x-small: 320px;
+  $small: 460px;
+  $medium: 769px;
+  $large: 1025px;
+  $x-large: 1250px;
+  $login-breakpoint: medium;
+
+  //standard breakpoints
+  @if $point == x-small {
+    @media (min-width: ($x-small)) { @content; }
+  }
+  @if $point == small {
+    @media (min-width: ($small)) { @content; }
+  }
+  @if $point == medium {
+    @media (min-width: ($medium)) { @content; }
+  }
+  @if $point == large {
+    @media (min-width: ($large)) { @content; }
+  }
+  @if $point == x-large {
+    @media (min-width: ($x-large)) { @content; }
+  }
+}
