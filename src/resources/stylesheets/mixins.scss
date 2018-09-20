@@ -1,6 +1,5 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/mixins';
 
-
 @mixin breakpoint($point) {
   $x-small: 320px;
   $small: 460px;
@@ -8,6 +7,7 @@
   $large: 1025px;
   $x-large: 1250px;
   $login-breakpoint: medium;
+
   //standard breakpoints
   @if $point == x-small {
     @media (min-width: ($x-small)) { @content; }
@@ -23,55 +23,5 @@
   }
   @if $point == x-large {
     @media (min-width: ($x-large)) { @content; }
-  }
-
-  //reverse breakpoints when required
-  @if $point == reverse-x-small {
-    @media (max-width: $x-small - 1) { @content; }
-  }
-  @if $point == reverse-small {
-    @media (max-width: $small - 1) { @content; }
-  }
-  @if $point == reverse-medium {
-    @media (max-width: $medium - 1) { @content; }
-  }
-  @if $point == reverse-large {
-    @media (max-width: $large - 1) { @content; }
-  }
-  @if $point == reverse-x-large {
-    @media (max-width: $x-large - 1) { @content; }
-  }
-
-  //exclusive breakpoints when required
-  @if $point == exclusive-x-small {
-    @media (max-width: $x-small) { @content; }
-  }
-  @if $point == exclusive-small {
-    @media (max-width: $small) { @content; }
-  }
-  @if $point == exclusive-medium {
-    @media (min-width: ($small + 1)) and (max-width: $medium) { @content; }
-  }
-  @if $point == exclusive-large {
-    @media (min-width: ($medium + 1)) and (max-width: $large) { @content; }
-  }
-  @if $point == exclusive-x-large {
-    @media (min-width: ($large + 1)) and (max-width: $x-large) { @content; }
-  }
-
-  //other media queries when required
-  @if $point == iOS {
-    @media (min-device-width: 768px) and (max-device-width: 1024px), (max-device-width: 480px) { @content; }
-  }
-
-  @if $point == portrait {
-    @media (orientation: portrait) { @content; }
-  }
-  @if $point == landscape {
-    @media (orientation: landscape) { @content; }
-  }
-
-  @if type_of($point) == number {
-    @media (min-width: ($point + 1)) { @content; }
   }
 }
