@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.9.0
+- added 'new' and 'jackpot' tag styles for game item
+
 ## 0.8.0
 - game items are now correctly styled
 
