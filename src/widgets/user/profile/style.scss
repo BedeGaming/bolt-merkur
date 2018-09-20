@@ -236,6 +236,10 @@ profile-area {
     div {
       text-align: center;
       width: 100%;
+
+      @media ($medium) {
+        text-align: left;
+      }
     }
 
     p {
@@ -297,6 +301,17 @@ profile-area {
           font-size: 1.6rem;
           min-width: 22rem;
           padding: 1.7rem;
+        }
+
+        &.deposit {
+          margin-left: 0;
+          max-width: 27rem;
+          min-width: 22rem;
+          padding: 1.7rem;
+
+          @media ($small) {
+            font-size: 1.6rem;
+          }
         }
       }
     }

@@ -17,8 +17,8 @@
   white-space: nowrap;
 
   &:hover {
-    border-color: $primary-gradient-to;
-    color: $primary-gradient-to;
+    border-color: lighten($primary-base, 20%);
+    color: lighten($primary-base, 20%);
   }
 
   &.btn-primary,
