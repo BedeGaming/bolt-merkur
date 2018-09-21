@@ -1,0 +1,37 @@
+import View from '@bedegaming/bolt/src/pages/game/info/view.js';
+import PlayButtons from '@bedegaming/bolt/src/widgets/game/play-buttons/view.js';
+import BannerView from '@bedegaming/bolt/src/widgets/game/banner/view.js';
+import InfoView from '@bedegaming/bolt/src/widgets/game/info/view.js';
+import RelatedView from '@bedegaming/bolt/src/widgets/game/related/view.js';
+
+export default View.extend({
+
+  regions: {
+    playButtons: '.play-buttons-region',
+    banner: 'game-banner',
+    info: 'game-info',
+    relatedGames: 'related-games'
+  },
+
+  onAttach() {
+    const model = this.model;
+
+    if (!this.hasPromo) this.showChildView('playButtons', new PlayButtons({ model }), { replaceElement: true });
+
+    this.showChildView('banner', this.getBannerComponent(), { replaceElement: true });
+
+    this.showChildView('info', new InfoView({
+      model: this.currentGame,
+      related: this.relatedGames
+    }), { replaceElement: true });
+
+    if (window.config.features.gameInfoPageBannerRelatedGames && this.relatedGames.length) {
+      this.showChildView('relatedGames', new RelatedView({
+        model: this.model,
+        take: 3,
+        preLoaderItems: 3
+      }), { replaceElement: true });
+    }
+  }
+
+});
