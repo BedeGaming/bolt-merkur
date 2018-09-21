@@ -8,8 +8,15 @@ game-info-header {
   justify-content: center;
   margin: 0;
   max-width: none;
+  padding: 5rem;
+  width: 100%;
 
-  .play-buttons {
-    padding: 5rem;
+  game-overview {
+    h1 {
+      color: $primary-base;
+      font-size: 5.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
   }
 }

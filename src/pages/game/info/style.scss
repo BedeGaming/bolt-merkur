@@ -1,3 +1,9 @@
 .game-info-wrapper {
-  max-width: $max-width;
+  max-width: 93rem;
+}
+
+game-info-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
