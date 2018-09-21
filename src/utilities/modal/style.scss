@@ -1,7 +1,5 @@
 @import '../../../node_modules/@bedegaming/bolt/src/utilities/modal/style';
 
-$input-height: 8rem;
-
 @keyframes tick-enter {
   from {
     transform: scale(0) translate(-50%, -50%);
@@ -47,7 +45,7 @@ dialog {
   form {
     height: auto;
 
-    div.input-container {
+    .input-container {
       margin-bottom: 2rem;
       min-height: $input-height;
       position: relative;
@@ -60,11 +58,21 @@ dialog {
         font-weight: bold;
         height: $input-height;
         padding: 3.5rem 2rem 2rem;
+
+        &:focus {
+          color: $secondary-color-700;
+        }
+
+        &:focus + label,
+        &:valid + label,
+        &:focus + .peeky-password + label,
+        &:valid + .peeky-password + label {
+          font-size: 1.4rem;
+          font-weight: normal;
+          transform: translateY(-20%);
+        }
       }
 
-      input:focus {
-        color: $secondary-color-700;
-      }
 
       label {
         align-items: center;
@@ -82,19 +90,10 @@ dialog {
         width: 100%;
       }
 
-      input:focus + label,
-      input:valid + label,
-      input:focus + button.peeky-password + label,
-      input:valid + button.peeky-password + label {
-        font-size: 1.4rem;
-        font-weight: normal;
-        transform: translateY(-20%);
-      }
-
-      button.peeky-password {
+      .peeky-password {
         height: auto;
         line-height: normal;
-        right: 2rem;
+        right: 6rem;
         top: 4rem;
         transition: right 300ms ease;
 
@@ -162,10 +161,6 @@ dialog {
             transform: scale(1);
             transition-delay: 300ms;
           }
-        }
-
-        button.peeky-password {
-          right: 6rem;
         }
       }
     }
@@ -235,9 +230,10 @@ dialog {
         }
       }
 
-      button.primary-action,
-      button.request-password,
-      button.update-password {
+      .primary-action,
+      .request-password,
+      .update-password,
+      .update-contacts {
         @extend %btn;
         @extend %btn-primary;
       }
@@ -247,7 +243,7 @@ dialog {
       }
     }
 
-    button.register {
+    .register {
       color: $dark-blue;
       font-size: 1.6rem;
       margin: 0;
