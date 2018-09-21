@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.10.0
+- added styling to Registration modal
+
 ## 0.9.0
 - added 'new' and 'jackpot' tag styles for game item
 

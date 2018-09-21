@@ -1,0 +1,250 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/register/style';
+
+user-register {
+  overflow: visible;
+
+  .switch-input-mode {
+    color: $primary-color-500;
+    font-size: 1.4rem;
+    font-weight: normal;
+    padding: 0 0 1rem 0.3rem;
+    text-align: left;
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+      outline-style: none;
+    }
+  }
+
+  .input-container-dob-gender {
+    display: flex;
+    height: $input-height * 0.4;
+    margin-bottom: 0;
+
+    .dob-gender {
+      color: $grey;
+      height: 2rem;
+      margin-bottom: 1rem;
+      padding-left: 0.2rem;
+      pointer-events: all;
+      position: relative;
+    }
+
+    .input-group {
+      input {
+        height: $input-height * 0.5;
+        padding: 0;
+        pointer-events: all;
+        position: relative;
+        text-align: center;
+      }
+
+      .gender-label {
+        height: $input-height * 0.4;
+        padding: 1.5rem 0 0;
+        pointer-events: all;
+        position: relative;
+
+        &::before {
+          height: $input-height * 0.4;
+          left: 2rem;
+          width: $input-height * 0.4;
+        }
+
+        &::after {
+          height: $input-height * 0.4;
+          position: absolute;
+          top: 1.5rem;
+          width: $input-height * 0.4;
+        }
+      }
+    }
+
+    &.invalid::after {
+      margin-top: -1rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .address-search {
+    .hide-placeholder {
+      &::placeholder { color: transparent; }
+      &:focus::placeholder { color: lighten($secondary-base, 20%); }
+    }
+  }
+
+  .terms-container {
+    &.checkbox-group {
+      height: 3rem;
+      margin: 0 0 3rem;
+      min-height: 2rem;
+      padding: 1rem;
+
+      label {
+        margin: 0;
+        max-height: 10px;
+        padding: 0;
+        pointer-events: all;
+      }
+    }
+  }
+
+  address-list {
+    margin-bottom: 2rem;
+  }
+
+  .full-address {
+    .input-container {
+      min-height: $input-height - 2rem;
+
+      input {
+        height: $input-height - 2rem;
+      }
+
+      label {
+        height: $input-height - 2rem;
+      }
+
+      input:focus + label,
+      input:valid + label,
+      input:focus + .peeky-password + label,
+      input:valid + .peeky-password + label {
+        transform: translateY(-22%);
+      }
+
+      .validation-icon {
+        &.validation-icon-skinny {
+          &::before,
+          &::after  {
+            top: 20%;
+          }
+        }
+
+        svg {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  .marketing {
+    h1 {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 0;
+      text-align: center;
+      width: auto;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .input-container-marketing {
+      display: flex;
+      margin-bottom: 2rem;
+      min-height: 4rem;
+      position: relative;
+
+      input {
+        border-color: $secondary-base;
+        border-radius: 3px;
+        color: $secondary-color-700;
+        font-size: 1.8rem;
+        font-weight: bold;
+        height: 2rem;
+        margin: auto;
+        padding: 0;
+      }
+
+      .marketing-opt-in-out {
+        color: $black;
+        font-weight: normal;
+        height: 2rem;
+        margin: auto auto 1rem;
+        padding-left: 0;
+        pointer-events: all;
+        position: relative;
+        width: auto;
+      }
+    }
+  }
+
+  .marketing-end {
+    p {
+      text-align: center;
+
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  footer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 3rem;
+
+    .next {
+      @extend %btn;
+      @extend %btn-primary;
+
+      &:hover {
+        @extend %btn;
+      }
+    }
+
+    .register-opt-in {
+      @extend %btn;
+      @extend %btn-primary;
+      margin-bottom: 1rem;
+
+      &:hover {
+        @extend %btn;
+      }
+    }
+
+    > * {
+      flex: none;
+    }
+
+    small {
+      margin: 2rem auto 1rem;
+    }
+
+    .no-thanks {
+      display: flex;
+      width: 70%;
+
+      .register-no-thanks {
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        width: 100%;
+
+        &:hover {
+          background-color: inherit;
+
+          span {
+            color: $primary-base;
+          }
+        }
+      }
+
+      a {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

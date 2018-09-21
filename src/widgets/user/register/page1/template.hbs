@@ -1,0 +1,65 @@
+<fieldset>
+  <div class="input-container">
+    <input name="email"
+    id="email"
+    class="no-autofill"
+    type="email"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    placeholder=""
+    value="{{email}}"
+    aria-label="{{translate "email_address_placeholder"}}"
+    required />
+    <label for="email"><span>{{translate "email_address_placeholder"}}</span></label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+
+  <div class="input-container">
+    <input name="username"
+    id="username"
+    class="no-autofill"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    type="text"
+    placeholder=""
+    value="{{username}}"
+    aria-label="{{translate 'username_placeholder'}}"
+    required />
+    <label for="username"><span>{{translate "username_placeholder"}}</span></label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+
+  <div class="input-container">
+    <input name="password"
+    id="password"
+    type="password"
+    class="no-autofill peeky"
+    autocomplete="new-password"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    placeholder=""
+    value="{{password}}"
+    aria-label="{{translate 'password_placeholder'}}"
+    data-hj-masked
+    required />
+    <button type="button" class="peeky-password"  aria-label="{{translate 'toggle_show_password'}}">
+      <svg focusable="false" class="open" viewBox="0 0 17.2 10.3"><use xlink:href="#icon-eye-open-icon"/></svg>
+      <svg focusable="false" class="close" viewBox="0 -5 32 25"><use xlink:href="#icon-eye-closed-icon"/></svg>
+    </button>
+    <label for="password"><span>{{translate "password_placeholder"}}</span></label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+</fieldset>
+
+<footer>
+  <button class="next">
+    <span>{{translate "next"}}</span>
+  </button>
+  <button class="login" >{{{translate "login_existing_user"}}}</button>
+</footer>
+

@@ -264,10 +264,10 @@
   "promotions": [],
   "registration": {
     "defaultGender": "Undisclosed",
-    "genderEnabled": false,
+    "genderEnabled": true,
     "marketing": true,
     "telephoneEnabled": true,
-    "regSuccess": true
+    "regSuccess": false
   },
   "siteCode": "bedecasino",
   "siteName": "Bede Casino",

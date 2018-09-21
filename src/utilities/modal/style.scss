@@ -68,7 +68,7 @@ dialog {
 
       label {
         align-items: center;
-        color: $secondary-color-700;
+        color: $secondary-base;
         display: flex;
         font-size: 1.8rem;
         font-weight: bold;
@@ -86,7 +86,6 @@ dialog {
       input:valid + label,
       input:focus + button.peeky-password + label,
       input:valid + button.peeky-password + label {
-        color: $secondary-color-500;
         font-size: 1.4rem;
         font-weight: normal;
         transform: translateY(-20%);
@@ -213,6 +212,28 @@ dialog {
       justify-content: center;
       margin-bottom: 3rem;
       margin-top: 0;
+
+      button {
+        // overriding weird selector from bolt
+        &:nth-child(2):not(.back) {
+          background: none;
+          color: $dark-grey;
+          font-size: 1.4rem;
+          font-weight: normal;
+          margin: 1rem 0 0;
+          pointer-events: none;
+          text-transform: none;
+
+          span {
+            pointer-events: all;
+          }
+
+          &:hover {
+            background: none;
+            color: $dark-grey;
+          }
+        }
+      }
 
       button.primary-action,
       button.request-password,

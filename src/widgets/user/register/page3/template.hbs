@@ -1,0 +1,133 @@
+<fieldset>
+  <input class="popup-remove" type="password"/>
+  {{#if countries}}
+    <div class="input-container">
+      <label>{{translate "country"}}</label>
+      <select name="countryCode" autofocus="true">
+        {{#if topCountries}}
+          {{#each topCountries}}
+            <option value="{{countryCode}}">{{translate name}}</option>
+          {{/each}}
+          <option value="" disabled>------------------</option>
+        {{/if}}
+        {{#each countries}}
+          <option value="{{countryCode}}">{{translate name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  {{/if}}
+
+  <button type="button" class="switch-input-mode">{{translate "enter_manually"}}</button>
+
+  <div class="input-container address-search" data-hj-masked>
+    <input name="addressSearch"
+           autocomplete="off"
+           autocorrect="off"
+           autocapitalize="off"
+           class="hide-placeholder"
+           placeholder="{{translate "type_address"}}"
+           spellcheck="false"
+           type="text"
+           required />
+    <label><span>{{translate "address_search"}}</span></label>
+  </div>
+
+  <div class="full-address folded" data-hj-masked>
+    <div class="input-container">
+      <input name="addressLine1"
+             type="text"
+             placeholder=""
+             value="{{addressLine1}}"
+             required
+             autocomplete="off"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false">
+      <label><span>{{translate "address_line1"}}</span></label>
+    </div>
+
+    <div class="input-container address-line2">
+      <input name="addressLine2"
+             type="text"
+             placeholder=""
+             value="{{addressLine2}}"
+             required
+             autocomplete="off"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false">
+      <label><span>{{translate "address_line2"}}</span></label>
+    </div>
+
+    <div class="input-container">
+      <input name="town"
+             type="text"
+             placeholder=""
+             value="{{town}}"
+             required
+             autocomplete="off"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false">
+      <label><span>{{translate "town"}}</span></label>
+    </div>
+
+    <div class="input-container">
+      <input name="postCode"
+             type="text"
+             class="input-checker"
+             placeholder=""
+             value="{{postCode}}"
+             required
+             autocomplete="off"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false">
+      <label><span>{{translate "postcode"}}</span></label>
+      <div class="validation-icon validation-icon-skinny"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+    </div>
+  </div>
+
+  <div class="address-list" data-hj-masked></div>
+  {{#if telephoneEnabled}}
+    <div class="input-container">
+      <input name="telephone"
+             id="telephone"
+             type="tel"
+             spellcheck="false"
+             value="{{telephone}}"
+             placeholder=""
+             required />
+      <label for="telephone"><span>{{translate "telephone_number"}}</span></label>
+      <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+    </div>
+  {{/if}}
+
+  <div class="input-container terms-container checkbox-group">
+    <input id="termsAgreement" type="checkbox" name="termsAgreement" {{isChecked}}>
+    <label for="termsAgreement">
+      <small>{{translate "registration_terms_agreement" privacyLink termsLink}}</small>
+    </label>
+  </div>
+</fieldset>
+
+<footer>
+  {{#if marketing}}
+    <button class="next">
+      <span>{{translate "next"}}</span>
+    </button>
+  {{else}}
+    <button type="submit" class="register">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        <span>{{translate "register"}}</span>
+      </span>
+    </button>
+  {{/if}}
+
+  <button type="button" class="back">
+    <span>{{translate "back"}}</span>
+  </button>
+</footer>
