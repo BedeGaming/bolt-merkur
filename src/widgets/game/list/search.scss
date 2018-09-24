@@ -17,3 +17,46 @@
     }
   }
 }
+
+// ------------------------------------------
+// Styles for Search dialog
+// ------------------------------------------
+
+.search-dialog {
+  background: $search-dialog-overlay-background;
+
+  close-modal {
+    @media only screen and (min-width: $medium-val) {
+      right: 2rem;
+      top: 2rem;
+
+      .icon-cross {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+
+  .input-container {
+    display: flex;
+
+    input,
+    input::placeholder {
+      @include responsive-type(30, 36);
+      color: $white;
+      font-weight: bold;
+      padding-right: 4.5rem;
+      text-shadow: none;
+    }
+
+
+    input:focus + svg,
+    svg {
+      fill: $white;
+      height: 100%;
+      margin: 0 auto auto;
+      opacity: 100;
+      padding-top: 0;
+    }
+  }
+}

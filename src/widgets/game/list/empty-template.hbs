@@ -1,0 +1,23 @@
+{{#if hasReset}}
+  <p class="no-games{{recentPlayedClass}}">
+    {{#if isRecent}}
+      {{translate "no_games_played"}}
+    {{else}}
+      {{translate "no_games"}}
+    {{/if}}
+  </p>
+{{else}}
+  {{#if isRecent}}
+    <svg class="spinner-dark" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  {{else}}
+    {{#if isSearch}}
+      {{#if hasTyped}}<p>{{translate "no_games_found" searchTerm}}</p>{{/if}}
+    {{else}}
+      {{#each preLoaderItems}}
+        <game-item><svg viewBox="0 0 3 1.865"></svg></game-item>
+      {{/each}}
+    {{/if}}
+  {{/if}}
+{{/if}}
