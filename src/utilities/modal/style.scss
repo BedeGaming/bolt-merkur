@@ -43,22 +43,12 @@ dialog {
     right: 1rem;
     top: 1rem;
 
-    button {
-      background-color: lighten($secondary-base, 30%);
-      border-radius: 50%;
-      padding: 0.6rem;
-
-      &:hover {
-        background-color: lighten($secondary-base, 30%);
-      }
-    }
-
     svg {
       height: 1.3rem;
       width: 1.3rem;
 
       path {
-        fill: $white;
+        fill: $secondary-base;
       }
     }
   }
@@ -260,7 +250,8 @@ dialog {
         @extend %btn;
         @extend %btn-primary;
 
-        &:first-child.waiting {
+        &:first-child
+        &.waiting {
           color: transparent;
         }
       }

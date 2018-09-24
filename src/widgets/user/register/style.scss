@@ -197,7 +197,8 @@ user-register {
       @extend %btn;
       @extend %btn-primary;
 
-      &:first-child.waiting {
+      &:first-child
+      &.waiting {
         color: transparent;
       }
     }
