@@ -25,7 +25,7 @@ dialog {
   border: 0;
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(22, 20, 20, 0.15);
-  padding: 3rem;
+  padding: 4.5rem 3rem 3rem;
   width: 45rem;
 
   h1 {
@@ -39,7 +39,28 @@ dialog {
   }
 
   close-modal {
-    padding: 1rem;
+    opacity: 1;
+    right: 1rem;
+    top: 1rem;
+
+    button {
+      background-color: lighten($secondary-base, 30%);
+      border-radius: 50%;
+      padding: 0.6rem;
+
+      &:hover {
+        background-color: lighten($secondary-base, 30%);
+      }
+    }
+
+    svg {
+      height: 1.3rem;
+      width: 1.3rem;
+
+      path {
+        fill: $white;
+      }
+    }
   }
 
   form {
@@ -205,8 +226,7 @@ dialog {
 
     footer {
       justify-content: center;
-      margin-bottom: 3rem;
-      margin-top: 0;
+      margin: 0 0 3rem;
 
       button {
         // overriding weird selector from bolt
