@@ -1,4 +1,6 @@
 promo-slider {
+  width: 100%;
+
   image-container {
     display: block;
     overflow: hidden;
@@ -6,6 +8,7 @@ promo-slider {
 
   .prev,
   .next {
+    align-items: center;
     background: transparentize($secondary-color-500, 0.5);
     border-radius: 2rem;
     display: none;
@@ -107,17 +110,21 @@ promo-slider {
 
   .slider__item--2 {
     h1 {
-      color: #E6506E;
+      color: #e6506e;
     }
   }
 
   .slider__item--3 {
     h1 {
-      color: #5BC64F;
+      color: #5bc64f;
     }
   }
 
   .bullets {
-    z-index: unset;
+    bottom: 6rem;
+
+    @media($medium) {
+      bottom: 8rem;
+    }
   }
 }

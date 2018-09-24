@@ -24,15 +24,25 @@ app-hub {
 
   total-balance {
     margin: 0;
+    top: 5.8rem;
+
+    @media ($medium) {
+      top: auto;
+    }
   }
 
   .balance-list {
     align-items: center;
     background-color: $light-blue;
     border-radius: 3px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     height: 100%;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
+
+    @media ($medium) {
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+    }
 
     svg {
       fill: darken($blue, 10%);
@@ -78,8 +88,12 @@ app-hub {
         line-height: 2rem;
         max-height: 50rem;
         opacity: 1;
-        padding: 2rem;
+        padding: 1rem;
         transform: scale(1);
+
+        @media ($medium) {
+          padding: 2rem;
+        }
       }
     }
 
@@ -123,7 +137,7 @@ app-hub {
 
     &:hover {
       svg {
-        fill: #7C91E9;
+        fill: #7c91e9;
       }
     }
   }
@@ -133,14 +147,14 @@ app-hub {
     transition: color 300ms ease;
 
     &:hover {
-      color: #7C91E9;
+      color: #7c91e9;
     }
   }
 
   sub-balance {
     color: darken($blue, 10%);
     flex-direction: row;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
 
     &:first-child {
@@ -153,6 +167,7 @@ app-hub {
 
     @media ($medium) {
       flex-direction: column;
+      font-size: 1.6rem;
     }
   }
 

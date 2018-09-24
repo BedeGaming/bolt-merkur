@@ -18,18 +18,11 @@ games-container {
   }
 }
 
-.games-page {
-  max-width: 130rem;
-  width: calc(100% - 4rem);
-
-  @media ($small) {
-    width: calc(100% - 6rem);
-  }
-
-  games-container {
-    max-width: none;
-    width: 100%;
-  }
+games-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 games-area {
