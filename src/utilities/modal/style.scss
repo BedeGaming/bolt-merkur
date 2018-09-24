@@ -259,6 +259,10 @@ dialog {
       .update-contacts {
         @extend %btn;
         @extend %btn-primary;
+
+        &:first-child.waiting {
+          color: transparent;
+        }
       }
 
       > * {
