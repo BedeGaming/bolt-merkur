@@ -45,7 +45,6 @@
   "metaKeywords": "",
   "features": {
     "bonusToolContentPromos": true,
-    "telephoneUpdatable": true,
     "logoutOnIdleSession": false,
     "winnersFeed": {
       "minWin": 10,

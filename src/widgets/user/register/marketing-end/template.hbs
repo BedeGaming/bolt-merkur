@@ -11,13 +11,19 @@
 
 <footer>
   <button type="submit" class="register-opt-in" data-opt="opt-in">
-    <span data-opt="opt-in">{{translate regButtonLabel}}</span>
+    <span data-opt="opt-in">
+      <div class="spinner"></div>
+      {{translate regButtonLabel}}
+    </span>
   </button>
 
   <div class="no-thanks">
     {{#unless marketing}}
       <button type="submit" class="register-no-thanks btn-text">
-        <span>{{translate "register_marketing_no_thanks"}}</span>
+        <span>
+          <div class="spinner"></div>
+          {{translate "register_marketing_no_thanks"}}
+        </span>
       </button>
     {{/unless}}
     <a href="/privacy-policy" target="_blank" class="privacy-policy">{{translate "compliance_link_privacy"}}</a>

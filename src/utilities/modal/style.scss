@@ -94,7 +94,6 @@ dialog {
         }
       }
 
-
       label {
         align-items: center;
         color: $secondary-base;
@@ -114,7 +113,7 @@ dialog {
       .peeky-password {
         height: auto;
         line-height: normal;
-        right: 6rem;
+        right: 2rem;
         top: 4rem;
         transition: right 300ms ease;
 
@@ -183,6 +182,10 @@ dialog {
             transition-delay: 300ms;
           }
         }
+
+        .peeky-password {
+          right: 6rem;
+        }
       }
     }
 
@@ -226,7 +229,7 @@ dialog {
 
     footer {
       justify-content: center;
-      margin: 0 0 3rem;
+      margin: 0 0 2.5rem;
 
       button {
         // overriding weird selector from bolt
