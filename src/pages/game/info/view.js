@@ -19,15 +19,15 @@ export default View.extend({
     const model = this.model;
 
     if (!this.hasPromo) this.showChildView('playButtons', new PlayButtons({ model }), { replaceElement: true });
-
-    this.showChildView('overview', new GameOverview({ model }), { replaceElement: true });
-
-    this.showChildView('banner', this.getBannerComponent(), { replaceElement: true });
-
+    
     this.showChildView('info', new InfoView({
       model: this.currentGame,
       related: this.relatedGames
     }), { replaceElement: true });
+
+    this.showChildView('overview', new GameOverview({ model }), { replaceElement: true });
+
+    this.showChildView('banner', this.getBannerComponent(), { replaceElement: true });
 
     if (window.config.features.gameInfoPageBannerRelatedGames && this.relatedGames.length) {
       this.showChildView('relatedGames', new RelatedView({
