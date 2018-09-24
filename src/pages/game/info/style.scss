@@ -1,9 +1,17 @@
+$box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+
 .game-info-wrapper {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  margin-bottom: 5rem;
+  margin-top: -2rem;
   max-width: 93rem;
 }
 
 game-info-page {
   align-items: center;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
 }
