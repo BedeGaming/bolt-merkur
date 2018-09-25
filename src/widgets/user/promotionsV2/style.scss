@@ -1,0 +1,31 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/promotionsV2/style';
+
+.promotions-container {
+  background-color: $light-grey;
+  padding: 0;
+
+  h1 {
+    color: pink;
+  }
+}
+
+.promotions-stack {
+  color: pink;
+}
+
+.promotion-section {
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+  flex: 1;
+  margin: 2rem auto;
+  max-width: 130rem;
+  // padding: 2rem;
+  width: calc(100% - 4rem);
+
+  @media ($small) {
+    margin: 3rem auto;
+    // padding: 3rem;
+    width: calc(100% - 6rem);
+  }
+}
