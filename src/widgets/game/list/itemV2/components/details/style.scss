@@ -1,8 +1,12 @@
 @import '../../../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/components/details/style';
 
+$box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+$hover-box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
+$bg-color: rgba(255, 255, 255, 0.95);
+
 .game-item {
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+  box-shadow: $box-shadow;
   overflow: hidden;
   transition-duration: 300ms;
   transition-property: box-shadow, transform;
@@ -15,7 +19,7 @@
 
   .display-container {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: $bg-color;
     border-radius: 0;
     bottom: 0;
     display: flex;
@@ -89,7 +93,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
+      box-shadow: $hover-box-shadow;
       transform: translateY(-0.5rem);
 
       .display-container {

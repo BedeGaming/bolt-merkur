@@ -8,7 +8,7 @@ game-info-header {
   justify-content: center;
   margin: 0;
   max-width: none;
-  padding: 7rem;
+  padding: 4rem;
   width: 100%;
 
   game-overview {
@@ -18,14 +18,38 @@ game-info-header {
       color: $primary-base;
       font-size: 5.8rem;
       font-weight: 900;
+      text-align: center;
       text-transform: uppercase;
     }
   }
 
   .play-buttons {
     .buttons {
+      display: flex;
+      flex-direction: column;
+
       .btn {
-        margin: 0 1rem;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  @media ($medium) {
+    padding: 7rem;
+
+    game-overview {
+      h1 {
+        text-align: left;
+      }
+    }
+
+    .play-buttons {
+      .buttons {
+        flex-direction: row;
+
+        .btn {
+          margin: 0 1rem;
+        }
       }
     }
   }

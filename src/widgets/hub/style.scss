@@ -43,15 +43,11 @@ app-hub {
     width: 100%;
 
     @media ($large) {
+      flex-direction: row;
       justify-content: space-between;
-      @if $isSidebar == true {
-        flex-direction: column;
-      } @else {
-        flex-direction: row;
 
-        li {
-          margin-left: $gutter;
-        }
+      li {
+        margin-left: $gutter;
       }
     }
   }

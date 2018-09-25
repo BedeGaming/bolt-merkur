@@ -1,6 +1,5 @@
 import View from '@bedegaming/bolt/src/pages/game/info/view.js';
 import PlayButtons from '@bedegaming/bolt/src/widgets/game/play-buttons/view.js';
-import BannerView from '@bedegaming/bolt/src/widgets/game/banner/view.js';
 import InfoView from '@bedegaming/bolt/src/widgets/game/info/view.js';
 import RelatedView from '@bedegaming/bolt/src/widgets/game/related/view.js';
 import GameOverview from '@bedegaming/bolt/src/widgets/game/overview/view.js';

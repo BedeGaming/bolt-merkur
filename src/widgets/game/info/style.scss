@@ -7,6 +7,7 @@ game-info {
   game-details {
     .bet-info-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .bet-info {
@@ -14,18 +15,14 @@ game-info {
         background-color: $light-blue;
         border-radius: 4px;
         display: flex;
-        flex: 1;
         flex-direction: column;
         justify-content: center;
-        margin: 0 1rem 2rem;
+        margin-bottom: 2rem;
         padding: 2rem;
+        width: calc(50% - 1rem);
 
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
+        @media ($medium) {
+          width: calc(25% - 1rem);
         }
       }
 
