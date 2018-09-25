@@ -12,14 +12,14 @@ export default View.extend({
     playButtons: '.play-buttons-region',
     banner: 'game-banner',
     info: 'game-info',
-    relatedGames: 'related-games'
+    related: 'game-related'
   },
 
   onAttach() {
     const model = this.model;
 
     if (!this.hasPromo) this.showChildView('playButtons', new PlayButtons({ model }), { replaceElement: true });
-    
+
     this.showChildView('info', new InfoView({
       model: this.currentGame,
       related: this.relatedGames
@@ -29,13 +29,7 @@ export default View.extend({
 
     this.showChildView('banner', this.getBannerComponent(), { replaceElement: true });
 
-    if (window.config.features.gameInfoPageBannerRelatedGames && this.relatedGames.length) {
-      this.showChildView('relatedGames', new RelatedView({
-        model: this.model,
-        take: 3,
-        preLoaderItems: 3
-      }), { replaceElement: true });
-    }
+    this.showChildView('related', new RelatedView({ model }), { replaceElement: true });
   }
 
 });
