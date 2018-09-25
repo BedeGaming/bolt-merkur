@@ -1,7 +1,5 @@
 @import '../../../node_modules/@bedegaming/bolt/src/utilities/modal/style';
 
-$input-height: 8rem;
-
 @keyframes tick-enter {
   from {
     transform: scale(0) translate(-50%, -50%);
@@ -27,7 +25,7 @@ dialog {
   border: 0;
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(22, 20, 20, 0.15);
-  padding: 3rem;
+  padding: 4.5rem 3rem 3rem;
   width: 45rem;
 
   h1 {
@@ -41,13 +39,24 @@ dialog {
   }
 
   close-modal {
-    padding: 1rem;
+    opacity: 1;
+    right: 1rem;
+    top: 1rem;
+
+    svg {
+      height: 1.3rem;
+      width: 1.3rem;
+
+      path {
+        fill: $secondary-base;
+      }
+    }
   }
 
   form {
     height: auto;
 
-    div.input-container {
+    .input-container {
       margin-bottom: 2rem;
       min-height: $input-height;
       position: relative;
@@ -60,10 +69,19 @@ dialog {
         font-weight: bold;
         height: $input-height;
         padding: 3.5rem 2rem 2rem;
-      }
 
-      input:focus {
-        color: $secondary-color-700;
+        &:focus {
+          color: $secondary-color-700;
+        }
+
+        &:focus + label,
+        &:valid + label,
+        &:focus + .peeky-password + label,
+        &:valid + .peeky-password + label {
+          font-size: 1.4rem;
+          font-weight: normal;
+          transform: translateY(-20%);
+        }
       }
 
       label {
@@ -82,16 +100,7 @@ dialog {
         width: 100%;
       }
 
-      input:focus + label,
-      input:valid + label,
-      input:focus + button.peeky-password + label,
-      input:valid + button.peeky-password + label {
-        font-size: 1.4rem;
-        font-weight: normal;
-        transform: translateY(-20%);
-      }
-
-      button.peeky-password {
+      .peeky-password {
         height: auto;
         line-height: normal;
         right: 2rem;
@@ -164,7 +173,7 @@ dialog {
           }
         }
 
-        button.peeky-password {
+        .peeky-password {
           right: 6rem;
         }
       }
@@ -210,8 +219,7 @@ dialog {
 
     footer {
       justify-content: center;
-      margin-bottom: 3rem;
-      margin-top: 0;
+      margin: 0 0 2.5rem;
 
       button {
         // overriding weird selector from bolt
@@ -235,11 +243,17 @@ dialog {
         }
       }
 
-      button.primary-action,
-      button.request-password,
-      button.update-password {
+      .primary-action,
+      .request-password,
+      .update-password,
+      .update-contacts {
         @extend %btn;
         @extend %btn-primary;
+
+        &:first-child
+        &.waiting {
+          color: transparent;
+        }
       }
 
       > * {
@@ -247,7 +261,7 @@ dialog {
       }
     }
 
-    button.register {
+    .register {
       color: $dark-blue;
       font-size: 1.6rem;
       margin: 0;

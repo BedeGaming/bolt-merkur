@@ -191,23 +191,20 @@ user-register {
     justify-content: center;
     margin: 0 auto 3rem;
 
-    .next {
+    .next,
+    .register,
+    .register-opt-in {
       @extend %btn;
       @extend %btn-primary;
 
-      &:hover {
-        @extend %btn;
+      &:first-child
+      &.waiting {
+        color: transparent;
       }
     }
 
     .register-opt-in {
-      @extend %btn;
-      @extend %btn-primary;
       margin-bottom: 1rem;
-
-      &:hover {
-        @extend %btn;
-      }
     }
 
     > * {
