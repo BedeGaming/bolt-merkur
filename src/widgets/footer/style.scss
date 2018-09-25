@@ -1,40 +1,50 @@
 @import '../../../node_modules/@bedegaming/bolt/src/widgets/footer/style';
 
 site-footer {
+  background-color: $primary-base;
   display: flex;
   flex-flow: column;
-  padding: 0;
+  padding: 0 2rem;
+
+  @media ($small) {
+    padding: 0 3rem;
+  }
 
   .compliance-links {
-    background: inherit;
+    background: none;
     justify-content: center;
+    padding: 0;
+
+    div {
+      margin: 0 0 3rem;
+      width: 100%;
+    }
 
     ul {
-      flex-flow: column;
+      flex-direction: column;
+
+      @media ($small) {
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-right: -3rem;
+      }
 
       li {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin: 0 0 1rem;
         text-align: center;
         width: 100%;
 
         @media ($small) {
-          margin: 0 2rem 1rem 0;
+          margin: 0 3rem 1rem 0;
           width: auto;
-
-          &:last-child {
-            margin-right: 0;
-          }
         }
-      }
-
-      @media ($small) {
-        flex-flow: row wrap;
-        justify-content: center;
       }
     }
 
     a {
+      color: $white;
+
       &:hover {
         color: transparentize($white, 0.2);
       }
@@ -43,34 +53,37 @@ site-footer {
 
   .info-text {
     justify-content: center;
-    margin: 0 auto;
-    max-width: 80%;
-    padding: 0;
+    margin: 3rem auto 0;
+    padding: 0 3rem;
     text-align: center;
     width: 100%;
-
-    @media ($medium) {
-      max-width: 70%;
-    }
 
     article {
       margin: 0;
 
       p {
         color: $white;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
     }
   }
 
   .payment-info {
+    margin-bottom: 3rem;
+    padding: 0;
+
     div {
       display: flex;
       justify-content: center;
+      margin: 0;
       width: 100%;
 
       ul {
         justify-content: center;
+      }
+
+      li {
+        margin-right: 1.5rem;
       }
 
       &:first-child {
@@ -81,28 +94,7 @@ site-footer {
 
   .footer-brand-logo {
     color: $white;
-    display: flex;
-    justify-content: center;
-    margin: 2rem auto;
-    order: 1;
+    margin: 4.5rem auto;
     width: 10rem;
-  }
-
-  footer-wrapper {
-    &:nth-child(1) {
-      order: 2;
-    }
-
-    &:nth-child(2) {
-      order: 3;
-    }
-
-    &:nth-child(3) {
-      order: 5;
-    }
-
-    &:nth-child(4) {
-      order: 4;
-    }
   }
 }
