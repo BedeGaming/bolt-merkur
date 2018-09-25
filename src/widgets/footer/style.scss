@@ -3,7 +3,7 @@
 site-footer {
   background-color: $primary-base;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   padding: 0 2rem;
 
   @media ($small) {
