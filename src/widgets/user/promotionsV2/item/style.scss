@@ -19,14 +19,19 @@
 .promo-text {
   h3 {
     color: $black;
-  }
-
-  .promo-description {
-    color: $black;
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.8rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+  }
+
+  .promo-description {
+    color: $black;
+    font-size: 1.4rem;
+    // font-weight: bold;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+    // text-transform: uppercase;
   }
 }
