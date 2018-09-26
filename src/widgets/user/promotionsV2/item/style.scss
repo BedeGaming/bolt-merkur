@@ -1,7 +1,32 @@
 @import '../../../../../node_modules/@bedegaming/bolt/src/widgets/user/promotionsV2/item/style';
 
-
-promo-card {
+.promo-card {
   border: 1px solid $light-grey;
   box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+
+  .claim {
+    @extend %btn;
+    @extend %btn-primary;
+
+    max-width: 22rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.promo-text {
+  h3 {
+    color: $black;
+  }
+
+  .promo-description {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
 }
