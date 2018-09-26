@@ -47,14 +47,16 @@ $body-font-size: 1.4rem;
 $body-line-height: 1.6;
 $body-color: $black;
 
+$common-box-shadow: 0 4px 10px rgba($black, 0.1);
+
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;
 $table-color: $black;
 $thead-border-bottom: 2px solid $light-grey;
-$thead-background: $white;
-$thead-color: $black;
-$trow-odd-background: $light-grey;
-$trow-even-background: $light-grey;
+$thead-background: linear-gradient(to right, $green -50%, $blue 100%);
+$thead-color: $white;
+$trow-odd-background: $light-blue;
+$trow-even-background: mix($light-blue, $white, 25%);
 
 $input-border: 1px solid $black;
 $input-border-radius: 0;

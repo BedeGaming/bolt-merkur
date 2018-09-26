@@ -1,0 +1,26 @@
+<history-container>
+  <h2>{{translate "account_history"}}</h2>
+  <section>
+    <h3>{{translate "qualifying_promotions"}}</h3>
+    <div class="qualifying-promotions" data-hj-masked></div>
+  </section>
+  <section>
+    <h3>{{translate "bonus_history"}}</h3>
+    <div class="bonus-history" data-hj-masked></div>
+  </section>
+  <section>
+    <h3>{{translate "transaction_history"}}</h3>
+    {{#if allTimeOnly}}
+    <section>
+      <div class="net-deposits" data-hj-masked></div>
+    </section>
+    {{/if}}
+    <div class="transaction-history" data-hj-masked></div>
+  </section>
+  {{#if tabbedNetDeposits}}
+  <section>
+    <h3>{{translate "title_net_deposits"}}</h3>
+    <div class="net-deposits" data-hj-masked></div>
+  </section>
+  {{/if}}
+</history-container>
