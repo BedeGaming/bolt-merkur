@@ -1,11 +1,28 @@
 @import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/promotionsV2/style';
 
+.promotions-group-container {
+  margin-top: 3rem;
+
+  @media ($medium) {
+    margin-top: 0;
+  }
+}
+
 .promotions-container {
   background-color: $light-grey;
   padding: 0;
 
   h1 {
-    color: pink;
+    color: $primary-base;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 3rem 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media ($small) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -18,13 +35,13 @@
   // border: 1px solid $light-grey;
   // box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
   flex: 1;
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
   max-width: 130rem;
   // padding: 2rem;
   width: calc(100% - 4rem);
 
   @media ($small) {
-    margin: 3rem auto;
+    margin: 0 auto 3rem;
     // padding: 3rem;
     width: calc(100% - 6rem);
   }
