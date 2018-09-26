@@ -122,6 +122,7 @@ promo-slider {
 
   .bullets {
     bottom: 6rem;
+    z-index: 9;
 
     @media($medium) {
       bottom: 8rem;
