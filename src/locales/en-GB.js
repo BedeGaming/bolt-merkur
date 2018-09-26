@@ -21,7 +21,8 @@ const enGB = {
       registration_success_body: 'Thank you for registering. Get ready to play!',
       total_balance: 'Total Balance',
       type_address: 'Start typing postcode / address',
-      username_placeholder: 'Username'
+      username_placeholder: 'Username',
+      account_history: 'Account History'
     }
   }
 };

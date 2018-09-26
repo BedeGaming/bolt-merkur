@@ -93,3 +93,126 @@ account-page {
     }
   }
 }
+
+player-history {
+  background: $white;
+  border: 1px solid $light-grey;
+  box-shadow: $common-box-shadow;
+  margin: 3rem auto;
+  max-width: $max-width;
+  padding: 2rem;
+  width: 100%;
+
+  h2 {
+    color: $grey;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+
+    @media ($small) {
+      font-size: 2.8rem;
+    }
+  }
+
+  h3 {
+    color: $grey;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 4rem 0 2rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    @media ($small) {
+      font-size: 2rem;
+    }
+  }
+
+
+  bonus-history,
+  transaction-history {
+    .table-scroll {
+      border-radius: 0.5em;
+      box-shadow: $common-box-shadow;
+    }
+
+    .transactions-pagination {
+      min-height: 0;
+
+      .page, .page:hover {
+        background-image: radial-gradient(circle closest-side, $primary-base, $primary-base 90%, rgba($primary-base, 0));
+        transition: background-size 0.2s ease;
+      }
+
+      .page {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 0% 0%;
+        color: $primary-base;
+
+        &:hover {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          color: $white;
+        }
+
+        &.active-page {
+          background-color: lighten($primary-base, 30%);
+          color: $white;
+        }
+      }
+
+      .arrow-wrap {
+        svg {
+          fill: $primary-base;
+        }
+
+        &.inactive {
+          svg {
+            fill: lighten($primary-base, 45%);
+          }
+        }
+
+        .page, .page:hover {
+          background: none;
+        }
+
+        &:not(.inactive) {
+          .next-page, .prev-page {
+            transition-duration: 0.2s ;
+            transition-property: padding;
+            transition-timing-function: ease;
+
+            &:hover {
+              background: none;
+              border-radius: 0;
+              padding-left: 0;
+              padding-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+bonus-terms {
+  article {
+    margin: 0;
+  }
+}
+
+.qualifying-listing ,
+.promotions-listing {
+  .opt-out,
+  .cancel {
+    background-color: mix($tertiary-base, $primary-base, 50%);
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: mix($tertiary-base, $primary-base, 10%);
+      transition: none;
+    }
+  }
+}
