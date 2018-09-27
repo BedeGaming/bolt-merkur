@@ -1,7 +1,7 @@
 game-info {
 
   section {
-    padding: 0 5rem 5rem;
+    padding: 0 2rem 5rem;
 
     @media ($medium) {
       padding: 5rem;
@@ -82,10 +82,14 @@ game-info {
 
     h1 {
       color: $primary-base;
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 900;
       text-align: center;
       text-transform: uppercase;
+
+      @media ($medium) {
+        font-size: 5rem;
+      }
     }
   }
 
