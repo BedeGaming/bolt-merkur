@@ -53,7 +53,7 @@ app-hub {
     .wallets {
       background-color: $light-blue;
       border-radius: 0 0 5px 5px;
-      box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
+      box-shadow: $common-box-shadow;
       font-weight: normal;
       height: auto;
       left: auto;
@@ -137,7 +137,7 @@ app-hub {
 
     &:hover {
       svg {
-        fill: #7c91e9;
+        fill: darken($blue, 10%);
       }
     }
   }
@@ -147,7 +147,7 @@ app-hub {
     transition: color 300ms ease;
 
     &:hover {
-      color: #7c91e9;
+      color: darken($blue, 10%);
     }
   }
 

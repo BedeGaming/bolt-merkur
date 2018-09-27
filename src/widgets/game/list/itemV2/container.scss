@@ -1,12 +1,8 @@
-// ------------------------------------------
-// Styles for Games Container
-// ------------------------------------------
-
-@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/container.scss';
+@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/container';
 
 games-container {
   border: 1px solid $light-grey;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+  box-shadow: $common-box-shadow;
   flex: 1;
   margin: 2rem 0;
   max-width: 130rem;

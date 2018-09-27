@@ -246,9 +246,9 @@
     undertaker-registry "^1.0.0"
     wreck "^10.0.0"
 
-"@bedegaming/bolt@^67.0.0":
-  version "67.1.1"
-  resolved "https://registry.npmjs.org/@bedegaming/bolt/-/bolt-67.1.1.tgz#8b49bacb13ff0f2e4b3c85d0ad8953951191acf2"
+"@bedegaming/bolt@67.1.2":
+  version "67.1.2"
+  resolved "https://registry.npmjs.org/@bedegaming/bolt/-/bolt-67.1.2.tgz#f9cb90ab68c40906648ab655d22f4865a7379093"
   dependencies:
     "@bedegaming/backbone.fetch" "^0.2.4"
     "@bedegaming/backbone.paginator" "^2.0.5"
@@ -9129,6 +9129,10 @@ miller-rabin@^4.0.0:
 mime-db@^1.28.0, mime-db@~1.36.0:
   version "1.36.0"
   resolved "https://registry.npmjs.org/mime-db/-/mime-db-1.36.0.tgz#5020478db3c7fe93aad7bbcc4dcf869c43363397"
+
+mime-db@~1.35.0:
+  version "1.35.0"
+  resolved "https://registry.npmjs.org/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
 
 mime-types@^2.1.12, mime-types@~2.1.19:
   version "2.1.20"

@@ -2,7 +2,7 @@ $primary-base: #e21455;
 $secondary-base: #999;
 $tertiary-base: #63152d;
 $white: #fff;
-$black: #010101;
+$black: #3e3135;
 $blue: #9ccaff;
 $light-blue: #ecf3fc;
 $dark-blue: #7c7f8c;
@@ -14,6 +14,7 @@ $grey: #7c7f8c;
 $dark-grey: #333;
 $green: #56e165;
 $dark-green: #37bb47;
+$cream: #f3ecec;
 
 $game-page-btn-accent-colour: $primary-base;
 $game-page-btn-span-margin: 0 0 0 1rem;
@@ -47,7 +48,7 @@ $body-font-size: 1.4rem;
 $body-line-height: 1.6;
 $body-color: $black;
 
-$common-box-shadow: 0 4px 10px rgba($black, 0.1);
+$common-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
 
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;

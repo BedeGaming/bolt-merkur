@@ -1,0 +1,70 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/game/banner/style';
+
+game-info-header {
+  align-items: center;
+  background-color: $cream;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  max-width: none;
+  padding: 4rem;
+  width: 100%;
+
+  game-overview {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: $primary-base;
+      font-size: 5.8rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .play-buttons {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  @media ($medium) {
+    padding: 7rem;
+
+    game-overview {
+      h1 {
+        text-align: left;
+      }
+    }
+
+    .play-buttons {
+      .buttons {
+        flex-direction: row;
+
+        .btn {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+game-banner {
+  border-radius: 5px 5px 0 0;
+
+  .play-buttons {
+    background-color: transparentize($white, 0.1);
+    display: flex;
+    justify-content: center;
+
+    .buttons {
+      flex: none;
+    }
+  }
+}

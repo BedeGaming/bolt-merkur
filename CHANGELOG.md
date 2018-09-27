@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.11.0
+- added game-info page styles
+
 ## 0.10.0
 - added styling to Registration modal
 
