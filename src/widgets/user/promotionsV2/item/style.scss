@@ -16,7 +16,19 @@
   }
 }
 
+.promo-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  @media ($small) {
+    padding: 3rem;
+  }
+}
+
 .promo-text {
+  padding: 0;
+
   h3 {
     color: $black;
     font-size: 1.8rem;
@@ -33,5 +45,15 @@
     line-height: 1.6rem;
     margin-bottom: 1.5rem;
     // text-transform: uppercase;
+  }
+}
+
+.promo-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .terms {
+    align-self: center;
   }
 }
