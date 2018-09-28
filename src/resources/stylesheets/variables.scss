@@ -25,8 +25,9 @@ $game-page-home-background: $grey;
 
 $max-width: 132rem;
 
-$body-font: 'worksans', helvetica, arial, sans-serif;
-$heading-font: 'worksans', helvetica, arial, sans-serif;
+$default-font: 'worksans', helvetica, arial, sans-serif;
+$body-font: $default-font;
+$heading-font: $default-font;
 
 // breakpoints
 $x-small-val: 320px default;
