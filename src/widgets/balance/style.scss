@@ -18,7 +18,7 @@
   }
 }
 
-$dark-blue: #3c4466;
+$blue-dark: #3c4466;
 
 app-hub {
 
@@ -33,7 +33,7 @@ app-hub {
 
   .balance-list {
     align-items: center;
-    background-color: $light-blue;
+    background-color: $blue-light;
     border-radius: 3px;
     font-size: 1.4rem;
     height: 100%;
@@ -51,7 +51,7 @@ app-hub {
     }
 
     .wallets {
-      background-color: $light-blue;
+      background-color: $blue-light;
       border-radius: 0 0 5px 5px;
       box-shadow: $common-box-shadow;
       font-weight: normal;
@@ -105,7 +105,7 @@ app-hub {
   }
 
   .balance-group {
-    color: $dark-blue;
+    color: $blue-dark;
     display: flex;
 
     &:hover {
@@ -126,7 +126,7 @@ app-hub {
     top: 0;
 
     svg {
-      fill: $dark-blue;
+      fill: $blue-dark;
       pointer-events: none;
       width: 2rem;
     }
@@ -172,11 +172,11 @@ app-hub {
   }
 
   wallet-name {
-    color: $dark-grey;
+    color: $grey-dark;
   }
 
   wallet-value {
-    color: $dark-blue;
+    color: $blue-dark;
     font-weight: bold;
   }
 }

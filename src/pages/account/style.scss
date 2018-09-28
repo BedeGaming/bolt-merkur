@@ -6,7 +6,7 @@
 
 account-page {
   .tabs-wrapper {
-    background: $light-grey;
+    background: $grey-light;
   }
 
   .tab-list {
@@ -22,9 +22,9 @@ account-page {
   }
 
   .nav-item {
-    background-color: $light-grey;
-    border-bottom: 4px solid $light-grey;
-    border-top: 4px solid $light-grey;
+    background-color: $grey-light;
+    border-bottom: 4px solid $grey-light;
+    border-top: 4px solid $grey-light;
     display: flex;
     flex: none;
     font-size: 1.2rem;
@@ -96,7 +96,7 @@ account-page {
 
 player-history {
   background: $white;
-  border: 1px solid $light-grey;
+  border: 1px solid $grey-light;
   box-shadow: $common-box-shadow;
   margin: 3rem auto;
   max-width: $max-width;

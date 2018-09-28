@@ -9,7 +9,7 @@
 }
 
 .promotions-container {
-  background-color: $light-grey;
+  background-color: $grey-light;
   padding: 0;
 
   h1 {
@@ -24,10 +24,24 @@
       font-size: 3rem;
     }
   }
+
+  .wagering-requirements {
+    h4 {
+      color: $blue;
+    }
+  }
+
+  .outer-promo-progress-bar {
+    background-color: $green;
+  }
+
+  .inner-promo-progress-bar {
+    background-image: linear-gradient(90deg, $blue 0%, $blue-dark 100%);
+  }
 }
 
 .promotion-section {
-  background-color: $light-grey;
+  background-color: $grey-light;
   flex: 1;
   margin: 0 auto 2rem;
   max-width: 130rem;

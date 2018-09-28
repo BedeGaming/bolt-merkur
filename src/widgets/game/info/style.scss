@@ -23,7 +23,7 @@ game-info {
 
       .bet-info {
         align-items: center;
-        background-color: $light-blue;
+        background-color: $blue-light;
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -39,7 +39,7 @@ game-info {
 
       .value,
       .title {
-        color: $dark-blue;
+        color: $blue-dark;
       }
 
       .value {
@@ -55,9 +55,9 @@ game-info {
 
     .bonus-info {
       p {
-        background-color: $light-blue;
+        background-color: $blue-light;
         border-radius: 4px;
-        color: $dark-blue;
+        color: $blue-dark;
         font-size: 2rem;
         font-weight: bold;
         padding: 2rem;
