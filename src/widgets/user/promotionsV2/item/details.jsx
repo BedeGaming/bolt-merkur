@@ -75,7 +75,7 @@ export default function (props) {
   const progressBar = hasProgressBar ? getProgress(percentage, currentContributions, wageringRequirementsTarget) : null;
 
   return (
-
+    <div class="promo-details">
       <div className="promo-text">
         { titleEl }
         { descriptionEl }
@@ -85,6 +85,6 @@ export default function (props) {
         { promoAction }
         { termsLink }
       </div>
-    
+    </div>
   );
 }

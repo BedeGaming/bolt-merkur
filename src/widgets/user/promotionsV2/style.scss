@@ -46,3 +46,15 @@
     display: none;
   }
 }
+
+.dynamic-promotions-container {
+  grid-template-columns: repeat(1, 1fr);
+
+  @media ($medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
