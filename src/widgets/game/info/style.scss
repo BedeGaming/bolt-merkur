@@ -1,10 +1,21 @@
 game-info {
 
   section {
-    padding: 5rem;
+    padding: 0 2rem 5rem;
+
+    @media ($medium) {
+      padding: 5rem;
+    }
   }
 
   game-details {
+    display: block;
+    padding-top: 2rem;
+
+    @media ($medium) {
+      padding-top: 0;
+    }
+
     .bet-info-container {
       display: flex;
       flex-wrap: wrap;

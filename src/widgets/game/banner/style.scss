@@ -16,10 +16,14 @@ game-info-header {
 
     h1 {
       color: $primary-base;
-      font-size: 5.8rem;
+      font-size: 3rem;
       font-weight: 900;
       text-align: center;
       text-transform: uppercase;
+
+      @media ($medium) {
+        font-size: 5rem;
+      }
     }
   }
 
