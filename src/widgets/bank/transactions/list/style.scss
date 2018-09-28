@@ -1,0 +1,9 @@
+@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/bank/transactions/list/style';
+
+transaction-history {
+  .transactions-listing {
+    .transactions-empty {
+      padding: 2rem;
+    }
+  }
+}
