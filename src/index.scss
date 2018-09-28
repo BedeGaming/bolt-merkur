@@ -16,7 +16,7 @@
 @import 'resources/stylesheets/_header';
 @import 'resources/stylesheets/_hamburger';
 @import 'resources/stylesheets/_animations';
-@import '../node_modules/flatpickr/dist/flatpickr.dark.min';
+@import '../node_modules/flatpickr/dist/flatpickr.min';
 
 // ------------------------------------------
 // Components
@@ -26,6 +26,7 @@
 @import 'components/_subnav';
 @import 'components/_peeky-password';
 @import 'components/_address-lookup';
+@import 'components/_datepicker';
 @import 'utilities/flashes/style';
 @import 'utilities/modal/style';
 @import 'utilities/pagination/style';

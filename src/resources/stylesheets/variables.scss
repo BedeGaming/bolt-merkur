@@ -26,7 +26,7 @@ $game-page-home-background: $grey;
 $max-width: 132rem;
 
 $body-font: 'worksans', helvetica, arial, sans-serif;
-$heading-font: 'worksans';
+$heading-font: 'worksans', helvetica, arial, sans-serif;
 
 // breakpoints
 $x-small-val: 320px default;
@@ -70,8 +70,10 @@ $heading-color: $light-grey;
 
 $header-background: $white;
 
-$transaction-history-button-active-color: $black;
+$transaction-history-color: mix($dark-grey, $light-grey, 50%);
+$transaction-history-button-active-color: $primary-base;
 $transaction-history-background-color: $light-grey;
-$transaction-history-font-size: 1.2rem;
+$transaction-history-border-color: $transaction-history-color;
+$transaction-history-font-size: 1.5rem;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';
