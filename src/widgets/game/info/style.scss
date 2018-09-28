@@ -9,6 +9,13 @@ game-info {
   }
 
   game-details {
+    display: block;
+    padding-top: 2rem;
+
+    @media ($medium) {
+      padding-top: 0;
+    }
+
     .bet-info-container {
       display: flex;
       flex-wrap: wrap;
@@ -26,7 +33,7 @@ game-info {
         width: calc(50% - 1rem);
 
         @media ($medium) {
-          width: calc(25% - 1rem);
+          width: calc(25% - 1.5rem);
         }
       }
 
@@ -77,20 +84,7 @@ game-info {
   }
 
   game-overview {
-    display: block;
-    margin-bottom: 2rem;
-
-    h1 {
-      color: $primary-base;
-      font-size: 3rem;
-      font-weight: 900;
-      text-align: center;
-      text-transform: uppercase;
-
-      @media ($medium) {
-        font-size: 5rem;
-      }
-    }
+    display: none;
   }
 
   aside {

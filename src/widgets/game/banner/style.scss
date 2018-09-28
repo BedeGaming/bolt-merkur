@@ -16,10 +16,14 @@ game-info-header {
 
     h1 {
       color: $primary-base;
-      font-size: 5.8rem;
+      font-size: 3rem;
       font-weight: 900;
       text-align: center;
       text-transform: uppercase;
+
+      @media ($medium) {
+        font-size: 5rem;
+      }
     }
   }
 
@@ -56,15 +60,7 @@ game-info-header {
 }
 
 game-banner {
-  border-radius: 5px 5px 0 0;
-
   .play-buttons {
-    background-color: transparentize($white, 0.1);
-    display: flex;
-    justify-content: center;
-
-    .buttons {
-      flex: none;
-    }
+    display: none;
   }
 }
