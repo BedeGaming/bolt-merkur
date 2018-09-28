@@ -30,5 +30,4 @@ export default View.extend({
 
     this.showChildView('related', new RelatedView({ model }), { replaceElement: true });
   }
-
 });

@@ -19,7 +19,6 @@
 }
 
 $dark-blue: #3c4466;
-$box-shadow: 0 6px 8px rgba(22, 20, 20, 0.1);
 
 app-hub {
 
@@ -54,7 +53,7 @@ app-hub {
     .wallets {
       background-color: $light-blue;
       border-radius: 0 0 5px 5px;
-      box-shadow: $box-shadow;
+      box-shadow: $common-box-shadow;
       font-weight: normal;
       height: auto;
       left: auto;
