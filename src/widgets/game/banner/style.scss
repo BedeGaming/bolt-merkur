@@ -56,15 +56,7 @@ game-info-header {
 }
 
 game-banner {
-  border-radius: 5px 5px 0 0;
-
   .play-buttons {
-    background-color: transparentize($white, 0.1);
-    display: flex;
-    justify-content: center;
-
-    .buttons {
-      flex: none;
-    }
+    display: none;
   }
 }

@@ -5,11 +5,8 @@ $box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
   border-radius: 5px;
   box-shadow: $box-shadow;
   margin-bottom: 5rem;
+  margin-top: -2rem;
   max-width: 93rem;
-
-  @media ($medium) {
-    margin-top: 5rem;
-  }
 }
 
 game-info-page {

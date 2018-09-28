@@ -94,7 +94,8 @@ boltTasks.IstanbulTasksRegistry.prototype.getConfig = function getConfig() {
   return {
     src: [
       `${process.cwd()}/src/**/*.js`,
-      `${process.cwd()}/main.js`
+      `${process.cwd()}/main.js`,
+      `!${process.cwd()}/src/pages/game/info/view.js`
     ]
   };
 };
