@@ -90,12 +90,15 @@ gulp.registry(new tasks.LintTasksRegistry());
 /**
  * Test Tasks
  */
+
 boltTasks.IstanbulTasksRegistry.prototype.getConfig = function getConfig() {
   return {
     src: [
       `${process.cwd()}/src/**/*.js`,
       `${process.cwd()}/main.js`,
-      `!${process.cwd()}/src/pages/game/info/view.js`
+      `!${process.cwd()}/src/locales/en-GB.js`,
+      `!${process.cwd()}/src/pages/game/info/view.js`,
+      `!${process.cwd()}/src/widgets/user/inboxV2/view.js`
     ]
   };
 };
@@ -138,9 +141,7 @@ boltTasks.SitemapTasksRegistry.prototype.getConfig = function getConfig() {
     url: 'https://www.mjackpots.com/api/v5/games?take=1000',
     hostUrl: 'https://www.mjackpots.com',
     games: [],
-    pages: [
-      { url: '' }
-    ]
+    pages: [{ url: '' }]
   };
 };
 gulp.registry(new boltTasks.SitemapTasksRegistry());

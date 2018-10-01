@@ -295,4 +295,48 @@ dialog {
       }
     }
   }
+
+  .confirm-modal {
+    justify-content: center;
+    text-align: center;
+
+    modal-header {
+      color: $grey;
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    modal-body {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      justify-content: center;
+
+      button {
+        &.confirm {
+          @extend %btn.btn-primary;
+          font-size: 1.4rem;
+          max-width: 14rem;
+          padding: 1.5rem;
+        }
+
+        &.cancel {
+          @extend %btn;
+          border-width: 2px;
+          font-size: 1.4rem;
+          max-width: 14rem;
+          min-width: 10rem;
+          padding: 1.3rem;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,98 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/inbox/style';
+
+.player-inbox {
+  .inbox-container {
+    background-color: $white;
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    margin: 3rem auto;
+    max-width: $max-width;
+
+    .inbox-header {
+      @include responsive-type(30, 36);
+      color: darken($secondary-base, 10%);
+      font-weight: 900;
+      margin: 2rem 0 2rem 3rem;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .unread-message-count {
+      @include responsive-type(20, 24);
+      color: $primary-base;
+      font-weight: 900;
+      margin: 0 0 2rem 3rem;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .inbox-options {
+      border: 0;
+      margin: 0 0 2rem;
+      padding: 0 3rem;
+    }
+
+    .inbox-area {
+      background-color: $light-blue-2;
+      border: 0;
+      padding: 3rem;
+    }
+
+    .message-item {
+      background-color: $white;
+      box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+
+      .checkbox-group {
+        display: flex;
+        margin: auto 2rem;
+        padding: 0;
+
+        label {
+          margin: auto;
+          width: 15px;
+        }
+      }
+
+      &.unread {
+        background-color: $white;
+        opacity: 1;
+      }
+
+      .message-details {
+        .message-info {
+          .subject {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      height: auto;
+      margin: 3rem auto 0;
+      width: 100%;
+
+      @media ($large) {
+        width: 30%;
+      }
+
+      button {
+        @extend %btn;
+        @extend %btn-primary;
+        @include responsive-type(10, 14);
+        margin: auto;
+        width: 30%;
+
+        &.disabled {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -128,7 +128,6 @@ player-history {
     }
   }
 
-
   bonus-history,
   transaction-history {
     .table-scroll {
@@ -139,8 +138,14 @@ player-history {
     .transactions-pagination {
       min-height: 0;
 
-      .page, .page:hover {
-        background-image: radial-gradient(circle closest-side, $primary-base, $primary-base 90%, rgba($primary-base, 0));
+      .page,
+      .page:hover {
+        background-image: radial-gradient(
+          circle closest-side,
+          $primary-base,
+          $primary-base 90%,
+          rgba($primary-base, 0)
+        );
         transition: background-size 0.2s ease;
       }
 
@@ -174,13 +179,15 @@ player-history {
           }
         }
 
-        .page, .page:hover {
+        .page,
+        .page:hover {
           background: none;
         }
 
         &:not(.inactive) {
-          .next-page, .prev-page {
-            transition-duration: 0.2s ;
+          .next-page,
+          .prev-page {
+            transition-duration: 0.2s;
             transition-property: padding;
             transition-timing-function: ease;
 
@@ -203,7 +210,7 @@ bonus-terms {
   }
 }
 
-.qualifying-listing ,
+.qualifying-listing,
 .promotions-listing {
   .opt-out,
   .cancel {
@@ -213,6 +220,20 @@ bonus-terms {
     &:hover {
       background-color: mix($tertiary-base, $primary-base, 10%);
       transition: none;
+    }
+  }
+}
+
+.inbox-tab {
+  &.inbox-badge::after {
+    height: 1.3rem;
+    right: calc(50% - 3.25rem);
+    top: 50%;
+    transform: translateY(-130%);
+    width: 1.3rem;
+
+    @media ($large) {
+      display: none;
     }
   }
 }
