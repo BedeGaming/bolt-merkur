@@ -340,3 +340,22 @@ dialog {
     }
   }
 }
+
+.inbox-message {
+  padding: 0 2rem;
+
+  .message-header {
+    margin-bottom: 2rem;
+    padding: 0;
+
+    .subject {
+      @include responsive-type(16, 20);
+      color: $secondary-color-700;
+      font-weight: bold;
+    }
+  }
+
+  .message-body {
+    margin-bottom: 2rem;
+  }
+}
