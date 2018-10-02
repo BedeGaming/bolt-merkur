@@ -1,5 +1,10 @@
-$notification-gradient-from: #b1fdd7;
-$notification-gradient-to: #d9fdda;
+$success-gradient-from: #b1fdd7;
+$success-gradient-to: #d9fdda;
+
+$error-gradient-from: #ffb7a9;
+$error-gradient-to: #ffd4e7;
+$error-outer-ring: #ff7d7d;
+$error-inner-ring: #e15656;
 
 .flashes {
   height: 100%;
@@ -15,11 +20,15 @@ $notification-gradient-to: #d9fdda;
 .site-notification {
   @include responsive-type(12, 18);
 
+  align-items: center;
+  backdrop-filter: blur(5px);
   background-color: transparentize($white, 0.05);
   border-radius: 5px;
   box-shadow: $common-box-shadow;
   color: $black;
   display: flex;
+  margin-bottom: 2rem;
+  min-height: 12rem;
   overflow: hidden;
   padding: 4rem 5rem 4rem 14rem;
   pointer-events: all;
@@ -27,7 +36,7 @@ $notification-gradient-to: #d9fdda;
 
   &.notification-success {
     .flash-type {
-      background-image: linear-gradient(180deg, $notification-gradient-from 0%, $notification-gradient-to 100%);
+      background-image: linear-gradient(180deg, $success-gradient-from 0%, $success-gradient-to 100%);
 
       &::before,
       &::after  {
@@ -63,7 +72,39 @@ $notification-gradient-to: #d9fdda;
   }
 
   &.notification-error {
-    background: $notification-error-background;
+    .flash-type {
+      background-image: linear-gradient(180deg, $error-gradient-from 0%, $error-gradient-to 100%);
+
+      &::before,
+      &::after  {
+        animation: tick-enter 500ms ease 0s 1 both;
+        background-color: $error-outer-ring;
+        border-radius: 50%;
+        content: '';
+        height: 8rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 8rem;
+      }
+
+      &::after {
+        animation-delay: 200ms;
+        background-color: $error-inner-ring;
+        height: 6.2rem;
+        width: 6.2rem;
+      }
+
+      svg {
+        fill: $white;
+        height: 3.2rem;
+        position: relative;
+        width: 3.2rem;
+        z-index: 1;
+      }
+    }
   }
 
   &.notification-info {
@@ -89,6 +130,7 @@ $notification-gradient-to: #d9fdda;
     align-items: center;
     border-left: 1px solid #dae1e6;
     bottom: 1rem;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     position: absolute;
