@@ -68,10 +68,7 @@
         {{/if}}
       {{else}}
         {{#if ../useBackgroundImage}}
-          <div class="slider__item-content" style="background-image: url('{{imgPath}}-medium.jpg');">
-            <!-- <div class="slide-medium" style="background-image: url('{{imgPath}}-medium.jpg');"></div>
-            <div class="slide-small" style="background-image: url('{{imgPath}}-small.jpg');"></div> -->
-          </div>
+          <div class="slider__item-content" style="background-image: url('{{imgPath}}-medium.jpg');"></div>
         {{else}}
           <img src="{{imgPath}}.jpg"
           srcset="{{imgPath}}.jpg 1400w, {{imgPath}}-small.jpg 1200w" alt="{{headline}}"

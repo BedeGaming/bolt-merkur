@@ -15,7 +15,7 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem 2.5rem;
   position: relative;
   text-transform: uppercase;
-  transition: border-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease, color 300ms ease, height 300ms ease, transform 100ms ease, width 300ms ease,;
+  transition: border-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease, color 300ms ease, height 300ms ease, transform 100ms ease, width 300ms ease;
   white-space: nowrap;
 
   &::after {
@@ -58,9 +58,9 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
 
 dialog {
   user-login {
-    footer {
-      .waiting {
-        &.primary-action {
+    form {
+      footer {
+        button.waiting.primary-action {
           color: transparent;
         }
       }
