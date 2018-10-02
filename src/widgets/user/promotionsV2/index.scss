@@ -1,0 +1,12 @@
+// these styles are now scoped here, when we start using more generic components it means we can do that without altering the actual file
+// It also means that if a file imported a bolt file and only had to change a few lines, we could do that here again without having to rewrite the full file
+// if u really hate it, feel ree to change and just import these at root
+promotions-group-container {
+  @import 'widgets/user/promotionsv2/style';
+  @import 'widgets/user/promotionsv2/item/style';
+  @import 'widgets/user/promotionsv2/item/placeholder';
+}
+
+.promotion-preview {
+  @import 'widgets/user/promotionsv2/preview/style';
+}
