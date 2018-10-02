@@ -1,5 +1,7 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/buttons';
 
+$hover-bg-color: rgba(255, 255, 255, 0.1);
+
 .btn,
 %btn {
   background-color: transparent;
@@ -13,12 +15,30 @@
   padding: 1.5rem 2.5rem;
   position: relative;
   text-transform: uppercase;
-  transition: border-color 200ms ease, color 200ms ease;
+  transition: border-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease, color 300ms ease, height 300ms ease, transform 100ms ease, width 300ms ease,;
   white-space: nowrap;
+
+  &::after {
+    background-color: $hover-bg-color;
+    border-radius: 50%;
+    content: '';
+    height: 20rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 300ms ease;
+    width: 20rem;
+  }
 
   &:hover {
     border-color: lighten($primary-base, 20%);
+    box-shadow: $common-box-shadow;
     color: lighten($primary-base, 20%);
+  }
+
+  &:active {
+    transform: scale(0.975);
   }
 
   &.btn-primary,
@@ -28,7 +48,9 @@
     color: $white;
 
     &:hover {
-      background-image: linear-gradient(270deg, $primary-gradient-from 0%, $primary-gradient-to 100%);
+      &::after {
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
   }
 }

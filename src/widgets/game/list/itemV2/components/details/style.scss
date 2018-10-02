@@ -77,9 +77,6 @@ $bg-color: rgba(255, 255, 255, 0.95);
       min-width: unset;
       padding: 0;
       transform: scale(0.8);
-      transition-duration: 300ms;
-      transition-property: border-radius, height, transform, width;
-      transition-timing-function: ease;
       width: 1rem;
 
       span {
