@@ -162,7 +162,7 @@ dialog {
 
           &::after {
             animation-delay: 200ms;
-            background-color: $dark-green;
+            background-color: $green-dark;
             height: 75%;
             width: 75%;
           }
@@ -225,7 +225,7 @@ dialog {
         // overriding weird selector from bolt
         &:nth-child(2):not(.back) {
           background: none;
-          color: $dark-grey;
+          color: $grey-dark;
           font-size: 1.4rem;
           font-weight: normal;
           margin: 1rem 0 0;
@@ -238,7 +238,7 @@ dialog {
 
           &:hover {
             background: none;
-            color: $dark-grey;
+            color: $grey-dark;
           }
         }
       }
@@ -262,7 +262,7 @@ dialog {
     }
 
     .register {
-      color: $dark-blue;
+      color: $blue-dark;
       font-size: 1.6rem;
       margin: 0;
 

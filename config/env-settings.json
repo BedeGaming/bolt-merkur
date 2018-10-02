@@ -1,4 +1,10 @@
 {
   "siteRoot": "http://localhost:3000",
-  "tracking": {}
+  "tracking": {},
+  "features": {
+    "promotions": {
+      "react": true,
+      "mergeContentWithConfig": true
+    }
+  }
 }

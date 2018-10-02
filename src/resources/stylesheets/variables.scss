@@ -4,18 +4,20 @@ $tertiary-base: #63152d;
 $white: #fff;
 $black: #3e3135;
 $blue: #9ccaff;
-$light-blue: #ecf3fc;
-$light-blue-2: #edeff5;
-$dark-blue: #7c7f8c;
+$blue-dark: #7c7f8c;
+$blue-light: #ecf3fc;
+$blue-light-2: #edeff5;
+$blue-mid: #62aafc;
+$cream: #f3ecec;
+$green: #56e165;
+$green-dark: #2ab23a;
+$green-light: #7cf488;
+$grey: #7c7f8c;
+$grey-dark: #333;
+$grey-light: #f9f9f9;
+$logo-color: #db0e17;
 $primary-gradient-from: #ff345f;
 $primary-gradient-to: #ff9268;
-$logo-color: #db0e17;
-$light-grey: #f9f9f9;
-$grey: #7c7f8c;
-$dark-grey: #333;
-$green: #56e165;
-$dark-green: #37bb47;
-$cream: #f3ecec;
 
 $game-page-btn-accent-colour: $primary-base;
 $game-page-btn-span-margin: 0 0 0 1rem;
@@ -55,11 +57,11 @@ $common-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;
 $table-color: $black;
-$thead-border-bottom: 2px solid $light-grey;
+$thead-border-bottom: 2px solid $grey-light;
 $thead-background: linear-gradient(to right, $green -50%, $blue 100%);
 $thead-color: $white;
-$trow-odd-background: $light-blue;
-$trow-even-background: mix($light-blue, $white, 25%);
+$trow-odd-background: $blue-light;
+$trow-even-background: mix($blue-light, $white, 25%);
 
 $input-border: 1px solid $black;
 $input-border-radius: 0;
@@ -68,13 +70,13 @@ $input-height: 8rem;
 
 $app-hub-logo-large-width: 10.3rem;
 $app-hub-logo-large-height: 5.5rem;
-$heading-color: $light-grey;
+$heading-color: $grey-light;
 
 $header-background: $white;
 
-$transaction-history-color: mix($dark-grey, $light-grey, 50%);
+$transaction-history-color: mix($grey-dark, $grey-light, 50%);
 $transaction-history-button-active-color: $primary-base;
-$transaction-history-background-color: $light-grey;
+$transaction-history-background-color: $grey-light;
 $transaction-history-border-color: $transaction-history-color;
 $transaction-history-font-size: 1.5rem;
 
