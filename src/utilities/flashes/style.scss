@@ -1,0 +1,105 @@
+$notification-gradient-from: #b1fdd7;
+$notification-gradient-to: #d9fdda;
+
+.flashes {
+  height: 100%;
+  padding: 2rem;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50rem;
+  z-index: 9999;
+}
+
+.site-notification {
+  @include responsive-type(12, 18);
+
+  background-color: transparentize($white, 0.05);
+  border-radius: 5px;
+  box-shadow: $common-box-shadow;
+  color: $black;
+  display: flex;
+  overflow: hidden;
+  padding: 4rem 5rem 4rem 14rem;
+  pointer-events: all;
+  position: relative;
+
+  &.notification-success {
+    .flash-type {
+      background-image: linear-gradient(180deg, $notification-gradient-from 0%, $notification-gradient-to 100%);
+
+      &::before,
+      &::after  {
+        animation: tick-enter 500ms ease 0s 1 both;
+        background-color: $green;
+        border-radius: 50%;
+        content: '';
+        height: 8rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 8rem;
+      }
+
+      &::after {
+        animation-delay: 200ms;
+        background-color: $green-dark;
+        height: 6.2rem;
+        width: 6.2rem;
+      }
+
+      svg {
+        fill: $white;
+        height: 3rem;
+        position: relative;
+        transform: translateY(0.2rem);
+        width: 4.1rem;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.notification-error {
+    background: $notification-error-background;
+  }
+
+  &.notification-info {
+    background: $info-blue;
+  }
+
+  .flash-type {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 12rem;
+  }
+
+  .flash-message {
+    line-height: 2.1rem;
+  }
+
+  .flash-close {
+    align-items: center;
+    border-left: 1px solid #dae1e6;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 5rem;
+
+    svg {
+      fill: #bfcbd4;
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+}
