@@ -2,7 +2,7 @@
 
 .promo-card {
   border: 1px solid $grey-light;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+  box-shadow: $common-box-shadow;
   display: flex;
   flex-direction: column;
 
