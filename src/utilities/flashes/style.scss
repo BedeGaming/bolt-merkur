@@ -6,6 +6,8 @@ $error-gradient-to: #ffd4e7;
 $error-outer-ring: #ff7d7d;
 $error-inner-ring: #e15656;
 
+$close-border-color: #dae1e6;
+
 @keyframes icon-enter {
   from {
     transform: scale(0) translate(-50%, -50%);
@@ -267,7 +269,7 @@ $error-inner-ring: #e15656;
     width: 4.3rem;
 
     &::before {
-      background-color: #dae1e6;
+      background-color: $close-border-color;
       content: '';
       height: calc(100% - 1rem);
       left: 0;
@@ -280,7 +282,7 @@ $error-inner-ring: #e15656;
     }
 
     svg {
-      fill: #bfcbd4;
+      fill: $close-color;
       height: 1.6rem;
       width: 1.6rem;
     }
