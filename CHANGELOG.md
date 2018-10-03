@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.13.0
+- added notification styles
+
 ## 0.12.0
 - enabled promotions V2 on the site
 
