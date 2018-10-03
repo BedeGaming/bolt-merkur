@@ -6,15 +6,54 @@ $error-gradient-to: #ffd4e7;
 $error-outer-ring: #ff7d7d;
 $error-inner-ring: #e15656;
 
+@keyframes icon-enter {
+  from {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  to {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes notification-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes notification-leave {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(-2rem);
+  }
+}
+
 .flashes {
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
   pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
-  width: 50rem;
+  width: 100%;
   z-index: 9999;
+
+  @media ($medium) {
+    padding: 2rem;
+    width: 50rem;
+  }
 }
 
 .site-notification {
@@ -22,51 +61,103 @@ $error-inner-ring: #e15656;
 
   align-items: center;
   backdrop-filter: blur(5px);
-  background-color: transparentize($white, 0.05);
+  background-color: transparentize($white, 0.02);
   border-radius: 5px;
   box-shadow: $common-box-shadow;
   color: $black;
   display: flex;
   margin-bottom: 2rem;
-  min-height: 12rem;
+  min-height: 4.4rem;
   overflow: hidden;
-  padding: 4rem 5rem 4rem 14rem;
+  padding: 1rem 7rem 1rem 5.5rem;
   pointer-events: all;
   position: relative;
+  transform-origin: top center;
+
+  @media ($medium) {
+    min-height: 12rem;
+    padding: 4rem 7rem 4rem 14rem;
+    transform-origin: top right;
+  }
+
+  &.show,
+  &.hide {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  &.show {
+    animation-fill-mode: forwards;
+    animation-name: notification-enter;
+  }
+
+  &.remove {
+    animation-fill-mode: forwards;
+    animation-name: notification-leave;
+  }
 
   &.notification-success {
     .flash-type {
       background-image: linear-gradient(180deg, $success-gradient-from 0%, $success-gradient-to 100%);
 
       &::before,
+      &::after,
+      svg  {
+        animation: icon-enter 500ms ease 400ms 1 both;
+      }
+
+      &::before,
       &::after  {
-        animation: tick-enter 500ms ease 0s 1 both;
         background-color: $green;
         border-radius: 50%;
         content: '';
-        height: 8rem;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
         transform-origin: top left;
-        width: 8rem;
+      }
+
+      &::before {
+        height: 3rem;
+        width: 3rem;
       }
 
       &::after {
-        animation-delay: 200ms;
+        animation-delay: 600ms;
         background-color: $green-dark;
-        height: 6.2rem;
-        width: 6.2rem;
+        height: 2.3rem;
+        width: 2.3rem;
       }
 
       svg {
+        animation-delay: 800ms;
         fill: $white;
         height: 3rem;
-        position: relative;
-        transform: translateY(0.2rem);
-        width: 4.1rem;
+        left: 50%;
+        position: absolute;
+        top: calc(50% + 0.1rem);
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 1.6rem;
         z-index: 1;
+      }
+
+      @media ($medium) {
+        &::before {
+          height: 8rem;
+          width: 8rem;
+        }
+
+        &::after {
+          height: 6.2rem;
+          width: 6.2rem;
+        }
+
+        svg {
+          top: calc(50% + 0.2rem);
+          width: 4.1rem;
+        }
       }
     }
   }
@@ -76,33 +167,63 @@ $error-inner-ring: #e15656;
       background-image: linear-gradient(180deg, $error-gradient-from 0%, $error-gradient-to 100%);
 
       &::before,
+      &::after,
+      svg  {
+        animation: icon-enter 500ms ease 400ms 1 both;
+      }
+
+      &::before,
       &::after  {
-        animation: tick-enter 500ms ease 0s 1 both;
         background-color: $error-outer-ring;
         border-radius: 50%;
         content: '';
-        height: 8rem;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
         transform-origin: top left;
-        width: 8rem;
+      }
+
+      &::before {
+        height: 3rem;
+        width: 3rem;
       }
 
       &::after {
-        animation-delay: 200ms;
+        animation-delay: 600ms;
         background-color: $error-inner-ring;
-        height: 6.2rem;
-        width: 6.2rem;
+        height: 2.3rem;
+        width: 2.3rem;
       }
 
       svg {
+        animation-delay: 800ms;
         fill: $white;
-        height: 3.2rem;
-        position: relative;
-        width: 3.2rem;
+        height: 1.2rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 1.2rem;
         z-index: 1;
+      }
+
+      @media ($medium) {
+        &::before {
+          height: 8rem;
+          width: 8rem;
+        }
+
+        &::after {
+          height: 6.2rem;
+          width: 6.2rem;
+        }
+
+        svg {
+          height: 3.2rem;
+          width: 3.2rem;
+        }
       }
     }
   }
@@ -119,29 +240,53 @@ $error-inner-ring: #e15656;
     left: 0;
     position: absolute;
     top: 0;
-    width: 12rem;
+    width: 4.4rem;
+
+    @media ($medium) {
+      width: 12rem;
+    }
   }
 
   .flash-message {
-    line-height: 2.1rem;
+    line-height: 1.4rem;
+
+    @media ($medium) {
+      line-height: 2.1rem;
+    }
   }
 
   .flash-close {
     align-items: center;
-    border-left: 1px solid #dae1e6;
-    bottom: 1rem;
+    bottom: 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
     position: absolute;
     right: 0;
-    top: 1rem;
-    width: 5rem;
+    top: 0;
+    width: 4.3rem;
+
+    &::before {
+      background-color: #dae1e6;
+      content: '';
+      height: calc(100% - 1rem);
+      left: 0;
+      position: absolute;
+      width: 0.1rem;
+
+      @media ($medium) {
+        height: calc(100% - 2rem);
+      }
+    }
 
     svg {
       fill: #bfcbd4;
       height: 1.6rem;
       width: 1.6rem;
+    }
+
+    @media ($medium) {
+      width: 5rem;
     }
   }
 }

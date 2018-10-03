@@ -42,15 +42,8 @@ class Flash extends Component {
     }
   }
 
-  getFlashTitle() {
-    const { titleTranslate, title } = this.props;
-
-    return titleTranslate !== false ? Translator.translate(title) : title;
-  }
-
   render() {
     const { dismissible = true, bodyTranslate } = this.props;
-    const title = this.getFlashTitle();
     let { body } = this.props;
     body = bodyTranslate !== false ? `<p>${Translator.translate(body)}</p>` : body;
 

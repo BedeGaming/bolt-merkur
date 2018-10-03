@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes animate {
+@keyframes modal-animate {
   from {
     transform: scale(0.9);
   }
@@ -20,11 +20,13 @@
   }
 }
 
+$model-box-shadow: 0 8px 20px rgba(22, 20, 20, 0.15);
+
 dialog {
-  animation: animate 300ms ease 0s 1 both;
+  animation: modal-animate 300ms ease 0s 1 both;
   border: 0;
   border-radius: 5px;
-  box-shadow: 0 8px 20px rgba(22, 20, 20, 0.15);
+  box-shadow: $model-box-shadow;
   padding: 4.5rem 3rem 3rem;
   width: 45rem;
 
@@ -101,10 +103,11 @@ dialog {
       }
 
       .peeky-password {
-        height: auto;
+        height: 3.2rem;
         line-height: normal;
         right: 2rem;
-        top: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
         transition: right 300ms ease;
 
         svg {
@@ -130,9 +133,13 @@ dialog {
 
         svg {
           fill: $white;
-          transform: scale(0);
+          left: 50%;
+          position: absolute;
+          top: calc(50% + 0.1rem);
+          transform: translate(-50%, -50%) scale(0);
+          transform-origin: center;
           transition: transform 300ms ease;
-          width: 55%;
+          width: 50%;
           z-index: 1;
         }
       }
@@ -168,7 +175,7 @@ dialog {
           }
 
           svg {
-            transform: scale(1);
+            transform: translate(-50%, -50%) scale(1);
             transition-delay: 300ms;
           }
         }
