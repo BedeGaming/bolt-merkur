@@ -207,6 +207,36 @@ profile-area {
       order: 2;
       width: 100%;
     }
+
+    .btn {
+      &.btn-primary {
+        margin: 0;
+        min-width: 14rem;
+        padding: 1.5rem;
+
+        @media ($small) {
+          font-size: 1.4rem;
+          margin: 0 0 0 1.5rem;
+        }
+
+        @media ($medium) {
+          font-size: 1.6rem;
+          min-width: 22rem;
+          padding: 1.7rem;
+        }
+
+        &.deposit {
+          margin-left: 0;
+          max-width: 27rem;
+          min-width: 22rem;
+          padding: 1.7rem;
+
+          @media ($small) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
   }
 
   user-wallets {
@@ -309,20 +339,6 @@ profile-area {
       }
     }
 
-    .btn {
-      &.btn-primary {
-        margin-bottom: 0;
-        min-width: 22rem;
-        overflow: inherit;
-        padding: 1.9rem;
-
-        @media ($small) {
-          font-size: 1.6rem;
-          width: 25rem;
-        }
-      }
-    }
-
     .pending-withdrawals-grid {
       flex-flow: column nowrap;
 
@@ -343,35 +359,6 @@ profile-area {
         &:only-child {
           margin-bottom: 0;
           max-width: none;
-        }
-      }
-
-      .btn
-      &.btn-primary {
-        margin: 0;
-        min-width: 14rem;
-        padding: 1.5rem;
-
-        @media ($small) {
-          font-size: 1.4rem;
-          margin: 0 0 0 1.5rem;
-        }
-
-        @media ($medium) {
-          font-size: 1.6rem;
-          min-width: 22rem;
-          padding: 1.7rem;
-        }
-
-        &.deposit {
-          margin-left: 0;
-          max-width: 27rem;
-          min-width: 22rem;
-          padding: 1.7rem;
-
-          @media ($small) {
-            font-size: 1.6rem;
-          }
         }
       }
     }
