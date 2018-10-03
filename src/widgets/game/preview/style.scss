@@ -18,6 +18,14 @@ game-preview {
   }
 
   footer {
+    align-items: stretch;
+    flex-direction: column;
+
+    @media ($medium) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
     .register {
       @extend %btn;
       @extend %btn-primary;
@@ -26,11 +34,18 @@ game-preview {
     }
 
     button {
+      margin-bottom: 1rem;
+
       &:nth-child(2):not(.back) {
         @extend %btn;
+        margin: 0;
 
         &:hover {
           background: $white;
+        }
+
+        @media ($medium) {
+          margin-left: 1rem;
         }
       }
     }
