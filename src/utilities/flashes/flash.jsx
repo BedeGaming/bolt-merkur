@@ -1,5 +1,6 @@
-import React from 'react'
-import View from '@bedegaming/bolt/src/utilities/flashes/flash'
+import React from 'react';
+import { Translator } from 'orchestra';
+import View from '@bedegaming/bolt/src/utilities/flashes/flash.jsx';
 
 class Flash extends View {
   render() {
