@@ -1,47 +1,7 @@
-import { Translator } from 'orchestra';
-import React, { Component } from 'react';
+import React from 'react'
+import View from '@bedegaming/bolt/src/utilities/flashes/flash'
 
-class Flash extends Component {
-  constructor(props) {
-    super(props);
-    const notificationType = props.type;
-    const notificationPosition = props.position || '';
-
-    this.state = {
-      notificationClasses: `site-notification show notification-${notificationType} ${notificationPosition}`,
-      dismissed: false
-    };
-  }
-
-  clearFlash() {
-    this.setState({ dismissed: true });
-    this.props.removeFlash(this.props.id);
-  }
-
-  dismiss() {
-    if (!this.state.dismissed) {
-      this.setState({
-        notificationClasses: `${this.state.notificationClasses} remove`
-      });
-
-      if (this.flash) {
-        this.flash.addEventListener('animationend', this.clearFlash.bind(this), false);
-      }
-    }
-  }
-
-  componentDidMount() {
-    const isInGame = this.props.type === 'in-game';
-    const hasTimeout = window.config.hasFlashDestroyTimer || isInGame;
-    const timeout = hasTimeout ? this.props.timeout || 3000 : false;
-
-    if (hasTimeout) {
-      setTimeout(() => {
-        this.dismiss();
-      }, timeout);
-    }
-  }
-
+class Flash extends View {
   render() {
     const { dismissible = true, bodyTranslate } = this.props;
     let { body } = this.props;
