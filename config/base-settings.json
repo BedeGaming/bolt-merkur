@@ -46,6 +46,9 @@
   "features": {
     "bonusToolContentPromos": true,
     "logoutOnIdleSession": false,
+    "promotions": {
+      "react": true
+    },
     "winnersFeed": {
       "minWin": 10,
       "minWinners": 6,
