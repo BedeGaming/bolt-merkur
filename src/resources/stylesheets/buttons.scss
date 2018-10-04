@@ -49,6 +49,8 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
     color: $white;
 
     &:hover {
+      background-image: linear-gradient(90deg, $primary-gradient-from 0%, $primary-gradient-to 100%);
+
       &::after {
         transform: translate(-50%, -50%) scale(1);
       }
