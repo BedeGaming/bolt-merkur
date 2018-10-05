@@ -18,12 +18,12 @@
   }
 }
 
-$blue-dark: #3c4466;
+// $blue-dark: #3c4466;
 
 app-hub {
-
   total-balance {
     margin: 0;
+    min-width: 14rem;
     top: 5.8rem;
 
     @media ($medium) {
@@ -34,14 +34,18 @@ app-hub {
   .balance-list {
     align-items: center;
     background-color: $blue-light;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 1.4rem;
     height: 100%;
-    padding: 0.5rem 2rem;
+    padding: 0;
+
+    // &:hover {
+    //   background-color: $blue-mid;
+    // }
 
     @media ($medium) {
       font-size: 1.6rem;
-      padding: 1rem 2rem;
+      // padding: 1rem 2rem;
     }
 
     svg {
@@ -105,28 +109,27 @@ app-hub {
   }
 
   .balance-group {
+    align-items: center;
     color: $blue-dark;
     display: flex;
-
-    &:hover {
-      color: darken($blue-mid, 20%);
-    }
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1.5rem;
   }
 
   .hide-balance {
     align-items: center;
     background-color: $blue-mid;
-    border-radius: 3px 0 0 3px;
-    bottom: 0;
+    border-radius: 5px 0 0 5px;
     display: flex;
+    height: 5rem;
     justify-content: center;
-    left: 0;
-    padding: 0 0.5rem;
-    position: absolute;
-    top: 0;
+    margin-right: 1rem;
+    min-width: 3.5rem;
+    width: 3.5rem;
 
     svg {
-      fill: $blue-dark;
+      fill: $white;
       pointer-events: none;
       width: 2rem;
     }
@@ -137,8 +140,59 @@ app-hub {
 
     &:hover {
       svg {
-        fill: $blue-mid;
+        fill: $blue-dark;
       }
+    }
+  }
+
+  .secret {
+    main-balance {
+      // width: 6.5rem;
+
+      @media ($large) {
+        margin-bottom: 1rem;
+        // width: 6rem;
+      }
+
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        content: '...';
+        font-size: 1.6rem;
+        // margin-bottom: 1rem;
+        // position: absolute;
+        text-align: center;
+        // top: 0;
+        width: 3rem;
+
+        // @media($large) {
+          // top: 0.7rem;
+        // }
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .hide-balance {
+      margin-right: 4rem;
+
+      .hidden {
+        display: block;
+        margin-top: 0.5rem;
+        width: 2rem;
+      }
+
+      .shown {
+        display: none;
+      }
+    }
+
+    .toggle-wallets {
+      display: none;
     }
   }
 
@@ -146,9 +200,9 @@ app-hub {
     margin-right: 0.5rem;
     transition: color 300ms ease;
 
-    &:hover {
-      color: $blue-mid;
-    }
+    // &:hover {
+    //   color: $blue-mid;
+    // }
   }
 
   sub-balance {
