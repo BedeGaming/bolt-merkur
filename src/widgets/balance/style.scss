@@ -152,7 +152,7 @@ app-hub {
     }
 
     svg {
-      fill: $white;
+      fill: $blue-dark;
       pointer-events: none;
       width: 1.8rem;
 
@@ -168,7 +168,7 @@ app-hub {
 
     &:hover {
       svg {
-        fill: $blue-dark;
+        fill: $white;
       }
     }
   }
