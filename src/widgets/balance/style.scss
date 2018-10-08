@@ -22,11 +22,15 @@
 
 app-hub {
   total-balance {
+    background-color: $blue-light;
+    justify-content: center;
     margin: 0;
     min-width: 14rem;
     top: 5.8rem;
 
     @media ($medium) {
+      background-color: $white;
+      justify-content: space-between;
       top: auto;
     }
   }
@@ -34,24 +38,33 @@ app-hub {
   .balance-list {
     align-items: center;
     background-color: $blue-light;
-    border-radius: 5px;
+    // border-radius: 5px;
+    flex-wrap: nowrap;
     font-size: 1.4rem;
     height: 100%;
     padding: 0;
+    width: auto;
 
     // &:hover {
     //   background-color: $blue-mid;
     // }
 
     @media ($medium) {
+      border-radius: 5px;
       font-size: 1.6rem;
       // padding: 1rem 2rem;
+      width: 100%;
     }
 
     svg {
       fill: $blue-mid;
+      // margin-bottom: 0.2rem;
       transition: fill 200ms ease;
-      width: 0.8rem;
+      width: 1.2rem;
+
+      @media ($medium) {
+        margin-bottom: 0.2rem;
+      }
     }
 
     .wallets {
@@ -99,6 +112,12 @@ app-hub {
           padding: 2rem;
         }
       }
+
+      .toggle-wallets {
+        svg {
+          margin: 0.2rem 0 0;
+        }
+      }
     }
 
     &.secret {
@@ -113,25 +132,44 @@ app-hub {
     color: $blue-dark;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-right: 1.5rem;
+    justify-content: center;
+    // margin-right: 1.2rem;
+    width: 100%;
+
+    @media ($medium) {
+      justify-content: flex-end;
+      margin-right: 1.2rem;
+    }
   }
 
   .hide-balance {
     align-items: center;
     background-color: $blue-mid;
-    border-radius: 5px 0 0 5px;
+    border-radius: 50%;
     display: flex;
-    height: 5rem;
+    height: 2.2rem;
     justify-content: center;
-    margin-right: 1rem;
-    min-width: 3.5rem;
-    width: 3.5rem;
+    margin: 0.3rem 1.5rem 0.3rem 0;
+    min-width: 2.2rem;
+    width: 2.2rem;
+
+    @media ($medium) {
+      border-radius: 5px 0 0 5px;
+      height: 5rem;
+      margin: 0 1rem 0 0;
+      min-width: 3.5rem;
+      width: 3.5rem;
+    }
 
     svg {
       fill: $white;
       pointer-events: none;
-      width: 2rem;
+      width: 1.8rem;
+
+      @media ($medium) {
+        height: 2.2rem;
+        width: 2.2rem;
+      }
     }
 
     .hidden {
@@ -145,9 +183,22 @@ app-hub {
     }
   }
 
+  .toggle-wallets {
+    margin-right: 0;
+
+    @media ($medium) {
+      margin-left: 0.7rem;
+    }
+  }
+
   .secret {
     main-balance {
+      padding-bottom: 0.7rem;
       // width: 6.5rem;
+
+      @media ($medium) {
+        padding-bottom: 0;
+      }
 
       @media ($large) {
         margin-bottom: 1rem;
@@ -163,9 +214,14 @@ app-hub {
         font-size: 1.6rem;
         // margin-bottom: 1rem;
         // position: absolute;
+        margin-left: 3rem;
         text-align: center;
         // top: 0;
         width: 3rem;
+
+        @media ($medium) {
+          margin-left: 0;
+        }
 
         // @media($large) {
           // top: 0.7rem;
@@ -177,13 +233,30 @@ app-hub {
       }
     }
 
+    .balance-group {
+      justify-content: flex-start;
+      min-width: 10rem;
+
+      @media ($medium) {
+        justify-content: center;
+      }
+    }
+
     .hide-balance {
-      margin-right: 4rem;
+      margin-right: 0;
+
+      // @media ($medium) {
+      //   margin-right: 4rem;
+      // }
 
       .hidden {
         display: block;
         margin-top: 0.5rem;
-        width: 2rem;
+        width: 1.8rem;
+
+        @media ($medium) {
+          width: 2rem;
+        }
       }
 
       .shown {
@@ -197,7 +270,7 @@ app-hub {
   }
 
   main-balance {
-    margin-right: 0.5rem;
+    // margin-right: 0.5rem;
     transition: color 300ms ease;
 
     // &:hover {
@@ -206,9 +279,10 @@ app-hub {
   }
 
   sub-balance {
-    color: $blue-mid;
+    // color: $blue-mid;
     flex-direction: row;
     font-size: 1.4rem;
+    justify-content: center;
     margin-bottom: 1rem;
 
     &:first-child {
@@ -227,10 +301,24 @@ app-hub {
 
   wallet-name {
     color: $grey-dark;
+    flex: 0;
+
+    @media ($medium) {
+      flex: 1;
+    }
   }
 
   wallet-value {
     color: $blue-dark;
+    flex: 0;
     font-weight: bold;
+
+    @media ($medium) {
+      flex: 1;
+    }
   }
 }
+
+// .toggle-wallets {
+//   margin-right: 0;
+// }
