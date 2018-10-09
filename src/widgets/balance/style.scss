@@ -168,7 +168,7 @@ app-hub {
 
     &:hover {
       svg {
-        fill: $white;
+        fill: lighten($blue-dark, 30%);
       }
     }
   }
