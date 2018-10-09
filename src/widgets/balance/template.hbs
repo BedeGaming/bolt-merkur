@@ -1,9 +1,13 @@
 <div class="balance-list {{openClass}}">
+  <div class="hide-balance">
+    <svg class="shown" viewBox="0 0 17.2 10.3"><use xlink:href="#icon-eye-open-icon"/></svg>
+    <svg class="hidden" viewBox="0 0 32 14.58"><use xlink:href="#icon-eye-closed-icon"/></svg>
+  </div>
+
   <div class="balance-group">
     <main-balance>
       <span>{{currency totalBalance 2}}</span>
     </main-balance>
-
     <button class="toggle-wallets">
       <span>
         <svg viewBox="0 0 8 5">

@@ -1,5 +1,8 @@
 ## Bolt Bede Casino
 
+## 0.14.0
+- added hide balance functionality to balance in header
+
 ## 0.13.0
 - added notification styles
 
