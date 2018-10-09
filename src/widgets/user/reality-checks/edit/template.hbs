@@ -1,0 +1,45 @@
+<h1>{{translate "reality_check_preface_title"}}</h1>
+<form autocomplete="off">
+  <p>{{translate "reality_check_question"}}</p>
+  <div class="input-container">
+    <label>{{translate "reality_check_duration"}}</label>
+    <select name="interval">
+       {{#each options}}
+          <option value="{{value}}" {{selected}}>{{{translate text}}}</option>
+       {{/each}}
+    </select>
+  </div>
+
+  <div class="input-container">
+    <label for="currentPassword">{{translate "enter_password"}}</label>
+    <input name="currentPassword"
+           id="currentPassword"
+           class="no-autofill peeky"
+           autocomplete="new-password"
+           placeholder="••••••••"
+           type="password"
+           value=""
+           placeholder="{{translate "password"}}"
+           data-hj-masked
+           required>
+    <button type="button" class="peeky-password" aria-label="{{translate 'toggle_show_password'}}">
+      <svg focusable="false" class="open" viewBox="0 0 17.2 10.3">
+        <use xlink:href="#icon-eye-open-icon" />
+      </svg>
+      <svg focusable="false" class="close" viewBox="0 -5 32 25">
+        <use xlink:href="#icon-eye-closed-icon" />
+      </svg>
+    </button>
+  </div>
+
+  <footer>
+    <button type="submit">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        {{translate "save"}}
+      </span>
+    </button>
+  </footer>
+</form>
