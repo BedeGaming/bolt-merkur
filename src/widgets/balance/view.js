@@ -3,6 +3,9 @@ import Cookies from 'cookies-js';
 import template from 'widgets/balance/template.hbs';
 
 export default View.extend({
+  tagName: 'total-balance',
+
+  template,
 
   events: {
     'click @ui.refresh': 'refresh',
@@ -60,7 +63,6 @@ export default View.extend({
 
     const isBalanceOpen = this.model.get('isBalanceOpen');
     this.model.set('isBalanceOpen', !isBalanceOpen);
-    console.log('chocolate');
     if (!isBalanceOpen) this.refresh();
   }
 });
