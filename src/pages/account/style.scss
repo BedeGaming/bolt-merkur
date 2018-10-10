@@ -92,8 +92,20 @@ account-page {
       }
     }
   }
+
+  .table-scroll {
+    border-radius: 0.5em;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
+    table {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
 }
 
+deposit-limits,
 player-history {
   background: $white;
   border: 1px solid $grey-light;
@@ -127,14 +139,11 @@ player-history {
       font-size: 2rem;
     }
   }
+}
 
+player-history {
   bonus-history,
   transaction-history {
-    .table-scroll {
-      border-radius: 0.5em;
-      box-shadow: $box-shadow;
-    }
-
     .transactions-pagination {
       min-height: 0;
 
@@ -235,5 +244,19 @@ bonus-terms {
     @media ($large) {
       display: none;
     }
+  }
+}
+
+deposit-limits {
+  .limits-area {
+    margin: 0;
+  }
+
+  .limits-description {
+    margin-bottom: 2em;
+  }
+
+  .table-scroll {
+    margin: 1em 0;
   }
 }
