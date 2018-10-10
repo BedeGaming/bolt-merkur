@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 0.15.0
+- added content page styles
+- added animated header to content pages
+
 ## 0.14.0
 - added hide balance functionality to balance in header
 

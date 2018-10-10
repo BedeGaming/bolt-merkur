@@ -98,6 +98,8 @@ boltTasks.IstanbulTasksRegistry.prototype.getConfig = function getConfig() {
       `${process.cwd()}/main.js`,
       `!${process.cwd()}/src/locales/en-GB.js`,
       `!${process.cwd()}/src/pages/game/info/view.js`,
+      `!${process.cwd()}/src/pages/content/route.js`,
+      `!${process.cwd()}/src/pages/content/view.js`,
       `!${process.cwd()}/src/widgets/user/inboxV2/view.js`
     ]
   };

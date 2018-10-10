@@ -1,0 +1,113 @@
+@keyframes blob-spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+content-container {
+  title-header {
+    align-items: center;
+    background-color: $cream;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+    padding: 13rem 5rem;
+    position: relative;
+    width: 100%;
+
+    h1 {
+      color: $primary-base;
+      font-size: 3rem;
+      font-weight: 900;
+      position: relative;
+      text-transform: uppercase;
+      width: 100%;
+      z-index: 1;
+
+      @media ($medium) {
+        font-size: 5rem;
+        max-width: $max-width;
+      }
+    }
+
+    &::before {
+      animation: blob-spin 20s linear 0s infinite both;
+      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#A6FFAA" offset="0%"></stop>
+            <stop stop-color="#41B9FF" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g fill="url(#linearGradient-1)">
+          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
+        </g>
+      </svg>');
+      background-size: cover;
+      content: '';
+      height: 76.3rem;
+      left: 80%;
+      position: absolute;
+      top: -250%;
+      width: 74.4rem;
+      height: 152.7rem;
+      width: 148.9rem;
+
+      @media ($large) {
+        left: auto;
+        right: -50%;
+        top: -300%;
+      }
+
+      @media ($x-large) {
+        right: -30%;
+      }
+
+      @media (prefers-reduced-motion) {
+        animation: none;
+      }
+    }
+  }
+
+  content {
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 5px;
+    box-shadow: $lighter-box-shadow;
+    display: block;
+    margin: -2rem auto 3rem;
+    max-width: 93rem;
+    padding: 3rem;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  h1 {
+    color: $primary-base;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    margin-bottom: 1rem;
+
+    li {
+      color: $primary-base;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    list-style-position: outside;
+    padding-left: 1.5rem;
+  }
+}

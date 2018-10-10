@@ -34,7 +34,7 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
 
   &:hover {
     border-color: lighten($primary-base, 20%);
-    box-shadow: $common-box-shadow;
+    box-shadow: $box-shadow;
     color: lighten($primary-base, 20%);
   }
 
