@@ -1,17 +1,3 @@
-.timeout-terms {
-  margin: 0 3rem;
-}
-
-.timeout-terms-list {
-  font-size: 1.2rem;
-  list-style-position: outside;
-  margin-left: 1.5rem;
-
-  li {
-    margin-bottom: 1rem;
-  }
-}
-
 timeout-expanded {
   form {
     .terms-container {
@@ -44,5 +30,19 @@ timeout-expanded {
     .btn {
       font-size: 1.6rem;
     }
+  }
+}
+
+.timeout-terms {
+  margin: 0 3rem;
+}
+
+.timeout-terms-list {
+  font-size: 1.2rem;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+
+  li {
+    margin-bottom: 1rem;
   }
 }
