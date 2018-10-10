@@ -20,9 +20,13 @@ gambling-container {
 
   section {
     display: flex;
-    margin: 0 0 9rem;
+    margin: 0 0 6rem;
 
-    &:nth-child(3) {
+    @media ($small) {
+      margin-bottom: 9rem;
+    }
+
+    &:nth-child(4) {
       margin-bottom: 0;
     }
 
@@ -50,17 +54,25 @@ gambling-container {
     display: none;
   }
 
+  h1 {
+    color: $grey;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0 0 6rem;
+    text-align: left;
+    text-transform: uppercase;
 
-  // &:last-child {
-  //   margin-bottom: 0;
-  // }
+    @media ($small) {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+  }
 
   h2 {
     color: $primary-base;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
-    // text-align: center;
     text-transform: uppercase;
   }
 }
