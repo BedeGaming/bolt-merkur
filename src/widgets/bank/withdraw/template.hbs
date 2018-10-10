@@ -1,0 +1,94 @@
+<h1>{{translate "withdraw"}}</h1>
+<form novalidate>
+  <div class="input-container dropdown card-number">
+    <i class="card-type"></i>
+    <div class="load-selection"></div>
+    <label>{{translate title}}</label>
+  </div>
+  <section class="bacs hide">
+    <div class="input-container">
+    {{#if countries}}
+      <div class="input-container">
+        <select name="countryCode" autofocus="true">
+          {{#if topCountries}}
+            {{#each topCountries}}
+              <option value="{{countryCode}}">{{translate name}}</option>
+            {{/each}}
+            <option value="" disabled>------------------</option>
+          {{/if}}
+          {{#each countries}}
+            <option value="{{countryCode}}">{{translate name}}</option>
+          {{/each}}
+        </select>
+        <label>{{translate "country_of_bank"}}</label>
+      </div>
+    {{/if}}
+    <div class="input-container iban">
+      <input name="iban"
+             id="iban"
+             type="text"
+             value="{{iban}}"
+             placeholder=""
+             data-hj-masked
+             required />
+      <label for="iban">{{translate "iban"}}</label>
+    </div>
+    <div class="input-container no-iban">
+      <input name="bankName"
+             id="bankName"
+             type="text"
+             value="{{bankName}}"
+             placeholder=""
+             data-hj-masked
+             required />
+      <label for="bankName">{{translate "bank_name"}}</label>
+    </div>
+    <div class="input-container no-iban">
+      <input name="accountNumber"
+             id="accountNumber"
+             type="text"
+             value="{{accountNumber}}"
+             pattern="\d*"
+             placeholder=""
+             required
+             data-hj-masked
+             />
+      <label for="accountNumber">{{translate "account_number"}}</label>
+    </div>
+    <div class="input-container no-iban">
+      <input name="sortCode"
+             id="sortCode"
+             type="text"
+             value="{{sortCode}}"
+             pattern="\d*"
+             placeholder=""
+             data-hj-masked
+             required />
+      <label for="sortCode">{{translate "sort_code"}}</label>
+    </div>
+  </section>
+  <div class="input-container">
+    <input name="amount"
+           id="amount"
+           class="no-autofill"
+           autocomplete="off"
+           type="text"
+           pattern="\d*"
+           placeholder=""
+           required>
+    <label for="amount">{{translate "amount_currency"}}</label>
+  </div>
+  <footer>
+    <button type="submit" class="withdraw btn primary">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+           <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        {{translate "withdraw_funds"}}
+      </span>
+    </button>
+  </footer>
+  <small class="withdrawal-terms">
+    {{translate "withdraw_terms"}}
+  </small>
+</form>

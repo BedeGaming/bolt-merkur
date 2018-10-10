@@ -47,3 +47,13 @@
     }
   }
 }
+
+.withdraw-dialog {
+  bank-withdraw {
+    min-height: 0;
+  }
+
+  .withdrawal-terms {
+    margin: 0;
+  }
+}
