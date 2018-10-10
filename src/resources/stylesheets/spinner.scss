@@ -1,64 +1,66 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/spinner';
 
-button.waiting {
-  span {
-    position: relative;
-
-    > .spinner,
-    .spinner::after {
-      border-radius: 50%;
-      height: 2.5rem;
-      width: 2.5rem;
-    }
-
-    > .spinner {
-      -ms-transform: translateZ(0);
-      -webkit-animation: spinload 1.1s infinite linear;
-      -webkit-transform: translateZ(0);
-      animation: spinload 1.1s infinite linear;
-      border-bottom: 4px solid rgba(255, 255, 255, 0.5);
-      border-left: 4px solid $white;
-      border-right: 4px solid rgba(255, 255, 255, 0.5);
-      border-top: 4px solid rgba(255, 255, 255, 0.5);
-      bottom: 0;
-      font-size: 1.5rem;
-      left: 0;
-      margin: auto;
-      position: absolute;
-      right: 0;
-      text-indent: -9999em;
-      top: 0;
-      transform: translateZ(0);
-
-      .path {
-        stroke: none;
-      }
-    }
-  }
-
-  &[type="submit"] {
-    color: transparent;
-
+button {
+  &.waiting {
     span {
-      > .spinner {
-        border-bottom: 4px solid lighten($primary-base, 40%);
-        border-left: 4px solid $primary-base;
-        border-right: 4px solid lighten($primary-base, 40%);
-        border-top: 4px solid lighten($primary-base, 40%);
+      position: relative;
+
+      > .spinner,
+      .spinner::after {
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
       }
-    }
-  }
 
-  &.btn
-  &.btn-primary {
-    color: transparent;
-
-    span {
       > .spinner {
-        border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+        -ms-transform: translateZ(0);
+        -webkit-animation: spinload 1.1s infinite linear;
+        -webkit-transform: translateZ(0);
+        animation: spinload 1.1s infinite linear;
+        border-bottom: 4px solid rgba($white, 0.5);
         border-left: 4px solid $white;
-        border-right: 4px solid rgba(255, 255, 255, 0.5);
-        border-top: 4px solid rgba(255, 255, 255, 0.5);
+        border-right: 4px solid rgba($white, 0.5);
+        border-top: 4px solid rgba($white, 0.5);
+        bottom: 0;
+        font-size: 1.5rem;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        text-indent: -9999em;
+        top: 0;
+        transform: translateZ(0);
+
+        .path {
+          stroke: none;
+        }
+      }
+    }
+
+    &[type='submit'] {
+      color: transparent;
+
+      span {
+        > .spinner {
+          border-bottom: 4px solid lighten($primary-base, 40%);
+          border-left: 4px solid $primary-base;
+          border-right: 4px solid lighten($primary-base, 40%);
+          border-top: 4px solid lighten($primary-base, 40%);
+        }
+      }
+    }
+
+    &.btn
+    &.btn-primary {
+      color: transparent;
+
+      span {
+        > .spinner {
+          border-bottom: 4px solid rgba($white, 0.5);
+          border-left: 4px solid $white;
+          border-right: 4px solid rgba($white, 0.5);
+          border-top: 4px solid rgba($white, 0.5);
+        }
       }
     }
   }
