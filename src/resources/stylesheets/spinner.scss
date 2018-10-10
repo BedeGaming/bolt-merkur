@@ -13,9 +13,6 @@ button {
       }
 
       > .spinner {
-        -ms-transform: translateZ(0);
-        -webkit-animation: spinload 1.1s infinite linear;
-        -webkit-transform: translateZ(0);
         animation: spinload 1.1s infinite linear;
         border-bottom: 4px solid rgba($white, 0.5);
         border-left: 4px solid $white;
@@ -68,24 +65,20 @@ button {
 
 @-webkit-keyframes spinload {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes spinload {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }

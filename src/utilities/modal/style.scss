@@ -175,9 +175,9 @@ dialog {
       &.valid {
         input {
           border-color: $green;
-          
+
           &[type='text'],
-          &[type='number']{
+          &[type='number'] {
             padding-right: 4em;
           }
 
