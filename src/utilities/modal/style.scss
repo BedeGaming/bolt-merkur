@@ -91,10 +91,19 @@ dialog {
         height: $input-height;
         padding: 3.5rem 2rem 2rem;
 
+        &.peeky {
+          padding-right: 4em;
+        }
+
+        &:disabled {
+          color: $grey;
+        }
+
         &:focus {
           color: $secondary-color-700;
         }
 
+        &:disabled + label,
         &:focus + label,
         &:valid + label,
         &:focus + .peeky-password + label,
@@ -166,6 +175,15 @@ dialog {
       &.valid {
         input {
           border-color: $green;
+
+          &[type='text'],
+          &[type='number'] {
+            padding-right: 4em;
+          }
+
+          &.peeky {
+            padding-right: 6em;
+          }
         }
 
         .validation-icon {

@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 0.16.0
+- added styles/files for deposit limits
+- fixed input text overlapping with peeky/validation icons
+
 ## 0.15.0
 - added content page styles
 - added animated header to content pages
