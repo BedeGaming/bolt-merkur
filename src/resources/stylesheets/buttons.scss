@@ -58,6 +58,11 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   }
 }
 
+button[type='submit'] {
+  @extend %btn;
+  @extend %btn-primary;
+}
+
 dialog {
   user-login {
     form {
