@@ -1,4 +1,4 @@
-import { View, Model, _ } from 'orchestra';
+import { Model } from 'orchestra';
 import ExtendView from '@bedegaming/bolt/src/pages/content/view.js';
 import ContentView from '@bedegaming/bolt/src/widgets/content/view.js';
 
@@ -26,5 +26,5 @@ export default ExtendView.extend({
       model: new Model({ content: this.content }),
       tagName: 'content'
     }), { replaceElement: true });
-  },
-})
+  }
+});
