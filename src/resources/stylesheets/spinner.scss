@@ -34,7 +34,8 @@ button {
       }
     }
 
-    &[type='submit'] {
+    &[type='submit'],
+    &[type='submit']:first-child {
       color: transparent;
 
       span {
