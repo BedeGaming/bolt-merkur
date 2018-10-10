@@ -54,8 +54,8 @@ $body-font-size: 1.4rem;
 $body-line-height: 1.6;
 $body-color: $black;
 
-$common-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
-$uncommon-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+$box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+$lighter-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
 
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;

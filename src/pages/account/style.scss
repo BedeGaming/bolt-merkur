@@ -97,7 +97,7 @@ account-page {
 player-history {
   background: $white;
   border: 1px solid $grey-light;
-  box-shadow: $common-box-shadow;
+  box-shadow: $box-shadow;
   margin: 3rem auto;
   max-width: $max-width;
   padding: 2rem;
@@ -132,7 +132,7 @@ player-history {
   transaction-history {
     .table-scroll {
       border-radius: 0.5em;
-      box-shadow: $common-box-shadow;
+      box-shadow: $box-shadow;
     }
 
     .transactions-pagination {

@@ -1,12 +1,11 @@
 @import '../../../../../../../node_modules/@bedegaming/bolt/src/widgets/game/list/itemV2/components/details/style';
 
-$box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
 $hover-box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
 $bg-color: rgba(255, 255, 255, 0.95);
 
 .game-item {
   border-radius: 5px;
-  box-shadow: $box-shadow;
+  box-shadow: $lighter-box-shadow;
   overflow: hidden;
   transition-duration: 300ms;
   transition-property: box-shadow, transform;
