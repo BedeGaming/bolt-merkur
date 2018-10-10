@@ -1,12 +1,24 @@
 .timeout-terms-list {
   font-size: 1.2rem;
-  // margin: 0 3rem;
+  list-style-position: outside;
+  margin-left: 2.5rem;
 
   li {
     margin-bottom: 1rem;
   }
+}
 
-  // span {
-  //   font-size: 1.4rem;
-  // }
+timeout-expanded {
+  form {
+    .terms-container {
+      margin: 0;
+      min-height: 4rem;
+
+      label {
+        color: $black;
+        padding-left: 0;
+        pointer-events: all;
+      }
+    }
+  }
 }

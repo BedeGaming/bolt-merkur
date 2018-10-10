@@ -133,12 +133,14 @@ dialog {
       .peeky-password {
         height: 3.2rem;
         line-height: normal;
+        opacity: 1;
         right: 2rem;
         top: 50%;
         transform: translateY(-50%);
         transition: right 300ms ease;
 
         svg {
+          fill: $secondary-base;
           margin: auto;
         }
 
