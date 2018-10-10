@@ -175,7 +175,11 @@ dialog {
       &.valid {
         input {
           border-color: $green;
-          padding-right: 4em;
+          
+          &[type='text'],
+          &[type='number']{
+            padding-right: 4em;
+          }
 
           &.peeky {
             padding-right: 6em;
