@@ -58,7 +58,7 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   }
 }
 
-button[type='submit'] {
+button[type='submit']:not(.btn-text) {
   @extend %btn;
   @extend %btn-primary;
 }
