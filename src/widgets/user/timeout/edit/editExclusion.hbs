@@ -1,0 +1,57 @@
+<h1>{{translate "timeout_exclusion_preface_title"}}</h1>
+<form autocomplete="off" novalidate>
+  <div class="input-container">
+    <select name="duration">
+       {{#each options}}
+          <option value="{{this.value}}">{{this.text}}</option>
+       {{/each}}
+    </select>
+    <label>{{translate "duration"}}</label>
+  </div>
+
+  <div class="timeout-terms">
+    <ul class="timeout-terms-list">
+      <li>{{translate "timeout_exclusion_term1"}}</li>
+      <li>{{translate "timeout_exclusion_term2"}}</li>
+      <li>{{translate "timeout_exclusion_term3"}}</li>
+      <li>{{translate "timeout_exclusion_term4"}}</li>
+      <li>{{translate "timeout_exclusion_term5"}}</li>
+    </ul>
+    <div class="input-container terms-container checkbox-group">
+      <input type="checkbox" name="termsAgreement" id="termsAgreement">
+      <label for="termsAgreement">
+        <span>{{translate "timeout-agreement"}}</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <input name="currentPassword"
+           id="currentPassword"
+           type="password"
+           class="no-autofill peeky"
+           autocomplete="new-password"
+           autocorrect="off"
+           autocapitalize="off"
+           spellcheck="false"
+           value=""
+           placeholder=""
+           data-hj-masked
+           required />
+    <button type="button" class="peeky-password">
+      <svg focusable="false" class="open" viewBox="0 0 17.2 10.3"><use xlink:href="#icon-eye-open-icon"/></svg>
+      <svg focusable="false" class="close" viewBox="0 -5 32 25"><use xlink:href="#icon-eye-closed-icon"/></svg>
+    </button>
+    <label for="currentPassword">{{translate "enter_password"}}</label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+
+  <footer>
+    <button type="submit" class="btn btn-primary btn-timeout-start">
+      <span>
+        <div class="spinner"></div>
+        {{translate "timeout_exclusion_start"}}
+      </span>
+    </button>
+  </footer>
+</form>

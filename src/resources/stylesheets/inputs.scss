@@ -26,11 +26,16 @@
 
   input {
     &:-webkit-autofill {
-      box-shadow: 0 0 0 100px #fffdf5 inset;
+      box-shadow: 0 0 0 100px $white inset;
     }
   }
 
   & + & {
     margin-top: 0;
   }
+}
+
+select {
+  background-image: url('/assets/images/svgSprites/arrow-down-grey.svg');
+  background-position: right 2rem bottom 2.5rem;
 }

@@ -1,0 +1,40 @@
+<h1>{{translate "reality_check_preface_title"}}</h1>
+<form autocomplete="off">
+  <p>{{translate "reality_check_question"}}</p>
+  <div class="input-container">
+    <select name="interval">
+       {{#each options}}
+          <option value="{{value}}" {{selected}}>{{{translate text}}}</option>
+       {{/each}}
+    </select>
+    <label>{{translate "reality_check_duration"}}</label>
+  </div>
+  <div class="input-container">
+    <input name="currentPassword"
+           id="currentPassword"
+           type="password"
+           class="no-autofill peeky"
+           autocomplete="new-password"
+           autocorrect="off"
+           autocapitalize="off"
+           spellcheck="false"
+           value=""
+           placeholder=""
+           data-hj-masked
+           required />
+    <button type="button" class="peeky-password">
+      <svg focusable="false" class="open" viewBox="0 0 17.2 10.3"><use xlink:href="#icon-eye-open-icon"/></svg>
+      <svg focusable="false" class="close" viewBox="0 -5 32 25"><use xlink:href="#icon-eye-closed-icon"/></svg>
+    </button>
+    <label for="currentPassword">{{translate "enter_password"}}</label>
+    <div class="validation-icon"><svg viewBox="0 0 16 12"><use xlink:href="#icon-tick"/></svg></div>
+  </div>
+  <footer>
+    <button type="submit" class="btn btn-primary">
+      <span>
+        <div class="spinner"></div>
+        {{translate "save"}}
+      </span>
+    </button>
+  </footer>
+</form>
