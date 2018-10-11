@@ -1,3 +1,47 @@
+@keyframes ball-entrance-x {
+  0% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  25% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 50%, 0);
+  }
+}
+
+@keyframes ball-entrance-y {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
 promo-slider {
   width: 100%;
 
@@ -57,21 +101,21 @@ promo-slider {
   slider-content-wrap {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 45rem;
     justify-content: center;
-    position: absolute;
+  }
+
+  article-wrap {
+    margin: 0 auto;
+    max-width: 130rem;
+    width: 100%;
   }
 
   article {
-    margin-left: 2rem;
     max-width: 22rem;
 
     @media ($small) {
       max-width: 42rem;
-    }
-
-    @media ($medium) {
-      margin-left: 8rem;
     }
 
     h1,
@@ -102,8 +146,82 @@ promo-slider {
     }
   }
 
-  //sass-lint:disable class-name-format
+  .slider__item {
+    min-height: 10rem;
+    position: relative;
+
+    &::before {
+      animation: blob-spin 20s linear 0s infinite both;
+      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#34D1FF" offset="0%"></stop>
+            <stop stop-color="#D41FB1" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g fill="url(#linearGradient-1)">
+          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
+        </g>
+      </svg>');
+      background-size: cover;
+      content: '';
+      height: 76.3rem;
+      left: 80%;
+      position: absolute;
+      top: 250%;
+      width: 74.4rem;
+      height: 152.7rem;
+      width: 148.9rem;
+
+      @media ($large) {
+        left: auto;
+        right: -50%;
+        top: -100%;
+      }
+
+      @media ($x-large) {
+        right: -30%;
+      }
+
+      @media (prefers-reduced-motion) {
+        animation: none;
+      }
+    }
+
+    .image-object {
+      position: absolute;
+    }
+  }
+
   .slider__item--1 {
+
+    .image-object-1 {
+      animation: ball-entrance-x 4s cubic-bezier(.5,0.05,1,.5) 0s infinite both;
+      bottom: 50%;
+      height: 100%;
+      left: 50%;
+      transform: translate3d(0, 50%, 0);
+      width: 38.4rem;
+
+      img {
+        animation: ball-entrance-y 4s cubic-bezier(.5,0.05,1,.5) 0s infinite both;
+      }
+    }
+
+    // .image-object-2 {
+    //   bottom: 50%;
+    //   left: 50%;
+    //   transform: translate3d(35rem, 3rem, 0);
+    //   width: 25.6rem;
+    // }
+    //
+    // .image-object-3 {
+    //   bottom: 50%;
+    //   left: 50%;
+    //   transform: translate3d(40rem, 19rem, 0);
+    //   width: 15rem;
+    // }
+
     h1 {
       color: #ab4fe2; //sass-lint:disable-line no-color-literals
     }
