@@ -1,44 +1,36 @@
-@keyframes ball-entrance-x {
+@keyframes shake-x {
   0% {
-    transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, -50%, 0);
   }
 
   25% {
-    transform: translate3d(0, 50%, 0);
-  }
-
-  50% {
-    transform: translate3d(0, 50%, 0);
+    transform: translate3d(-0.25rem, -50%, 0);
   }
 
   75% {
-    transform: translate3d(0, 50%, 0);
+    transform: translate3d(0.25rem, -50%, 0);
   }
 
   100% {
-    transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
-@keyframes ball-entrance-y {
+@keyframes shake-y {
   0% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   25% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, -0.25rem, 0);
   }
 
   75% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, 0.25rem, 0);
   }
 
   100% {
-    transform: scale(1) translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -108,7 +100,9 @@ promo-slider {
   article-wrap {
     margin: 0 auto;
     max-width: 130rem;
+    position: relative;
     width: 100%;
+    z-index: 1;
   }
 
   article {
@@ -179,7 +173,7 @@ promo-slider {
         top: -100%;
       }
 
-      @media ($x-large) {
+      @media ($xx-large) {
         right: -30%;
       }
 
@@ -190,37 +184,60 @@ promo-slider {
 
     .image-object {
       position: absolute;
+
+      &::before {
+        background-color: rgba(0, 0, 0, 0.39);
+        box-shadow: 0 0 15rem 6rem rgba(0, 0, 0, 0.7);
+        content: '';
+        border-radius: 5rem;
+        height: 1rem;
+        left: 50%;
+        opacity: 0.75;
+        position: absolute;
+        top: 100%;
+        transform: scaleY(0.25) translateX(-50%);
+        width: 25%;
+      }
     }
   }
 
   .slider__item--1 {
 
     .image-object-1 {
-      animation: ball-entrance-x 4s cubic-bezier(.5,0.05,1,.5) 0s infinite both;
-      bottom: 50%;
-      height: 100%;
-      left: 50%;
-      transform: translate3d(0, 50%, 0);
+      animation: shake-x 16s linear -2s infinite both;
+      left: calc(50% - 10rem);
+      top: 50%;
       width: 38.4rem;
+      z-index: 3;
 
       img {
-        animation: ball-entrance-y 4s cubic-bezier(.5,0.05,1,.5) 0s infinite both;
+        animation: shake-y 12s linear -4s infinite both;
       }
     }
 
-    // .image-object-2 {
-    //   bottom: 50%;
-    //   left: 50%;
-    //   transform: translate3d(35rem, 3rem, 0);
-    //   width: 25.6rem;
-    // }
-    //
-    // .image-object-3 {
-    //   bottom: 50%;
-    //   left: 50%;
-    //   transform: translate3d(40rem, 19rem, 0);
-    //   width: 15rem;
-    // }
+    .image-object-2 {
+      animation: shake-x 15s linear 0s infinite both;
+      left: calc(50% + 25rem);
+      top: 32%;
+      width: 25.6rem;
+      z-index: 1;
+
+      img {
+        animation: shake-y 7s linear 0s infinite both;
+      }
+    }
+
+    .image-object-3 {
+      animation: shake-x 10s linear -4s infinite both;
+      left: calc(50% + 30rem);
+      top: 72%;
+      width: 15rem;
+      z-index: 2;
+
+      img {
+        animation: shake-y 10s linear -2s infinite both;
+      }
+    }
 
     h1 {
       color: #ab4fe2; //sass-lint:disable-line no-color-literals
