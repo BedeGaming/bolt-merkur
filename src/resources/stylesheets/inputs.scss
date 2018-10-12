@@ -39,3 +39,8 @@ select {
   background-image: url('/assets/images/svgSprites/arrow-down-grey.svg');
   background-position: right 2rem bottom 2.5rem;
 }
+
+input:disabled,
+textarea:disabled {
+  opacity: 1;
+}
