@@ -102,7 +102,7 @@ promo-slider {
     max-width: 130rem;
     position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
   }
 
   article {
@@ -184,20 +184,6 @@ promo-slider {
 
     .image-object {
       position: absolute;
-
-      &::before {
-        background-color: rgba(0, 0, 0, 0.39);
-        box-shadow: 0 0 15rem 6rem rgba(0, 0, 0, 0.7);
-        content: '';
-        border-radius: 5rem;
-        height: 1rem;
-        left: 50%;
-        opacity: 0.75;
-        position: absolute;
-        top: 100%;
-        transform: scaleY(0.25) translateX(-50%);
-        width: 25%;
-      }
     }
   }
 
