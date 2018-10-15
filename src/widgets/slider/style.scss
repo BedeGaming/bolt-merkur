@@ -211,6 +211,15 @@ promo-slider {
       img {
         animation: shake-y 1s linear 0s infinite both;
       }
+
+      @media (prefers-reduced-motion) {
+        animation: none;
+        transform: translate3d(0, -50%, 0);
+
+        img {
+          animation: none;
+        }
+      }
     }
   }
 
