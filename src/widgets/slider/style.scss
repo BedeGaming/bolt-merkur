@@ -150,7 +150,6 @@ promo-slider {
 
   .slider__item {
     min-height: 10rem;
-    position: relative;
 
     &::before {
       animation: blob-spin 20s linear -7s infinite both;
@@ -270,12 +269,164 @@ promo-slider {
   }
 
   .slider__item--2 {
+    &::before {
+      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFB93F" offset="0%"></stop>
+            <stop stop-color="#F7456B" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g fill="url(#linearGradient-1)">
+          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
+        </g>
+      </svg>');
+    }
+
+    .image-object-1 {
+      animation-delay: -2s;
+      animation-duration: 16s;
+      left: 5%;
+      top: 30%;
+      width: 19.2rem;
+      z-index: 3;
+
+      img {
+        animation-delay: -4s;
+        animation-duration: 12s;
+      }
+    }
+
+    .image-object-2 {
+      animation-delay: 0s;
+      animation-duration: 15s;
+      left: calc(50% + 7rem);
+      top: 15%;
+      width: 12.8rem;
+      z-index: 1;
+
+      img {
+        animation-delay: 0s;
+        animation-duration: 7s;
+      }
+    }
+
+    .image-object-3 {
+      animation-delay: -4s;
+      animation-duration: 10s;
+      left: calc(50% + 3rem);
+      top: 42%;
+      width: 7.5rem;
+      z-index: 2;
+
+      img {
+        animation-delay: -2s;
+        animation-duration: 10s;
+      }
+    }
+
+    @media ($medium) {
+      .image-object-1 {
+        left: calc(50% - 10rem);
+        top: 50%;
+        width: 50.8rem;
+      }
+
+      .image-object-2 {
+        left: calc(50% + 25rem);
+        top: 32%;
+        width: 34.1rem;
+      }
+
+      .image-object-3 {
+        left: calc(50% + 30rem);
+        top: 72%;
+        width: 33.3rem;
+      }
+    }
+
     h1 {
       color: #e6506e; //sass-lint:disable-line no-color-literals
     }
   }
 
   .slider__item--3 {
+    &::before {
+      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFDC87" offset="0%"></stop>
+            <stop stop-color="#1FD43B" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g fill="url(#linearGradient-1)">
+          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
+        </g>
+      </svg>');
+    }
+
+    .image-object-1 {
+      animation-delay: -2s;
+      animation-duration: 16s;
+      left: 5%;
+      top: 30%;
+      width: 19.2rem;
+      z-index: 3;
+
+      img {
+        animation-delay: -4s;
+        animation-duration: 12s;
+      }
+    }
+
+    .image-object-2 {
+      animation-delay: 0s;
+      animation-duration: 15s;
+      left: calc(50% + 7rem);
+      top: 15%;
+      width: 12.8rem;
+      z-index: 1;
+
+      img {
+        animation-delay: 0s;
+        animation-duration: 7s;
+      }
+    }
+
+    .image-object-3 {
+      animation-delay: -4s;
+      animation-duration: 10s;
+      left: calc(50% + 3rem);
+      top: 42%;
+      width: 7.5rem;
+      z-index: 2;
+
+      img {
+        animation-delay: -2s;
+        animation-duration: 10s;
+      }
+    }
+
+    @media ($medium) {
+      .image-object-1 {
+        left: calc(50% - 10rem);
+        top: 50%;
+        width: 50.8rem;
+      }
+
+      .image-object-2 {
+        left: calc(50% + 25rem);
+        top: 32%;
+        width: 34.1rem;
+      }
+
+      .image-object-3 {
+        left: calc(50% + 30rem);
+        top: 72%;
+        width: 33.3rem;
+      }
+    }
+
     h1 {
       color: #5bc64f; //sass-lint:disable-line no-color-literals
     }
