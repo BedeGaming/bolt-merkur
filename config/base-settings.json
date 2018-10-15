@@ -19,13 +19,8 @@
       "defaultAmount": 50,
       "enablePromotions": true,
       "hideWithdrawals": false,
-      "isModal": false,
-      "quickAmounts": [
-        25,
-        50,
-        100,
-        500
-      ],
+      "isModal": true,
+      "quickAmounts": [25, 50, 100, 500],
       "useCodeForBonus": false
     },
     "paymentMethods": {
@@ -109,10 +104,7 @@
         "key": "displayName"
       }
     ],
-    "tagsToHighlight": [
-      "new",
-      "jackpot"
-    ]
+    "tagsToHighlight": ["new", "jackpot"]
   },
   "paymentProviderIcons": [
     {
@@ -281,26 +273,19 @@
       {
         "imgPath": "/assets/images/slider/slide-one",
         "markup": "<h1>Top prize £2 million</h1> <p>A game so big, it's giant!</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
-      }, {
+      },
+      {
         "imgPath": "/assets/images/slider/slide-two",
         "markup": "<h1>Up to £50 new player bonus</h1> <p>Deposit between £10 - £50 to claim!</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
-      }, {
+      },
+      {
         "imgPath": "/assets/images/slider/slide-three",
         "markup": "<h1>Live casino</h1> <p>Play Blackjack and Roulette</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
       }
     ]

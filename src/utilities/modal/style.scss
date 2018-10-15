@@ -30,6 +30,10 @@ dialog {
   padding: 4.5rem 3rem 3rem;
   width: 45rem;
 
+  @media ($small) {
+    padding: 4.5rem 3rem 3rem;
+  }
+
   h1 {
     @include responsive-type(30, 36);
 
@@ -107,7 +111,8 @@ dialog {
         &:focus + label,
         &:valid + label,
         &:focus + .peeky-password + label,
-        &:valid + .peeky-password + label {
+        &:valid + .peeky-password + label,
+        &.has-value + label {
           font-size: 1.4rem;
           font-weight: normal;
           transform: translateY(-20%);
@@ -192,7 +197,7 @@ dialog {
           opacity: 1;
 
           &::before,
-          &::after  {
+          &::after {
             animation: tick-enter 500ms ease 0s 1 both;
             background-color: $green;
             border-radius: 50%;
@@ -296,8 +301,7 @@ dialog {
         @extend %btn;
         @extend %btn-primary;
 
-        &:first-child
-        &.waiting {
+        &:first-child &.waiting {
           color: transparent;
         }
       }
@@ -365,6 +369,7 @@ dialog {
       button {
         &.confirm {
           @extend %btn.btn-primary;
+
           font-size: 1.4rem;
           max-width: 14rem;
           padding: 1.5rem;
@@ -372,6 +377,7 @@ dialog {
 
         &.cancel {
           @extend %btn;
+
           border-width: 2px;
           font-size: 1.4rem;
           max-width: 14rem;

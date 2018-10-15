@@ -1,0 +1,403 @@
+.deposit-dialog,
+.add-card-dialog {
+  .input-container {
+    .card-type {
+      display: none;
+    }
+
+    &.card-number {
+      .credit-card {
+        font-size: 1.3rem;
+        @media ($small) {
+          font-size: 2rem;
+        }
+
+        &::placeholder {
+          font-size: 1.2rem;
+          @media ($small) {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .card-type {
+        display: flex;
+        left: -1rem;
+        top: 50%;
+        transform: translateY(-50%) scale(0.4);
+      }
+
+      .payment-card-selection {
+        background-position: right 2rem bottom 50%;
+        color: $secondary-base;
+        padding: 2rem 2rem 2rem 8rem;
+
+        option {
+          left: 5rem;
+        }
+      }
+    }
+
+    input {
+      font-size: 1.4rem;
+
+      @media ($small) {
+        font-size: 1.8rem;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus::placeholder {
+        color: lighten($secondary-base, 20%);
+      }
+
+      &:focus + label,
+      &.has-value + label {
+        & + .card-type {
+          display: flex;
+          left: -1rem;
+          top: 50%;
+          transform: translateY(-37.5%) scale(0.4);
+        }
+      }
+
+      &.credit-card {
+        padding-left: 7rem;
+      }
+    }
+
+    &.invalid {
+      &::after {
+        top: 8rem;
+      }
+    }
+  }
+
+  .quick-amounts-container {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .quick-amounts {
+    display: flex;
+    width: 100%;
+
+    label {
+      margin: 0;
+      position: relative;
+    }
+
+    input {
+      &[type='radio'] + label {
+        border-color: $blue-dark;
+        color: $blue-dark;
+        display: flex;
+        font-size: 1.6rem;
+        font-weight: bold;
+        height: 4rem;
+        justify-content: center;
+        top: 0;
+
+        &:hover {
+          background-color: $blue-dark;
+          color: $white;
+        }
+      }
+
+      &[type='radio']:checked + label {
+        background-color: $blue-dark;
+        color: $white;
+      }
+    }
+  }
+
+  .pending-withdrawals-grid {
+    flex-flow: column;
+
+    li {
+      flex: 1;
+      margin-bottom: 0.5rem;
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
+    }
+
+    grid-content {
+      flex-flow: row;
+      justify-content: space-between;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      min-width: 1rem;
+      padding: 0.7rem 1rem;
+      width: auto;
+    }
+  }
+
+  hr {
+    margin-top: 1.5rem;
+  }
+
+  .cvv-group-container {
+    flex: 0;
+    height: 10.5rem;
+    margin: 0;
+
+    .input-container {
+      flex: 1;
+
+      &:first-child {
+        flex: 1;
+      }
+
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+
+    label {
+      font-size: 1.4rem;
+      padding-left: 1.5rem;
+
+      @media ($small) {
+        font-size: 1.8rem;
+        padding-left: 2rem;
+      }
+    }
+
+    input {
+      padding-left: 1.5rem;
+
+      @media ($small) {
+        padding-left: 2rem;
+      }
+    }
+
+    .invalid {
+      &::after {
+        width: 180%;
+      }
+
+      &:last-of-type {
+        &::after {
+          text-align: right;
+          width: 100%;
+        }
+      }
+    }
+
+    .validation-icon {
+      display: none;
+
+      @media ($small) {
+        display: block;
+      }
+    }
+  }
+
+  .cvv-container {
+    flex: 1;
+  }
+
+  bonus-summary {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  deposit-section {
+    h1 {
+      @include responsive-type(20, 24);
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    .info-container {
+      .promo-description-area {
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+
+      a {
+        text-align: right;
+      }
+
+      .input-group {
+        padding: 0;
+      }
+    }
+
+    .input-container {
+      &.checkbox-group {
+        margin: 0;
+        min-height: 1rem;
+
+        input {
+          display: none;
+        }
+
+        label {
+          align-items: flex-start;
+          height: auto;
+          left: 0;
+          min-height: 2rem;
+          padding: 0 0.5rem;
+          pointer-events: all;
+          position: initial;
+          text-align: justify;
+          top: 2rem;
+
+          &::before {
+            margin-top: 0.3rem;
+          }
+
+          &::after {
+            left: 0.5rem;
+            margin: 0.3rem 0 0;
+            position: absolute;
+          }
+
+          &.first-deposit-terms {
+            margin-bottom: 0.5rem;
+          }
+
+          &.first-deposit-limits-terms {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .confirmation-table {
+    margin-top: 1rem;
+  }
+
+  table {
+    &.promo-calculator {
+      margin-bottom: 1rem;
+
+      td {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  bank-addcard {
+    &.add-card-deposit {
+      footer {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .deposit-bonus-details {
+    .hide {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .input-container {
+      height: 8rem;
+      margin: 0;
+      padding: 0;
+      width: 80%;
+
+      input {
+        border-radius: 3px 0 0 3px;
+        border-right: 0;
+        box-sizing: border-box;
+      }
+
+      &.invalid {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .btn-bonus-request {
+      @extend %btn-primary;
+
+      background-color: $blue-dark;
+      border-radius: 0 3px 3px 0;
+      height: 8rem;
+      min-width: 8rem;
+      padding: 0;
+      width: 20%;
+    }
+  }
+
+  deposit-form {
+    form {
+      footer {
+        margin: 1rem 0;
+
+        .btn-deposit-request {
+          @extend %btn;
+
+          height: 5rem;
+          margin: 0 auto;
+          padding: 1.5rem 2.5rem;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  bonus-summary + bonus-section {
+    .hide {
+      .input-container {
+        display: none;
+      }
+
+      .input-container + button {
+        display: none;
+      }
+    }
+  }
+
+  dialog {
+    .add-card-deposit {
+      footer {
+        .add-card {
+          @extend %btn;
+
+          height: 5rem;
+          margin: 0 auto;
+          padding: 1.5rem 2.5rem;
+          width: auto;
+
+          &.modify-bonus-text {
+            font-size: 1.6rem;
+            max-width: 24rem;
+            padding: 1rem 2rem;
+            white-space: pre-wrap;
+          }
+        }
+      }
+    }
+  }
+
+  .info-container {
+    h2 {
+      @include responsive-type(20, 24);
+      color: lighten($secondary-base, 10%);
+      font-weight: 900;
+      margin: 1rem 0 0.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .deposit-bonus-preview {
+    img {
+      margin-top: 2rem;
+    }
+  }
+}

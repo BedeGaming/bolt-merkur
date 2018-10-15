@@ -100,6 +100,9 @@ boltTasks.IstanbulTasksRegistry.prototype.getConfig = function getConfig() {
       `!${process.cwd()}/src/pages/game/info/view.js`,
       `!${process.cwd()}/src/pages/content/route.js`,
       `!${process.cwd()}/src/pages/content/view.js`,
+      `!${process.cwd()}/src/widgets/bank/add-card/view.js`,
+      `!${process.cwd()}/src/widgets/bank/add-card-deposit/view.js`,
+      `!${process.cwd()}/src/widgets/bank/deposit/bonus/view.js`,
       `!${process.cwd()}/src/widgets/user/inboxV2/view.js`
     ]
   };
