@@ -268,11 +268,11 @@
   "siteName": "Bede Casino",
   "siteRoot": "http://localhost:3000",
   "slider": {
-    "speed": 3000,
+    "speed": 5000,
     "items": [
       {
         "imgPath": "/assets/images/slider/slide-one",
-        "markup": "<h1>Live casino</h1> <p>Play Blackjack and Roulette</p>",
+        "markup": "<h1>Top prize £2 million</h1> <p>A game so big, it's giant!</p>",
         "states": [
           "isUnauthenticated",
           "isAuthenticated"
@@ -281,7 +281,7 @@
       },
       {
         "imgPath": "/assets/images/slider/slide-two",
-        "markup": "<h1>Top prize £2 million</h1> <p>A game so big, it's giant!</p>",
+        "markup": "<h1>Live casino</h1> <p>Play Blackjack and Roulette</p>",
         "states": [
           "isUnauthenticated",
           "isAuthenticated"
