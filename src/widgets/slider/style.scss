@@ -93,8 +93,17 @@ promo-slider {
   slider-content-wrap {
     display: flex;
     flex-direction: column;
-    height: 45rem;
-    justify-content: center;
+    height: 35rem;
+    justify-content: flex-end;
+    padding: 3rem;
+    text-align: center;
+
+    @media ($medium) {
+      height: 45rem;
+      justify-content: center;
+      padding: 0;
+      text-align: left;
+    }
   }
 
   article-wrap {
@@ -106,7 +115,6 @@ promo-slider {
   }
 
   article {
-    max-width: 22rem;
 
     @media ($small) {
       max-width: 42rem;
@@ -122,7 +130,7 @@ promo-slider {
     }
 
     h1 {
-      @include responsive-type(14, 52);
+      @include responsive-type(18, 52);
 
       font-family: $body-font;
       font-weight: 900;
@@ -145,7 +153,7 @@ promo-slider {
     position: relative;
 
     &::before {
-      animation: blob-spin 20s linear 0s infinite both;
+      animation: blob-spin 20s linear -7s infinite both;
       background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
@@ -160,17 +168,17 @@ promo-slider {
       background-size: cover;
       content: '';
       height: 76.3rem;
-      left: 80%;
+      left: -35%;
       position: absolute;
-      top: 250%;
+      top: -170%;
       width: 74.4rem;
-      height: 152.7rem;
-      width: 148.9rem;
 
       @media ($large) {
+        height: 152.7rem;
         left: auto;
         right: -50%;
         top: -100%;
+        width: 148.9rem;
       }
 
       @media ($xx-large) {
@@ -183,45 +191,76 @@ promo-slider {
     }
 
     .image-object {
+      animation: shake-x 1s linear 0s infinite both;
       position: absolute;
+
+      img {
+        animation: shake-y 1s linear 0s infinite both;
+      }
     }
   }
 
   .slider__item--1 {
 
     .image-object-1 {
-      animation: shake-x 16s linear -2s infinite both;
-      left: calc(50% - 10rem);
-      top: 50%;
-      width: 38.4rem;
+      animation-delay: -2s;
+      animation-duration: 16s;
+      left: 5%;
+      top: 30%;
+      width: 19.2rem;
       z-index: 3;
 
       img {
-        animation: shake-y 12s linear -4s infinite both;
+        animation-delay: -4s;
+        animation-duration: 12s;
       }
     }
 
     .image-object-2 {
-      animation: shake-x 15s linear 0s infinite both;
-      left: calc(50% + 25rem);
-      top: 32%;
-      width: 25.6rem;
+      animation-delay: 0s;
+      animation-duration: 15s;
+      left: calc(50% + 7rem);
+      top: 15%;
+      width: 12.8rem;
       z-index: 1;
 
       img {
-        animation: shake-y 7s linear 0s infinite both;
+        animation-delay: 0s;
+        animation-duration: 7s;
       }
     }
 
     .image-object-3 {
-      animation: shake-x 10s linear -4s infinite both;
-      left: calc(50% + 30rem);
-      top: 72%;
-      width: 15rem;
+      animation-delay: -4s;
+      animation-duration: 10s;
+      left: calc(50% + 3rem);
+      top: 42%;
+      width: 7.5rem;
       z-index: 2;
 
       img {
-        animation: shake-y 10s linear -2s infinite both;
+        animation-delay: -2s;
+        animation-duration: 10s;
+      }
+    }
+
+    @media ($medium) {
+      .image-object-1 {
+        left: calc(50% - 10rem);
+        top: 50%;
+        width: 38.4rem;
+      }
+
+      .image-object-2 {
+        left: calc(50% + 25rem);
+        top: 32%;
+        width: 25.6rem;
+      }
+
+      .image-object-3 {
+        left: calc(50% + 30rem);
+        top: 72%;
+        width: 15rem;
       }
     }
 
