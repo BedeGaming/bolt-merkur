@@ -47,7 +47,11 @@ app-hub {
       justify-content: space-between;
 
       li {
-        margin-left: $gutter;
+        margin-left: 0;
+
+        @media ($x-large) {
+          margin-left: 1rem;
+        }
       }
     }
   }
@@ -94,7 +98,7 @@ app-hub {
         a {
           display: flex;
           font-size: 1.8rem;
-          padding: 2rem;
+          padding: 2rem 2rem 2rem 1rem;
 
           @media ($x-large) {
             padding: 2.6rem 3rem;
@@ -118,28 +122,32 @@ app-hub {
                 height: 8px;
                 justify-content: center;
                 position: absolute;
-                right: 1rem;
+                right: 0.2rem;
                 top: 50%;
                 transform: translateY(-50%);
 
                 svg {
-                  width: 0.8rem;
+                  width: 1.2rem;
                 }
               }
 
               .item-text {
                 color: $primary-base;
+                display: block;
                 font-weight: bold;
+                max-width: 13rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
             }
 
-            @media ($x-large) {
-              padding-right: 4rem;
+            // @media ($x-large) {
+            //   padding-right: 4rem;
 
-              .item-icon {
-                right: 2.5rem;
-              }
-            }
+              // .item-icon {
+              //   right: 2.5rem;
+              // }
+            // }
           }
 
           &.inbox-link {
@@ -356,7 +364,11 @@ app-hub {
     }
 
     .logo {
-      margin-right: 3rem;
+      margin-right: 2rem;
+
+      @media ($x-large) {
+        margin-right: 3rem;
+      }
     }
   }
 }
