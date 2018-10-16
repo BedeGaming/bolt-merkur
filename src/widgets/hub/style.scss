@@ -138,6 +138,10 @@ app-hub {
                 max-width: 13rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media ($x-large) {
+                  max-width: 18rem;
+                }
               }
             }
           }
