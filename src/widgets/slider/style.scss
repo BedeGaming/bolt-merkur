@@ -163,7 +163,8 @@ promo-slider {
     }
   }
 
-  .slider__item { //sass-lint:disable-line class-name-format
+  //sass-lint:disable class-name-format
+  .slider__item {
     min-height: 10rem;
 
     &::before {
@@ -223,7 +224,7 @@ promo-slider {
     }
   }
 
-  .slider__item--1 { //sass-lint:disable-line class-name-format
+  .slider__item--1 {
     .image-object-1 {
       animation-delay: -2s;
       animation-duration: 16s;
@@ -291,7 +292,7 @@ promo-slider {
     }
   }
 
-  .slider__item--2 { //sass-lint:disable-line class-name-format
+  .slider__item--2 {
     &::before {
       background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
@@ -373,7 +374,7 @@ promo-slider {
     }
   }
 
-  .slider__item--3 { //sass-lint:disable-line class-name-format
+  .slider__item--3 {
     &::before {
       background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
@@ -454,7 +455,7 @@ promo-slider {
       color: #5bc64f; //sass-lint:disable-line no-color-literals
     }
   }
-  //sass-lint:disable class-name-format
+  //sass-lint:enable class-name-format
 
   .bullets {
     bottom: 6rem;
@@ -470,11 +471,13 @@ promo-slider {
     }
   }
 
-  #slide-1:checked ~ .bullets .bullets__item--1, //sass-lint:disable-line no-ids force-element-nesting
-  #slide-2:checked ~ .bullets .bullets__item--2, //sass-lint:disable-line no-ids force-element-nesting
-  #slide-3:checked ~ .bullets .bullets__item--3, //sass-lint:disable-line no-ids force-element-nesting
-  #slide-4:checked ~ .bullets .bullets__item--4, //sass-lint:disable-line no-ids force-element-nesting
-  #slide-5:checked ~ .bullets .bullets__item--5 { //sass-lint:disable-line no-ids force-element-nesting
+  //sass-lint:disable class-name-format no-ids force-element-nesting
+  #slide-1:checked ~ .bullets .bullets__item--1,
+  #slide-2:checked ~ .bullets .bullets__item--2,
+  #slide-3:checked ~ .bullets .bullets__item--3,
+  #slide-4:checked ~ .bullets .bullets__item--4,
+  #slide-5:checked ~ .bullets .bullets__item--5 {
     background-color: $primary-base;
   }
+  //sass-lint:enable class-name-format no-ids force-element-nesting
 }
