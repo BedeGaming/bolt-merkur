@@ -203,6 +203,12 @@ promo-slider {
       @media (prefers-reduced-motion) {
         animation: none;
       }
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          animation: none;
+        }
+      }
     }
 
     .image-object {
