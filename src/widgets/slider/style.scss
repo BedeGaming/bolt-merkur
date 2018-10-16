@@ -34,7 +34,7 @@
   }
 }
 
-$hover-box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
+$paging-arrow-hover-box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
 
 promo-slider {
   width: 100%;
@@ -67,7 +67,7 @@ promo-slider {
 
     &:hover {
       background-color: transparentize($white, 0.05);
-      box-shadow: $hover-box-shadow;
+      box-shadow: $paging-arrow-hover-box-shadow;
       transform: translateY(-0.2rem);
     }
 
