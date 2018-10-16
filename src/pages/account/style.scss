@@ -109,11 +109,25 @@ deposit-limits,
 player-history {
   background: $white;
   border: 1px solid $grey-light;
-  box-shadow: $box-shadow;
-  margin: 3rem auto;
+  border-radius: 5px;
+  box-shadow: $lighter-box-shadow;
+  display: block;
+  margin: -2rem auto 3rem;
   max-width: $max-width;
   padding: 2rem;
-  width: 100%;
+  position: relative;
+  width: calc(100% - 4rem);
+  z-index: 1;
+
+  @media ($small) {
+    padding: 3rem;
+    width: calc(100% - 6rem);
+  }
+
+  @media ($medium) {
+    padding: 3rem;
+    width: 100%;
+  }
 
   h2 {
     color: $grey;
