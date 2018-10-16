@@ -58,7 +58,7 @@ promo-slider {
     padding: 0;
     top: -4.5rem;
     transition: background-color 300ms ease, box-shadow 300ms ease,
-      transform 300ms ease;
+      transform 300ms ease; // sass-lint:disable-line indentation
     width: 3.1rem;
 
     @media ($medium) {
