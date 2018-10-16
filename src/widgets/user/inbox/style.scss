@@ -3,7 +3,7 @@
 .player-inbox {
   .inbox-container {
     background-color: $white;
-    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1); //sass-lint:disable-line no-color-literals
     margin: 3rem auto;
     max-width: $max-width;
 
@@ -39,7 +39,7 @@
 
     .message-item {
       background-color: $white;
-      box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+      box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1); //sass-lint:disable-line no-color-literals
       margin-bottom: 2rem;
       opacity: 0.8;
 

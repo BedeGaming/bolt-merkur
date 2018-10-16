@@ -72,8 +72,13 @@ user-register {
 
   .address-search {
     .hide-placeholder {
-      &::placeholder { color: transparent; }
-      &:focus::placeholder { color: lighten($secondary-base, 20%); }
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus::placeholder {
+        color: lighten($secondary-base, 20%);
+      }
     }
   }
 
@@ -119,7 +124,7 @@ user-register {
       .validation-icon {
         &.validation-icon-skinny {
           &::before,
-          &::after  {
+          &::after {
             top: 20%;
           }
         }
@@ -197,8 +202,7 @@ user-register {
       @extend %btn;
       @extend %btn-primary;
 
-      &:first-child
-      &.waiting {
+      &:first-child &.waiting {
         color: transparent;
       }
     }

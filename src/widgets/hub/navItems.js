@@ -59,5 +59,4 @@ const nav = () => {
   return navItems;
 };
 
-
 export default nav;

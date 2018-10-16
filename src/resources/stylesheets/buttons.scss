@@ -15,7 +15,11 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem 2.5rem;
   position: relative;
   text-transform: uppercase;
-  transition: border-color 300ms ease, border-radius 300ms ease, box-shadow 300ms ease, color 300ms ease, height 300ms ease, transform 100ms ease, width 300ms ease;
+  //sass-lint:disable indentation
+  transition: border-color 300ms ease, border-radius 300ms ease,
+    box-shadow 300ms ease, color 300ms ease, height 300ms ease,
+    transform 100ms ease, width 300ms ease;
+  //sass-lint enable indentation
   white-space: nowrap;
 
   &::after {
@@ -44,12 +48,20 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
 
   &.btn-primary,
   &%btn-primary {
-    background-image: linear-gradient(90deg, $primary-gradient-from 0%, $primary-gradient-to 100%);
+    background-image: linear-gradient(
+      90deg,
+      $primary-gradient-from 0%,
+      $primary-gradient-to 100%
+    );
     border: 0;
     color: $white;
 
     &:hover {
-      background-image: linear-gradient(90deg, $primary-gradient-from 0%, $primary-gradient-to 100%);
+      background-image: linear-gradient(
+        90deg,
+        $primary-gradient-from 0%,
+        $primary-gradient-to 100%
+      );
 
       &::after {
         transform: translate(-50%, -50%) scale(1);
@@ -58,15 +70,19 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   }
 }
 
+//sass-lint:disable no-qualifying-elements
 button[type='submit']:not(.btn-text) {
   @extend %btn;
   @extend %btn-primary;
 }
+//sass-lint:enable no-qualifying-elements
 
 dialog {
   user-login {
     form {
       footer {
+        //sass-lint:disable-block force-element-nesting
+        //sass-lint:disable-block no-qualifying-elements
         button.waiting.primary-action {
           color: transparent;
         }

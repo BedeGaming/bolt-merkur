@@ -24,7 +24,12 @@ export default ({
   tags,
   model
 }) => (
-  <div className={options.showExtraInfo ? 'info-enabled item-container' : 'item-container'} onClick={fullItemHandler}>
+  <div
+    className={
+      options.showExtraInfo ? 'info-enabled item-container' : 'item-container'
+    }
+    onClick={fullItemHandler}
+  >
     <div className="image-container">
       <Info friendlyUrlPrefix={friendlyUrlPrefix} />
       <ImageContainer
@@ -36,13 +41,10 @@ export default ({
         playClickHandler={playClickHandler}
       />
     </div>
-    <JackpotContainer jackpotId={jackpotId}></JackpotContainer>
+    <JackpotContainer jackpotId={jackpotId} />
     <div className="display-container">
       <div className="display-name-container">
-        <TagContainer
-          isNativeAppGame={isNativeAppGame}
-          tags={tags}
-        />
+        <TagContainer isNativeAppGame={isNativeAppGame} tags={tags} />
         <Details
           displayName={displayName}
           friendlyUrlPrefix={friendlyUrlPrefix}

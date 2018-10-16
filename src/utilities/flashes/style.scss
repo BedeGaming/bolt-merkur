@@ -100,16 +100,20 @@ $close-border-color: #dae1e6;
 
   &.notification-success {
     .flash-type {
-      background-image: linear-gradient(180deg, $success-gradient-from 0%, $success-gradient-to 100%);
+      background-image: linear-gradient(
+        180deg,
+        $success-gradient-from 0%,
+        $success-gradient-to 100%
+      );
 
       &::before,
       &::after,
-      svg  {
+      svg {
         animation: icon-enter 500ms ease 400ms 1 both;
       }
 
       &::before,
-      &::after  {
+      &::after {
         background-color: $green;
         border-radius: 50%;
         content: '';
@@ -166,16 +170,20 @@ $close-border-color: #dae1e6;
 
   &.notification-error {
     .flash-type {
-      background-image: linear-gradient(180deg, $error-gradient-from 0%, $error-gradient-to 100%);
+      background-image: linear-gradient(
+        180deg,
+        $error-gradient-from 0%,
+        $error-gradient-to 100%
+      );
 
       &::before,
       &::after,
-      svg  {
+      svg {
         animation: icon-enter 500ms ease 400ms 1 both;
       }
 
       &::before,
-      &::after  {
+      &::after {
         background-color: $error-outer-ring;
         border-radius: 50%;
         content: '';

@@ -16,33 +16,43 @@ const getDescription = description => (
 );
 
 const getTermsButton = onClickHandler => (
-  <button className="terms" onClick={onClickHandler}>{Translator.translate('terms_and_conditions_ampersand')}</button>
+  <button className="terms" onClick={onClickHandler}>
+    {Translator.translate('terms_and_conditions_ampersand')}
+  </button>
 );
 
-const getProgress = (percentage, currentContributions, wageringRequirementsTarget) => (
+const getProgress = (
+  percentage,
+  currentContributions,
+  wageringRequirementsTarget
+) => (
   <div>
     <div className="wagering-requirements">
       <h4>{Translator.translate('wagering_reqs')}:</h4>
       <p>
-        <span className="wagering-currency">{Currency.format(currentContributions, 2)} </span>
+        <span className="wagering-currency">
+          {Currency.format(currentContributions, 2)}{' '}
+        </span>
         {Translator.translate('wagering_of')}
-        <span className="wagering-currency">{Currency.format(wageringRequirementsTarget, 2)}</span>
+        <span className="wagering-currency">
+          {Currency.format(wageringRequirementsTarget, 2)}
+        </span>
       </p>
     </div>
     <div className="outer-promo-progress-bar">
-      <div className="inner-promo-progress-bar" style={{ width: `${percentage}%` }}>
+      <div
+        className="inner-promo-progress-bar"
+        style={{ width: `${percentage}%` }}
+      >
         <span>{percentage}%</span>
       </div>
     </div>
   </div>
 );
 
-const displayStatuses = [
-  'PartQualified',
-  'Active'
-];
+const displayStatuses = ['PartQualified', 'Active'];
 
-export default function (props) {
+export default function(props) {
   const {
     bonusType,
     canBeClaimed = false,
@@ -65,25 +75,34 @@ export default function (props) {
     type
   };
 
-  const percentage = ((currentContributions / wageringRequirementsTarget) * 100).toFixed(2);
+  const percentage = (
+    (currentContributions / wageringRequirementsTarget) *
+    100
+  ).toFixed(2);
   const isWelcome = type === 'welcome';
   const promoAction = isWelcome ? null : <ActionButton {...buttonProps} />;
-  const termsLink = canBeClaimed || isClaimed ? getTermsButton(showTerms) : null;
+  const termsLink =
+    canBeClaimed || isClaimed ? getTermsButton(showTerms) : null;
   const titleEl = displayName ? <h3>{displayName}</h3> : null;
-  const descriptionEl = description ? getDescription(generateDescription(description)) : null;
-  const hasProgressBar = displayStatuses.includes(status) && wageringRequirementsTarget !== 0;
-  const progressBar = hasProgressBar ? getProgress(percentage, currentContributions, wageringRequirementsTarget) : null;
+  const descriptionEl = description
+    ? getDescription(generateDescription(description))
+    : null;
+  const hasProgressBar =
+    displayStatuses.includes(status) && wageringRequirementsTarget !== 0;
+  const progressBar = hasProgressBar
+    ? getProgress(percentage, currentContributions, wageringRequirementsTarget)
+    : null;
 
   return (
     <div className="promo-details">
       <div className="promo-text">
-        { titleEl }
-        { descriptionEl }
-        { progressBar }
+        {titleEl}
+        {descriptionEl}
+        {progressBar}
       </div>
       <div className="promo-buttons">
-        { promoAction }
-        { termsLink }
+        {promoAction}
+        {termsLink}
       </div>
     </div>
   );

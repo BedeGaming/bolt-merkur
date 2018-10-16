@@ -5,7 +5,7 @@ export function extractInteger(text) {
   return parseInt(text.match(/\d+/g), 10);
 }
 
-export default function (props) {
+export default function(props) {
   const unreadText = Translator.translate('unread_messages', [props.unread]);
 
   if (extractInteger(unreadText) === 1) {

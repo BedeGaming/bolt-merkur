@@ -3,7 +3,6 @@ import ExtendView from '@bedegaming/bolt/src/pages/content/view.js';
 import ContentView from '@bedegaming/bolt/src/widgets/content/view.js';
 
 export default ExtendView.extend({
-
   regions: {
     title: 'title-header',
     section: 'content'
@@ -17,14 +16,22 @@ export default ExtendView.extend({
   },
 
   showContent() {
-    this.showChildView('title', new ContentView({
-      model: new Model({ title: this.title }),
-      tagName: 'title-header'
-    }), { replaceElement: true });
+    this.showChildView(
+      'title',
+      new ContentView({
+        model: new Model({ title: this.title }),
+        tagName: 'title-header'
+      }),
+      { replaceElement: true }
+    );
 
-    this.showChildView('section', new ContentView({
-      model: new Model({ content: this.content }),
-      tagName: 'content'
-    }), { replaceElement: true });
+    this.showChildView(
+      'section',
+      new ContentView({
+        model: new Model({ content: this.content }),
+        tagName: 'content'
+      }),
+      { replaceElement: true }
+    );
   }
 });

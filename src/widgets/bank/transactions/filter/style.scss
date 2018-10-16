@@ -85,7 +85,11 @@
 
       &:not(.checked) {
         &:hover {
-          $transaction-history-hover-color: mix($transaction-history-button-active-color, $transaction-history-border-color, 35%);
+          $transaction-history-hover-color: mix(
+            $transaction-history-button-active-color,
+            $transaction-history-border-color,
+            35%
+          );
 
           background: transparent;
           border-color: $transaction-history-hover-color;

@@ -1,7 +1,6 @@
 import View from '@bedegaming/bolt/src/pages/account/view.js';
 
 export default View.extend({
-
   setupNavigation() {
     return [
       { displayName: 'my_profile', route: '/account/profile' },

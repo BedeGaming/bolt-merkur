@@ -27,11 +27,19 @@ export default Router.extend({
   },
 
   gamesCategory(category, activeCategory = false) {
-    return this.showCategory(category, activeCategory, window.config.games.categoriesGames);
+    return this.showCategory(
+      category,
+      activeCategory,
+      window.config.games.categoriesGames
+    );
   },
 
   homeCategory(category, activeCategory = false) {
-    return this.showCategory(category, activeCategory, window.config.games.categoriesHome);
+    return this.showCategory(
+      category,
+      activeCategory,
+      window.config.games.categoriesHome
+    );
   },
 
   showCategory(category, activeCategory, categories) {
@@ -60,12 +68,15 @@ export default Router.extend({
   ) {
     this.displayGamesLayout();
 
-    return new GamesRoute({
-      container: this.contentContainer,
-      category,
-      activeCategory,
-      pageConfig,
-      categoryFilter: pageConfig.categoryFilter
-    }, isRoot);
+    return new GamesRoute(
+      {
+        container: this.contentContainer,
+        category,
+        activeCategory,
+        pageConfig,
+        categoryFilter: pageConfig.categoryFilter
+      },
+      isRoot
+    );
   }
 });

@@ -5,7 +5,7 @@ import InboxControls from '../../../../node_modules/@bedegaming/bolt/src/widgets
 // eslint-disable-next-line max-len
 import InboxMessageList from '../../../../node_modules/@bedegaming/bolt/src/widgets/user/inboxV2/messages/message-list.jsx';
 
-export default function (state) {
+export default function(state) {
   const { state: props } = state;
   const messages = props.messages;
   const unread = props.meta.unread;
@@ -18,7 +18,7 @@ export default function (state) {
 
   return (
     <div className="inbox-container">
-      <h1 className="inbox-header" >Messages</h1>
+      <h1 className="inbox-header">Messages</h1>
       {unread > 0 ? <Header unread={unread} /> : null}
       {messages.length ? <InboxControls {...state} /> : null}
       <div className="inbox-area">

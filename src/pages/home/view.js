@@ -9,15 +9,21 @@ export default View.extend({
       this.appendAllCategory(gameCategories);
     }
 
-    this.showChildView('featured', new GamesView({
-      collection: this.collection,
-      category: this.category,
-      showExtraInfo: window.config.features.homeListExtraData,
-      categories: gameCategories,
-      tags: this.tags,
-      superFilter: window.config.features.superFilter && window.config.games.superFilterOnHome,
-      categoryFilter: true,
-      filterCurrentRoute: true
-    }), { replaceElement: true });
+    this.showChildView(
+      'featured',
+      new GamesView({
+        collection: this.collection,
+        category: this.category,
+        showExtraInfo: window.config.features.homeListExtraData,
+        categories: gameCategories,
+        tags: this.tags,
+        superFilter:
+          window.config.features.superFilter &&
+          window.config.games.superFilterOnHome,
+        categoryFilter: true,
+        filterCurrentRoute: true
+      }),
+      { replaceElement: true }
+    );
   }
 });

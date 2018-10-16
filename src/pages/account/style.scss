@@ -149,12 +149,14 @@ player-history {
 
       .page,
       .page:hover {
+        //sass-lint:disable no-color-literals
         background-image: radial-gradient(
           circle closest-side,
           $primary-base,
           $primary-base 90%,
           rgba($primary-base, 0)
         );
+        //sass-lintenable no-color-literals
         transition: background-size 0.2s ease;
       }
 

@@ -34,6 +34,7 @@ content-container {
     }
 
     &::before {
+      //sass-lint:disable-block no-duplicate-properties
       animation: blob-spin 20s linear 0s infinite both;
       background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>

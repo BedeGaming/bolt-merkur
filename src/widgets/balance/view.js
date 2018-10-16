@@ -15,7 +15,7 @@ export default View.extend({
 
   initialize() {
     const secretBalance = Cookies.get('isBalanceSecret') || false;
-    this.model.set('isBalanceSecret', (secretBalance === 'true'));
+    this.model.set('isBalanceSecret', secretBalance === 'true');
   },
 
   ui: {
@@ -55,7 +55,7 @@ export default View.extend({
   },
 
   toggleWallets(e) {
-    const target = e && e.target.className === ('hide-balance');
+    const target = e && e.target.className === 'hide-balance';
     const secretBalance = this.model.get('isBalanceSecret');
     if (target || secretBalance) {
       return;

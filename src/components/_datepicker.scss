@@ -1,11 +1,12 @@
+//sass-lint:disable clean-import-paths
 @import '../../node_modules/@bedegaming/bolt/src/components/_datepicker';
 
 // Mobile styles
 @include breakpoint(reverse-small) {
   .flatpickr {
     &-wrapper {
-      left: 0 !important;
-      width: 100% !important;
+      left: 0 !important; //sass-lint:disable-line no-important
+      width: 100% !important; //sass-lint:disable-line no-important
     }
 
     &-calendar {

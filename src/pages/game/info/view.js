@@ -5,7 +5,6 @@ import RelatedView from '@bedegaming/bolt/src/widgets/game/related/view.js';
 import GameOverview from '@bedegaming/bolt/src/widgets/game/overview/view.js';
 
 export default View.extend({
-
   regions: {
     overview: '.game-overview-region',
     playButtons: '.play-buttons-region',
@@ -17,17 +16,30 @@ export default View.extend({
   onAttach() {
     const model = this.model;
 
-    if (!this.hasPromo) this.showChildView('playButtons', new PlayButtons({ model }), { replaceElement: true });
+    if (!this.hasPromo)
+      this.showChildView('playButtons', new PlayButtons({ model }), {
+        replaceElement: true
+      });
 
-    this.showChildView('info', new InfoView({
-      model: this.currentGame,
-      related: this.relatedGames
-    }), { replaceElement: true });
+    this.showChildView(
+      'info',
+      new InfoView({
+        model: this.currentGame,
+        related: this.relatedGames
+      }),
+      { replaceElement: true }
+    );
 
-    this.showChildView('overview', new GameOverview({ model }), { replaceElement: true });
+    this.showChildView('overview', new GameOverview({ model }), {
+      replaceElement: true
+    });
 
-    this.showChildView('banner', this.getBannerComponent(), { replaceElement: true });
+    this.showChildView('banner', this.getBannerComponent(), {
+      replaceElement: true
+    });
 
-    this.showChildView('related', new RelatedView({ model }), { replaceElement: true });
+    this.showChildView('related', new RelatedView({ model }), {
+      replaceElement: true
+    });
   }
 });
