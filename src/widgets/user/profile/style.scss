@@ -186,6 +186,7 @@ profile-area {
 
     footer {
       display: flex;
+      justify-content: center;
       text-align: center;
 
       .btn[type='submit'] {

@@ -33,28 +33,6 @@ button {
         }
       }
     }
-
-    // span {
-    //   > .spinner {
-    //     border-bottom: 4px solid lighten($primary-base, 40%);
-    //     border-left: 4px solid $primary-base;
-    //     border-right: 4px solid lighten($primary-base, 40%);
-    //     border-top: 4px solid lighten($primary-base, 40%);
-    //   }
-    // }
-
-    &.btn &.btn-primary {
-      color: transparent;
-
-      span {
-        > .spinner {
-          border-bottom: 4px solid rgba($white, 0.5); //sass-lint:disable-line no-color-literals
-          border-left: 4px solid $white;
-          border-right: 4px solid rgba($white, 0.5); //sass-lint:disable-line no-color-literals
-          border-top: 4px solid rgba($white, 0.5); //sass-lint:disable-line no-color-literals
-        }
-      }
-    }
   }
 }
 
