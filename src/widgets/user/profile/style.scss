@@ -185,16 +185,47 @@ profile-area {
     }
 
     footer {
+      display: flex;
+      justify-content: center;
       text-align: center;
 
       .btn[type='submit'] {
         &.update-marketing {
+          background-color: $white;
+          background-image: none;
+          border: 2px solid $primary-base;
+          border-radius: 4px;
+          color: $primary-base;
           font-size: 1.4rem;
-          margin-bottom: 0;
+          margin: 0 1rem 2rem;
+          max-width: 27rem;
           min-width: 22rem;
+          padding: 1.5rem;
+          width: 100%;
 
           @media ($small) {
             font-size: 1.6rem;
+            margin: 0 1.5rem 3rem;
+          }
+        }
+
+        &:hover:not(.btn-text) {
+          background-image: none;
+          border-color: lighten($primary-base, 20%);
+          box-shadow: $box-shadow;
+          color: lighten($primary-base, 20%);
+        }
+
+        &.waiting {
+          color: transparent;
+
+          span {
+            .spinner {
+              border-bottom: 4px solid lighten($primary-base, 40%);
+              border-left: 4px solid $primary-base;
+              border-right: 4px solid lighten($primary-base, 40%);
+              border-top: 4px solid lighten($primary-base, 40%);
+            }
           }
         }
       }

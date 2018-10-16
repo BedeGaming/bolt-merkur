@@ -70,10 +70,17 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   }
 }
 
-//sass-lint:disable no-qualifying-elements
-button[type='submit']:not(.btn-text) {
-  @extend %btn;
-  @extend %btn-primary;
+button {
+  &[type='submit'] {
+    &:not(.btn-text) {
+      @extend %btn;
+      @extend %btn-primary;
+
+      &.waiting {
+        color: transparent;
+      }
+    }
+  }
 }
 //sass-lint:enable no-qualifying-elements
 
