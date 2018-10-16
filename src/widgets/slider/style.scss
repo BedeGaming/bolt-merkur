@@ -163,6 +163,7 @@ promo-slider {
     }
   }
 
+  //sass-lint:disable class-name-format
   .slider__item {
     min-height: 10rem;
 
@@ -201,6 +202,12 @@ promo-slider {
 
       @media (prefers-reduced-motion) {
         animation: none;
+      }
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          animation: none;
+        }
       }
     }
 
@@ -454,7 +461,7 @@ promo-slider {
       color: #5bc64f; //sass-lint:disable-line no-color-literals
     }
   }
-  //sass-lint:disable class-name-format
+  //sass-lint:enable class-name-format
 
   .bullets {
     bottom: 6rem;
@@ -470,6 +477,7 @@ promo-slider {
     }
   }
 
+  //sass-lint:disable class-name-format no-ids force-element-nesting
   #slide-1:checked ~ .bullets .bullets__item--1,
   #slide-2:checked ~ .bullets .bullets__item--2,
   #slide-3:checked ~ .bullets .bullets__item--3,
@@ -477,4 +485,5 @@ promo-slider {
   #slide-5:checked ~ .bullets .bullets__item--5 {
     background-color: $primary-base;
   }
+  //sass-lint:enable class-name-format no-ids force-element-nesting
 }
