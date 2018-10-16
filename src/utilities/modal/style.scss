@@ -292,17 +292,14 @@ dialog {
             color: $grey-dark;
           }
         }
-      }
 
-      .primary-action,
-      .request-password,
-      .update-password,
-      .update-contacts {
-        @extend %btn;
-        @extend %btn-primary;
+        &[type='submit']:not(.btn-text) {
+          @extend %btn;
+          @extend %btn-primary;
 
-        &:first-child &.waiting {
-          color: transparent;
+          &.waiting {
+            color: transparent;
+          }
         }
       }
 

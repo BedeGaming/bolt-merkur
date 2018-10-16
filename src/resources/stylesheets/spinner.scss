@@ -34,19 +34,14 @@ button {
       }
     }
 
-    &[type='submit'],
-    &[type='submit']:first-child {
-      color: transparent;
-
-      span {
-        > .spinner {
-          border-bottom: 4px solid lighten($primary-base, 40%);
-          border-left: 4px solid $primary-base;
-          border-right: 4px solid lighten($primary-base, 40%);
-          border-top: 4px solid lighten($primary-base, 40%);
-        }
-      }
-    }
+    // span {
+    //   > .spinner {
+    //     border-bottom: 4px solid lighten($primary-base, 40%);
+    //     border-left: 4px solid $primary-base;
+    //     border-right: 4px solid lighten($primary-base, 40%);
+    //     border-top: 4px solid lighten($primary-base, 40%);
+    //   }
+    // }
 
     &.btn &.btn-primary {
       color: transparent;
