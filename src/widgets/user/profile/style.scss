@@ -187,8 +187,16 @@ profile-area {
     footer {
       text-align: center;
 
-      .btn {
-        margin-bottom: 0;
+      .btn[type='submit'] {
+        &.update-marketing {
+          font-size: 1.4rem;
+          margin-bottom: 0;
+          min-width: 22rem;
+
+          @media ($small) {
+            font-size: 1.6rem;
+          }
+        }
       }
     }
   }
