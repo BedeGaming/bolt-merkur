@@ -93,7 +93,7 @@ promo-slider {
     right: 1rem;
 
     svg {
-      transform: scale(-1, 1) translateX(0rem);
+      transform: scale(-1, 1) translateX(0);
     }
 
     @media ($medium) {
