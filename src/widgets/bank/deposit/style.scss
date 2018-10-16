@@ -36,6 +36,21 @@
           left: 5rem;
         }
       }
+
+      label {
+        transform: translateX(5rem);
+      }
+
+      input {
+        &:disabled + label,
+        &:focus + label,
+        &:valid + label,
+        &:focus + .peeky-password + label,
+        &:valid + .peeky-password + label,
+        &.has-value + label {
+          transform: translateY(-20%);
+        }
+      }
     }
 
     input {
@@ -378,7 +393,6 @@
             font-size: 1.6rem;
             max-width: 24rem;
             padding: 1rem 2rem;
-            white-space: pre-wrap;
           }
         }
       }
@@ -399,5 +413,16 @@
     img {
       margin-top: 2rem;
     }
+  }
+}
+
+.deposit-dialog {
+  .card-number {
+    margin-bottom: 0;
+  }
+
+  .add-new-card {
+    color: $primary-base;
+    opacity: 1;
   }
 }
