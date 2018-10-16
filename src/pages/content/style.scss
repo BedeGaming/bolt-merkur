@@ -50,25 +50,31 @@ content-container {
       background-size: cover;
       content: '';
       height: 76.3rem;
-      left: 80%;
+      left: 60%;
       position: absolute;
-      top: -250%;
+      top: -100%;
       width: 74.4rem;
-      height: 152.7rem;
-      width: 148.9rem;
 
       @media ($large) {
+        height: 152.7rem;
         left: auto;
         right: -50%;
-        top: -300%;
+        top: -100%;
+        width: 148.9rem;
       }
 
-      @media ($x-large) {
+      @media ($xx-large) {
         right: -30%;
       }
 
       @media (prefers-reduced-motion) {
         animation: none;
+      }
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          animation: none;
+        }
       }
     }
   }
@@ -81,10 +87,20 @@ content-container {
     display: block;
     margin: -2rem auto 3rem;
     max-width: 93rem;
-    padding: 3rem;
+    padding: 2rem;
     position: relative;
-    width: 100%;
+    width: calc(100% - 4rem);
     z-index: 1;
+
+    @media ($small) {
+      padding: 3rem;
+      width: calc(100% - 6rem);
+    }
+
+    @media ($medium) {
+      padding: 3rem;
+      width: 100%;
+    }
   }
 
   h1 {
