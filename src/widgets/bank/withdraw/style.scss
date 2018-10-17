@@ -56,4 +56,27 @@
   .withdrawal-terms {
     margin: 0;
   }
+
+  .card-number {
+    .card-type {
+      display: flex;
+      left: -1rem;
+      top: 50%;
+      transform: translateY(-50%) scale(0.4);
+    }
+
+    .payment-card-selection {
+      background-position: right 2rem bottom 50%;
+      color: $secondary-base;
+      padding: 2rem 2rem 2rem 8rem;
+
+      option {
+        left: 5rem;
+      }
+    }
+  }
+
+  .withdraw {
+    height: 5rem;
+  }
 }
