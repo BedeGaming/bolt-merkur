@@ -50,6 +50,19 @@ game-demo-page {
       @extend %btn;
 
       border: 0;
+
+      &:hover {
+        box-shadow: none;
+        color: lighten($primary-base, 20%);
+
+        svg {
+          fill: lighten($primary-base, 20%);
+        }
+      }
+
+      &:active {
+        transform: scale(0.975);
+      }
     }
 
     .deposit,
