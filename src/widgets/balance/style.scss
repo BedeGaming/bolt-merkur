@@ -293,19 +293,11 @@ app-hub {
     flex: 1;
     justify-content: flex-end;
     margin-right: 0;
-
-    // @media ($medium) {
-    //   flex: 1;
-    // }
   }
 
   wallet-value {
     color: $blue-dark;
     flex: 1;
     font-weight: bold;
-
-    // @media ($medium) {
-    //   flex: 1;
-    // }
   }
 }
