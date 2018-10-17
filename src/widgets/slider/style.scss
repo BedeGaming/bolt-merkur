@@ -61,7 +61,7 @@ promo-slider {
       transform 300ms ease; // sass-lint:disable-line indentation
     width: 3.1rem;
 
-    @media ($medium) {
+    @media ($large) {
       display: flex;
     }
 
@@ -125,13 +125,21 @@ promo-slider {
   article-wrap {
     margin: 0 auto;
     max-width: 130rem;
+    padding: 0;
     position: relative;
     width: 100%;
     z-index: 10;
+
+    @media ($medium) {
+      padding: 0 5rem;
+    }
   }
 
   article {
+    margin: 0 auto;
+
     @media ($small) {
+      margin: 0;
       max-width: 42rem;
     }
 
@@ -188,12 +196,20 @@ promo-slider {
       top: -170%;
       width: 74.4rem;
 
-      @media ($large) {
+      @media ($medium) {
         height: 152.7rem;
         left: auto;
-        right: -50%;
+        right: -90%;
         top: -100%;
         width: 148.9rem;
+      }
+
+      @media ($large) {
+        right: -80%;
+      }
+
+      @media ($x-large) {
+        right: -50%;
       }
 
       @media ($xx-large) {
@@ -212,65 +228,31 @@ promo-slider {
     }
 
     .image-object {
-      animation: shake-x 1s linear 0s infinite both;
       position: absolute;
-
-      img {
-        animation: shake-y 1s linear 0s infinite both;
-      }
-
-      @media (prefers-reduced-motion) {
-        animation: none;
-        transform: translate3d(0, -50%, 0);
-
-        img {
-          animation: none;
-        }
-      }
+      transform: translate3d(0, -50%, 0);
     }
   }
 
   .slider__item--1 {
     .image-object-1 {
-      animation-delay: -2s;
-      animation-duration: 16s;
       left: 5%;
       top: 30%;
       width: 19.2rem;
       z-index: 3;
-
-      img {
-        animation-delay: -4s;
-        animation-duration: 12s;
-      }
     }
 
     .image-object-2 {
-      animation-delay: 0s;
-      animation-duration: 15s;
       left: calc(50% + 7rem);
       top: 15%;
       width: 12.8rem;
       z-index: 1;
-
-      img {
-        animation-delay: 0s;
-        animation-duration: 7s;
-      }
     }
 
     .image-object-3 {
-      animation-delay: -4s;
-      animation-duration: 10s;
       left: calc(50% + 3rem);
       top: 42%;
       width: 7.5rem;
       z-index: 2;
-
-      img {
-        animation-delay: -2s;
-        animation-duration: 10s;
-      }
     }
 
     @media ($medium) {
