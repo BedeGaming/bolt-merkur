@@ -5,6 +5,17 @@
 @import '../../../node_modules/@bedegaming/bolt/src/pages/account/style';
 
 account-page {
+  h1 {
+    background-color: $primary-base;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 6rem;
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .tabs-wrapper {
     background: $grey-light;
   }
@@ -112,7 +123,7 @@ player-history {
   border-radius: 5px;
   box-shadow: $lighter-box-shadow;
   display: block;
-  margin: 0 auto 3rem;
+  margin: 3rem auto;
   max-width: $max-width;
   padding: 2rem;
   position: relative;
