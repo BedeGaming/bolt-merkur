@@ -7,41 +7,71 @@
     margin: 3rem auto;
     max-width: $max-width;
 
-    .inbox-header {
-      @include responsive-type(30, 36);
+    h1 {
+      background-color: $white;
       color: darken($secondary-base, 10%);
+      font-size: 2.2rem;
       font-weight: 900;
-      margin: 2rem 0 2rem 3rem;
+      height: auto;
+      margin: 2rem 2rem 1rem;
+      padding-top: 0;
       text-align: left;
       text-transform: uppercase;
+      width: auto;
+
+      @media ($small) {
+        font-size: 2.8rem;
+        margin: 3rem 3rem 1.5rem;
+      }
     }
 
     .unread-message-count {
-      @include responsive-type(20, 24);
       color: $primary-base;
-      font-weight: 900;
-      margin: 0 0 2rem 3rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 0 2rem 1rem;
       text-align: left;
       text-transform: uppercase;
+
+      @media ($small) {
+        margin: 0 3rem 1.5rem;
+      }
     }
 
     .inbox-options {
       border: 0;
-      margin: 0 0 2rem;
-      padding: 0 3rem;
+      padding: 0 2rem;
+
+      @media ($small) {
+        margin-bottom: 2rem;
+        padding: 0 3rem;
+      }
     }
 
     .inbox-area {
       background-color: $grey-light;
       border: 0;
-      padding: 3rem;
+      padding: 2rem;
+
+      @media ($small) {
+        padding: 3rem;
+      }
     }
 
     .message-item {
       background-color: $white;
-      box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1); //sass-lint:disable-line no-color-literals
-      margin-bottom: 2rem;
-      opacity: 0.8;
+      box-shadow: $lighter-box-shadow;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        box-shadow: $box-shadow;
+        opacity: 0.6;
+      }
+
+      &.unread {
+        border: 0;
+        opacity: 1;
+      }
 
       .checkbox-group {
         display: flex;
@@ -52,11 +82,6 @@
           margin: auto;
           width: 15px;
         }
-      }
-
-      &.unread {
-        background-color: $white;
-        opacity: 1;
       }
 
       .message-details {
@@ -85,7 +110,7 @@
       button {
         @extend %btn;
         @extend %btn-primary;
-        @include responsive-type(10, 14);
+        // @include responsive-type(10, 14);
         margin: auto;
         width: 30%;
 
