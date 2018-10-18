@@ -150,21 +150,26 @@
     }
 
     .pagination {
-      display: flex;
-      height: auto;
-      margin: 3rem auto 0;
-      width: 100%;
-
-      @media ($large) {
-        width: 30%;
-      }
+      justify-content: center;
+      margin: 0;
 
       button {
         @extend %btn;
         @extend %btn-primary;
 
-        margin: auto;
-        width: 30%;
+        font-size: 1.4rem;
+
+        @media ($small) {
+          font-size: 1.6rem;
+        }
+
+        &.enabled {
+          margin: 2rem 0.5rem 0;
+
+          @media ($small) {
+            margin: 3rem 1rem 0;
+          }
+        }
 
         &.disabled {
           display: none;
