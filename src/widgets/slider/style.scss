@@ -138,7 +138,7 @@ promo-slider {
   article {
     margin: 0 auto;
 
-    @media ($small) {
+    @media ($medium) {
       margin: 0;
       max-width: 42rem;
     }
@@ -157,7 +157,12 @@ promo-slider {
 
       font-family: $body-font;
       font-weight: 900;
+      margin-bottom: 0;
       text-transform: uppercase;
+
+      @media ($medium) {
+        margin-bottom: 1rem;
+      }
     }
 
     p {
@@ -171,27 +176,27 @@ promo-slider {
     }
   }
 
-  //sass-lint:disable class-name-format
+  //sass-lint:disable class-name-format quotes
   .slider__item {
     min-height: 10rem;
 
     &::before {
       animation: blob-spin 20s linear -7s infinite both;
-      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-            <stop stop-color="%2334D1FF" offset="0%"></stop>
-            <stop stop-color="%23D41FB1" offset="100%"></stop>
-          </linearGradient>
-        </defs>
-        <g fill="url(%23linearGradient-1)">
-          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
-        </g>
-      </svg>');
+      background-image: url("data:image/svg+xml;utf8,%3Csvg width='1489px' height='1527px' viewBox='0 0 1489 1527' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E
+        %3Cdefs%3E
+          %3ClinearGradient x1='0%' y1='100%' x2='100%' y2='0%' id='linearGradient-1'%3E
+            %3Cstop stop-color='%2334D1FF' offset='0%'%3E%3C/stop%3E
+            %3Cstop stop-color='%23D41FB1' offset='100%'%3E%3C/stop%3E
+          %3C/linearGradient%3E
+        %3C/defs%3E
+        %3Cg fill='url(%23linearGradient-1)'%3E
+          %3Cpath d='M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z'%3E%3C/path%3E
+        %3C/g%3E
+      %3C/svg%3E");
       background-size: cover;
       content: '';
       height: 76.3rem;
-      left: -35%;
+      left: calc(50% - 30rem);
       position: absolute;
       top: -170%;
       width: 74.4rem;
@@ -235,7 +240,7 @@ promo-slider {
 
   .slider__item--1 {
     .image-object-1 {
-      left: 5%;
+      left: calc(50% - 20rem);
       top: 30%;
       width: 19.2rem;
       z-index: 3;
@@ -282,59 +287,38 @@ promo-slider {
 
   .slider__item--2 {
     &::before {
-      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-            <stop stop-color="%23FFB93F" offset="0%"></stop>
-            <stop stop-color="%23F7456B" offset="100%"></stop>
-          </linearGradient>
-        </defs>
-        <g fill="url(%23linearGradient-1)">
-          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
-        </g>
-      </svg>');
+      background-image: url("data:image/svg+xml;utf8,%3Csvg width='1489px' height='1527px' viewBox='0 0 1489 1527' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E
+        %3Cdefs%3E
+          %3ClinearGradient x1='0%' y1='100%' x2='100%' y2='0%' id='linearGradient-1'%3E
+            %3Cstop stop-color='%23FFB93F' offset='0%'%3E%3C/stop%3E
+            %3Cstop stop-color='%23F7456B' offset='100%'%3E%3C/stop%3E
+          %3C/linearGradient%3E
+        %3C/defs%3E
+        %3Cg fill='url(%23linearGradient-1)'%3E
+          %3Cpath d='M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z'%3E%3C/path%3E
+        %3C/g%3E
+      %3C/svg%3E");
     }
 
     .image-object-1 {
-      animation-delay: -2s;
-      animation-duration: 16s;
-      left: 2%;
-      top: 25%;
-      width: 25.4rem;
+      left: calc(50% - 20rem);
+      top: 35%;
+      width: 20rem;
       z-index: 3;
-
-      img {
-        animation-delay: -4s;
-        animation-duration: 12s;
-      }
     }
 
     .image-object-2 {
-      animation-delay: 0s;
-      animation-duration: 15s;
-      left: calc(50% + 7rem);
-      top: 5%;
+      left: calc(50% + 3rem);
+      top: 20%;
       width: 17rem;
       z-index: 1;
-
-      img {
-        animation-delay: 0s;
-        animation-duration: 7s;
-      }
     }
 
     .image-object-3 {
-      animation-delay: -4s;
-      animation-duration: 10s;
-      left: calc(50% + 3rem);
-      top: 45%;
-      width: 16.6rem;
+      left: calc(50% + 2rem);
+      top: 52%;
+      width: 12rem;
       z-index: 2;
-
-      img {
-        animation-delay: -2s;
-        animation-duration: 10s;
-      }
     }
 
     @media ($medium) {
@@ -364,59 +348,38 @@ promo-slider {
 
   .slider__item--3 {
     &::before {
-      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-            <stop stop-color="%23FFDC87" offset="0%"></stop>
-            <stop stop-color="%231FD43B" offset="100%"></stop>
-          </linearGradient>
-        </defs>
-        <g fill="url(%23linearGradient-1)">
-          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
-        </g>
-      </svg>');
+      background-image: url("data:image/svg+xml;utf8,%3Csvg width='1489px' height='1527px' viewBox='0 0 1489 1527' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E
+        %3Cdefs%3E
+          %3ClinearGradient x1='0%' y1='100%' x2='100%' y2='0%' id='linearGradient-1'%3E
+            %3Cstop stop-color='%23FFDC87' offset='0%'%3E%3C/stop%3E
+            %3Cstop stop-color='%231FD43B' offset='100%'%3E%3C/stop%3E
+          %3C/linearGradient%3E
+        %3C/defs%3E
+        %3Cg fill='url(%23linearGradient-1)'%3E
+          %3Cpath d='M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z'%3E%3C/path%3E
+        %3C/g%3E
+      %3C/svg%3E");
     }
 
     .image-object-1 {
-      animation-delay: -2s;
-      animation-duration: 16s;
-      left: 5%;
+      left: calc(50% - 15rem);
       top: 30%;
       width: 19.2rem;
       z-index: 3;
-
-      img {
-        animation-delay: -4s;
-        animation-duration: 12s;
-      }
     }
 
     .image-object-2 {
-      animation-delay: 0s;
-      animation-duration: 15s;
       left: calc(50% + 7rem);
       top: 15%;
       width: 12.8rem;
       z-index: 1;
-
-      img {
-        animation-delay: 0s;
-        animation-duration: 7s;
-      }
     }
 
     .image-object-3 {
-      animation-delay: -4s;
-      animation-duration: 10s;
       left: calc(50% + 3rem);
       top: 42%;
       width: 7.5rem;
       z-index: 2;
-
-      img {
-        animation-delay: -2s;
-        animation-duration: 10s;
-      }
     }
 
     @media ($medium) {
@@ -443,7 +406,6 @@ promo-slider {
       color: #5bc64f; //sass-lint:disable-line no-color-literals
     }
   }
-  //sass-lint:enable class-name-format
 
   .bullets {
     bottom: 6rem;

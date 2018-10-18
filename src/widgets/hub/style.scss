@@ -108,6 +108,7 @@ app-hub {
             color: $nav-item-color;
             font-weight: 900;
             text-transform: uppercase;
+            transition: transform 300ms ease;
           }
 
           &.account-link {
@@ -174,6 +175,36 @@ app-hub {
 
               @media ($medium) {
                 right: calc(50% - 0.2rem);
+              }
+            }
+          }
+
+          @media ($medium) {
+            .item-text {
+              position: relative;
+
+              &::before {
+                background: $blue-mid;
+                border-radius: 20px;
+                content: '';
+                height: 0;
+                left: 50%;
+                position: absolute;
+                top: 100%;
+                transform: translate(-50%, 0);
+                transition: width 300ms ease, height 300ms ease;
+                width: 0%;
+              }
+            }
+
+            &:hover {
+              .item-text {
+                transform: translateY(-0.2rem);
+
+                &::before {
+                  height: 0.3rem;
+                  width: 100%;
+                }
               }
             }
           }
