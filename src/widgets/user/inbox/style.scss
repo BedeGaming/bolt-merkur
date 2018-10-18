@@ -1,27 +1,35 @@
 @import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/inbox/style';
-
-.player-inbox {
-  .inbox-container {
+.account-content {
+  &.player-inbox {
     background-color: $white;
     box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1); //sass-lint:disable-line no-color-literals
-    margin: 3rem auto;
-    max-width: $max-width;
+    margin: 2rem auto;
+    max-width: 93rem;
+    padding: 2rem 0 0;
+    width: calc(100% - 4rem);
 
+    @media ($small) {
+      margin: 3rem auto;
+      padding: 3rem 0 0;
+      width: calc(100% - 6rem);
+    }
+  }
+
+  .inbox-container {
     h1 {
       background-color: $white;
       color: darken($secondary-base, 10%);
       font-size: 2.2rem;
       font-weight: 900;
       height: auto;
-      margin: 2rem 2rem 1rem;
-      padding-top: 0;
+      padding: 0 2rem;
       text-align: left;
       text-transform: uppercase;
       width: auto;
 
       @media ($small) {
         font-size: 2.8rem;
-        margin: 3rem 3rem 1.5rem;
+        padding: 0 3rem;
       }
     }
 
@@ -29,12 +37,12 @@
       color: $primary-base;
       font-size: 1.4rem;
       font-weight: bold;
-      margin: 0 2rem 1rem;
+      margin: 1rem 2rem;
       text-align: left;
       text-transform: uppercase;
 
       @media ($small) {
-        margin: 0 3rem 1.5rem;
+        margin: 1.5rem 3rem;
       }
     }
 
@@ -62,6 +70,12 @@
       background-color: $white;
       box-shadow: $lighter-box-shadow;
       margin-bottom: 0.5rem;
+      padding-left: 0;
+      transition: box-shadow 300ms ease;
+
+      @media ($small) {
+        padding-left: 1rem;
+      }
 
       &:hover {
         box-shadow: $box-shadow;
@@ -71,6 +85,21 @@
       &.unread {
         border: 0;
         opacity: 1;
+        padding-left: 0;
+
+        @media ($small) {
+          padding-left: 1rem;
+        }
+
+        .subject {
+          font-size: 1.4rem;
+          font-weight: bold;
+          line-height: 1.6rem;
+
+          @media ($small) {
+            font-size: 1.6rem;
+          }
+        }
       }
 
       .checkbox-group {
@@ -84,11 +113,34 @@
         }
       }
 
+      .message-info {
+        margin-bottom: 0;
+      }
+
       .message-details {
-        .message-info {
-          .subject {
-            margin-bottom: 0;
-          }
+        padding: 1.5rem 1.5rem 1.5rem 0;
+
+        @media ($small) {
+          padding: 2rem 3rem 2rem 0;
+        }
+      }
+
+      .subject {
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 1.6rem;
+        margin-bottom: 0.5rem;
+
+        @media ($small) {
+          font-size: 1.4rem;
+        }
+      }
+
+      .time {
+        display: none;
+
+        @media ($medium) {
+          display: block;
         }
       }
 
@@ -110,7 +162,7 @@
       button {
         @extend %btn;
         @extend %btn-primary;
-        // @include responsive-type(10, 14);
+
         margin: auto;
         width: 30%;
 
@@ -119,5 +171,12 @@
         }
       }
     }
+  }
+}
+
+.inbox-message {
+  .message-body {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 }
