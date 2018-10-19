@@ -180,6 +180,18 @@ deposit-limits {
   &.account-content {
     max-width: 93rem;
   }
+
+  .limits-area {
+    margin: 0;
+  }
+
+  .limits-description {
+    margin-bottom: 2em;
+  }
+
+  .table-scroll {
+    margin: 1em 0;
+  }
 }
 
 player-history {
@@ -295,19 +307,5 @@ bonus-terms {
         display: none;
       }
     }
-  }
-}
-
-deposit-limits {
-  .limits-area {
-    margin: 0;
-  }
-
-  .limits-description {
-    margin-bottom: 2em;
-  }
-
-  .table-scroll {
-    margin: 1em 0;
   }
 }

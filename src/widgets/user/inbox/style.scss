@@ -1,4 +1,5 @@
 @import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/inbox/style';
+
 .account-content {
   &.player-inbox {
     background-color: $white;
@@ -66,10 +67,10 @@
       }
 
       .spinner {
-        border-bottom: 4px solid rgba($grey, 0.5);
+        border-bottom: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
         border-left: 4px solid $grey;
-        border-right: 4px solid rgba($grey, 0.5);
-        border-top: 4px solid rgba($grey, 0.5);
+        border-right: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
+        border-top: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
       }
     }
 
