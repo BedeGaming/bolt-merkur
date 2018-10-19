@@ -65,13 +65,6 @@
       @media ($small) {
         padding: 3rem;
       }
-
-      .spinner {
-        border-bottom: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
-        border-left: 4px solid $grey;
-        border-right: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
-        border-top: 4px solid rgba($grey, 0.5); //sass-lint:disable-line no-color-literals
-      }
     }
 
     .message-item {
