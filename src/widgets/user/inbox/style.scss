@@ -64,6 +64,13 @@
       @media ($small) {
         padding: 3rem;
       }
+
+      .spinner {
+        border-bottom: 4px solid rgba($grey, 0.5);
+        border-left: 4px solid $grey;
+        border-right: 4px solid rgba($grey, 0.5);
+        border-top: 4px solid rgba($grey, 0.5);
+      }
     }
 
     .message-item {
@@ -193,7 +200,6 @@
   &::after {
     background-color: $primary-base;
   }
-
 }
 
 .sub-menu-item {
