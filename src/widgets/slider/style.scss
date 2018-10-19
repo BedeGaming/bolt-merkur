@@ -39,6 +39,10 @@ $paging-arrow-hover-box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
 promo-slider {
   width: 100%;
 
+  > .slider {
+    overflow: hidden;
+  }
+
   image-container {
     background-color: $grey-light;
     display: block;
