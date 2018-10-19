@@ -176,6 +176,12 @@ player-history {
   }
 }
 
+deposit-limits {
+  &.account-content {
+    max-width: 93rem;
+  }
+}
+
 player-history {
   bonus-history,
   transaction-history {
