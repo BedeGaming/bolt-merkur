@@ -2,7 +2,7 @@
 .account-content {
   &.player-inbox {
     background-color: $white;
-    box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1); //sass-lint:disable-line no-color-literals
+    box-shadow: $box-shadow;
     margin: 2rem auto;
     max-width: 93rem;
     padding: 2rem 0 0;
@@ -155,11 +155,14 @@
 
       button {
         @extend %btn;
-        @extend %btn-primary;
 
+        border-radius: 4px;
+        border-width: 2px;
         font-size: 1.4rem;
 
         @media ($small) {
+          border-radius: 5px;
+          border-width: 3px;
           font-size: 1.6rem;
         }
 
@@ -183,5 +186,11 @@
   .message-body {
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+}
+
+.inbox-badge {
+  &::after {
+    background-color: $primary-base;
   }
 }
