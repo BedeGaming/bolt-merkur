@@ -36,17 +36,10 @@ content-container {
     &::before {
       //sass-lint:disable-block no-duplicate-properties
       animation: blob-spin 20s linear 0s infinite both;
-      background-image: url('data:image/svg+xml;utf8,<svg width="1489px" height="1527px" viewBox="0 0 1489 1527" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-            <stop stop-color="#A6FFAA" offset="0%"></stop>
-            <stop stop-color="#41B9FF" offset="100%"></stop>
-          </linearGradient>
-        </defs>
-        <g fill="url(#linearGradient-1)">
-          <path d="M320.388073,1112.24778 C176.274353,1052.22587 66.7283347,930.664618 21.974532,781.103622 C-60.4011204,505.815629 95.9852314,215.871956 371.273225,133.496303 L738.950371,23.4746487 C775.324373,12.5902941 812.713475,5.44344898 850.537509,2.14501152 C1157.81938,-24.6514437 1428.64337,202.726909 1455.43982,510.008776 L1485.68969,856.891789 C1504.27652,1070.03185 1427.64625,1280.47956 1276.3615,1431.76431 C1153.53169,1554.59412 955.503233,1558.12943 828.367441,1439.76215 C678.141352,1299.89711 508.814896,1190.72565 320.388073,1112.24778 Z"></path>
-        </g>
-      </svg>');
+      //sass-lint:disable no-misspelled-properties space-after-colon space-around-operator space-after-comma url-quotes
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ4OXB4IiBoZWlnaHQ9IjE1MjdweCIgdmlld0JveD0iMCAwIDE0ODkgMTUyNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZGVmcz48bGluZWFyR3JhZGllbnQgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSIgaWQ9ImxpbmVhckdyYWRpZW50LTEiPjxzdG9wIHN0b3AtY29sb3I9IiNBNkZGQUEiIG9mZnNldD0iMCUiPjwvc3RvcD48c3RvcCBzdG9wLWNvbG9yPSIjNDFCOUZGIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIj48cGF0aCBkPSJNMzIwLjM4ODA3MywxMTEyLjI0Nzc4IEMxNzYuMjc0MzUzLDEwNTIuMjI1ODcgNjYuNzI4MzM0Nyw5MzAuNjY0NjE4IDIxLjk3NDUzMiw3ODEuMTAzNjIyIEMtNjAuNDAxMTIwNCw1MDUuODE1NjI5IDk1Ljk4NTIzMTQsMjE1Ljg3MTk1NiAzNzEuMjczMjI1LDEzMy40OTYzMDMgTDczOC45NTAzNzEsMjMuNDc0NjQ4NyBDNzc1LjMyNDM3MywxMi41OTAyOTQxIDgxMi43MTM0NzUsNS40NDM0NDg5OCA4NTAuNTM3NTA5LDIuMTQ1MDExNTIgQzExNTcuODE5MzgsLTI0LjY1MTQ0MzcgMTQyOC42NDMzNywyMDIuNzI2OTA5IDE0NTUuNDM5ODIsNTEwLjAwODc3NiBMMTQ4NS42ODk2OSw4NTYuODkxNzg5IEMxNTA0LjI3NjUyLDEwNzAuMDMxODUgMTQyNy42NDYyNSwxMjgwLjQ3OTU2IDEyNzYuMzYxNSwxNDMxLjc2NDMxIEMxMTUzLjUzMTY5LDE1NTQuNTk0MTIgOTU1LjUwMzIzMywxNTU4LjEyOTQzIDgyOC4zNjc0NDEsMTQzOS43NjIxNSBDNjc4LjE0MTM1MiwxMjk5Ljg5NzExIDUwOC44MTQ4OTYsMTE5MC43MjU2NSAzMjAuMzg4MDczLDExMTIuMjQ3NzggWiI+PC9wYXRoPjwvZz48L3N2Zz4=);
+
+      //sass-lint:enable no-misspelled-properties space-after-colon space-around-operator space-after-comma url-quotes
       background-size: cover;
       content: '';
       height: 76.3rem;
