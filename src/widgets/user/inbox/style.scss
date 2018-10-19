@@ -193,4 +193,13 @@
   &::after {
     background-color: $primary-base;
   }
+
+}
+
+.sub-menu-item {
+  .inbox-link {
+    &::after {
+      display: none;
+    }
+  }
 }
