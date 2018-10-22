@@ -7,26 +7,32 @@ $bg-color: rgba(0, 0, 0, 0.5);
     &::before {
       content: none;
     }
+
+    .info {
+      align-items: center;
+      background-color: $bg-color;
+      border-radius: 50%;
+      display: flex;
+      height: 3.2rem;
+      justify-content: center;
+      opacity: 1;
+      pointer-events: all;
+      right: 1rem;
+      top: 1rem;
+      transform: scale(0.8);
+      transition-duration: 500ms;
+      transition-property: opacity, transform;
+      visibility: visible;
+      width: 3.2rem;
+      z-index: 2;
+    }
   }
 
   @media ($medium) {
     .image-container {
       .info {
-        align-items: center;
-        background-color: $bg-color;
-        border-radius: 50%;
-        display: flex;
-        height: 3.2rem;
-        justify-content: center;
+        opacity: 0;
         pointer-events: none;
-        right: 1rem;
-        top: 1rem;
-        transform: scale(0.8);
-        transition-duration: 500ms;
-        transition-property: opacity, transform;
-        visibility: visible;
-        width: 3.2rem;
-        z-index: 2;
       }
     }
 
