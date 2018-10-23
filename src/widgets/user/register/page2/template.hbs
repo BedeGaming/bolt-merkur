@@ -1,0 +1,84 @@
+<fieldset>
+  <div class="input-container">
+    <input name="firstname"
+           id="firstName"
+           type="text"
+           autocomplete="on"
+           autocorrect="off"
+           autocapitalize="on"
+           spellcheck="false"
+           placeholder=""
+           value="{{firstname}}"
+           required />
+    <label for="firstName"><span>{{translate "first_name_placeholder"}}</span></label>
+  </div>
+
+  <div class="input-container">
+    <input name="lastname"
+           id="lastName"
+           type="text"
+           autocomplete="on"
+           autocorrect="off"
+           autocapitalize="on"
+           spellcheck="false"
+           placeholder=""
+           value="{{lastname}}"
+           required />
+    <label for="lastName"><span>{{translate "last_name_placeholder"}}</span></label>
+  </div>
+
+  {{#if genderEnabled}}
+    <div class="input-container input-container-dob-gender">
+      <label class="dob-gender" ><span>{{translate "gender"}}</span></label>
+      <div class="input-group">
+        {{#each genders}}
+          <input id="{{display}}" class="gender-input" name="gender" type="radio" value="{{value}}" required {{selected}} />
+          <label class="gender-label" for="{{display}}">{{display}}</label>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="input-container input-container-dob-gender">
+    <label class="dob-gender" for="dobDay"><span>{{translate "dob"}}</span></label>
+    <div class="input-group">
+      <input class="date-part leading-zero"
+             id="dobDay"
+             name="dobDay"
+             type="tel"
+             pattern="\d*"
+             placeholder="{{translate "dd"}}"
+             value="{{dobDay}}"
+             maxlength="2" />
+      <input class="date-part leading-zero"
+             id="dobMonth"
+             name="dobMonth"
+             type="tel"
+             pattern="\d*"
+             placeholder="{{translate "mm"}}"
+             value="{{dobMonth}}"
+             maxlength="2" />
+      <input class="date-part"
+             id="dobYear"
+             name="dobYear"
+             type="tel"
+             pattern="\d*"
+             placeholder="{{translate "yyyy"}}"
+             value="{{dobYear}}"
+             maxlength="4" />
+    </div>
+    <input type="hidden" name="dateOfBirth" minlength="6" maxlength="10" data-dateformat="dobYear/dobMonth/dobDay" required>
+  </div>
+</fieldset>
+
+<footer>
+  <button class="next">
+    <span>
+      <div class="spinner"></div>
+      {{translate "next"}}
+    </span>
+  </button>
+  <button type="button" class="back">
+    <span>{{translate "back"}}</span>
+  </button>
+</footer>

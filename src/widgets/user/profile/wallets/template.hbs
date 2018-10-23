@@ -1,0 +1,20 @@
+<section>
+  <total-balance>
+    <wallet-name>{{translate "total_balance"}}:</wallet-name>
+    <wallet-value>{{currency totalBalance 2}}</wallet-value>
+  </total-balance>
+
+  {{#each wallets}}
+    <sub-balance>
+      <wallet-name>{{translate walletName}}:</wallet-name>
+      <wallet-value>{{currency balance 2}}</wallet-value>
+    </sub-balance>
+  {{/each}}
+
+  {{#if loyalty}}
+    <sub-balance>
+      <wallet-name>{{loyalty.pointsName}}:</wallet-name>
+      <wallet-value>{{loyalty.pointsBalance}}&nbsp;{{loyalty.abbreviation}}</wallet-value>
+    </sub-balance>
+  {{/if}}
+</section>

@@ -1,0 +1,89 @@
+{{#each banner}}
+  <label for="slide-{{index}}"
+    class="slider__item slider__item--{{index}} {{classes}}"
+    data-link="{{link}}"
+    data-slide-action="{{slideAction}}"
+    data-interactive="{{interactive}}"
+    data-content="{{content}}"
+    data-contentsrc="{{contentSrc}}">
+    <slider-content-wrap>
+      <article-wrap class="{{../state}}">
+        <article>
+          <div class="text-container">
+            {{{markup}}}
+          </div>
+          <div class="button-container">
+            {{#unless ../isAuthenticated}}
+              <button class="secondary-action" data-action="login"><span>{{translate "log_in"}}</span></button>
+            {{/unless}}
+            {{#unless hideAction}}
+              {{#if action}}
+                <button data-action="{{action}}" class="primary-action btn btn-primary">
+              {{else}}
+                <button data-action="{{../actionData}}" class="primary-action btn btn-primary">
+              {{/if}}
+              {{#if ../isAuthenticated}}
+                {{#if btnText}}
+                  <span>{{translate btnText}}</span>
+                {{else}}
+                  <span>{{translate ../btnText}}</span>
+                {{/if}}
+              {{/if}}
+              {{#unless ../isAuthenticated}}
+                <span>{{translate ../btnText}}</span>
+              {{/unless}}
+              </button>
+            {{/unless}}
+          </div>
+          {{#if ../termsVisible}}
+            {{#unless hideTerms}}
+              {{#if modalTerms}}
+                <button class="show-terms btn-text terms">{{translate "compliance_link_terms"}}</button>
+              {{else}}
+                <a class="terms" href="/promotional-terms">{{translate "compliance_link_terms"}}</a>
+              {{/if}}
+            {{/unless}}
+          {{/if}}
+          {{#if ../hasResponsibleGamblingLogos}}
+            <div class="rg-logos">
+              {{#each ../hasResponsibleGamblingLogos}}
+                <svg class="{{this.name}}" viewBox="{{this.viewbox}}"><use xlink:href="#icon-{{this.svgId}}"/></svg>
+              {{/each}}
+            </div>
+          {{/if}}
+        </article>
+      </article-wrap>
+    </slider-content-wrap>
+    <div class="slider__item-content">
+      {{#if videos}}
+        {{#if ../isMobile}}
+          <img src="{{imgPath}}.jpg" alt="{{headline}}" sizes="(max-width: 700px) 20vw, (min-width: 481px) and (max-width: 1023px) and (orientation:landscape) 20vw, (min-width: 701px) 120vw" class="video-fallback" />
+        {{else}}
+          <video autoplay {{videoLoop}} poster="{{imgPath}}.jpg" class={{videoRatio}}>
+            {{#each videos}}
+              <source src="{{videoPath}}" type="{{videoType}}">
+            {{/each}}
+            <img src="{{imgPath}}.jpg" alt="{{headline}}" sizes="(max-width: 700px) 20vw, (min-width: 481px) and (max-width: 1023px) and (orientation:landscape) 20vw, (min-width: 701px) 120vw" />
+          </video>
+        {{/if}}
+      {{else}}
+        {{#if ../useBackgroundImage}}
+          <div class="slider__item-content" style="background-image: url('{{imgPath}}-medium.jpg');"></div>
+        {{else}}
+          <div class="image-object image-object-1">
+            <img src="{{imgPath}}-object-1.png" />
+          </div>
+          <div class="image-object image-object-2">
+            <img src="{{imgPath}}-object-2.png" />
+          </div>
+          <div class="image-object image-object-3">
+            <img src="{{imgPath}}-object-3.png" />
+          </div>
+        {{/if}}
+      {{/if}}
+    </div>
+  </label>
+{{/each}}
+
+<jackpots-total></jackpots-total>
+<feed></feed>

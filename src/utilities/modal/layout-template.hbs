@@ -1,0 +1,20 @@
+<dialog>
+  {{#unless isGameSearch}}
+    <close-modal>
+      <button>
+        <svg viewBox="0 0 16 16"><use xlink:href="#icon-cross"/></svg>
+        <span>{{translate "close"}}</span>
+      </button>
+    </close-modal>
+  {{/unless}}
+  <div class="modal-content"></div>
+</dialog>
+
+{{#if isGameSearch}}
+  <close-modal>
+    <button>
+      <svg viewBox="0 0 16 16"><use xlink:href="#icon-cross"/></svg>
+      <span>{{translate "close"}}</span>
+    </button>
+  </close-modal>
+{{/if}}

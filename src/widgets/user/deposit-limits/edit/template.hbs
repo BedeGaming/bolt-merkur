@@ -1,0 +1,25 @@
+<h1>{{translate "deposit_limit_name" type}}</h1>
+<form>
+  <div class="input-container">
+    {{#if amount}}
+      <input type="text" value="{{currency amount}}" disabled>
+    {{else}}
+      <input type="text" value="{{translate "default"}}" disabled>
+    {{/if}}
+    <label>{{translate "current_amount"}}</label>
+  </div>
+
+  <div class="input-container">
+    <input id="{{type}}DepositLimit" name="{{type}}DepositLimit" type="text" required="required">
+    <label for="{{type}}DepositLimit">{{translate "new_amount"}}</label>
+  </div>
+
+  <footer>
+    <button type="submit" class="save">
+      <span>
+        <div class="spinner"></div>
+        {{translate "save"}}
+      </span>
+    </button>
+  </footer>
+</form>

@@ -1,1 +1,99 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/buttons';
+
+$hover-bg-color: rgba(255, 255, 255, 0.1);
+
+.btn,
+%btn {
+  background: transparent;
+  border: 3px solid $primary-base;
+  border-radius: 5px;
+  color: $primary-base;
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 14rem;
+  overflow: hidden;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+  //sass-lint:disable indentation
+  transition: border-color 300ms ease, border-radius 300ms ease,
+    box-shadow 300ms ease, color 300ms ease, height 300ms ease,
+    transform 100ms ease, width 300ms ease;
+  //sass-lint enable indentation
+  white-space: nowrap;
+
+  &::after {
+    background-color: $hover-bg-color;
+    border-radius: 50%;
+    content: '';
+    height: 20rem;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 300ms ease;
+    width: 20rem;
+  }
+
+  &:hover {
+    border-color: lighten($primary-base, 20%);
+    box-shadow: $box-shadow;
+    color: lighten($primary-base, 20%);
+  }
+
+  &:active {
+    transform: scale(0.975);
+  }
+
+  &.btn-primary,
+  &%btn-primary {
+    background-image: linear-gradient(
+      90deg,
+      $primary-gradient-from 0%,
+      $primary-gradient-to 100%
+    );
+    border: 0;
+    color: $white;
+
+    &:hover {
+      background-image: linear-gradient(
+        90deg,
+        $primary-gradient-from 0%,
+        $primary-gradient-to 100%
+      );
+
+      &::after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}
+
+button {
+  &[type='submit'] {
+    &:not(.btn-text) {
+      @extend %btn;
+      @extend %btn-primary;
+
+      &.waiting {
+        color: transparent;
+      }
+    }
+  }
+}
+//sass-lint:enable no-qualifying-elements
+
+dialog {
+  user-login {
+    form {
+      footer {
+        //sass-lint:disable-block force-element-nesting
+        //sass-lint:disable-block no-qualifying-elements
+        button.waiting.primary-action {
+          color: transparent;
+        }
+      }
+    }
+  }
+}

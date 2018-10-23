@@ -1,0 +1,28 @@
+<div class="marketing">
+  <h1>{{translate "register_marketing_title"}}</h1>
+  <p>{{translate "register_marketing_line1" siteName}}</p>
+  <p>{{translate "register_marketing_line2"}}</p>
+  <fieldset>
+    <div class="input-container input-container-marketing">
+      <input id="optIn" name="marketing" type="radio" value="opt-in" required />
+      <label class="marketing-opt-in-out" for="optIn">{{translate "register_marketing_opt_in_line"}}</label>
+      <input id="optOut" name="marketing" type="radio" value="opt-out" required />
+      <label class="marketing-opt-in-out" for="optOut">{{translate "register_marketing_opt_out_line"}}</label>
+      <input id="optUnselected" name="marketing" type="radio" value="opt-unselected" required checked class="hide" />
+    </div>
+  </fieldset>
+</div>
+
+<footer>
+  <button class="next">
+    <span>
+      <div class="spinner"></div>
+      {{translate "next"}}
+    </span>
+  </button>
+  <small>{{translate "register_marketing_update_prefs"}}</small>
+  <a href="/privacy-policy" target="_blank" class="privacy-policy">{{translate "compliance_link_privacy"}}</a>
+  <button type="button" class="back">
+      <span>{{translate "back"}}</span>
+  </button>
+</footer>

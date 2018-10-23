@@ -1,0 +1,48 @@
+timeout-expanded {
+  form {
+    .terms-container {
+      height: 3rem;
+      margin: 1.5rem 0;
+      min-height: 2.5rem;
+
+      &.invalid {
+        margin-bottom: 3rem;
+
+        &::after {
+          margin-top: -0.5rem;
+          padding: 0;
+        }
+      }
+
+      input {
+        height: 3rem;
+      }
+
+      label {
+        color: $black;
+        height: 3rem;
+        margin-bottom: 0;
+        padding-left: 0;
+        pointer-events: all;
+      }
+    }
+
+    .btn {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.timeout-terms {
+  margin: 0 3rem;
+}
+
+.timeout-terms-list {
+  font-size: 1.2rem;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}

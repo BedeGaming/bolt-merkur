@@ -1,0 +1,31 @@
+<div class="marketing marketing-end">
+{{#if marketing}}
+  <h1>{{translate "register_marketing_success_title"}}</h1>
+  <p>{{translate "register_marketing_thanks"}}</p>
+{{else}}
+  <h1>{{translate "register_marketing_sure_title"}}</h1>
+  <p>{{translate "register_marketing_sure"}}</p>
+  <p>{{translate "register_marketing_opt_offer"}}</p>
+{{/if}}
+</div>
+
+<footer>
+  <button type="submit" class="register-opt-in" data-opt="opt-in">
+    <span data-opt="opt-in">
+      <div class="spinner"></div>
+      {{translate regButtonLabel}}
+    </span>
+  </button>
+
+  <div class="no-thanks">
+    {{#unless marketing}}
+      <button type="submit" class="register-no-thanks btn-text">
+        <span>
+          <div class="spinner"></div>
+          {{translate "register_marketing_no_thanks"}}
+        </span>
+      </button>
+    {{/unless}}
+    <a href="/privacy-policy" target="_blank" class="privacy-policy">{{translate "compliance_link_privacy"}}</a>
+  </div>
+</footer>

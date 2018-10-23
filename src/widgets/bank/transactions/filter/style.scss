@@ -1,0 +1,106 @@
+@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/bank/transactions/filter/style';
+
+.transaction-filter-form {
+  .input-container {
+    min-height: 0;
+  }
+
+  .manual-date {
+    display: flex;
+    flex-flow: row;
+    height: 0;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    transition-property: transform, height;
+
+    &.active {
+      display: flex;
+      height: 3rem;
+      transform: scale(1);
+
+      @include breakpoint(reverse-medium) {
+        height: 6rem;
+      }
+    }
+
+    .input-container {
+      flex-flow: row;
+      max-width: 20rem;
+      min-width: initial;
+
+      @include breakpoint(reverse-medium) {
+        flex-flow: column;
+      }
+
+      label {
+        line-height: 3rem;
+        margin: 0 0.5em 0 0;
+        white-space: nowrap;
+        width: initial;
+      }
+
+      input {
+        height: auto;
+        padding: 0;
+        text-align: center;
+
+        @include breakpoint(reverse-medium) {
+          height: 3rem;
+        }
+      }
+    }
+
+    .reset {
+      height: 3rem;
+      margin: 0 0 0 0.5rem;
+
+      @include breakpoint(reverse-medium) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .categories,
+  .dates {
+    justify-content: center;
+
+    label {
+      border-radius: 3px;
+      border-width: 2px;
+      font-weight: bold;
+      max-width: 15rem;
+      padding: 1rem;
+      transition-duration: 0.2s;
+      transition-property: color, border-color;
+      transition-timing-function: ease;
+
+      @include breakpoint(reverse-x-small) {
+        flex-basis: 10rem;
+      }
+
+      @include breakpoint(reverse-small) {
+        flex-basis: 12rem;
+      }
+
+      &:not(.checked) {
+        &:hover {
+          $transaction-history-hover-color: mix(
+            $transaction-history-button-active-color,
+            $transaction-history-border-color,
+            35%
+          );
+
+          background: transparent;
+          border-color: $transaction-history-hover-color;
+          color: $transaction-history-hover-color;
+        }
+      }
+
+      &.checked {
+        background: transparent;
+        border-color: $transaction-history-button-active-color;
+      }
+    }
+  }
+}

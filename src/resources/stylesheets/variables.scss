@@ -1,102 +1,86 @@
-$primary-base: #a18f61;
+$primary-base: #e21455;
 $secondary-base: #999;
 $tertiary-base: #63152d;
 $white: #fff;
-$black: #010101;
+$black: #3e3135;
+$blue: #9ccaff;
+$blue-dark: #3c4466;
+$blue-light: #ecf3fc;
+$blue-light-2: #c9e2ff;
+$blue-mid: #62aafc;
+$cream: #f3ecec;
+$green: #56e165;
+$green-dark: #2ab23a;
+$green-light: #7cf488;
+$grey: #7c7f8c;
+$grey-dark: #333;
+$grey-light: #f9f9f9;
+$logo-color: #db0e17;
+$primary-gradient-from: #ff345f;
+$primary-gradient-to: #ff9268;
 
-$primary-color-50: scale-color($primary-base, $lightness: 90%);
-$primary-color-100: scale-color($primary-base, $lightness: 80%);
-$primary-color-200: scale-color($primary-base, $lightness: 65%);
-$primary-color-300: #c3b89f;
-$primary-color-400: scale-color($primary-base, $lightness: 20%);
-$primary-color-500: $primary-base;
-$primary-color-600: scale-color($primary-base, $lightness: -10%);
-$primary-color-700: scale-color($primary-base, $lightness: -20%);
-$primary-color-800: scale-color($primary-base, $lightness: -25%);
-$primary-color-900: scale-color($primary-base, $lightness: -35%);
-
-$secondary-color-50: scale-color($secondary-base, $lightness: 85%);
-$secondary-color-100: scale-color($secondary-base, $lightness: 75%);
-$secondary-color-200: scale-color($secondary-base, $lightness: 65%);
-$secondary-color-300: #d9d9d8;
-$secondary-color-400: scale-color($secondary-base, $lightness: 20%);
-$secondary-color-500: $secondary-base;
-$secondary-color-600: darken($secondary-color-500, 10%);
-$secondary-color-700: darken($secondary-color-600, 15%);
-$secondary-color-800: #4d4d4f;
-$secondary-color-900: #262626;
-
-$tertiary-color-100: scale-color($tertiary-base, $lightness: 80%);
-$tertiary-color-300: scale-color($tertiary-base, $lightness: 65%);
-$tertiary-color-500: $tertiary-base;
-$tertiary-color-700: scale-color($tertiary-base, $lightness: -20%);
-$tertiary-color-900: scale-color($tertiary-base, $lightness: -35%);
+$close-color: #bfcbd4;
 
 $game-page-btn-accent-colour: $primary-base;
 $game-page-btn-span-margin: 0 0 0 1rem;
 
 $game-page-home-text-color: $white;
-$game-page-home-arrow-fill: $primary-color-500;
-$game-page-home-background: $secondary-color-500;
+$game-page-home-arrow-fill: $grey;
+$game-page-home-background: $grey;
 
 $max-width: 132rem;
 
-$body-font: sans-serif;
-$heading-font: serif;
-$banner-heading-font: $heading-font;
+$default-font: 'worksans', helvetica, arial, sans-serif;
+$body-font: $default-font;
+$heading-font: $default-font;
 
 // breakpoints
-$large-val: 1250px;
-$large: 'min-width: #{$large-val}';
+$x-small-val: 320px default;
+$small-val: 460px !default;
+$medium-val: 769px !default;
+$large-val: 1025px !default;
+$x-large-val: 1250px !default;
+$xx-large-val: 1441px !default;
 
-// buttons
-$btn-text-color: $black;
-$btn-border-radius: 0;
-$btn-primary-color: $black;
-$btn-secondary-color: $primary-color-500;
-$btn-secondary-background: $black;
-$btn-secondary-border: 2px solid $primary-color-500;
-$btn-primary-hover-color: $black;
-$btn-primary-transition: color 0.2s ease, background 0.2s ease;
-
-$dialog-overlay-background: transparentize($black, 0.2);
-$dialog-border: .5rem solid $primary-base;
+$dialog-overlay-background: transparentize($black, 0.5);
+$search-dialog-overlay-background: transparentize($black, 0.3);
+$dialog-border: 0.5rem solid $primary-base;
 
 $nav-container-box-shadow: 0.2rem 0 2rem 0 transparentize($black, 0.1);
+$nav-item-color: #3e3135;
 
 $body-font-weight: 500;
 $body-font-size: 1.4rem;
 $body-line-height: 1.6;
 $body-color: $black;
-$body-background: $secondary-color-500;
 
-$history-empty-color: $tertiary-color-500;
+$box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+$lighter-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
 
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;
 $table-color: $black;
-$thead-border-bottom: 2px solid $tertiary-color-500;
-$thead-background: $white;
-$thead-color: $black;
-$trow-odd-background: $secondary-color-300;
-$trow-even-background: $secondary-color-50;
+$thead-border-bottom: 2px solid $grey-light;
+$thead-background: linear-gradient(to right, $green -50%, $blue 100%);
+$thead-color: $white;
+$trow-odd-background: $blue-light;
+$trow-even-background: mix($blue-light, $white, 25%);
 
 $input-border: 1px solid $black;
 $input-border-radius: 0;
 $input-outline: none;
+$input-height: 8rem;
 
 $app-hub-logo-large-width: 10.3rem;
 $app-hub-logo-large-height: 5.5rem;
-$heading-color: $secondary-color-800;
+$heading-color: $grey-light;
 
-$header-background: $black;
+$header-background: $white;
 
-$transaction-history-button-active-color: $black;
-$transaction-history-background-color: $secondary-color-300;
-$transaction-history-font-size: 1.2rem;
-
-$date-range-slider-knob-color: $primary-color-500;
-$date-range-slider-track-color: $secondary-color-300;
-$date-range-slider-range-color: $tertiary-color-500;
+$transaction-history-color: mix($grey-dark, $grey-light, 50%);
+$transaction-history-button-active-color: $primary-base;
+$transaction-history-background-color: $grey-light;
+$transaction-history-border-color: $transaction-history-color;
+$transaction-history-font-size: 1.5rem;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';

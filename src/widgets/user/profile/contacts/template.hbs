@@ -1,0 +1,21 @@
+<h1>{{translate "update_details"}}</h1>
+<form novalidate>
+  {{#if telephoneField}}
+    <div class="input-container">
+      <input id="telephone" name="telephone" type="tel" value="{{telephone}}" placeholder="{{translate "telephone_number"}}" required>
+      <label for="telephone"><span>{{translate "telephone_number"}}</span></label>
+    </div>
+  {{/if}}
+  <div class="input-container">
+    <input id="email" name="email" type="text" value="{{email}}" placeholder="{{translate "email_address"}}" required>
+    <label for="email"><span>{{translate "email_address"}}</span></label>
+  </div>
+  <footer>
+    <button type="submit" class="update-contacts">
+      <span>
+        <div class="spinner"></div>
+        {{translate "update"}}
+      </span>
+    </button>
+  </footer>
+</form>

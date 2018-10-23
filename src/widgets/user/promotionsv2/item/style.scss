@@ -1,0 +1,65 @@
+@import '../../../../../node_modules/@bedegaming/bolt/src/widgets/user/promotionsv2/item/style';
+
+.promo-card {
+  border: 1px solid $grey-light;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+
+  .claim {
+    @extend %btn;
+    @extend %btn-primary;
+
+    max-width: 22rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.promo-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2rem;
+
+  @media ($small) {
+    padding: 3rem;
+  }
+}
+
+.promo-text {
+  padding: 0;
+
+  h3 {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .promo-description {
+    color: $black;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.promo-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .terms {
+    align-self: center;
+    color: $black;
+
+    &:hover {
+      color: lighten($black, 20%);
+    }
+  }
+}

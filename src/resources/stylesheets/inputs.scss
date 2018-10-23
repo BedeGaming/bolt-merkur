@@ -1,0 +1,95 @@
+@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/inputs';
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.input-container {
+  &.invalid {
+    flex-flow: column;
+
+    &::after {
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      position: absolute;
+      top: 100%;
+    }
+  }
+
+  input {
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 100px $white inset;
+    }
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+}
+
+// Card input
+.card-type {
+  background-image: url('/assets/images/icons/cards.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: block;
+  height: 6.4rem;
+  left: -2rem;
+  pointer-events: none;
+  position: absolute;
+  top: -0.88rem;
+  transform: scale(0.5);
+  width: 10.2rem;
+  z-index: 1;
+
+  &.maestro,
+  &.maestro-debit,
+  &.maestro-credit {
+    background-position: 0 -320px;
+  }
+
+  &.mastercard,
+  &.mastercard-credit,
+  &.mastercard-debit {
+    background-position: 0 -256px;
+  }
+
+  &.visa,
+  &.visa-credit {
+    background-position: 0 -64px;
+  }
+
+  &.visa-debit {
+    background-position: 0 -192px;
+  }
+
+  &.visa-electron {
+    background-position: 0 -128px;
+  }
+
+  ~ select {
+    appearance: none;
+  }
+
+  label + & {
+    top: $card-type-top;
+  }
+}
+
+select {
+  background-image: url('/assets/images/svgSprites/arrow-down-grey.svg');
+  background-position: right 2rem bottom 2.5rem;
+}
+
+input:disabled,
+textarea:disabled {
+  opacity: 1;
+}

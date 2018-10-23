@@ -1,0 +1,95 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/footer/style';
+
+site-footer {
+  background-color: $primary-base;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  @media ($small) {
+    padding: 0 3rem;
+  }
+
+  .info-text {
+    justify-content: center;
+    margin: 3rem auto 0;
+    padding: 0 3rem;
+    text-align: center;
+    width: 100%;
+
+    article {
+      margin: 0;
+
+      p {
+        color: $white;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .footer-brand-logo {
+    color: $white;
+    margin: 4.5rem auto;
+    width: 10rem;
+  }
+
+  .compliance-links {
+    background: none;
+    justify-content: center;
+    margin: 0 0 3rem;
+    padding: 0;
+    width: 100%;
+
+    ul {
+      flex-direction: column;
+
+      @media ($small) {
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-right: -3rem;
+      }
+
+      li {
+        font-size: 1.4rem;
+        margin: 0 0 1rem;
+        text-align: center;
+        width: 100%;
+
+        @media ($small) {
+          margin: 0 3rem 1rem 0;
+          width: auto;
+        }
+      }
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: transparentize($white, 0.2);
+      }
+    }
+  }
+
+  .payment-info {
+    display: none;
+  }
+
+  .compliance-logos {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0 -1.5rem 3rem 0;
+    }
+
+    li {
+      margin: 0 1.5rem 1rem 0;
+    }
+  }
+}

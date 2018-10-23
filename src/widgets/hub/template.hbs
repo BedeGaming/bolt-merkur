@@ -1,0 +1,41 @@
+<header-left>
+  <hamburger-trigger></hamburger-trigger>
+</header-left>
+
+<a href="/" class="logo">
+  <svg width='148' height='51' viewBox='0 0 148 51' xmlns='http://www.w3.org/2000/svg'>
+    <use xlink:href="#icon-logo"/>
+  </svg>
+</a>
+
+<nav-container>
+  <nav role="navigation"></nav>
+  <div class="nav-buttons is-mobile">
+    {{#if wallets}}
+      <div class="button-container">
+        <button class="btn btn-primary deposit" type="button">{{translate "deposit"}}</button>
+      </div>
+    {{else}}
+      <div class="button-container">
+        <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
+        <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
+      </div>
+    {{/if}}
+  </div>
+</nav-container>
+
+<header-right>
+  <div class="nav-buttons">
+    {{#if wallets}}
+      <div class="balance"></div>
+      <div class="button-container">
+        <button class="btn btn-primary deposit" type="button">{{translate "deposit"}}</button>
+      </div>
+    {{else}}
+      <div class="button-container">
+        <button class="btn login-modal" type="button">{{translate "log_in"}}</button>
+        <button class="btn btn-primary register" type="button">{{translate "join_now"}}</button>
+      </div>
+    {{/if}}
+  </div>
+</header-right>

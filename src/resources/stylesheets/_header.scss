@@ -1,1 +1,34 @@
-@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/_header';
+header {
+  &-left,
+  &-right,
+  &-center {
+    display: flex;
+  }
+
+  &-left {
+    align-items: center;
+    height: 100%;
+    width: $header-left-width;
+
+    @media ($large) {
+      display: none;
+    }
+  }
+
+  &-right {
+    width: $header-right-width;
+  }
+}
+
+hamburger-trigger {
+  width: 100%;
+}
+
+.site-header {
+  //sass-lint:disable-block no-color-literals
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 12px rgba(22, 20, 18, 0.1);
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}

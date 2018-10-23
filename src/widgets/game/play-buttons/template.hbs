@@ -1,0 +1,14 @@
+<div class="buttons">
+  <button class="play btn btn-primary"><span>{{translate "play_now"}}</span></button>
+  {{#if demoAvailable}}
+  <button class="demo btn"><span>{{translate "demo"}}</span></button>
+  {{/if}}
+</div>
+{{#if hasResponsibleGamblingLogos}}
+<div class="rg-logos">
+  {{#each hasResponsibleGamblingLogos}}
+  <svg class="{{this.name}}" viewBox="{{this.viewbox}}">
+    <use xlink:href="#icon-{{this.svgId}}" /></svg>
+  {{/each}}
+</div>
+{{/if}}

@@ -1,0 +1,58 @@
+{{#if showPromoText}}
+  <footer-wrapper>
+    <div class="info-text">
+      {{#if content}}
+          {{{markdown content}}}
+      {{else}}
+        {{#each articles}}
+          <article>
+            {{#if titleKey }}<h3>{{translate titleKey}}</h3>{{/if}}
+            <p>{{translate textKey}}</p>
+          </article>
+        {{/each}}
+      {{/if}}
+    </div>
+  </footer-wrapper>
+{{/if}}
+
+{{#if brandLogo}}
+  <svg class="footer-brand-logo" viewBox="{{brandLogo.viewBox}}">
+    <use xlink:href="#icon-{{brandLogo.name}}"/>
+  </svg>
+{{/if}}
+
+<footer-wrapper>
+  <div class="compliance-links">
+    <ul>
+      {{#if hasAZ}}
+        <li><a href="/games-a-to-z">{{translate "games_a_z"}}</a></li>
+      {{/if}}
+      {{#each links}}
+        <li><a href="{{href}}">{{translate textKey}}</a></li>
+      {{/each}}
+      {{#if hasNews}}
+        <li><a href="/news">{{translate "news"}}</a></li>
+      {{/if}}
+    </ul>
+  </div>
+  <div class="payment-info">
+    <ul>
+      {{#each paymentProviders}}
+      <li class="payment-info-logo">
+        <svg class="svg-logo {{#if wide}}extra-width{{/if}}" viewBox="{{viewbox}}"><use xlink:href="#icon-{{name}}"/></svg>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="compliance-logos">
+    <ul>
+      {{#each complianceLinks}}
+      <li class="legal-logo">
+        {{#if link}}<a href="{{link}}" target="{{target}}" rel="noopener">{{/if}}
+          <svg class="{{svgClass}}" viewBox="{{viewbox}}"><use xlink:href="#icon-{{svgId}}"/></svg>
+        {{#if link}}</a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</footer-wrapper>

@@ -1,0 +1,38 @@
+<div class="claim-bonus-area">
+  {{#if bonusImg}}
+  <img src="{{bonusImg}}" alt="{{displayName}}">
+  {{/if}}
+  <div class="info-container">
+    {{#if firstDepositBonus}}
+    <p class="include">{{translate "include"}} {{translate "first_deposit_bonus"}}?</p>
+    {{/if}}
+    <h2 class="promo-title">{{displayName}}</h2>
+    {{#if firstDepositBonus}}
+    {{#unless useCodeForBonus}}
+    <div class="input-group">
+      <input id="depositBonusOptInYes" name="depositBonusOptIn" class="radio-accept-bonus" type="radio" value="true"
+        checked>
+      <label for="depositBonusOptInYes"><span>{{translate "yes_please"}}</span></label>
+      <input id="depositBonusOptInNo" name="depositBonusOptIn" class="radio-decline-bonus" type="radio" value="false">
+      <label for="depositBonusOptInNo"><span>{{translate "no_thanks"}}</span></label>
+    </div>
+    {{/unless}}
+    <a target="_blank" href="/promotional-terms">{{translate "view_promo_terms"}}</a>
+    {{/if}}
+    <p class="promo-description-area">{{description}}</p>
+
+  </div>
+</div>
+<div class="request-confirmation"></div>
+{{#if isExtended}}
+<div class="bonus-buttons">
+  <button type="button" class="btn-accept-bonus">
+    <span>
+      <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+      {{translate btnText}}
+    </span>
+  </button>
+</div>
+{{/if}}

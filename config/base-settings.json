@@ -4,74 +4,78 @@
   },
   "walletCurrency": "GBP",
   "api": {
-    "client": "mjackpots_web",
-    "url": "https://qa02-mjackpots.bedegaming.net/api/v5"
+    "client": "bededemo",
+    "url": "https://qa02-bedecasino.bedegaming.net/api/v5"
   },
   "auth": {
-    "clientId": "mjackpots_web",
+    "clientId": "bededemo",
     "scope": "spine"
   },
   "banking": {
     "addCard": {
-      "useCodeForBonus": true
+      "depositWithAddCard": true
     },
-    "gatewayEnabled": false,
     "deposit": {
       "defaultAmount": 50,
       "enablePromotions": true,
       "hideWithdrawals": false,
       "isModal": true,
-      "quickAmounts": [
-        10,
-        50,
-        100,
-        500
-      ]
-    }
+      "quickAmounts": [25, 50, 100, 500],
+      "useCodeForBonus": false
+    },
+    "paymentMethods": {
+      "isHubDefault": true
+    },
+    "providers": [
+      {
+        "provider": "card",
+        "localeKey": "debit_credit",
+        "iconId": "card"
+      }
+    ],
+    "validateCard": true
   },
   "metaTitle": "",
   "metaDescription": "",
   "metaKeywords": "",
   "features": {
     "bonusToolContentPromos": true,
-    "logoutOnIdleSession": false
+    "logoutOnIdleSession": false,
+    "promotions": {
+      "react": true
+    },
+    "winnersFeed": {
+      "minWin": 10,
+      "minWinners": 6,
+      "take": 25,
+      "maxItems": 6
+    }
   },
   "feeds": {
-    "url": "https://qa02-mjackpots.bedegaming.net/feeds/v1"
+    "url": "https://qa02-bedecasino.bedegaming.net/feeds/v1"
   },
   "games": {
+    "react": true,
     "categories": [
-      {
-        "name": "live_le_club"
-      },
-      {
-        "name": "live_casino"
-      },
       {
         "name": "featured"
       },
       {
-        "name": "new-games"
+        "name": "slots"
       },
       {
-        "name": "5-reel-slots"
-      },
-      {
-        "name": "3-reel-slots"
-      },
-      {
-        "name": "progressive-jackpots"
-      },
-      {
-        "name": "other-games"
+        "name": "tables"
       }
     ],
     "categoriesHome": [
       {
-        "name": "live_le_club"
+        "name": "featured"
       },
       {
-        "name": "live_casino"
+        "name": "slots"
+      },
+      {
+        "name": "tables"
       }
     ],
     "categoriesGames": [
@@ -79,25 +83,120 @@
         "name": "featured"
       },
       {
-        "name": "new-games"
+        "name": "slots"
       },
       {
-        "name": "5-reel-slots"
-      },
-      {
-        "name": "3-reel-slots"
-      },
-      {
-        "name": "progressive-jackpots"
-      },
-      {
-        "name": "other-games"
+        "name": "tables"
       }
     ],
     "showSearchOnGamesPageCategories": true,
     "noIndex": true,
     "gamesPagePromoArea": true,
-    "showRelatedGames": true
+    "showRelatedGames": true,
+    "tags": [
+      {
+        "name": "recommended",
+        "active": "active",
+        "key": "priority"
+      },
+      {
+        "name": "alphabetical",
+        "key": "displayName"
+      }
+    ],
+    "tagsToHighlight": ["new", "jackpot"]
+  },
+  "paymentProviderIcons": [
+    {
+      "name": "visa-flat",
+      "viewbox": "0 0 39.4 13"
+    },
+    {
+      "name": "visa-debit-flat",
+      "viewbox": "0 0 77.8 37.4"
+    },
+    {
+      "name": "visa-electron-flat",
+      "viewbox": "0 0 79.5 39.7"
+    },
+    {
+      "name": "mastercard-flat",
+      "viewbox": "0 0 121.2 70.6"
+    }
+  ],
+  "compliance": {
+    "complianceLinks": [
+      {
+        "svgClass": "svg-logo square",
+        "svgId": "18plus-flat",
+        "viewbox": "0 0 25 25"
+      },
+      {
+        "link": "http://www.gambleaware.co.uk/",
+        "svgClass": "svg-logo wide",
+        "svgId": "gambleaware-flat",
+        "target": "_blank",
+        "viewbox": "0 0 93.5 10.6"
+      },
+      {
+        "link": "https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/44819",
+        "svgClass": "svg-logo wide",
+        "svgId": "gamblingcommision-flat",
+        "target": "_blank",
+        "viewbox": "0 0 32 8.69"
+      },
+      {
+        "link": "http://www.gamcare.org.uk/",
+        "svgClass": "svg-logo square",
+        "svgId": "gamcare-square-flat",
+        "target": "_blank",
+        "viewbox": "0 0 500 500"
+      },
+      {
+        "link": "http://www.gamstop.co.uk/",
+        "svgClass": "svg-logo wide",
+        "svgId": "gamstop",
+        "target": "_blank",
+        "viewbox": "0 0 503.5 109"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "href": "/terms-and-conditions",
+        "textKey": "compliance_link_terms"
+      },
+      {
+        "href": "/responsible-gambling",
+        "textKey": "responsible_gambling"
+      },
+      {
+        "href": "/privacy-policy",
+        "textKey": "compliance_link_privacy"
+      },
+      {
+        "href": "/account/deposit-limits",
+        "textKey": "deposit_limits_title"
+      },
+      {
+        "href": "/promotional-terms",
+        "textKey": "promotional_terms"
+      },
+      {
+        "href": "/support",
+        "textKey": "support"
+      }
+    ],
+    "articles": [
+      {
+        "textKey": "footer_paragraph1"
+      }
+    ],
+    "brandLogo": {
+      "name": "logo",
+      "viewBox": "0 0 112 38"
+    }
   },
   "hasFlashDestroyTimer": true,
   "isLandingEnabled": false,
@@ -160,43 +259,43 @@
   "promotions": [],
   "registration": {
     "defaultGender": "Undisclosed",
-    "genderEnabled": false,
+    "genderEnabled": true,
+    "marketing": true,
     "telephoneEnabled": true,
-    "regSuccess": true
+    "regSuccess": false
   },
-  "siteCode": "mjackpots.com",
+  "siteCode": "bedecasino",
   "siteName": "Bede Casino",
   "siteRoot": "http://localhost:3000",
   "slider": {
-    "speed": 3000,
+    "speed": 5000,
     "items": [
       {
         "imgPath": "/assets/images/slider/slide-one",
-        "markup": "<h1></h1>",
+        "markup": "<h1>Top prize £2 million</h1> <p>A game so big, it's giant!</p>",
         "states": [
           "isUnauthenticated",
           "isAuthenticated"
         ],
-        "hideTerms": true,
-        "hideAction": true
-      }, {
+        "hideTerms": true
+      },
+      {
         "imgPath": "/assets/images/slider/slide-two",
-        "markup": "<h1></h1>",
+        "markup": "<h1>Live casino</h1> <p>Play Blackjack and Roulette</p>",
         "states": [
           "isUnauthenticated",
           "isAuthenticated"
         ],
-        "hideTerms": true,
-        "hideAction": true
-      }, {
+        "hideTerms": true
+      },
+      {
         "imgPath": "/assets/images/slider/slide-three",
-        "markup": "<h1></h1>",
+        "markup": "<h1>Up to £50 new player bonus</h1> <p>Deposit between £10 - £50 to claim!</p>",
         "states": [
           "isUnauthenticated",
           "isAuthenticated"
         ],
-        "hideTerms": true,
-        "hideAction": true
+        "hideTerms": true
       }
     ]
   },

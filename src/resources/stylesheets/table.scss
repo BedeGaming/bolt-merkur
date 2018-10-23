@@ -1,1 +1,15 @@
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/table';
+
+table {
+  border-radius: 0.5em;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  thead {
+    background-attachment: fixed;
+
+    th {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,311 @@
+// ------------------------------------------
+// Account page base styles
+// ------------------------------------------
+
+@import '../../../node_modules/@bedegaming/bolt/src/pages/account/style';
+
+account-page {
+  margin-top: 3.4rem;
+
+  @media ($medium) {
+    margin-top: 0;
+  }
+
+  h1 {
+    background-color: $primary-base;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 6rem;
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .tabs-wrapper {
+    background: $grey-light;
+  }
+
+  .tab-list {
+    border: 0;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @media ($medium) {
+      justify-content: center;
+    }
+  }
+
+  .nav-item {
+    background-color: $grey-light;
+    border-bottom: 4px solid $grey-light;
+    border-top: 4px solid $grey-light;
+    display: flex;
+    flex: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    text-transform: uppercase;
+    width: 10rem;
+
+    @media ($small) {
+      font-size: 1.4rem;
+      width: 14rem;
+    }
+
+    @media ($large) {
+      font-size: 1.6rem;
+      width: 18rem;
+    }
+
+    &::before {
+      background: lighten($grey, 20%);
+      bottom: -4px;
+      content: '';
+      height: 4px;
+      left: 51%;
+      position: absolute;
+      right: 51%;
+      transition-duration: 0.3s;
+      transition-property: left, right;
+      transition-timing-function: ease-out;
+    }
+
+    @media ($medium) {
+      &:hover::before {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    a {
+      color: $black;
+      padding: 1.6rem 0.8rem;
+
+      @media ($small) {
+        padding: 2rem 1rem;
+      }
+
+      @media ($large) {
+        padding: 3.1rem 1.5rem;
+      }
+    }
+
+    &.active {
+      border-bottom: 4px solid $primary-base;
+
+      @media ($medium) {
+        &:hover::before {
+          left: 100%;
+          right: 100%;
+        }
+      }
+
+      a {
+        color: $primary-base;
+      }
+    }
+  }
+
+  .table-scroll {
+    border-radius: 0.5em;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
+    table {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+deposit-limits,
+player-history {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 5px;
+  box-shadow: $lighter-box-shadow;
+  display: block;
+  margin: 3rem auto;
+  max-width: $max-width;
+  padding: 2rem;
+  position: relative;
+  width: calc(100% - 4rem);
+  z-index: 1;
+
+  &.account-content {
+    width: calc(100% - 4rem);
+
+    @media ($small) {
+      padding: 3rem;
+      width: calc(100% - 6rem);
+    }
+
+    @media ($x-large) {
+      padding: 3rem;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    color: $grey;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+
+    @media ($small) {
+      font-size: 2.8rem;
+    }
+  }
+
+  h3 {
+    color: $grey;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 4rem 0 2rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    @media ($small) {
+      font-size: 2rem;
+    }
+  }
+}
+
+deposit-limits {
+  &.account-content {
+    max-width: 93rem;
+  }
+
+  .limits-area {
+    margin: 0;
+  }
+
+  .limits-description {
+    margin-bottom: 2em;
+  }
+
+  .table-scroll {
+    margin: 1em 0;
+  }
+}
+
+player-history {
+  bonus-history,
+  transaction-history {
+    .transactions-pagination {
+      min-height: 0;
+
+      .page,
+      .page:hover {
+        //sass-lint:disable no-color-literals
+        background-image: radial-gradient(
+          circle closest-side,
+          $primary-base,
+          $primary-base 90%,
+          rgba($primary-base, 0)
+        );
+        //sass-lintenable no-color-literals
+        transition: background-size 0.2s ease;
+      }
+
+      .page {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 0% 0%;
+        color: $primary-base;
+
+        &:hover {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          color: $white;
+        }
+
+        &.active-page {
+          background-color: lighten($primary-base, 30%);
+          color: $white;
+        }
+      }
+
+      .arrow-wrap {
+        svg {
+          fill: $primary-base;
+        }
+
+        &.inactive {
+          svg {
+            fill: lighten($primary-base, 45%);
+          }
+        }
+
+        .page,
+        .page:hover {
+          background: none;
+        }
+
+        &:not(.inactive) {
+          .next-page,
+          .prev-page {
+            transition-duration: 0.2s;
+            transition-property: padding;
+            transition-timing-function: ease;
+
+            &:hover {
+              background: none;
+              border-radius: 0;
+              padding-left: 0;
+              padding-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+bonus-terms {
+  article {
+    margin: 0;
+  }
+}
+
+.qualifying-listing,
+.promotions-listing {
+  .opt-out,
+  .cancel {
+    background-color: mix($tertiary-base, $primary-base, 50%);
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: mix($tertiary-base, $primary-base, 10%);
+      transition: none;
+    }
+  }
+}
+
+.inbox-tab {
+  &.inbox-badge {
+    &::after {
+      background-color: $primary-base;
+      height: 1.6rem;
+      right: 1.3rem;
+      top: 1.1rem;
+      width: 1.6rem;
+
+      @media ($small) {
+        padding-left: 0.1rem;
+        right: 3rem;
+        top: 1.8rem;
+      }
+
+      @media ($large) {
+        display: none;
+      }
+    }
+  }
+}

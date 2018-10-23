@@ -37,15 +37,15 @@ gulp.registry(new boltTasks.ScriptTasksRegistry());
 /**
  * Font Tasks
  */
-// tasks.FontTasksRegistry.prototype.getConfig = function getConfig() {
-//   return {
-//     fonts: {
-//       src: './src/resources/fonts/**/*.woff',
-//       dest: './dist/assets/fonts/',
-//       cssFilename: 'main.css'
-//     }
-//   };
-// };
+tasks.FontTasksRegistry.prototype.getConfig = function getConfig() {
+  return {
+    fonts: {
+      src: './src/resources/fonts/**/*.woff',
+      dest: './dist/assets/fonts/',
+      cssFilename: 'main.css'
+    }
+  };
+};
 gulp.registry(new tasks.FontTasksRegistry());
 
 /**
@@ -63,7 +63,6 @@ tasks.HtmlTasksRegistry.prototype.getConfig = function getConfig() {
   };
 };
 gulp.registry(new boltTasks.HtmlTasksRegistry());
-
 
 /**
  * Image Tasks
@@ -88,15 +87,23 @@ tasks.LintTasksRegistry.prototype.getConfig = function getConfig() {
 };
 gulp.registry(new tasks.LintTasksRegistry());
 
-
 /**
  * Test Tasks
  */
+
 boltTasks.IstanbulTasksRegistry.prototype.getConfig = function getConfig() {
   return {
     src: [
       `${process.cwd()}/src/**/*.js`,
-      `${process.cwd()}/main.js`
+      `${process.cwd()}/main.js`,
+      `!${process.cwd()}/src/locales/en-GB.js`,
+      `!${process.cwd()}/src/pages/game/info/view.js`,
+      `!${process.cwd()}/src/pages/content/route.js`,
+      `!${process.cwd()}/src/pages/content/view.js`,
+      `!${process.cwd()}/src/widgets/bank/add-card/view.js`,
+      `!${process.cwd()}/src/widgets/bank/add-card-deposit/view.js`,
+      `!${process.cwd()}/src/widgets/bank/deposit/bonus/view.js`,
+      `!${process.cwd()}/src/widgets/user/inboxV2/view.js`
     ]
   };
 };
@@ -139,9 +146,7 @@ boltTasks.SitemapTasksRegistry.prototype.getConfig = function getConfig() {
     url: 'https://www.mjackpots.com/api/v5/games?take=1000',
     hostUrl: 'https://www.mjackpots.com',
     games: [],
-    pages: [
-      { url: '' }
-    ]
+    pages: [{ url: '' }]
   };
 };
 gulp.registry(new boltTasks.SitemapTasksRegistry());
@@ -163,7 +168,7 @@ boltTasks.ContentTasksRegistry.prototype.getConfig = function getConfig() {
   return {
     settings: {
       content: {
-        siteDir: 'mjackpots'
+        siteDir: 'bedecasino'
       }
     }
   };

@@ -1,0 +1,29 @@
+<div class="input-container card-number">
+  <i class="card-type"></i>
+  <div class="load-selection"></div>
+</div>
+{{#if canAddCard}}
+  <button class="add-new-card" type="button">+ {{translate "deposit_new_card"}}</button>
+{{/if}}
+{{#if quickAmounts}}
+  <div class="quick-amounts-container">
+    {{#each quickAmountGroups}}
+      <div class="input-group radio-custom quick-amounts">
+        {{#each this}}
+          <input name="quickAmounts" type="radio" id="quick{{this}}" data-amount="{{this}}">
+          <label for="quick{{this}}" data-amount="{{this}}"><span>{{currency this}}</span></label>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+<div class="input-group cvv-group-container">
+  <div class="input-container">
+    <input id="amount" class="amount" name="amount" type="number" placeholder="{{ translate "deposit_amount_placeholder"}}" required>
+    <label for="amount">{{translate "amount_currency"}}</label>
+  </div>
+  <div class="input-container">
+    <input id="cvn" name="cvn" pattern="\d*" type="tel" placeholder="{{ translate "cvv_number_placeholder" }}" maxlength="4" required data-hj-masked>
+    <label for="cvn">{{translate "cvv"}}</label>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<h1>{{translate "add_card"}}</h1>
+<form method="post" novalidate>
+  <add-card-section>
+    <input type="hidden" name="OTT" data-hj-masked>
+    <input type="hidden" name="Action" data-hj-masked>
+    <input type="hidden" name="AcctName" data-hj-masked>
+    <div class="input-container card-number">
+      <input name="cardNumber" type="tel" pattern="\d*" id="deposit-input-card-number" class="credit-card" placeholder="{{translate "card_number_placeholder"}}"
+        data-hj-masked required>
+      <label>{{translate "card_number"}}</label>
+      <i class="card-type"></i>
+      <div class="validation-icon"><svg viewBox="0 0 16 12">
+          <use xlink:href="#icon-tick" /></svg>
+      </div>
+    </div>
+    <div class="input-group cvv-group-container">
+      <div class="input-container">
+        <input name="expiryDate" type="tel" pattern="\d*" id="deposit-input-expiry-date" class="expiry-date"
+          placeholder="{{translate "card_expiry_date_placeholder"}}" defaultValue="9" required>
+        <label>{{translate "card_expiry_date"}}</label>
+        <div class="validation-icon"><svg viewBox="0 0 16 12">
+            <use xlink:href="#icon-tick" /></svg>
+        </div>
+      </div>
+      <div class="input-container cvv-container">
+        <input name="CVN" type="tel" pattern="\d*" class="cvv" placeholder="{{translate "cvv_number_placeholder"}}"
+          data-hj-masked required>
+        <label>{{translate "cvv"}}</label>
+        <div class="validation-icon"><svg viewBox="0 0 16 12">
+            <use xlink:href="#icon-tick" /></svg>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" name="AcctNumber" data-hj-masked>
+    <input type="hidden" name="ExpDate" data-hj-masked>
+    <input type="hidden" name="First" data-hj-masked>
+    <input type="hidden" name="LastName" data-hj-masked>
+    <input type="hidden" name="Address1" data-hj-masked>
+    <input type="hidden" name="Address2" data-hj-masked>
+    <input type="hidden" name="City" data-hj-masked>
+    <input type="hidden" name="ZipCode" data-hj-masked>
+    <input type="hidden" name="CountryCode" data-hj-masked>
+
+    {{#unless entitiesLength}}
+    {{#if manyCardRegBonuses}}
+    <h2>{{translate "choose_free_bonus"}}</h2>
+    <div class="card-bonuses-container">
+      <div class="bonuses">
+        {{#each cardRegBonuses}}
+        <input name="cardBonusOpt" type="radio" id="{{promoCode}}" {{checked}} value="{{promoCode}}">
+        <label for="{{promoCode}}" class="tab">{{translate "option"}} {{index}}</label>
+        <div class="bonus-card">
+          {{#if image}}
+          <img src="{{image}}" alt="{{displayName}}">
+          {{/if}}
+          <div class="bonus-info">
+            <a class="view-terms" target="_blank" href="/promotional-terms">{{translate "view_promo_terms"}}</a>
+            <span class="selected-status">
+              <svg class="checkmark" viewBox="0 0 1 1">
+                <use xlink:href="#icon-checkmark" />
+              </svg>
+              {{translate "selected"}}
+            </span>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <button class="decline-bonus" type="button">
+        <svg class="checkmark" viewBox="0 0 1 1">
+          <use xlink:href="#icon-checkmark" />
+        </svg>
+        <span>{{translate "decline_free_bonus"}}</span>
+      </button>
+    </div>
+    {{else}}
+    {{#each cardRegBonuses}}
+    <div class="add-card-bonus">
+      {{#if image}}
+      <img src="{{image}}" alt="{{displayName}}">
+      {{/if}}
+      <div class="info-container">
+        <p class="include">{{translate "include"}} {{translate "card_registration_bonus"}}</p>
+        <h2>{{displayName}}</h2>
+        <p>{{description}}</p>
+        <a target="_blank" href="/promotional-terms">{{translate "view_promo_terms"}}</a>
+        <div class="input-container">
+          <div class="input-group">
+            {{#if useCodeForBonus}}
+            <input id="bonusPromoCode" name="bonusPromoCode" type="text" placeholder="{{translate "enter_promo_code_placeholder"}}">
+            {{else}}
+            <input id="bonusOptInYes" name="bonusOptIn" type="radio" value="true" checked="checked">
+            <label for="bonusOptInYes"><span>{{translate "yes_please"}}</span></label>
+            <input id="bonusOptInNo" name="bonusOptIn" type="radio" value="false">
+            <label for="bonusOptInNo"><span>{{translate "no_thanks"}}</span></label>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{/if}}
+    {{/unless}}
+  </add-card-section>
+
+  <deposit-section>
+    <h1>{{translate "deposit"}}</h1>
+    <div class="input-container">
+      <input id="amount" class="amount" name="amount" pattern="\d*" type="number" placeholder="{{translate "deposit_amount_placeholder"}}"
+        required>
+      <label for="amount">{{translate "amount_currency"}}</label>
+    </div>
+
+    <bonus-preview></bonus-preview>
+    <bonus-summary></bonus-summary>
+    <bonus-section class="deposit-bonus-details"></bonus-section>
+    {{#unless hasDeposited}}
+    <div class="input-container checkbox-group">
+      <input id="firstDepositTerms" type="checkbox" name="firstDepositTerms">
+      <label for="firstDepositTerms" class="first-deposit-terms">
+        <small>
+          {{translate "first_deposit_terms"}}
+          <a href="http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx">{{translate
+            "here"}}</a>
+        </small>
+      </label>
+    </div>
+    <div class="input-container checkbox-group">
+      <input id="firstDepositLimitsTerms" type="checkbox" name="firstDepositLimitsTerms">
+      <label for="firstDepositLimitsTerms" class="first-deposit-limits-terms">
+        <small>
+          {{translate "first_deposit_limits_terms"}}
+          <a href="/account/deposit-limits">{{translate "navigate_to_deposit_limits"}}</a>
+        </small>
+      </label>
+    </div>
+    {{/unless}}
+  </deposit-section>
+
+  <footer>
+    <button class="add-card modify-bonus-text">
+      <span>
+        <svg class="spinner" width="15px" height="15px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        {{translate "add_card"}}
+      </span>
+    </button>
+  </footer>
+</form>

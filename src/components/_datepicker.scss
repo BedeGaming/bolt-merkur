@@ -1,0 +1,28 @@
+//sass-lint:disable clean-import-paths
+@import '../../node_modules/@bedegaming/bolt/src/components/_datepicker';
+
+// Mobile styles
+@include breakpoint(reverse-small) {
+  .flatpickr {
+    &-wrapper {
+      left: 0 !important; //sass-lint:disable-line no-important
+      width: 100% !important; //sass-lint:disable-line no-important
+    }
+
+    &-calendar {
+      width: 100%;
+    }
+
+    &-days,
+    &-weeks {
+      span {
+        font-size: 20px;
+        height: 43px;
+        line-height: 2;
+        margin: 0;
+        padding: 0;
+        width: 14.2%;
+      }
+    }
+  }
+}

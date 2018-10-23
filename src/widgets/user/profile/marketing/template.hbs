@@ -1,0 +1,23 @@
+<h2>{{translate "contact_preferences"}}</h2>
+<p>{{translate "register_marketing_line1" siteName}}</p>
+<p>{{translate "register_marketing_line2"}}</p>
+
+<form novalidate>
+  <div class="input-container">
+    <div class="input-group">
+      {{#each contactTypes}}
+        <input class="opt-radio-btn" id="{{key}}" type="checkbox" name="{{key}}" {{checked}}>
+        <label for="{{key}}">{{display}}</label>
+      {{/each}}
+    </div>
+  </div>
+  <footer>
+    <button type="submit" class="btn update-marketing">
+      <span>
+        <div class="spinner">
+        </div>
+        {{translate "update_preferences"}}
+      </span>
+    </button>
+  </footer>
+</form>

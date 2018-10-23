@@ -1,3 +1,5 @@
+//sass-lint:disable clean-import-paths
+
 // ------------------------------------------
 // Imports
 // ------------------------------------------
@@ -16,7 +18,7 @@
 @import 'resources/stylesheets/_header';
 @import 'resources/stylesheets/_hamburger';
 @import 'resources/stylesheets/_animations';
-@import '../node_modules/flatpickr/dist/flatpickr.dark.min';
+@import '../node_modules/flatpickr/dist/flatpickr.min';
 
 // ------------------------------------------
 // Components
@@ -26,6 +28,7 @@
 @import 'components/_subnav';
 @import 'components/_peeky-password';
 @import 'components/_address-lookup';
+@import 'components/_datepicker';
 @import 'utilities/flashes/style';
 @import 'utilities/modal/style';
 @import 'utilities/pagination/style';
@@ -56,8 +59,9 @@
 // Game Views
 // ------------------------------------------
 
-@import 'widgets/game/list/grid-view';
 @import 'widgets/game/list/search';
+@import 'widgets/game/list/itemV2/list-view';
+@import 'widgets/game/list/itemV2/style';
 @import 'widgets/game/play/style';
 @import 'widgets/game/info/style';
 @import 'widgets/game/banner/style';
@@ -69,8 +73,8 @@
 // Promotion Views
 // ------------------------------------------
 
-@import 'widgets/promotion/style';
-@import 'widgets/content-promotions/style';
+@import 'widgets/user/promotionsv2/style';
+@import 'widgets/user/promotionsv2/item/style';
 
 // ------------------------------------------
 // Bank Views
@@ -111,6 +115,5 @@
 @import 'widgets/navigation/style';
 @import 'widgets/footer/style';
 @import 'resources/stylesheets/_utilities';
-
 @import 'widgets/winners-feed-container/style';
 @import 'widgets/winners-feed/style';
