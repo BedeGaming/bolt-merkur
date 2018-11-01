@@ -35,7 +35,7 @@ dialog {
   }
 
   h1 {
-    color: lighten($primary-base, 10%);
+    color: $primary-base;
     font-size: 3.6rem;
     font-weight: 900;
     margin-bottom: 3rem;
@@ -259,7 +259,7 @@ dialog {
       }
 
       &:hover {
-        color: lighten($primary-base, 10%);
+        color: $primary-base;
 
         &::before {
           width: 100%;
