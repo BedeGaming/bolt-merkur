@@ -35,9 +35,8 @@ dialog {
   }
 
   h1 {
-    @include responsive-type(30, 36);
-
     color: lighten($primary-base, 10%);
+    font-size: 3.6rem;
     font-weight: 900;
     margin-bottom: 3rem;
     text-align: center;
@@ -398,8 +397,8 @@ dialog {
     padding: 0;
 
     .subject {
-      @include responsive-type(16, 20);
       color: $secondary-color-700;
+      font-size: 1.8rem;
       font-weight: bold;
     }
   }

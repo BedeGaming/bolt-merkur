@@ -224,7 +224,7 @@
 
   deposit-section {
     h1 {
-      @include responsive-type(20, 24);
+      font-size: 2.2rem;
       margin-bottom: 1rem;
       text-align: left;
     }
@@ -405,8 +405,8 @@
 
   .info-container {
     h2 {
-      @include responsive-type(20, 24);
       color: lighten($secondary-base, 10%);
+      font-size: 2.2rem;
       font-weight: 900;
       margin: 1rem 0 0.5rem;
       text-transform: uppercase;
