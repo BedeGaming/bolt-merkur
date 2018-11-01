@@ -5,7 +5,7 @@
     <input type="hidden" name="Action" data-hj-masked>
     <input type="hidden" name="AcctName" data-hj-masked>
     <div class="input-container card-number">
-      <input name="cardNumber" type="tel" pattern="\d*" id="deposit-input-card-number" class="credit-card" placeholder="{{translate "card_number_placeholder"}}"
+      <input name="cardNumber" type="tel" pattern="\d*" class="credit-card" placeholder="{{translate "card_number_placeholder"}}"
         data-hj-masked required>
       <label>{{translate "card_number"}}</label>
       <i class="card-type"></i>
@@ -15,7 +15,7 @@
     </div>
     <div class="input-group cvv-group-container">
       <div class="input-container">
-        <input name="expiryDate" type="tel" pattern="\d*" id="deposit-input-expiry-date" class="expiry-date"
+        <input name="expiryDate" type="tel" pattern="\d*" class="expiry-date"
           placeholder="{{translate "card_expiry_date_placeholder"}}" defaultValue="9" required>
         <label>{{translate "card_expiry_date"}}</label>
         <div class="validation-icon"><svg viewBox="0 0 16 12">
