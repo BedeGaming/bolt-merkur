@@ -43,9 +43,8 @@ $bg-color: rgba(255, 255, 255, 0.95);
     }
 
     .display-name {
-      @include responsive-type(14, 16);
-
       color: $black;
+      font-size: 1.6rem;
       font-weight: bold;
       overflow: hidden;
       text-align: center;
