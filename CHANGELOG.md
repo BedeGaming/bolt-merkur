@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+# v1.1.0
+
+- Updated bolt version
+
 # v1.0.0
 
 - working and completed demo site
