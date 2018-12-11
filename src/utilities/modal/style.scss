@@ -142,6 +142,7 @@ dialog {
         top: 50%;
         transform: translateY(-50%);
         transition: right 300ms ease;
+        z-index: 1;
 
         svg {
           fill: $secondary-base;
