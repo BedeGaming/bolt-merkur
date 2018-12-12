@@ -20,7 +20,8 @@ app-hub {
   margin: 0;
   max-width: none;
   padding: 0 2rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
 
   .logo {
