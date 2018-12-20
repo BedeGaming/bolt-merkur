@@ -24,6 +24,12 @@ app-hub {
   width: 100%;
   z-index: 1;
 
+  ul {
+    li {
+      margin-left: 0;
+    }
+  }
+
   .logo {
     display: inline-block;
     margin: 1rem 0;
@@ -99,7 +105,7 @@ app-hub {
         a {
           display: flex;
           font-size: 1.8rem;
-          padding: 2rem 2rem 2rem 1rem;
+          padding: 2rem 1rem;
 
           @media ($x-large) {
             padding: 2.6rem 3rem;
@@ -150,7 +156,10 @@ app-hub {
 
           &.inbox-link {
             height: 100%;
-            padding: 2rem;
+
+            @media ($x-large) {
+              padding: 2rem;
+            }
 
             svg {
               fill: $blue-dark;
