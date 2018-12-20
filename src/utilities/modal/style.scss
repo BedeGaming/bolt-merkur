@@ -184,7 +184,8 @@ dialog {
           border-color: $green;
 
           &[type='text'],
-          &[type='number'] {
+          &[type='number'],
+          &[type='email'] {
             padding-right: 4em;
           }
 
