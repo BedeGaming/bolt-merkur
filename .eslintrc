@@ -1,9 +1,7 @@
 {
   "extends": [
     "@bedegaming/eslint-config-bede",
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
+    "plugin:react/recommended"
   ],
   "rules": {
     "react/prop-types": 0,
