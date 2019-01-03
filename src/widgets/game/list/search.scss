@@ -63,18 +63,17 @@
   games {
     padding: 4rem 0 3rem;
 
-    @media
-    ($medium) {
+    @media ($medium) {
       padding: 6rem 0 3rem;
     }
   }
 
   .input-container {
+    left: 0;
     padding-bottom: 3rem;
     position: relative;
-    top: 0;
-    left: 0;
     right: 0;
+    top: 0;
 
     input {
       border-bottom-color: $white;
@@ -83,7 +82,7 @@
       font-weight: bold;
       height: 4rem;
       padding-left: 2.8rem;
-        text-shadow: none;
+      text-shadow: none;
 
       @media ($medium) {
         font-size: 3rem;
