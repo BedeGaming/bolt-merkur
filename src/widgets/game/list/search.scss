@@ -23,7 +23,7 @@
 // ------------------------------------------
 
 .search-dialog {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: $search-dialog-overlay-background;
 
   // &::before {
   //   height: 3rem;
@@ -33,15 +33,17 @@
     @media ($medium) {
       right: 2rem;
       top: 2rem;
-
-      .icon-cross {
-        height: 3rem;
-        width: 3rem;
-      }
     }
 
     svg {
       fill: $white;
+      height: 1.6rem;
+      width: 1.6rem;
+
+      @media ($medium) {
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 
@@ -59,9 +61,10 @@
   }
 
   games {
-    // padding: 6rem 0 0;
+    padding: 4rem 0 3rem;
 
-    @media ($medium) {
+    @media
+    ($medium) {
       padding: 6rem 0 3rem;
     }
   }
@@ -70,15 +73,23 @@
     padding-bottom: 3rem;
     position: relative;
     top: 0;
+    left: 0;
+    right: 0;
 
     input {
       border-bottom-color: $white;
       color: $white;
-      font-size: 3.6rem;
+      font-size: 2.4rem;
       font-weight: bold;
-      height: 5rem;
-      padding-left: 4rem;
-      text-shadow: none;
+      height: 4rem;
+      padding-left: 2.8rem;
+        text-shadow: none;
+
+      @media ($medium) {
+        font-size: 3rem;
+        height: 5rem;
+        padding-left: 4rem;
+      }
 
       &::placeholder {
         font-weight: bold;
@@ -93,8 +104,18 @@
     svg {
       left: -0.5rem;
       padding: 0;
-      top: 0.3rem;
-      width: 2.5rem;
+      top: -0.2rem;
+      width: 2rem;
+
+      @media ($medium) {
+        bottom: 0;
+        top: 0.3rem;
+        width: 2.4rem;
+      }
     }
+  }
+
+  .loading {
+    color: $blue;
   }
 }
