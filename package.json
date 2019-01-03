@@ -18,7 +18,7 @@
     "lint": "gulp lint",
     "images": "gulp images",
     "icons": "gulp icons",
-    "pre-push": "yarn coverage && yarn format:check",
+    "pre-push": "yarn format:check",
     "format": "prettier-eslint --write \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --write \" info",
     "format:check": "prettier-eslint --list-different \"src/**/*.{js,jsx,css,json,scss}\" && prettier-eslint info --list-different \" "
   },
