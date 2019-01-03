@@ -25,10 +25,6 @@
 .search-dialog {
   background-color: $search-dialog-overlay-background;
 
-  // &::before {
-  //   height: 3rem;
-  // }
-
   close-modal {
     @media ($medium) {
       right: 2rem;
