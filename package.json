@@ -19,8 +19,8 @@
     "images": "gulp images",
     "icons": "gulp icons",
     "pre-push": "yarn format:check",
-    "format": "prettier-eslint --write \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --write \" info",
-    "format:check": "prettier-eslint --list-different \"src/**/*.{js,jsx,css,json,scss}\" && prettier-eslint info --list-different \" "
+    "format": "prettier-eslint --write \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --write",
+    "format:check": "prettier-eslint --list-different \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --list-different"
   },
   "author": "Bede Gaming",
   "license": "ISC",
