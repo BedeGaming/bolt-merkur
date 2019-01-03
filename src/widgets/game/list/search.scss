@@ -23,10 +23,14 @@
 // ------------------------------------------
 
 .search-dialog {
-  background: $search-dialog-overlay-background;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  // &::before {
+  //   height: 3rem;
+  // }
 
   close-modal {
-    @media only screen and (min-width: $medium-val) {
+    @media ($medium) {
       right: 2rem;
       top: 2rem;
 
@@ -41,25 +45,56 @@
     }
   }
 
-  .input-container {
-    display: flex;
+  dialog {
+    padding: 0 3rem;
+    z-index: 2;
 
-    input,
-    input::placeholder {
+    @media ($small) {
+      padding: 0 4.5rem;
+    }
+
+    @media ($medium) {
+      padding: 0 6rem;
+    }
+  }
+
+  games {
+    // padding: 6rem 0 0;
+
+    @media ($medium) {
+      padding: 6rem 0 3rem;
+    }
+  }
+
+  .input-container {
+    padding-bottom: 3rem;
+    position: relative;
+    top: 0;
+
+    input {
+      border-bottom-color: $white;
       color: $white;
       font-size: 3.6rem;
       font-weight: bold;
-      padding-right: 4.5rem;
+      height: 5rem;
+      padding-left: 4rem;
       text-shadow: none;
+
+      &::placeholder {
+        font-weight: bold;
+        opacity: 0.7;
+      }
+
+      &:focus + svg {
+        fill: $white;
+      }
     }
 
-    input:focus + svg,
     svg {
-      fill: $white;
-      height: 100%;
-      margin: 0 auto auto;
-      opacity: 100;
-      padding-top: 0;
+      left: -0.5rem;
+      padding: 0;
+      top: 0.3rem;
+      width: 2.5rem;
     }
   }
 }
