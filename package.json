@@ -20,8 +20,8 @@
     "icons": "gulp icons",
     "pre-commit": "yarn format",
     "pre-push": "yarn format:check",
-    "format": "prettier-eslint --write \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --write",
-    "format:check": "prettier-eslint --list-different \"src/**/*.{js,jsx,css,json,scss}\" info && prettier-eslint --list-different"
+    "format": "prettier-eslint --write src/**/*.{js,jsx,css,json,scss}",
+    "format:check": "prettier-eslint --list-different src/**/*.{js,jsx,css,json,scss}"
   },
   "author": "Bede Gaming",
   "license": "ISC",

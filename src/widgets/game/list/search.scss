@@ -61,8 +61,7 @@
   games {
     // padding: 6rem 0 0;
 
-    @media
-    ($medium) {
+    @media ($medium) {
       padding: 6rem 0 3rem;
     }
   }
@@ -93,7 +92,6 @@
 
     svg {
       left: -0.5rem;
-
       padding: 0;
       top: 0.3rem;
       width: 2.5rem;
