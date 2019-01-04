@@ -11,8 +11,7 @@ export default View.extend({
 
     if (emailId.value.length > 0) {
       emailId.classList.add('has-value');
-    }
-    else {
+    } else {
       emailId.classList.remove('has-value');
     }
   }

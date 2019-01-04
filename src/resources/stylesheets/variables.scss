@@ -43,7 +43,7 @@ $x-large-val: 1250px !default;
 $xx-large-val: 1441px !default;
 
 $dialog-overlay-background: transparentize($black, 0.5);
-$search-dialog-overlay-background: transparentize($black, 0.1);
+$search-dialog-overlay-background: rgba(0, 0, 0, 0.85);
 $dialog-border: 0.5rem solid $primary-base;
 
 $nav-container-box-shadow: 0.2rem 0 2rem 0 transparentize($black, 0.1);

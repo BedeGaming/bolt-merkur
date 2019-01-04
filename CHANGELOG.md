@@ -1,10 +1,14 @@
 ## Bolt Bede Casino
 
-# v1.1.0
+## 1.2.0
+
+- removed running tests on pre commit
+
+## 1.1.0
 
 - Updated bolt version
 
-# v1.0.0
+## 1.0.0
 
 - working and completed demo site
 
