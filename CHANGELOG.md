@@ -2,7 +2,7 @@
 
 ## 1.2.0
 
-- removed running tests on pre commit (as complete waste of time)
+- removed running tests on pre commit
 
 ## 1.1.0
 
