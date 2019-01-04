@@ -24,12 +24,6 @@ app-hub {
   width: 100%;
   z-index: 1;
 
-  // ul {
-  //   li {
-  //     margin-left: 0;
-  //   }
-  // }
-
   .logo {
     display: inline-block;
     margin: 1rem 0;
@@ -52,13 +46,13 @@ app-hub {
     @media ($large) {
       flex-direction: row;
       justify-content: space-between;
+    }
 
-      li {
-        margin-left: 0;
+    li {
+      margin-left: 0;
 
-        @media ($x-large) {
-          margin-left: 1rem;
-        }
+      @media ($x-large) {
+        margin-left: 1rem;
       }
     }
   }
