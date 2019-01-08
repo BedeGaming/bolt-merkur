@@ -70,6 +70,20 @@ user-register {
     }
   }
 
+  .input-container-gender {
+    flex-flow: row wrap;
+    height: auto;
+
+    .input-group {
+      flex-wrap: wrap;
+
+      .gender-label {
+        margin-top: 1rem;
+        width: 12.2rem;
+      }
+    }
+  }
+
   .address-search {
     .hide-placeholder {
       &::placeholder {
