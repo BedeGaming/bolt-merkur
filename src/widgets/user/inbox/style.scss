@@ -23,6 +23,7 @@
       font-size: 2.2rem;
       font-weight: 900;
       height: auto;
+      margin-bottom: 3rem;
       padding: 0 2rem;
       text-align: left;
       text-transform: uppercase;
@@ -52,7 +53,6 @@
       padding: 0 2rem;
 
       @media ($small) {
-        margin-bottom: 2rem;
         padding: 0 3rem;
       }
     }
