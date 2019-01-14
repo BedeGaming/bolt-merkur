@@ -4,15 +4,15 @@ profile-area {
   padding: 0;
 
   user-info {
-    margin: 1.5rem auto;
-    max-width: 130rem;
+    margin: 0.5rem auto;
+    max-width: 133rem;
 
     @media ($small) {
-      width: calc(100% - 6rem);
+      width: calc(100% - 3rem);
     }
 
     @media ($medium) {
-      margin-top: 0;
+      margin: 1.5rem auto;
     }
   }
 
@@ -28,27 +28,20 @@ profile-area {
     }
   }
 
-  personal-section,
-  marketing-prefs,
-  .balance-section {
+  user-info > * {
     background: $white;
     border: 1px solid $grey-light;
     box-shadow: $box-shadow;
     flex: 1;
-    margin: 1rem 2rem;
+    flex-basis: 100%;
+    margin: 1rem 1.5rem;
     padding: 2rem;
     width: 100%;
 
-    @media ($small) {
-      margin: 1.5rem 0;
-      min-width: 100%;
-      padding: 3rem;
-    }
-
     @media ($medium) {
-      margin: 3rem 1.5rem 3rem 0;
-      min-width: 32rem;
-      width: 50%;
+      flex-basis: calc(50% - 3rem);
+      margin: 1.5rem;
+      padding: 3rem;
     }
 
     .btn {
@@ -153,11 +146,10 @@ profile-area {
   }
 
   marketing-prefs {
-    order: 2;
+    order: 5;
 
     @media ($medium) {
-      margin: 3rem 0 3rem 1.5rem;
-      order: 1;
+      order: 2;
     }
 
     p {
@@ -233,19 +225,7 @@ profile-area {
   }
 
   .balance-section {
-    margin: 1rem 2rem 2rem;
-    order: 1;
-
-    @media ($small) {
-      flex: none;
-      margin: 1.5rem 0;
-    }
-
-    @media ($medium) {
-      margin: 0 0 1.5rem;
-      order: 2;
-      width: 100%;
-    }
+    order: 2;
 
     .btn {
       &.btn-primary {
@@ -415,6 +395,14 @@ profile-area {
     }
 
     hr {
+      display: none;
+    }
+  }
+
+  login-history {
+    order: 3;
+
+    &:empty {
       display: none;
     }
   }

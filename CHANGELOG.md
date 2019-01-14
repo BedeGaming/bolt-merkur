@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.3.0
+
+- Added basic layout styles for login history
+
 ## 1.2.0
 
 - removed running tests on pre commit
