@@ -96,18 +96,54 @@ user-register {
     }
   }
 
-  .terms-container {
-    &.checkbox-group {
-      height: 3rem;
+  .input-container {
+    &.terms-container {
+      justify-content: center;
       margin: 0 0 3rem;
-      min-height: 2rem;
-      padding: 1rem;
+      min-height: 0;
+      padding: 0;
 
-      label {
-        margin: 0;
-        max-height: 10px;
+      @media ($small) {
+        padding: 0 2rem;
+      }
+
+      &.checkbox-group {
+        input {
+          height: 0;
+          padding: 0;
+        }
+
+        label {
+          align-items: flex-start;
+          color: $black;
+          height: 5rem;
+          padding: 0;
+          pointer-events: all;
+          position: relative;
+
+          &::before {
+            margin: 0.6rem 1.5rem 0 0;
+          }
+
+          &::after {
+            margin-top: 0.6rem;
+          }
+        }
+      }
+    }
+
+    &.invalid {
+      margin-bottom: 0.5rem;
+
+      &::after {
+        margin-top: 4rem;
         padding: 0;
-        pointer-events: all;
+        position: inherit;
+        text-align: center;
+
+        @media ($small) {
+          margin-top: 1.5rem;
+        }
       }
     }
   }
@@ -222,7 +258,11 @@ user-register {
     }
 
     .register-opt-in {
-      margin-bottom: 1rem;
+      margin: 2rem 0 1rem;
+
+      @media ($small) {
+        margin: 1.5rem 0 1rem;
+      }
     }
 
     > * {
@@ -256,10 +296,6 @@ user-register {
         text-align: center;
         width: 100%;
       }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }

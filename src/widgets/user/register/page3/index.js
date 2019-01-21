@@ -30,7 +30,7 @@ export default View.extend({
     postcode: 'input[name=postCode]',
     addressSearch: 'input[name=addressSearch]',
     addressSearchContainer: '.address-search',
-    inputBtn: '.switch-input-mode',
+    inputBtn: '.switch-input-mode'
   },
 
   regions: {
@@ -59,14 +59,21 @@ export default View.extend({
 
   validatePostcode() {
     this.model.set({ countryCode: this.ui.country.val() });
-    if (this.ui.postcode.val().length) this.model.validate({ postCode: this.ui.postcode.val() });
+    if (this.ui.postcode.val().length)
+      this.model.validate({ postCode: this.ui.postcode.val() });
   },
 
   templateContext() {
-    const { marketing, telephoneEnabled, regSuccess } = window.config.registration;
+    const {
+      marketing,
+      telephoneEnabled,
+      regSuccess
+    } = window.config.registration;
     const countryConfig = countryHelper.getConfig();
     const registrationCountries = countryHelper.getRegCountries(countryConfig);
-    const countries = registrationCountries.filter(country => !country.featured);
+    const countries = registrationCountries.filter(
+      country => !country.featured
+    );
     let topCountries = null;
 
     if (registrationCountries.length) {
@@ -134,7 +141,7 @@ export default View.extend({
 
     this.toggleFullAddress();
 
-    const building = (addressParts[1] || addressParts[0]);
+    const building = addressParts[1] || addressParts[0];
     this.ui.addressLine1.val(`${building} ${addressParts[2]}`);
     this.ui.addressLine2.val(addressParts[3]);
     this.ui.town.val(addressParts[4]);
@@ -165,9 +172,13 @@ export default View.extend({
     }
 
     if (!this.getRegion('addressList').currentView) {
-      this.showChildView('addressList', new AddressList({
-        collection
-      }), { replaceElement: true });
+      this.showChildView(
+        'addressList',
+        new AddressList({
+          collection
+        }),
+        { replaceElement: true }
+      );
     } else {
       const addressList = this.getRegion('addressList').currentView.collection;
       addressList.reset(collection.toJSON());
@@ -199,8 +210,12 @@ export default View.extend({
       return Promise.resolve();
     }
 
-    return AddressService.request('addresses', searchTerm, country, format)
-    .then(addressList => {
+    return AddressService.request(
+      'addresses',
+      searchTerm,
+      country,
+      format
+    ).then(addressList => {
       this.ui.addressSearch.parent().removeClass('waiting');
       this.updateAddressList(addressList, clicked);
     });

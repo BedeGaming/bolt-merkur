@@ -17,6 +17,7 @@
     flex-flow: column;
 
     &::after {
+      color: $primary-base;
       font-size: 1.1rem;
       padding: 0.2rem;
       position: absolute;
