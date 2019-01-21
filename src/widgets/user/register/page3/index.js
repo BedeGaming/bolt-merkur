@@ -66,8 +66,8 @@ export default View.extend({
   templateContext() {
     const {
       marketing,
-      telephoneEnabled,
-      regSuccess
+      regSuccess,
+      telephoneEnabled
     } = window.config.registration;
     const countryConfig = countryHelper.getConfig();
     const registrationCountries = countryHelper.getRegCountries(countryConfig);

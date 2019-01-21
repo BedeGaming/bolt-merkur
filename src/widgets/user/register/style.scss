@@ -298,4 +298,10 @@ user-register {
       }
     }
   }
+
+  .text-alert {
+    @media ($small) {
+      margin-top: 2rem;
+    }
+  }
 }

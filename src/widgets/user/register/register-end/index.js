@@ -31,6 +31,8 @@ export default View.extend({
 
   templateContext() {
     const marketing = this.model.get('marketing') === 'opt-in';
+    const emailverify = window.config.registration.emailverify;
+    console.log(emailverify);
     const regButtonLabel = marketing ? 'register' : 'register_marketing_opt_in';
     console.log('this is Bede Casino');
     const privacyLink = this.getPrivacyLink(
@@ -46,6 +48,7 @@ export default View.extend({
     }
 
     return {
+      emailverify,
       marketing,
       regButtonLabel,
       isChecked,
