@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.4.0
+
+- Added and enabled login history
+
 ## 1.3.0
 
 - Added basic layout styles for login history
