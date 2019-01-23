@@ -39,6 +39,7 @@
   "metaDescription": "",
   "metaKeywords": "",
   "features": {
+    "loginHistory": true,
     "bonusToolContentPromos": true,
     "logoutOnIdleSession": false,
     "promotions": {

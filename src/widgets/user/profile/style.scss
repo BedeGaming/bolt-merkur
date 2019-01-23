@@ -36,12 +36,13 @@ profile-area {
     flex-basis: 100%;
     margin: 1rem 1.5rem;
     padding: 2rem;
-    width: 100%;
+    width: calc(100% - 4rem);
 
     @media ($medium) {
       flex-basis: calc(50% - 3rem);
       margin: 1.5rem;
       padding: 3rem;
+      width: 100%;
     }
 
     .btn {
