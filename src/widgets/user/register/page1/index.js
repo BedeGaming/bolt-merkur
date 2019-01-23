@@ -8,7 +8,6 @@ export default View.extend({
 
   checkIfHasValue() {
     const emailId = document.getElementById('email');
-    console.log('this is Bede');
 
     if (emailId.value.length > 0) {
       emailId.classList.add('has-value');

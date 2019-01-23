@@ -3,6 +3,12 @@
 user-register {
   overflow: visible;
 
+  form {
+    footer {
+      margin: 0 0 1.5rem;
+    }
+  }
+
   .switch-input-mode {
     color: $primary-color-500;
     font-size: 1.4rem;
@@ -200,7 +206,7 @@ user-register {
       text-align: left;
     }
 
-    .input-container-marketing {
+    .input-container {
       display: flex;
       margin-bottom: 2rem;
       min-height: 4rem;
@@ -215,9 +221,10 @@ user-register {
         height: 2rem;
         margin: auto;
         padding: 0;
+
       }
 
-      .marketing-opt-in-out {
+      .marketing-opt {
         color: $black;
         font-weight: normal;
         height: 2rem;
@@ -228,6 +235,12 @@ user-register {
         width: auto;
       }
     }
+  }
+
+
+  .marketing-policy {
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .marketing-end {
@@ -244,11 +257,10 @@ user-register {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto 3rem;
+    // margin: 0 auto 3rem;
 
     .next,
-    .register,
-    .register-opt-in {
+    .register-end {
       @extend %btn;
       @extend %btn-primary;
 
@@ -257,11 +269,15 @@ user-register {
       }
     }
 
-    .register-opt-in {
+    .register-end {
       margin: 2rem 0 1rem;
 
       @media ($small) {
-        margin: 1.5rem 0 1rem;
+        margin: 1.5rem 0 2rem;
+      }
+
+      span {
+        color: $white;
       }
     }
 
@@ -299,7 +315,7 @@ user-register {
     }
   }
 
-  .text-alert {
+  .alert-text {
     @media ($small) {
       margin-top: 2rem;
     }
