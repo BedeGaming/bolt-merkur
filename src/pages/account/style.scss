@@ -194,74 +194,69 @@ deposit-limits {
   }
 }
 
-player-history {
-  bonus-history,
-  transaction-history {
-    .transactions-pagination {
-      min-height: 0;
+.transactions-pagination, .table-pagination {
+  min-height: 0;
 
-      .page,
-      .page:hover {
-        //sass-lint:disable no-color-literals
-        background-image: radial-gradient(
-          circle closest-side,
-          $primary-base,
-          $primary-base 90%,
-          rgba($primary-base, 0)
-        );
-        //sass-lintenable no-color-literals
-        transition: background-size 0.2s ease;
+  .page,
+  .page:hover {
+    //sass-lint:disable no-color-literals
+    background-image: radial-gradient(
+      circle closest-side,
+      $primary-base,
+      $primary-base 90%,
+      rgba($primary-base, 0)
+    );
+    //sass-lintenable no-color-literals
+    transition: background-size 0.2s ease;
+  }
+
+  .page {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0% 0%;
+    color: $primary-base;
+
+    &:hover {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      color: $white;
+    }
+
+    &.active-page {
+      background-color: lighten($primary-base, 30%);
+      color: $white;
+    }
+  }
+
+  .arrow-wrap {
+    svg {
+      fill: $primary-base;
+    }
+
+    &.inactive {
+      svg {
+        fill: lighten($primary-base, 45%);
       }
+    }
 
-      .page {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 0% 0%;
-        color: $primary-base;
+    .page,
+    .page:hover {
+      background: none;
+    }
+
+    &:not(.inactive) {
+      .next-page,
+      .prev-page {
+        transition-duration: 0.2s;
+        transition-property: padding;
+        transition-timing-function: ease;
 
         &:hover {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-          color: $white;
-        }
-
-        &.active-page {
-          background-color: lighten($primary-base, 30%);
-          color: $white;
-        }
-      }
-
-      .arrow-wrap {
-        svg {
-          fill: $primary-base;
-        }
-
-        &.inactive {
-          svg {
-            fill: lighten($primary-base, 45%);
-          }
-        }
-
-        .page,
-        .page:hover {
           background: none;
-        }
-
-        &:not(.inactive) {
-          .next-page,
-          .prev-page {
-            transition-duration: 0.2s;
-            transition-property: padding;
-            transition-timing-function: ease;
-
-            &:hover {
-              background: none;
-              border-radius: 0;
-              padding-left: 0;
-              padding-right: 1rem;
-            }
-          }
+          border-radius: 0;
+          padding-left: 0;
+          padding-right: 1rem;
         }
       }
     }
