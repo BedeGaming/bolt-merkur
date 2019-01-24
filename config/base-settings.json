@@ -263,7 +263,7 @@
     "emailverify": true,
     "genderEnabled": true,
     "marketing": true,
-    "regSuccess": false,
+    "regSuccess": true,
     "telephoneEnabled": true
   },
   "siteCode": "bedecasino",

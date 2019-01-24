@@ -3,6 +3,14 @@
 user-register {
   overflow: visible;
 
+  h2 {
+    color: $primary-base;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align:  center;
+    text-transform: uppercase;
+  }
+
   form {
     footer {
       margin: 0 0 1.5rem;
@@ -72,7 +80,7 @@ user-register {
     }
 
     &:last-of-type {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -128,12 +136,16 @@ user-register {
           position: relative;
 
           &::before {
-            margin: 0.6rem 1.5rem 0 0;
+            margin: 0.4rem 1.5rem 0 0;
           }
 
           &::after {
-            margin-top: 0.6rem;
+            margin-top: 0.4rem;
           }
+        }
+
+        p {
+          font-size: 1.2rem;
         }
       }
     }
@@ -221,7 +233,6 @@ user-register {
         height: 2rem;
         margin: auto;
         padding: 0;
-
       }
 
       .marketing-opt {
@@ -236,7 +247,6 @@ user-register {
       }
     }
   }
-
 
   .marketing-policy {
     margin-bottom: 2rem;
@@ -257,7 +267,6 @@ user-register {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    // margin: 0 auto 3rem;
 
     .next,
     .register-end {
@@ -270,54 +279,14 @@ user-register {
     }
 
     .register-end {
-      margin: 2rem 0 1rem;
-
-      @media ($small) {
-        margin: 1.5rem 0 2rem;
-      }
-
-      span {
-        color: $white;
-      }
-    }
-
-    > * {
-      flex: none;
-    }
-
-    small {
-      margin: 2rem auto 1rem;
-    }
-
-    .no-thanks {
-      display: flex;
-      width: 70%;
-
-      .register-no-thanks {
-        background-color: transparent;
-        border: 0;
-        margin: 0;
-        width: 100%;
-
-        &:hover {
-          background-color: inherit;
-
-          span {
-            color: $primary-base;
-          }
-        }
-      }
-
-      a {
-        text-align: center;
-        width: 100%;
-      }
+      color: $white;
+      margin-bottom: 2rem;
     }
   }
 
-  .alert-text {
-    @media ($small) {
-      margin-top: 2rem;
-    }
+  .success-body {
+    color: $black;
+    margin: 2rem 0;
+    text-align: center;
   }
 }
