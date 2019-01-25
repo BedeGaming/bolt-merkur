@@ -31,7 +31,8 @@ export default View.extend({
 
   templateContext() {
     const marketing = this.model.get('marketing') === 'opt-in';
-    const emailverify = window.config.registration.emailverify;
+    // const optOut = this.model.get('marketing') === 'opt-out';
+    console.log(this.model);
     const regButtonLabel = marketing ? 'register' : 'register_marketing_opt_in';
     const privacyLink = this.getPrivacyLink(
       Translator.translate('compliance_link_privacy')
@@ -46,8 +47,8 @@ export default View.extend({
     }
 
     return {
-      emailverify,
       marketing,
+      // optOut,
       regButtonLabel,
       isChecked,
       privacyLink,

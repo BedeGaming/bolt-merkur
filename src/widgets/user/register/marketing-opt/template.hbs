@@ -1,5 +1,5 @@
 <div class="marketing">
-  <h1>{{translate "register_marketing_title"}}</h1>
+  <h2>{{translate "register_marketing_title"}}</h2>
   <p>{{translate "register_marketing_line1" siteName}}</p>
   <p>{{translate "register_marketing_line2"}}</p>
   <fieldset>
@@ -11,20 +11,12 @@
       <input id="optUnselected" name="marketing" type="radio" value="opt-unselected" required checked class="hide" />
     </div>
   </fieldset>
-  <div class="marketing-policy">
-    <small>{{translate "register_marketing_update_prefs"}}</small>
-    <a href="/privacy-policy" target="_blank" class="privacy-policy">{{translate "compliance_link_privacy"}}</a>
-  </div>
 </div>
 
 <footer>
   <button class="next">
-    <span>
-      <div class="spinner"></div>
-      {{translate "next"}}
-    </span>
+    <span>{{translate "save_preferences"}}</span>
   </button>
-  <button type="button" class="back">
-      <span>{{translate "back"}}</span>
-  </button>
+  <small>{{translate "register_marketing_update_prefs"}}</small>
+  <a href="/privacy-policy" target="_blank" class="privacy-policy">{{translate "compliance_link_privacy"}}</a>
 </footer>
