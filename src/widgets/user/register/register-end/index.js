@@ -6,6 +6,8 @@ export default View.extend({
 
   tagName: 'form',
 
+  validationName: 'register-end',
+
   ui: {
     terms: '.terms',
     privacy: '.privacy'
@@ -30,10 +32,6 @@ export default View.extend({
   },
 
   templateContext() {
-    const marketing = this.model.get('marketing') === 'opt-in';
-    // const optOut = this.model.get('marketing') === 'opt-out';
-    console.log(this.model);
-    const regButtonLabel = marketing ? 'register' : 'register_marketing_opt_in';
     const privacyLink = this.getPrivacyLink(
       Translator.translate('compliance_link_privacy')
     );
@@ -47,9 +45,6 @@ export default View.extend({
     }
 
     return {
-      marketing,
-      // optOut,
-      regButtonLabel,
       isChecked,
       privacyLink,
       termsLink

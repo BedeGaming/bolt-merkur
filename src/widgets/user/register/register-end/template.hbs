@@ -1,11 +1,3 @@
-
-  {{#unless marketing}}
-    <h1>{{translate "register_marketing_sure_title"}}</h1>
-    <p>{{translate "register_marketing_sure"}}</p>
-    <p>{{translate "register_marketing_opt_offer"}}</p>
-  {{/unless}}
-
-
 <div class="input-container terms-container checkbox-group">
   <input id="termsAgreement" type="checkbox" name="termsAgreement" {{isChecked}}>
   <label for="termsAgreement">
@@ -14,18 +6,10 @@
 </div>
 
 <footer>
-  <button type="submit" class="register-end" data-opt="opt-in">
-    <span data-opt="opt-in">
+  <button type="submit" class="register-end">
+    <span>
       <div class="spinner"></div>
-      {{translate regButtonLabel}}
+      {{translate "register"}}
     </span>
   </button>
-
-  {{#unless marketing}}
-    <button type="submit" class="btn-text">
-      <span>
-        {{translate "register_marketing_no_thanks"}}
-      </span>
-    </button>
-  {{/unless}}
 </footer>

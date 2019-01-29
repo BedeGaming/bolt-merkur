@@ -13,6 +13,7 @@ export default View.extend({
   template,
 
   templateContext() {
+
     return {
       siteName: window.config.siteName
     };
