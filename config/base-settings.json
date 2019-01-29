@@ -260,8 +260,8 @@
   "promotions": [],
   "registration": {
     "defaultGender": "Undisclosed",
-    "emailverify": true,
     "genderEnabled": true,
+    "emailverify": true,
     "marketing": true,
     "regSuccess": true,
     "telephoneEnabled": true

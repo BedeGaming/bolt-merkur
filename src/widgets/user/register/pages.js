@@ -9,8 +9,6 @@ export default () => {
   const pages = [Page1, Page2, Page3];
   const marketing = window.config.registration.marketing;
   const regSuccess = window.config.registration.regSuccess;
-  console.log(marketing);
-  console.log(!marketing);
 
   if (!marketing) {
     pages.push(RegisterEnd);
