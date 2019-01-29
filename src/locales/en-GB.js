@@ -42,8 +42,6 @@ const enGB = {
       register_marketing_success_title: "You're Nearly There!",
       register_marketing_thanks: 'Your marketing preferences have been saved.',
       register_new_user: 'Not a member? <span>Create Account</span>',
-      registration_success_body:
-        'Thank you for registering. Get ready to play!',
       total_balance: 'Total Balance',
       type_address: 'Start typing postcode / address',
       username_placeholder: 'Username',

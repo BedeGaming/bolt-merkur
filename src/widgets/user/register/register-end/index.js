@@ -32,6 +32,7 @@ export default View.extend({
   },
 
   templateContext() {
+    console.log(this.model);
     const privacyLink = this.getPrivacyLink(
       Translator.translate('compliance_link_privacy')
     );
