@@ -261,7 +261,7 @@
   "registration": {
     "defaultGender": "Undisclosed",
     "genderEnabled": true,
-    "emailverify": true,
+    "emailVerify": true,
     "marketing": true,
     "regSuccess": true,
     "telephoneEnabled": true
