@@ -1,0 +1,15 @@
+<div class="input-container terms-container checkbox-group">
+  <input id="termsAgreement" type="checkbox" name="termsAgreement" {{isChecked}}>
+  <label for="termsAgreement">
+    <p>{{translate "registration_terms_agreement" privacyLink termsLink}}</p>
+  </label>
+</div>
+
+<footer>
+  <button type="submit" class="register-end">
+    <span>
+      <div class="spinner"></div>
+      {{translate "register"}}
+    </span>
+  </button>
+</footer>

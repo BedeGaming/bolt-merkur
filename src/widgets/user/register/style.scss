@@ -3,6 +3,20 @@
 user-register {
   overflow: visible;
 
+  h2 {
+    color: $primary-base;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  form {
+    footer {
+      margin: 0 0 1.5rem;
+    }
+  }
+
   .switch-input-mode {
     color: $primary-color-500;
     font-size: 1.4rem;
@@ -66,7 +80,7 @@ user-register {
     }
 
     &:last-of-type {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -96,18 +110,54 @@ user-register {
     }
   }
 
-  .terms-container {
-    &.checkbox-group {
-      height: 3rem;
+  .input-container {
+    &.terms-container {
+      justify-content: center;
       margin: 0 0 3rem;
-      min-height: 2rem;
-      padding: 1rem;
+      min-height: 0;
+      padding: 0;
 
-      label {
-        margin: 0;
-        max-height: 10px;
+      @media ($small) {
+        padding: 0 2rem;
+      }
+
+      &.checkbox-group {
+        input {
+          height: 0;
+          padding: 0;
+        }
+
+        label {
+          align-items: flex-start;
+          color: $black;
+          height: 5rem;
+          padding: 0;
+          pointer-events: all;
+          position: relative;
+
+          &::before {
+            margin: 0.4rem 1.5rem 0 0;
+          }
+
+          &::after {
+            margin-top: 0.4rem;
+          }
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    &.invalid {
+      margin-bottom: 0.5rem;
+
+      &::after {
+        margin: 0.5rem 0 1rem;
         padding: 0;
-        pointer-events: all;
+        position: inherit;
+        text-align: center;
       }
     }
   }
@@ -151,12 +201,8 @@ user-register {
   }
 
   .marketing {
-    h1 {
-      display: block;
-      font-size: 3rem;
-      margin-bottom: 0;
-      text-align: center;
-      width: auto;
+    h2 {
+      margin-bottom: 2rem;
     }
 
     p {
@@ -164,11 +210,11 @@ user-register {
       text-align: left;
     }
 
-    .input-container-marketing {
+    .input-container {
       display: flex;
-      margin-bottom: 2rem;
+      margin: 0 auto 1.5rem;
       min-height: 4rem;
-      position: relative;
+      width: 85%;
 
       input {
         border-color: $secondary-base;
@@ -181,38 +227,50 @@ user-register {
         padding: 0;
       }
 
-      .marketing-opt-in-out {
+      label {
+        &::before {
+          border-color: $blue-mid;
+        }
+
+        &::after {
+          background-color: $blue-mid;
+        }
+      }
+
+      .marketing-opt {
         color: $black;
         font-weight: normal;
         height: 2rem;
-        margin: auto auto 1rem;
+        margin: 0 auto 3rem;
         padding-left: 0;
         pointer-events: all;
         position: relative;
-        width: auto;
+
+        @media ($small) {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
 
-  .marketing-end {
-    p {
-      text-align: center;
+  .marketing-policy {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
-      &:last-of-type {
-        margin-bottom: 2rem;
-      }
-    }
+  small {
+    font-size: 0.9rem;
+    margin: 2rem 0 1rem;
+    text-align: center;
   }
 
   footer {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto 3rem;
 
     .next,
-    .register,
-    .register-opt-in {
+    .register-end {
       @extend %btn;
       @extend %btn-primary;
 
@@ -221,45 +279,19 @@ user-register {
       }
     }
 
-    .register-opt-in {
-      margin-bottom: 1rem;
+    .register-end {
+      color: $white;
+      margin-bottom: 2rem;
     }
+  }
 
-    > * {
-      flex: none;
-    }
+  .login {
+    padding-bottom: 0;
+  }
 
-    small {
-      margin: 2rem auto 1rem;
-    }
-
-    .no-thanks {
-      display: flex;
-      width: 70%;
-
-      .register-no-thanks {
-        background-color: transparent;
-        border: 0;
-        margin: 0;
-        width: 100%;
-
-        &:hover {
-          background-color: inherit;
-
-          span {
-            color: $primary-base;
-          }
-        }
-      }
-
-      a {
-        text-align: center;
-        width: 100%;
-      }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+  .success-body {
+    color: $black;
+    margin: 2rem 0;
+    text-align: center;
   }
 }
