@@ -32,17 +32,14 @@ export default View.extend({
   },
 
   templateContext() {
-    const privacyLink = this.getPrivacyLink(
-      Translator.translate('compliance_link_privacy')
-    );
-    const termsLink = this.getTermsLink(
-      Translator.translate('compliance_link_terms')
-    );
     let isChecked = '';
 
     if (this.model.get('termsAgreement')) {
       isChecked = 'checked';
     }
+
+    const privacyLink = this.getPrivacyLink(Translator.translate('compliance_link_privacy'));
+    const termsLink = this.getTermsLink(Translator.translate('compliance_link_terms'));
 
     return {
       isChecked,

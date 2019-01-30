@@ -194,7 +194,8 @@ deposit-limits {
   }
 }
 
-.transactions-pagination, .table-pagination {
+.transactions-pagination,
+.table-pagination {
   min-height: 0;
 
   .page,
