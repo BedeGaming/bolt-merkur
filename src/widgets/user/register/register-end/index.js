@@ -38,8 +38,12 @@ export default View.extend({
       isChecked = 'checked';
     }
 
-    const privacyLink = this.getPrivacyLink(Translator.translate('compliance_link_privacy'));
-    const termsLink = this.getTermsLink(Translator.translate('compliance_link_terms'));
+    const privacyLink = this.getPrivacyLink(
+      Translator.translate('compliance_link_privacy')
+    );
+    const termsLink = this.getTermsLink(
+      Translator.translate('compliance_link_terms')
+    );
 
     return {
       isChecked,
