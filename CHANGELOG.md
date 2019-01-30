@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.5.0
+
+- added emailVerify notification to Registration
+
 ## 1.4.0
 
 - Added and enabled login history
