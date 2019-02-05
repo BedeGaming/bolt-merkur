@@ -263,9 +263,9 @@
   "registration": {
     "defaultGender": "Undisclosed",
     "genderEnabled": true,
-    "emailVerify": true,
+    "emailVerify": false,
     "marketing": true,
-    "regSuccess": true,
+    "regSuccess": false,
     "telephoneEnabled": true
   },
   "siteCode": "bedecasino",
