@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.6.0
+
+- added support for notification types
+
 ## 1.5.0
 
 - added emailVerify notification to Registration
