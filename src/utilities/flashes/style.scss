@@ -3,8 +3,21 @@ $success-gradient-to: #d9fdda;
 
 $error-gradient-from: #ffb7a9;
 $error-gradient-to: #ffd4e7;
+
 $error-outer-ring: #ff7d7d;
 $error-inner-ring: #e15656;
+
+$cash-gradient-from: #ffe1a8;
+$cash-gradient-to: #fff991;
+
+$bonus-gradient-from: #07a1ff;
+$bonus-gradient-to: #9dd9f9;
+
+$casino-gradient-from: #875cfe;
+$casino-gradient-to: #d3aafe;
+
+$default-gradient-from: #cfebfd;
+$default-gradient-to: #dfedfd;
 
 $close-border-color: #dae1e6;
 
@@ -39,6 +52,36 @@ $close-border-color: #dae1e6;
   to {
     opacity: 0;
     transform: scale(0.9) translateY(-2rem);
+  }
+}
+
+@keyframes coin-drop {
+  from {
+    transform: translate(-50%, -58%);
+  }
+
+  to {
+    transform: translate(-50%, -42%);
+  }
+}
+
+@keyframes background-drop {
+  from {
+    background-position-y: 0;
+  }
+
+  to {
+    background-position-y: 99%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -96,6 +139,76 @@ $close-border-color: #dae1e6;
   &.remove {
     animation-fill-mode: forwards;
     animation-name: notification-leave;
+  }
+
+  &.notification-default {
+    .flash-type {
+      background-image: linear-gradient(
+        180deg,
+        $default-gradient-from 0%,
+        $default-gradient-to 100%
+      );
+
+      &::before,
+      &::after,
+      svg {
+        animation: icon-enter 500ms ease 400ms 1 both;
+      }
+
+      &::before,
+      &::after {
+        background-color: #7fc1ff;
+        border-radius: 50%;
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+      }
+
+      &::before {
+        height: 3rem;
+        width: 3rem;
+      }
+
+      &::after {
+        animation-delay: 600ms;
+        background-color: #579fee;
+        height: 2.3rem;
+        width: 2.3rem;
+      }
+
+      svg {
+        animation-delay: 800ms;
+        fill: $white;
+        height: 1.8rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 0.6rem;
+        z-index: 1;
+      }
+
+      @media ($medium) {
+        &::before {
+          height: 8rem;
+          width: 8rem;
+        }
+
+        &::after {
+          height: 6.2rem;
+          width: 6.2rem;
+        }
+
+        svg {
+          height: 4rem;
+          width: 1.4rem;
+        }
+      }
+    }
   }
 
   &.notification-success {
@@ -214,7 +327,7 @@ $close-border-color: #dae1e6;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        transform-origin: top left;
+        transform-origin: center center;
         width: 1.2rem;
         z-index: 1;
       }
@@ -238,6 +351,102 @@ $close-border-color: #dae1e6;
     }
   }
 
+  &.notification-cash,
+  &.notification-casino,
+  &.notification-bonus {
+    .flash-type {
+      svg {
+        animation: icon-enter 500ms ease 400ms 1 both;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.notification-cash {
+    .flash-type {
+      background-image: linear-gradient(
+        180deg,
+        $cash-gradient-from 0%,
+        $cash-gradient-to 100%
+      );
+
+      &::before {
+        animation: background-drop 2000ms linear 0ms infinite both;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNTBweCIgaGVpZ2h0PSI0MHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCAzNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoMjU1LDI1NSwyNTUsMCkiIG9mZnNldD0iLjIiLz4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSgyNTUsMjU1LDI1NSwwLjgpIiBvZmZzZXQ9IjEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgoJPHBvbHlnb24gcG9pbnRzPSIwIDAgNTAgMCA1MCAyMCAyNSAzNyAwIDIwIiBmaWxsPSJ1cmwoI2EpIi8+Cjwvc3ZnPgo=');
+        background-position-x: center;
+        background-size: 50%;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      svg {
+        animation: coin-drop 500ms linear 0ms infinite both;
+        height: 200%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 90%;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.notification-bonus,
+  &.notification-casino {
+    .flash-type {
+      overflow: hidden;
+
+      svg {
+        width: 85%;
+      }
+
+      &::before {
+        animation: spin 5000ms linear 0ms infinite both;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9Ii0yNTYgLTI1NiA1MTIgNTEyIgogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiAKICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cjx0aXRsZT5VbnRpdGxlZDwvdGl0bGU+CjxkZWZzPgogIDxnIGlkPSJidXJzdCI+CiAgICA8ZyBpZD0icXVhZCI+CiAgICAgIDxwYXRoIGlkPSJyYXkiIGQ9Ik0wLDAgLTY5LC01MDAgNjksLTUwMCB6IiAvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDMwKSIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNyYXkiIHRyYW5zZm9ybT0icm90YXRlKDkwKSIvPgogICAgPC9nPgogICAgPHVzZSB4bGluazpocmVmPSIjcXVhZCIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwKSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjcXVhZCIgdHJhbnNmb3JtPSJyb3RhdGUoMjQwKSIvPgogIDwvZz4KICA8cmFkaWFsR3JhZGllbnQgaWQ9ImdyYWQiIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSIgZng9IjUwJSIgZnk9IjUwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHVzZSB4bGluazpocmVmPSIjYnVyc3QiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIvPgo8Y2lyY2xlIHI9IjM2MHB4IiBmaWxsPSJ1cmwoI2dyYWQpIiAvPgo8L3N2Zz4K');
+        background-size: 100% 100%;
+        content: '';
+        height: 200%;
+        left: -50%;
+        opacity: 0.6;
+        position: absolute;
+        top: -50%;
+        width: 200%;
+      }
+    }
+  }
+
+  &.notification-casino {
+    .flash-type {
+      background-image: linear-gradient(
+        180deg,
+        $casino-gradient-from 0%,
+        $casino-gradient-to 100%
+      );
+    }
+  }
+
+  &.notification-bonus {
+    .flash-type {
+      background-image: linear-gradient(
+        180deg,
+        $bonus-gradient-from 0%,
+        $bonus-gradient-to 100%
+      );
+    }
+  }
+
   &.notification-info {
     background: $info-blue;
   }
@@ -251,7 +460,6 @@ $close-border-color: #dae1e6;
     position: absolute;
     top: 0;
     width: 4.4rem;
-
     @media ($medium) {
       width: 12rem;
     }
@@ -259,7 +467,6 @@ $close-border-color: #dae1e6;
 
   .flash-message {
     line-height: 1.4rem;
-
     @media ($medium) {
       line-height: 2.1rem;
     }
@@ -283,7 +490,6 @@ $close-border-color: #dae1e6;
       left: 0;
       position: absolute;
       width: 0.1rem;
-
       @media ($medium) {
         height: calc(100% - 2rem);
       }

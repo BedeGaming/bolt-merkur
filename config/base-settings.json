@@ -5,7 +5,8 @@
   "walletCurrency": "GBP",
   "api": {
     "client": "bededemo",
-    "url": "https://qa02-bedecasino.bedegaming.net/api/v5"
+    "url": "https://qa02-bedecasino.bedegaming.net/api/v5",
+    "notificationsUrl": "https://qa02-notifications.bedegaming.net"
   },
   "auth": {
     "clientId": "bededemo",
@@ -41,6 +42,7 @@
   "features": {
     "loginHistory": true,
     "bonusToolContentPromos": true,
+    "bridgeContainer": true,
     "logoutOnIdleSession": false,
     "promotions": {
       "react": true
@@ -311,5 +313,11 @@
   "transactionHistory": {
     "rangeSlider": false
   },
-  "twitterHandle": "@"
+  "twitterHandle": "@",
+  "notificationTypes": [
+    "default",
+    "cash",
+    "casino",
+    "bonus"
+  ]
 }
