@@ -264,7 +264,7 @@
     "defaultGender": "Undisclosed",
     "genderEnabled": true,
     "emailVerify": false,
-    "marketing": true,
+    "marketing": false,
     "regSuccess": false,
     "telephoneEnabled": true
   },
