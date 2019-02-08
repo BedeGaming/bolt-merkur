@@ -16,19 +16,15 @@ export default View.extend({
   onAttach() {
     const model = this.model;
 
-    if (!this.hasPromo)
+    if (!this.hasPromo) {
       this.showChildView('playButtons', new PlayButtons({ model }), {
         replaceElement: true
       });
+    }
 
-    this.showChildView(
-      'info',
-      new InfoView({
-        model: this.currentGame,
-        related: this.relatedGames
-      }),
-      { replaceElement: true }
-    );
+    this.showChildView('info', new InfoView({ model: this.currentGame, related: this.relatedGames }), {
+      replaceElement: true
+    });
 
     this.showChildView('overview', new GameOverview({ model }), {
       replaceElement: true

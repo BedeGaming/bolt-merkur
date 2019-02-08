@@ -52,7 +52,7 @@ const getProgress = (
 
 const displayStatuses = ['PartQualified', 'Active'];
 
-export default function(props) {
+export default function (props) {
   const {
     bonusType,
     canBeClaimed = false,

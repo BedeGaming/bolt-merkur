@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.7.0
+
+- removed prettier from commits
+
 ## 1.6.0
 
 - added support for notification types

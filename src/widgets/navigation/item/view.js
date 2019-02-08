@@ -6,10 +6,13 @@ export default View.extend({
       const unread = this.state.unread;
       this.el.setAttribute('data-unread', `${unread}`);
 
-      if (this.ui.parentheses[0])
+      if (this.ui.parentheses[0]) {
         this.ui.parentheses[0].setAttribute('data-unread', `(${unread})`);
-      if (this.ui.badge[0])
+      }
+
+      if (this.ui.badge[0]) {
         this.ui.badge[0].setAttribute('data-unread', unread);
+      }
     }
   }
 });
