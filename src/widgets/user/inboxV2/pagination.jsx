@@ -1,7 +1,7 @@
 import { Translator } from 'orchestra';
 import React from 'react';
 
-export default function(props) {
+export default function (props) {
   const previousText = Translator.translate('previous');
   const nextText = Translator.translate('next');
   const isFirstPage = props.currentPage === 1;
