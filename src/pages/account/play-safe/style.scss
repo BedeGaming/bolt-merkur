@@ -37,10 +37,15 @@
     background-color: $white;
     border-radius: 3px;
     box-shadow: $box-shadow;
+    margin-bottom: 3rem;
     max-height: 10rem;
     overflow: hidden;
     padding: 2rem 10rem 2rem 13rem;
     position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     .accordion-title {
       color: $black;
