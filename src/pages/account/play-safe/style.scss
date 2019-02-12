@@ -29,7 +29,7 @@
 
   @media ($small) {
     margin: 3rem auto;
-    padding: 11.2rem 3rem 5rem;
+    padding: 12.2rem 3rem 4rem;
     width: calc(100% - 6rem);
   }
 
@@ -37,8 +37,9 @@
     background-color: $white;
     border-radius: 3px;
     box-shadow: $box-shadow;
+    max-height: 10rem;
     overflow: hidden;
-    padding: 2rem 13rem;
+    padding: 2rem 10rem 2rem 13rem;
     position: relative;
 
     .accordion-title {
@@ -48,9 +49,15 @@
     }
 
     .accordion-info {
+      padding-left: 3rem;
+      position: relative;
+
       svg {
         fill: $blue;
         height: 1.6rem;
+        left: 0;
+        position: absolute;
+        top: 0;
         width: 1.6rem;
       }
     }
@@ -62,6 +69,84 @@
       position: absolute;
       top: 0;
       width: 10rem;
+    }
+
+    .accordion-arrow {
+      align-items: center;
+      background-color: $blue-light;
+      border-radius: 3px;
+      bottom: 3rem;
+      display: flex;
+      height: 4rem;
+      justify-content: center;
+      position: absolute;
+      right: 3rem;
+      width: 4rem;
+
+      svg {
+        fill: $blue-dark;
+        width: 2rem;
+      }
+    }
+
+    &.deposit-limit {
+      .accordion-icon {
+        background-color: #FFE8E8;
+
+        svg {
+          fill: #C43434;
+        }
+      }
+    }
+
+    &.loss-limit {
+      .accordion-icon {
+        background-color: #FFF7D8;
+
+        svg {
+          fill: #BB5537;
+        }
+      }
+    }
+
+    &.stake-limit {
+      .accordion-icon {
+        background-color: #CBFFE0;
+
+        svg {
+          fill: #74BD92;
+        }
+      }
+    }
+
+    &.time-out {
+      .accordion-icon {
+        background-color: #CCF3FF;
+
+        svg {
+          fill: #467BBA;
+        }
+      }
+    }
+
+    &.reality-check {
+      .accordion-icon {
+        background-color: #F1E5FF;
+
+        svg {
+          fill: #835094;
+        }
+      }
+    }
+
+    &.self-exclusion {
+      .accordion-icon {
+        background-color: #FDE3FF;
+
+        svg {
+          fill: #BA46BA;
+        }
+      }
     }
   }
 }
