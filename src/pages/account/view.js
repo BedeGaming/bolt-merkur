@@ -14,7 +14,8 @@ export default View.extend({
         displayName: 'withdraw',
         route: '/withdraw?direct=false',
         navigate: false
-      }
+      },
+      { displayName: 'play_safe_title', route: '/account/play-safe' },
     ];
   }
 });
