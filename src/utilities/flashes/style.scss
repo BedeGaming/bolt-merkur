@@ -327,7 +327,7 @@ $close-border-color: #dae1e6;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        transform-origin: center center;
+        transform-origin: top left;
         width: 1.2rem;
         z-index: 1;
       }
