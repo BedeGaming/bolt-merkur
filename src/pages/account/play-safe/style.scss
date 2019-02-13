@@ -62,36 +62,40 @@
       margin-bottom: 0;
     }
 
-    .accordion-title {
-      color: $black;
-      font-weight: 700;
-      margin: 0;
+    .accordion-text {
+      height: 8rem;
 
-      .setting-tag {
-        background-color: $blue-mid;
-        border-radius: 3px;
-        color: $white;
-        display: inline-block;
-        font-size: 1.2rem;
-        font-weight: normal;
-        margin-left: 1rem;
-        padding: 0.1rem 0.6rem;
-        position: relative;
-        top: -0.4rem;
+      .accordion-title {
+        color: $black;
+        font-weight: 700;
+        margin: 0;
+
+        .setting-tag {
+          background-color: $blue-mid;
+          border-radius: 3px;
+          color: $white;
+          display: inline-block;
+          font-size: 1.2rem;
+          font-weight: normal;
+          margin-left: 1rem;
+          padding: 0.1rem 0.6rem;
+          position: relative;
+          top: -0.4rem;
+        }
       }
-    }
 
-    .accordion-info {
-      padding-left: 3rem;
-      position: relative;
+      .accordion-info {
+        padding-left: 3rem;
+        position: relative;
 
-      svg {
-        fill: $blue;
-        height: 1.6rem;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 1.6rem;
+        svg {
+          fill: $blue;
+          height: 1.6rem;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 1.6rem;
+        }
       }
     }
 
@@ -122,6 +126,10 @@
         transition: transform 300ms ease;
         width: 2rem;
       }
+    }
+
+    .accordion-content {
+      padding: 1rem 0;
     }
 
     &.deposit-limit {
