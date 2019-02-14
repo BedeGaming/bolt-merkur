@@ -1,12 +1,14 @@
 .play-safe {
   background-color: $grey-light;
   border: 1px solid $grey-light;
+  border-radius: 4px;
   box-shadow: $box-shadow;
   display: flex;
   flex: 1;
   flex-direction: column;
   margin: 3rem auto;
   max-width: 93rem;
+  overflow: hidden;
   padding: 6rem 2rem 3rem;
   position: relative;
   width: calc(100% - 4rem);
