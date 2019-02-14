@@ -46,7 +46,7 @@
     transition: max-height 300ms ease;
 
     &.open {
-      max-height: 30rem;
+      max-height: 100rem;
 
       .accordion-arrow {
         svg {
@@ -131,6 +131,12 @@
 
     .accordion-content {
       padding-bottom: 3rem;
+
+      ul {
+        list-style-position: outside;
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
     }
 
     &.deposit-limit {
@@ -163,7 +169,7 @@
       }
     }
 
-    &.time-out {
+    &.take-a-break {
       .accordion-icon {
         background-color: #CCF3FF;
 
