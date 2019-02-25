@@ -22,11 +22,11 @@
   "author": "Bede Gaming",
   "license": "ISC",
   "dependencies": {
-    "@bedegaming/bolt": "^67.9.2",
+    "@bedegaming/bolt": "^67.11.1",
     "@bedegaming/bolt-content": "^2.0.0",
     "@bedegaming/bolt-tasks": "^18.2.0",
     "babel-polyfill": "^6.16.0",
-    "marked": "^0.3.5",
-    "sitemap": "^1.8.2"
+    "marked": "^0.6.1",
+    "sitemap": "^2.1.0"
   }
 }
