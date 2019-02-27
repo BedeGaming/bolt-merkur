@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.8.0
+
+- Enabled the promosearch
+
 ## 1.7.0
 
 - removed prettier from commits

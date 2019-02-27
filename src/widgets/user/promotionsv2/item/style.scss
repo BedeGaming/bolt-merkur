@@ -50,16 +50,17 @@
 }
 
 .promo-buttons {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
   .terms {
-    align-self: center;
     color: $black;
 
     &:hover {
       color: lighten($black, 20%);
     }
   }
+
+  .not-now {
+    border-width: 2px;
+    padding: calc(1.5rem - 2px) calc(2.5rem - 2px);
+  }
 }
+
