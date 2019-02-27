@@ -114,3 +114,25 @@
     }
   }
 }
+
+.promo-code {
+  h3 {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  p,
+  li {
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    list-style-position: outside;
+    margin-left: 2rem;
+  }
+}

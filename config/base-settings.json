@@ -44,6 +44,7 @@
     "bonusToolContentPromos": true,
     "bridgeContainer": true,
     "logoutOnIdleSession": false,
+    "promoSearch": true,
     "promotions": {
       "react": true
     },
