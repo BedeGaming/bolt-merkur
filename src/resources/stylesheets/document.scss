@@ -2,7 +2,7 @@
 // Basic styles for document view
 // ------------------------------------------
 
-@import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/document';
+@import "../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/document";
 
 body {
   background-color: $grey-light;
@@ -13,4 +13,16 @@ site-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+//This ensures the footer is pushed to the bottom of the page
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  //last child will be the footer.
+  & > :not(site-footer) {
+    flex-grow: 1;
+  }
 }
