@@ -14,3 +14,15 @@ site-content {
   flex-direction: column;
   justify-content: center;
 }
+
+//This ensures the footer is pushed to the bottom of the page
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  //last child will be the footer.
+  & > :not(site-footer) {
+    flex-grow: 1;
+  }
+}
