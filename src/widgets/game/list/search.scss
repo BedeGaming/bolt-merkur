@@ -55,12 +55,7 @@
     padding: 0 4.5rem;
 
     @media ($small) {
-    padding: 0 3rem;
-    z-index: 2;
-    }
-
-    @media ($small) {
-      padding: 0 4.5rem;
+      z-index: 2;
     }
 
     @media ($medium) {
