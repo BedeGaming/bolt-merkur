@@ -26,9 +26,8 @@
   background-color: $search-dialog-overlay-background;
 
   close-modal {
-
-    right: 0;
-    top: 0;
+    right: 1rem;
+    top: 1rem;
 
     @media ($small) {
       right: 1.2rem;
@@ -53,8 +52,12 @@
   }
 
   dialog {
+    padding: 0 4.5rem;
+
+    @media ($small) {
     padding: 0 3rem;
     z-index: 2;
+    }
 
     @media ($small) {
       padding: 0 4.5rem;
