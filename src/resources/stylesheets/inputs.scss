@@ -121,17 +121,6 @@ textarea:disabled {
     &:focus {
       color: $secondary-color-700;
     }
-
-    &:disabled + label,
-    &:focus + label,
-    &:valid + label,
-    &:focus + .peeky-password + label,
-    &:valid + .peeky-password + label,
-    &.has-value + label {
-      font-size: 1.4rem;
-      font-weight: normal;
-      transform: translateY(calc(-50% - 1.5rem));
-    }
   }
 
   label {
@@ -149,6 +138,12 @@ textarea:disabled {
     transition-property: color, font-size, font-weight, transform;
     transition-timing-function: ease;
     width: 100%;
+
+    &.focused {
+      font-size: 1.4rem;
+      font-weight: normal;
+      transform: translateY(calc(-50% - 1.5rem));
+    }
   }
 
   .peeky-password {
@@ -244,6 +239,21 @@ textarea:disabled {
 
     .peeky-password {
       right: 6rem;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-color: $primary-base;
+    }
+
+    &::after {
+      color: $primary-base;
+      content: '';
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      position: absolute;
+      top: 100%;
     }
   }
 }
