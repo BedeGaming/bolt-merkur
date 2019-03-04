@@ -8,6 +8,7 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
   border: 3px solid $primary-base;
   border-radius: 5px;
   color: $primary-base;
+  flex-shrink: 1;
   font-size: 2rem;
   font-weight: bold;
   min-width: 14rem;
@@ -20,7 +21,6 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
     box-shadow 300ms ease, color 300ms ease, height 300ms ease,
     transform 100ms ease, width 300ms ease;
   //sass-lint enable indentation
-  white-space: nowrap;
 
   &::after {
     background-color: $hover-bg-color;
