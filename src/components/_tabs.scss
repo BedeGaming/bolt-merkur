@@ -57,9 +57,11 @@
         border-color: $primary-base;
         color: $primary-base;
 
-        &:hover {
-          border-color: lighten($primary-base, 30%);
-          color: lighten($primary-base, 30%);
+        @media (hover: hover) {
+          &:hover {
+            border-color: lighten($primary-base, 30%);
+            color: lighten($primary-base, 30%);
+          }
         }
       }
     }
