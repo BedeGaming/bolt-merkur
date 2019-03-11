@@ -133,7 +133,7 @@ app-hub {
 
     @media ($medium) {
       justify-content: flex-end;
-      margin-right: 1.2rem;
+      margin-right: 1rem;
     }
   }
 
@@ -207,7 +207,7 @@ app-hub {
         font-size: 1.6rem;
         margin-left: 3rem;
         text-align: center;
-        width: 3rem;
+        width: 2rem;
 
         @media ($medium) {
           margin-left: 0;
@@ -229,7 +229,12 @@ app-hub {
     }
 
     .hide-balance {
+      margin-left: 1rem;
       margin-right: 0;
+
+      @media ($medium) {
+        margin-left: 0;
+      }
 
       .hidden {
         display: block;
@@ -252,6 +257,7 @@ app-hub {
   }
 
   main-balance {
+    margin-right: 0.6rem;
     transition: color 300ms ease;
   }
 
