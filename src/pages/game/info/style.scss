@@ -9,6 +9,16 @@ $box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
   max-width: 93rem;
 }
 
+game-related {
+  h2 {
+    color: $primary-base;
+    font-family: $default-font;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+  }
+}
+
 game-info-page {
   align-items: center;
   background-color: transparent;
