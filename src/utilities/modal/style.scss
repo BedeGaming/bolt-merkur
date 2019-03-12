@@ -398,6 +398,13 @@ dialog {
   .message-header {
     margin-bottom: 2rem;
     padding: 0;
+    word-wrap: break-word;
+
+    .subject,
+    .from,
+    .time {
+      width: 100%;
+    }
 
     .subject {
       color: $secondary-color-700;
@@ -408,5 +415,6 @@ dialog {
 
   .message-body {
     margin-bottom: 2rem;
+    word-wrap: break-word;
   }
 }
