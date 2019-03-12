@@ -400,7 +400,9 @@ dialog {
     padding: 0;
     word-wrap: break-word;
 
-    > * {
+    .subject,
+    .from,
+    .time {
       width: 100%;
     }
 
