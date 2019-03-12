@@ -147,6 +147,12 @@
         }
       }
 
+      .from {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
       .time {
         display: none;
 
