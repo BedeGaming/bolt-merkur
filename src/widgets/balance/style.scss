@@ -144,7 +144,7 @@ app-hub {
     display: flex;
     height: 2.2rem;
     justify-content: center;
-    margin: 0.3rem 0;
+    margin: 0 0.5rem 0 0;
     min-width: 2.2rem;
     width: 2.2rem;
 
@@ -205,7 +205,7 @@ app-hub {
       &::after {
         content: '...';
         font-size: 1.6rem;
-        margin-left: 3rem;
+        margin-left: 2rem;
         text-align: center;
         width: 2rem;
 
@@ -257,7 +257,7 @@ app-hub {
   }
 
   main-balance {
-    margin-right: 0.6rem;
+    margin: 0 0.2rem 0 0.4rem;
     transition: color 300ms ease;
   }
 
