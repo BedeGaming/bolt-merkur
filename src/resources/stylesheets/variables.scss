@@ -56,6 +56,7 @@ $body-color: $black;
 
 $box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
 $lighter-box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+$highlight-box-shadow: $lighter-box-shadow, 0 0 10px rgba(55, 141, 253, 0.15);
 
 $table-font-size: $body-font-size;
 $thead-font-size: $table-font-size;
@@ -84,3 +85,10 @@ $transaction-history-border-color: $transaction-history-color;
 $transaction-history-font-size: 1.5rem;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';
+
+// Play Safe page
+$play-safe-setting-tag-color: $blue-mid;
+$play-safe-accordion-info-svg-fill: $blue-mid;
+$play-safe-accordion-icon-background: $blue;
+$play-safe-accordion-arrow-background: $blue-light;
+$play-safe-accordion-arrow-svg-fill: $blue-dark;

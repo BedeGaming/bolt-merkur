@@ -1,5 +1,9 @@
 ## Bolt Bede Casino
 
+## 1.9.0
+
+- Added playsafe page
+
 ## 1.8.0
 
 - Enabled the promosearch

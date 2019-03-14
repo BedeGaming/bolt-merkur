@@ -94,3 +94,170 @@ input:disabled,
 textarea:disabled {
   opacity: 1;
 }
+
+.input {
+  margin-bottom: 2rem;
+  min-height: $input-height;
+  position: relative;
+
+  input,
+  select {
+    border-color: $secondary-base;
+    border-radius: 3px;
+    color: $secondary-color-700;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: $input-height;
+    padding: 3.5rem 2rem 2rem;
+
+    &.peeky {
+      padding-right: 4em;
+    }
+
+    &:disabled {
+      color: $grey;
+    }
+
+    &:focus {
+      color: $secondary-color-700;
+    }
+  }
+
+  label {
+    align-items: center;
+    color: $secondary-base;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 300ms;
+    transition-property: color, font-size, font-weight, transform;
+    transition-timing-function: ease;
+    width: 100%;
+
+    &.focused {
+      font-size: 1.4rem;
+      font-weight: normal;
+      transform: translateY(calc(-50% - 1.5rem));
+    }
+  }
+
+  .peeky-password {
+    height: 3.2rem;
+    line-height: normal;
+    opacity: 1;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 300ms ease;
+    z-index: 1;
+
+    svg {
+      fill: $secondary-base;
+      margin: auto;
+    }
+
+    &:focus {
+      outline: auto 5px -webkit-focus-ring-color;
+    }
+
+    .close {
+      display: block;
+    }
+  }
+
+  .validation-icon {
+    align-items: center;
+    display: flex;
+    height: 3.2rem;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    right: 2rem;
+    top: 2.5rem;
+    transition: opacity 300ms ease;
+    width: 3.2rem;
+
+    svg {
+      fill: $white;
+      left: 50%;
+      position: absolute;
+      top: calc(50% + 0.1rem);
+      transform: translate(-50%, -50%) scale(0);
+      transform-origin: center;
+      transition: transform 300ms ease;
+      width: 50%;
+      z-index: 1;
+    }
+  }
+
+  &.valid {
+    input {
+      border-color: $green;
+
+      &[type='text'],
+      &[type='number'],
+      &[type='email'] {
+        padding-right: 4em;
+      }
+
+      &.peeky {
+        padding-right: 6em;
+      }
+    }
+
+    .validation-icon {
+      opacity: 1;
+
+      &::before,
+      &::after {
+        animation: tick-enter 500ms ease 0s 1 both;
+        background-color: $green;
+        border-radius: 50%;
+        content: '';
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: top left;
+        width: 100%;
+      }
+
+      &::after {
+        animation-delay: 200ms;
+        background-color: $green-dark;
+        height: 75%;
+        width: 75%;
+      }
+
+      svg {
+        transform: translate(-50%, -50%) scale(1);
+        transition-delay: 300ms;
+      }
+    }
+
+    .peeky-password {
+      right: 6rem;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-color: $primary-base;
+    }
+
+    &::after {
+      color: $primary-base;
+      content: '';
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      position: absolute;
+      top: 100%;
+    }
+  }
+}
