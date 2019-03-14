@@ -85,3 +85,10 @@ $transaction-history-border-color: $transaction-history-color;
 $transaction-history-font-size: 1.5rem;
 
 @import '../../../node_modules/@bedegaming/bolt/src/resources/stylesheets/variables';
+
+// Play Safe page
+$play-safe-setting-tag-color: $blue-mid;
+$play-safe-accordion-info-svg-fill: $blue-mid;
+$play-safe-accordion-icon-background: $blue;
+$play-safe-accordion-arrow-background: $blue-light;
+$play-safe-accordion-arrow-svg-fill: $blue-dark;

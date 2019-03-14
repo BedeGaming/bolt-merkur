@@ -29,6 +29,10 @@ describe('user/account view', function () {
           displayName: 'withdraw',
           navigate: false,
           route: '/withdraw?direct=false'
+        },
+        {
+          displayName: 'play_safe_title',
+          route: '/account/play-safe'
         }
       ];
 

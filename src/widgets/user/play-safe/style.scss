@@ -1,0 +1,101 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/play-safe/style';
+
+.play-safe {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 3rem auto;
+  overflow: hidden;
+  padding: 6rem 2rem 3rem;
+  position: relative;
+  width: calc(100% - 4rem);
+
+  .title {
+    background-color: $white;
+    left: 0;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    > h1 {
+      color: $grey;
+      font-weight: 900;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .accordion {
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+
+    &.set {
+      box-shadow: $highlight-box-shadow;
+    }
+
+    &.deposit-limit {
+      .accordion-icon {
+        background-color: #ffe8e8;
+
+        svg {
+          fill: #c43434;
+        }
+      }
+    }
+
+    &.loss-limit {
+      .accordion-icon {
+        background-color: #fff7d8;
+
+        svg {
+          fill: #bb5537;
+        }
+      }
+    }
+
+    &.stake-limit {
+      .accordion-icon {
+        background-color: #cbffe0;
+
+        svg {
+          fill: #5ca67a;
+        }
+      }
+    }
+
+    &.session-reminder {
+      .accordion-icon {
+        background-color: #ccf3ff;
+
+        svg {
+          fill: #467bba;
+        }
+      }
+    }
+
+    &.take-a-break {
+      .accordion-icon {
+        background-color: #f1e5ff;
+
+        svg {
+          fill: #835094;
+        }
+      }
+    }
+
+    &.self-exclusion {
+      .accordion-icon {
+        background-color: #fde3ff;
+
+        svg {
+          fill: #ba46ba;
+        }
+      }
+    }
+  }
+}
