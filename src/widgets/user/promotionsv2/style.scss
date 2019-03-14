@@ -135,4 +135,13 @@
     list-style-position: outside;
     margin-left: 2rem;
   }
+
+  .input {
+    min-height: 0;
+
+    input {
+      margin-bottom: 0;
+      padding: 2rem;
+    }
+  }
 }
