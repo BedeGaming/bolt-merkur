@@ -187,10 +187,10 @@
     undertaker-registry "^1.0.0"
     wreck "^10.0.0"
 
-"@bedegaming/bolt@^67.18.0":
-  version "67.18.1"
-  resolved "https://registry.yarnpkg.com/@bedegaming/bolt/-/bolt-67.18.1.tgz#b0d4dd08327be980bb9cae2b48d405afff12b5f1"
-  integrity sha512-6rAwvzJ7K+RiDmkd0bVfeLBywo9GMf2pIqGvmGVDljlsTYlilkRnAIEOs67QMpIISFY04kGXfLZ6HprAzsideA==
+"@bedegaming/bolt@^67.18.3":
+  version "67.18.3"
+  resolved "https://registry.yarnpkg.com/@bedegaming/bolt/-/bolt-67.18.3.tgz#44fe4f92f4cc1fd3ecf8db2355b5d07864fcbbce"
+  integrity sha512-eyjOBL7alaFF+bJD+jm2NRyiKrVRn/bYrr7zNe700iLmIDChNKOsDK8ZOa6tUERL0WFBJAWBure6+45QbT1vSQ==
   dependencies:
     "@bedegaming/backbone.fetch" "^0.2.4"
     "@bedegaming/backbone.paginator" "^2.0.5"

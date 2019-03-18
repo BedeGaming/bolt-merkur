@@ -10,7 +10,35 @@ describe('user/account view', function () {
   });
 
   describe('#setupNavigation', function () {
-    it('should return the navigation', function () {
+    it('should return the navigation when the playsafe feature is false', function () {
+      window.config.features.playsafe = false;
+      const expected = [
+        {
+          displayName: 'my_profile',
+          route: '/account/profile'
+        },
+        {
+          displayName: 'inbox',
+          route: '/account/inbox',
+          className: 'inbox-tab inbox-badge'
+        },
+        {
+          displayName: 'history',
+          route: '/account/history'
+        },
+        {
+          displayName: 'withdraw',
+          navigate: false,
+          route: '/withdraw?direct=false'
+        }
+      ];
+
+      const result = this.view.setupNavigation();
+      expect(result).to.be.eql(expected);
+    });
+
+    it('should return the navigation when the playsafe feature is true', function () {
+      window.config.features.playsafe = true;
       const expected = [
         {
           displayName: 'my_profile',
