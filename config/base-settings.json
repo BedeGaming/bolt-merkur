@@ -53,7 +53,8 @@
       "minWinners": 6,
       "take": 25,
       "maxItems": 6
-    }
+    },
+    "playsafe": true
   },
   "feeds": {
     "url": "https://qa02-bedecasino.bedegaming.net/feeds/v1"

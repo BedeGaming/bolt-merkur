@@ -2,7 +2,7 @@ import View from '@bedegaming/bolt/src/pages/account/view.js';
 
 export default View.extend({
   setupNavigation() {
-    return [
+    const navRoutes = [
       {
         displayName: 'my_profile',
         route: '/account/profile'
@@ -20,11 +20,16 @@ export default View.extend({
         displayName: 'withdraw',
         route: '/withdraw?direct=false',
         navigate: false
-      },
-      {
-        displayName: 'play_safe_title',
-        route: '/account/play-safe'
       }
     ];
+
+    if (window.config.features.playsafe) {
+      navRoutes.push({
+        displayName: 'play_safe_title',
+        route: '/account/play-safe'
+      });
+    }
+
+    return navRoutes;
   }
 });
