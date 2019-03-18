@@ -1,32 +1,28 @@
 @import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/play-safe/style';
 
+.account-content {
+  &.play-safe {
+    @include breakpoint(reverse-small) {
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+}
+
 .play-safe {
-  background-color: $grey-light;
-  border: 1px solid $grey-light;
-  border-radius: 4px;
-  box-shadow: $box-shadow;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin: 3rem auto;
-  overflow: hidden;
-  padding: 6rem 2rem 3rem;
-  position: relative;
-  width: calc(100% - 4rem);
+  background: none;
+  padding: none;
+
+  play-safe {
+    background-color: $grey-light;
+  }
 
   .title {
-    background-color: $white;
-    left: 0;
-    padding: 3rem;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    display: none;
 
-    > h1 {
-      color: $grey;
-      font-weight: 900;
-      margin: 0;
-      text-transform: uppercase;
+    @media ($small) {
+      display: block;
     }
   }
 
@@ -34,8 +30,32 @@
     border-radius: 4px;
     box-shadow: $box-shadow;
 
+    .accordion-text {
+      .accordion-title {
+        color: $grey;
+        font-size: 2.2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+    }
+
     &.set {
       box-shadow: $highlight-box-shadow;
+    }
+
+    .accordion-content {
+      margin-top: -1rem;
+
+      p,
+      ul {
+        margin: 1rem;
+      }
+
+      article {
+        + button {
+          margin: 1rem;
+        }
+      }
     }
 
     &.deposit-limit {

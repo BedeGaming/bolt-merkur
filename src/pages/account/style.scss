@@ -123,6 +123,7 @@ account-page {
 }
 
 deposit-limits,
+.play-safe,
 player-history {
   background: $white;
   border: 1px solid $grey-light;
@@ -150,11 +151,12 @@ player-history {
     }
   }
 
+  .title h1,
   h2 {
     color: $grey;
     font-size: 2.2rem;
     font-weight: 900;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem;
     text-transform: uppercase;
 
     @media ($small) {
