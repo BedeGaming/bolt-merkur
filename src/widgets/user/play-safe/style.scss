@@ -43,6 +43,21 @@
       box-shadow: $highlight-box-shadow;
     }
 
+    .accordion-content {
+      margin-top: -1rem;
+
+      p,
+      ul {
+        margin: 1rem;
+      }
+
+      article {
+        + button {
+          margin: 1rem;
+        }
+      }
+    }
+
     &.deposit-limit {
       .accordion-icon {
         background-color: #ffe8e8;
