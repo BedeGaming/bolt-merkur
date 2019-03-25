@@ -1,0 +1,16 @@
+$step-background-color: #e0e0e0;
+$step-active-background-color: $blue;
+$step-complete-background-color: lighten($blue, 13);
+
+$ball-step-radius: 2.75rem;
+$separator-background-color: $grey;
+$separator-radius: 0.3rem;
+$separator-gap: 2.3rem;
+
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/step-progressV2/style';
+
+.ball-step {
+  color: $grey;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in, color 0.2s ease-in;
+}
