@@ -52,7 +52,9 @@
       "minWin": 10,
       "minWinners": 6,
       "take": 25,
-      "maxItems": 6
+      "maxItems": 6,
+      "orientation": "vertical",
+      "decimals": 2
     },
     "playsafe": true
   },

@@ -1,0 +1,42 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/winners-feedV2/style';
+
+.winners-feed-container {
+  background-color: $grey-dark;
+  color: $white;
+
+  &.horizontal {
+    min-height: 4.5rem;
+
+    @media ($medium) {
+      min-height: 7rem;
+    }
+  }
+
+  &.vertical {
+    min-height: 100%;
+  }
+}
+
+.winners-feed-horizontal {
+  .winner-info {
+    font-weight: 700;
+  }
+
+  li {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+};
+
+.winners-feed-vertical {
+  .winner-info {
+    font-weight: 700;
+  }
+
+  li {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+};
