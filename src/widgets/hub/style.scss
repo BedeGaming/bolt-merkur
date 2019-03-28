@@ -116,7 +116,7 @@ app-hub {
             display: none;
 
             @media ($large) {
-              display: inline-block;
+              display: inline-flex;
               padding-right: 2rem;
 
               .item-icon {
