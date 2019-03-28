@@ -1,0 +1,16 @@
+@import '../../../node_modules/@bedegaming/bolt/src/widgets/bingo/style';
+
+bingo-page {
+  h1 {
+    color: $primary-base;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 3rem 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media ($small) {
+      font-size: 3rem;
+    }
+  }
+}
