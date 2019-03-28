@@ -20,6 +20,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 7.9rem;
 
   //last child will be the footer.
   & > :not(site-footer) {
