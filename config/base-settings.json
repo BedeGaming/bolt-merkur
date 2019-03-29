@@ -6,7 +6,8 @@
   "api": {
     "client": "bededemo",
     "url": "https://qa02-bedecasino.bedegaming.net/api/v5",
-    "notificationsUrl": "https://qa02-notifications.bedegaming.net"
+    "notificationsUrl": "https://qa02-notifications.bedegaming.net",
+    "bingoUrl": "https://qa01-bingo.bgs.bedegaming.net/api/v1"
   },
   "auth": {
     "clientId": "bededemo",

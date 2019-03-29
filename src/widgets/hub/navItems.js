@@ -7,6 +7,11 @@ const nav = () => {
       displayName: 'games'
     },
     {
+      route: '/bingo',
+      displayName: 'bingo',
+      className: 'bingo'
+    },
+    {
       route: '/promotions',
       displayName: 'promotions'
     },

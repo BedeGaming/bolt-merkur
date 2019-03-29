@@ -17,6 +17,11 @@ describe('navItems', function () {
           displayName: 'games'
         },
         {
+          route: '/bingo',
+          displayName: 'bingo',
+          className: 'bingo'
+        },
+        {
           route: '/promotions',
           displayName: 'promotions'
         },
@@ -80,6 +85,11 @@ describe('navItems', function () {
         {
           route: '/games',
           displayName: 'games'
+        },
+        {
+          route: '/bingo',
+          displayName: 'bingo',
+          className: 'bingo'
         },
         {
           route: '/promotions',

@@ -92,3 +92,40 @@ $play-safe-accordion-info-svg-fill: $blue-mid;
 $play-safe-accordion-icon-background: $blue;
 $play-safe-accordion-arrow-background: $blue-light;
 $play-safe-accordion-arrow-svg-fill: $blue-dark;
+
+/**
+ * Bingo
+ */
+$bingo-room-action-background: linear-gradient(135deg, rgba(97, 10, 106, 0.7), rgba(191, 42, 107, 0.7));
+$bingo-lobby-background: red;
+$bingo-room-game-type-color: transparent;
+$bingo-room-game-type-background: transparent;
+
+// Room Cards
+$bingo-room-padding: 0.7rem;
+$bingo-room-countdown-color: #ffe100;
+$bingo-room-countdown-secs-color: #ff5771;
+
+$bingo-room-75-background: linear-gradient(135deg, #8a2dab, #c068d0);
+$bingo-room-75-text-color: $white;
+$bingo-room-75-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-75.svg');
+
+$bingo-room-75-speed-background: linear-gradient(135deg, #8a2dab, #c068d0);
+$bingo-room-75-speed-text-color: $white;
+$bingo-room-75-speed-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-75.svg');
+
+$bingo-room-90-background: linear-gradient(135deg, #610a6a, #bf2a6b);
+$bingo-room-90-text-color: $white;
+$bingo-room-90-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-90.svg');
+
+$bingo-room-90-free-background: linear-gradient(135deg, #cd4c6a, #d8688e);
+$bingo-room-90-free-text-color: $white;
+$bingo-room-90-free-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-free.svg');
+
+$bingo-room-90-speed-background: linear-gradient(135deg, #944c95, #dc5d92);
+$bingo-room-90-speed-text-color: $white;
+$bingo-room-90-speed-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-speed.svg');
+
+$bingo-room-90-prebuy-background: linear-gradient(135deg, #ff88c2, #ff9796);
+$bingo-room-90-prebuy-text-color: $white;
+$bingo-room-90-prebuy-info-area-game-type-background: url('/assets/images/svgSprites/bingo-ball-90.svg');
