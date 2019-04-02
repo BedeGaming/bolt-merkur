@@ -54,8 +54,9 @@
       "minWinners": 6,
       "take": 25,
       "maxItems": 6,
-      "orientation": "vertical",
-      "decimals": 2
+      "isVertical": false,
+      "decimals": 2,
+      "useReact": true
     },
     "playsafe": true
   },
