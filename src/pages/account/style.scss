@@ -5,11 +5,6 @@
 @import '../../../node_modules/@bedegaming/bolt/src/pages/account/style';
 
 account-page {
-  margin-top: 3.4rem;
-
-  @media ($medium) {
-    margin-top: 0;
-  }
 
   > h1 {
     background-color: $primary-base;
