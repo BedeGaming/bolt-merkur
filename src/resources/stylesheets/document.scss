@@ -22,8 +22,16 @@ main {
   min-height: 100vh;
   padding-top: 9rem;
 
+  // overides 9 rem padding on site when user is not logged in
+  .not-authed & {
+    padding-top: 5rem;
+  }
+
   @media ($medium) {
-    padding-top: 7.9rem;
+    &,
+    .not-authed & {
+      padding-top: 7.9rem;
+    }
   }
 
   //last child will be the footer.
