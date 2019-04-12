@@ -1,6 +1,7 @@
 @import '../../../../../node_modules/@bedegaming/bolt/src/widgets/user/promotionsv2/item/style';
 
 .promo-card {
+  background: #fbfbfb;
   border: 1px solid $grey-light;
   box-shadow: $box-shadow;
   display: flex;
@@ -9,8 +10,6 @@
   .claim {
     @extend %btn;
     @extend %btn-primary;
-
-    max-width: 22rem;
 
     &:hover {
       color: $white;
@@ -23,10 +22,6 @@
   flex: 1;
   flex-direction: column;
   padding: 2rem;
-
-  @media ($small) {
-    padding: 3rem;
-  }
 }
 
 .promo-text {
