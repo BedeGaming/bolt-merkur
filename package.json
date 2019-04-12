@@ -1,6 +1,6 @@
 {
   "name": "@bedegaming/bolt-demo-site",
-  "version": "1.9.12",
+  "version": "1.9.13",
   "description": "Bolt demo site",
   "private": true,
   "main": "index.js",
