@@ -115,25 +115,34 @@
     ],
     "tagsToHighlight": ["new", "jackpot"]
   },
-  "paymentProviderIcons": [
-    {
-      "name": "visa-flat",
-      "viewbox": "0 0 39.4 13"
-    },
-    {
-      "name": "visa-debit-flat",
-      "viewbox": "0 0 77.8 37.4"
-    },
-    {
-      "name": "visa-electron-flat",
-      "viewbox": "0 0 79.5 39.7"
-    },
-    {
-      "name": "mastercard-flat",
-      "viewbox": "0 0 121.2 70.6"
-    }
-  ],
-  "compliance": {
+  "footer": {
+    "useReact": true,
+    "links": [
+      {
+        "href": "/terms-and-conditions",
+        "textKey": "compliance_link_terms"
+      },
+      {
+        "href": "/responsible-gambling",
+        "textKey": "responsible_gambling"
+      },
+      {
+        "href": "/privacy-policy",
+        "textKey": "compliance_link_privacy"
+      },
+      {
+        "href": "/account/deposit-limits",
+        "textKey": "deposit_limits_title"
+      },
+      {
+        "href": "/promotional-terms",
+        "textKey": "promotional_terms"
+      },
+      {
+        "href": "/support",
+        "textKey": "support"
+      }
+    ],
     "complianceLinks": [
       {
         "svgClass": "svg-logo square",
@@ -167,41 +176,27 @@
         "svgId": "gamstop",
         "target": "_blank",
         "viewbox": "0 0 503.5 109"
-      }
-    ]
-  },
-  "footer": {
-    "links": [
+      } 
+    ],
+    "paymentProviders": [
       {
-        "href": "/terms-and-conditions",
-        "textKey": "compliance_link_terms"
+        "name": "visa-flat",
+        "viewbox": "0 0 39.4 13"
       },
       {
-        "href": "/responsible-gambling",
-        "textKey": "responsible_gambling"
+        "name": "visa-debit-flat",
+        "viewbox": "0 0 77.8 37.4"
       },
       {
-        "href": "/privacy-policy",
-        "textKey": "compliance_link_privacy"
+        "name": "visa-electron-flat",
+        "viewbox": "0 0 79.5 39.7"
       },
       {
-        "href": "/account/deposit-limits",
-        "textKey": "deposit_limits_title"
-      },
-      {
-        "href": "/promotional-terms",
-        "textKey": "promotional_terms"
-      },
-      {
-        "href": "/support",
-        "textKey": "support"
+        "name": "mastercard-flat",
+        "viewbox": "0 0 121.2 70.6"
       }
     ],
-    "articles": [
-      {
-        "textKey": "footer_paragraph1"
-      }
-    ],
+    "text": "footer_paragraph1",
     "brandLogo": {
       "name": "logo",
       "viewBox": "0 0 112 38"
