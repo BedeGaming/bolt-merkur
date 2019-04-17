@@ -21,22 +21,31 @@
 
     .compliance-logo {
       display: flex;
-      fill: transparentize($white, 0.4);
       flex-wrap: wrap;
       justify-content: center;
       margin-left: 1rem;
 
       .svg-logo {
+        fill: transparentize($white, 0.6);
+
         &.square {
           height: 3rem;
           width: 3rem;
        }
 
         &.wide {
-          height: 3rem;
-          width: 5rem;
+          height: 4rem;
+          width: 6rem;
         }
      }
+    }
+  }
+
+  .payment-providers {
+    .payment-provider {
+      .svg-logo {
+        opacity: 0.6;
+      }
     }
   }
 }
