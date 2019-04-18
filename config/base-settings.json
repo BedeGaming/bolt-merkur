@@ -261,6 +261,9 @@
     }
   ],
   "promotions": [],
+  "promotionsOptions": {
+    "preloaderCount": 6
+  },
   "registration": {
     "defaultGender": "Undisclosed",
     "genderEnabled": true,
