@@ -131,8 +131,8 @@
         "textKey": "compliance_link_privacy"
       },
       {
-        "href": "/account/deposit-limits",
-        "textKey": "deposit_limits_title"
+        "href": "/account/play-safe",
+        "textKey": "play_safe_title"
       },
       {
         "href": "/promotional-terms",
@@ -150,28 +150,28 @@
         "viewbox": "0 0 25 25"
       },
       {
-        "link": "http://www.gambleaware.co.uk/",
+        "href": "http://www.gambleaware.co.uk/",
         "svgClass": "svg-logo wide",
         "svgId": "gambleaware-flat",
         "target": "_blank",
         "viewbox": "0 0 93.5 10.6"
       },
       {
-        "link": "https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/44819",
+        "href": "https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/44819",
         "svgClass": "svg-logo wide",
         "svgId": "gamblingcommision-flat",
         "target": "_blank",
         "viewbox": "0 0 32 8.69"
       },
       {
-        "link": "http://www.gamcare.org.uk/",
+        "href": "http://www.gamcare.org.uk/",
         "svgClass": "svg-logo square",
         "svgId": "gamcare-square-flat",
         "target": "_blank",
         "viewbox": "0 0 500 500"
       },
       {
-        "link": "http://www.gamstop.co.uk/",
+        "href": "http://www.gamstop.co.uk/",
         "svgClass": "svg-logo wide",
         "svgId": "gamstop",
         "target": "_blank",
