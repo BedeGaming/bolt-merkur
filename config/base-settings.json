@@ -229,7 +229,7 @@
     },
     {
       "type": "deposit",
-      "image": "/assets/images/promotions/deposit-bonus"
+      "image": "/assets/images/promotions/deposit"
     },
     {
       "type": "depositoverperiod",
@@ -253,7 +253,7 @@
     },
     {
       "type": "playerregistration",
-      "image": "/assets/images/promotions/deposit-bonus"
+      "image": "/assets/images/promotions/player-registration"
     },
     {
       "type": "cardregistration",
