@@ -26,6 +26,10 @@ main {
     padding-top: 5rem;
   }
 
+  .game-open & {
+    padding-top: 0;
+  }
+
   @media ($medium) {
     &,
     .not-authed & {
