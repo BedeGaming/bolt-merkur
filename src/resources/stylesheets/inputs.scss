@@ -274,8 +274,8 @@ textarea:disabled {
     &[data-error] {
       margin-bottom: 3rem;
     }
-  
-    &[data-error=""] {
+
+    &[data-error=''] {
       margin-bottom: 2rem;
     }
   }
