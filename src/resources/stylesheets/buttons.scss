@@ -36,10 +36,12 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
     width: 20rem;
   }
 
-  &:hover {
-    border-color: lighten($primary-base, 20%);
-    box-shadow: $box-shadow;
-    color: lighten($primary-base, 20%);
+  @media (hover: hover) {
+    &:hover {
+      border-color: lighten($primary-base, 20%);
+      box-shadow: $box-shadow;
+      color: lighten($primary-base, 20%);
+    }
   }
 
   &:active {
@@ -56,15 +58,17 @@ $hover-bg-color: rgba(255, 255, 255, 0.1);
     border: 0;
     color: $white;
 
-    &:hover {
-      background-image: linear-gradient(
-        90deg,
-        $primary-gradient-from 0%,
-        $primary-gradient-to 100%
-      );
+    @media (hover: hover) {
+      &:hover {
+        background-image: linear-gradient(
+          90deg,
+          $primary-gradient-from 0%,
+          $primary-gradient-to 100%
+        );
 
-      &::after {
-        transform: translate(-50%, -50%) scale(1);
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
       }
     }
   }
