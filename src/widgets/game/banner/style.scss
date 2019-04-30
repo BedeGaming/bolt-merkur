@@ -41,12 +41,6 @@ game-info-header {
   @media ($medium) {
     padding: 7rem;
 
-    game-overview {
-      h1 {
-        text-align: left;
-      }
-    }
-
     .play-buttons {
       .buttons {
         flex-direction: row;
