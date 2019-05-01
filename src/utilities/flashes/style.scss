@@ -118,6 +118,7 @@ $close-border-color: #dae1e6;
   pointer-events: all;
   position: relative;
   transform-origin: top center;
+  word-break: break-word;
 
   @media ($medium) {
     min-height: 12rem;
