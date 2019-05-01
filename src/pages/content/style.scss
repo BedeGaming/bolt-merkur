@@ -99,15 +99,17 @@ content-container {
   h1 {
     color: $primary-base;
     font-weight: bold;
+    margin-bottom: 2rem;
   }
 
   h2 {
     color: $primary-base;
-    margin-top: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
     color: $grey;
+    margin-bottom: 0.5rem;
   }
 
   strong {
@@ -116,12 +118,10 @@ content-container {
 
   p {
     font-size: 1.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   ol {
-    margin-bottom: 1rem;
-
     li {
       color: $primary-base;
       font-size: 1.8rem;
