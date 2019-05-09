@@ -279,4 +279,20 @@ textarea:disabled {
       margin-bottom: 2rem;
     }
   }
+
+  .input-prefix {
+    font-size: 1.8rem;
+    height: $input-height;
+    text-align: center;
+  }
+
+  &.with-prefix {
+    input {
+      border-radius: 0 3px 3px 0;
+    }
+
+    label {
+      padding-left: 5.3rem;
+    }
+  }
 }
