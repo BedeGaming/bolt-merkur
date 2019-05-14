@@ -1,5 +1,23 @@
 user-forgot-password {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0 20rem;
+
+  .input-container {
+    min-width: 30rem;
+    width: 40vw;
+
+    .no-autofill {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .request-password {
+    font-size: 10px;
+  }
+
   p {
     margin-bottom: 1rem;
   }
 }
+
