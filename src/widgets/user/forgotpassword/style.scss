@@ -1,23 +1,74 @@
 user-forgot-password {
   display: flex;
   justify-content: center;
-  padding: 10rem 0 20rem;
 
-  .input-container {
-    min-width: 30rem;
-    width: 40vw;
+  forgot-password-container {
+    background: $white;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 3rem;
 
-    .no-autofill {
-      margin-bottom: 1rem;
+    @media ($large) {
+      min-width: 60rem;
     }
-  }
 
-  .request-password {
-    font-size: 10px;
-  }
+    h1 {
+      color: $primary-base;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 0 0 2rem;
+      text-align: center;
+      text-transform: uppercase;
 
-  p {
-    margin-bottom: 1rem;
+      @media ($large) {
+        font-size: 3rem;
+      }
+    }
+
+    form {
+      footer {
+        display: flex;
+        justify-content: center;
+      }
+
+      .input {
+        margin-bottom: 2rem;
+        min-height: $input-height;
+        position: relative;
+
+        input,
+        select {
+          border-color: $secondary-base;
+          border-radius: 3px;
+          color: $secondary-color-700;
+          font-size: 1.8rem;
+          font-weight: bold;
+          height: $input-height;
+          padding: 2rem;
+
+          &.peeky {
+            padding-right: 4rem;
+          }
+
+          &:disabled {
+            color: $grey;
+          }
+
+          &:focus {
+            color: $secondary-color-700;
+          }
+        }
+
+        label {
+          font-size: 1.4rem;
+          font-weight: normal;
+          transform: translateY(-120%);
+        }
+      }
+    }
   }
 }
 
