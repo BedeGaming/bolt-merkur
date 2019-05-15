@@ -39,6 +39,18 @@ user-forgot-password {
         min-height: $input-height;
         position: relative;
 
+        .peeky-password {
+          .close {
+            display: none;
+          }
+
+          &.active {
+            .close {
+              display: block;
+            }
+          }
+        }
+
         input,
         select {
           border-color: $secondary-base;
