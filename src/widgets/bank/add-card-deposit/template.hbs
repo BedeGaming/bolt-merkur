@@ -81,9 +81,6 @@
       <div class="info-container">
         <p class="include">{{translate "include"}} {{translate "card_registration_bonus"}}</p>
         <h2>{{displayName}}</h2>
-        <p>{{description}}</p>
-        <a target="_blank" href="/promotional-terms">{{translate "view_promo_terms"}}</a>
-        <div class="input-container">
           <div class="input-group">
             {{#if useCodeForBonus}}
             <input id="bonusPromoCode" name="bonusPromoCode" type="text" placeholder="{{translate "enter_promo_code_placeholder"}}">
@@ -94,8 +91,9 @@
             <label for="bonusOptInNo"><span>{{translate "no_thanks"}}</span></label>
             {{/if}}
           </div>
+        <a target="_blank" href="/promotional-terms">{{translate "view_promo_terms"}}</a>
         </div>
-      </div>
+        <p>{{description}}</p>
     </div>
     {{/each}}
     {{/if}}
