@@ -279,7 +279,7 @@ textarea:disabled {
       position: absolute;
       text-align: left;
       text-overflow: ellipsis;
-      top: 103%;
+      top: calc(100% + 0.25rem);
       transform: translateX(-50%);
       white-space: nowrap;
       width: 100%;
@@ -337,7 +337,7 @@ textarea:disabled {
       position: absolute;
       text-align: left;
       text-overflow: ellipsis;
-      top: 108%;
+      top: calc(100% + 0.25rem);
       transform: translateX(-50%);
       white-space: nowrap;
       width: 100%;
