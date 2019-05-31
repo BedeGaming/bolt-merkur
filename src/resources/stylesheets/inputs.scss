@@ -250,6 +250,20 @@ textarea:disabled {
     }
   }
 
+  &.is-loading {
+    input {
+      &[type='text'],
+      &[type='number'],
+      &[type='email'] {
+        padding-right: 4em;
+      }
+    }
+
+    .peeky-password {
+      right: 6rem;
+    }
+  }
+
   &.invalid {
     input {
       border-color: $primary-base;
@@ -263,9 +277,67 @@ textarea:disabled {
       overflow: hidden;
       padding: 0.2rem;
       position: absolute;
-      text-align: center;
+      text-align: left;
       text-overflow: ellipsis;
-      top: 100%;
+      top: 103%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    &[data-error] {
+      margin-bottom: 3.5rem;
+    }
+
+    &[data-error=''] {
+      margin-bottom: 2rem;
+    }
+
+    + .hint {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+// Grouped input, e.g. Date of Birth
+.grouped-input {
+  position: relative;
+  transition-duration: 200ms;
+  transition-property: margin-bottom;
+  transition-timing-function: ease;
+
+  .input {
+    min-height: $input-height / 2;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+    
+    input {
+      height: $input-height / 2;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-color: $primary-base;
+      color: $primary-base;
+    }
+
+    &::after {
+      color: $primary-base;
+      content: attr(data-error);
+      font-size: 1.1rem;
+      left: 50%;
+      overflow: hidden;
+      padding: 0.2rem;
+      position: absolute;
+      text-align: left;
+      text-overflow: ellipsis;
+      top: 108%;
       transform: translateX(-50%);
       white-space: nowrap;
       width: 100%;
@@ -277,6 +349,10 @@ textarea:disabled {
 
     &[data-error=''] {
       margin-bottom: 2rem;
+    }
+
+    + .hint {
+      margin-top: 2.5rem;
     }
   }
 

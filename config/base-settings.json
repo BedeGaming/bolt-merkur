@@ -269,10 +269,13 @@
     "genderEnabled": true,
     "emailVerify": false,
     "marketing": true,
+    "pageRegistration": false,
     "regSuccess": false,
     "stepProgress": true,
     "stepProgressType": "balls",
-    "telephoneEnabled": true
+    "telephoneEnabled": true,
+    "useValidationIcons": true,
+    "useReact": true
   },
   "siteCode": "bedecasino",
   "siteName": "Bede Casino",
