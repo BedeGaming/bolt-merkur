@@ -1,0 +1,209 @@
+@import '../../../../node_modules/@bedegaming/bolt/src/widgets/user/registerV2/style';
+
+.register {
+  // To stop focus outlines being hidden
+  .reg-steps {
+    padding: 1px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .step-progress {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .group-container {
+    margin-bottom: 2rem;
+
+    .group-label {
+      color: $grey;
+      font-size: 1.8rem;
+      font-weight: bold;
+      height: 2rem;
+      margin-bottom: 1rem;
+      padding-left: 0.2rem;
+    }
+  }
+
+  .dob-input {
+    margin-top: 1.25rem;
+
+    &.invalid {
+      margin-bottom: 2rem;
+    }
+
+    + .hint {
+      margin-bottom: 0;
+    }
+  }
+
+  .gender-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -0.5rem;
+    width: 97%;
+
+    input[type='radio'] {
+      position: absolute;
+
+      + label {
+        color: $secondary-base;
+        height: 3.5rem;
+        margin-bottom: 0;
+        margin-top: 0.75rem;
+        padding: 0;
+        position: relative;
+        width: 12.5rem;
+      }
+
+      + label::after {
+        height: 3.2rem;
+        position: absolute;
+        top: 0;
+        width: 3.2rem;
+      }
+
+      + label::before {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+    }
+  }
+
+  h2 {
+    color: $primary-base;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .switch-input-mode span {
+    text-decoration: underline;
+  }
+
+  .switch-input-mode:focus {
+    box-shadow: none;
+
+    span {
+      outline: $input-focus-outline;
+    }
+  }
+
+  .privacy-policy:focus, .login:focus span span, .terms-checkbox a:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  .manual-address {
+    input,
+    label {
+      height: $input-height - 2rem;
+    }
+
+    .input {
+      min-height: $input-height - 2rem;
+
+      .validation-icon {
+        top: 22%;
+      }
+    }
+  }
+
+  .marketing {
+    .marketing-options {
+      .marketing-opt {
+        color: $black;
+        font-weight: normal;
+        pointer-events: all;
+
+        &::before {
+          border-color: $blue-mid;
+        }
+
+        &::after {
+          background-color: $blue-mid;
+        }
+      }
+    }
+  }
+
+  .terms-checkbox {
+    margin-bottom: 3.5rem;
+    position: relative;
+    transition-duration: 200ms;
+    transition-property: margin-bottom;
+    transition-timing-function: ease;
+
+    @media ($small) {
+      padding: 0 2.5rem;
+    }
+
+    label {
+      color: $black;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+
+      &::before {
+        margin-right: 1.25rem;
+      }
+    }
+
+    &.invalid {
+      &[data-error] {
+        margin-bottom: 5rem;
+      }
+
+      &[data-error=''] {
+        margin-bottom: 3.5rem;
+      }
+
+      &::after {
+        color: $primary-base;
+        content: attr(data-error);
+        font-size: 1.1rem;
+        left: 50%;
+        overflow: hidden;
+        padding: 0.2rem;
+        position: absolute;
+        text-align: center;
+        text-overflow: ellipsis;
+        top: calc(100% + 0.25rem);
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 1.5rem;
+
+    .next,
+    .register-end {
+      @extend %btn-primary;
+      @extend %btn;
+
+      &:first-child &.waiting {
+        color: transparent;
+      }
+    }
+
+    .login {
+      line-height: normal;
+      padding-bottom: 0;
+    }
+
+    .register-end {
+      color: $white;
+      margin-bottom: 2rem;
+    }
+  }
+}

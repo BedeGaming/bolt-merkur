@@ -390,6 +390,20 @@ dialog {
       }
     }
   }
+
+  input[type='radio']:focus + label {
+    box-shadow: none;
+    outline: $input-focus-outline;
+  }
+
+  input[type='checkbox']:focus + label {
+    box-shadow: none;
+    outline: $input-focus-outline;
+  }
+
+  button.back:focus span {
+    text-decoration: underline;
+  }
 }
 
 .inbox-message {
