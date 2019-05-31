@@ -307,13 +307,13 @@ textarea:disabled {
   transition-timing-function: ease;
 
   .input {
-    min-height: $input-height / 2;
     margin-bottom: 0;
+    min-height: $input-height / 2;
 
     &:not(:first-child) {
       margin-left: 1rem;
     }
-    
+
     input {
       height: $input-height / 2;
       padding: 0;
