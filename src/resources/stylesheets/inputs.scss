@@ -12,6 +12,13 @@
   }
 }
 
+.input {
+  .input-spinner {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
 .input-container {
   &.invalid {
     flex-flow: column;
