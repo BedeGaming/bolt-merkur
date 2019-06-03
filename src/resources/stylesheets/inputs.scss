@@ -297,6 +297,28 @@ textarea:disabled {
       margin-top: 2.5rem;
     }
   }
+
+  .input-prefix {
+    background: $grey-100;
+    border: 1px solid $secondary-base;
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: $input-height;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+
+  &.with-prefix {
+    input {
+      border-radius: 0 3px 3px 0;
+    }
+
+    label {
+      padding-left: 5.3rem;
+    }
+  }
 }
 
 // Grouped input, e.g. Date of Birth
