@@ -44,7 +44,7 @@
   .payment-providers {
     .payment-provider {
       .svg-logo {
-        opacity: 0.6;
+        fill: transparentize($white, 0.6);
       }
     }
   }
