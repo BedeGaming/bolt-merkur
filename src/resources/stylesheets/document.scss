@@ -22,19 +22,28 @@ main {
   min-height: 100vh;
   padding-top: 9rem;
 
+  @media ($medium) {
+    padding-top: 5.5rem;
+  }
+
+  @media ($large) {
+    padding-top: 6.5rem;
+  }
+
+  @media ($x-large) {
+    padding-top: 7.5rem;
+  }
+
   .not-authed & {
-    padding-top: 5rem;
+    padding-top: 5.5rem;
+
+    @media ($large) {
+      padding-top: 6.5rem;
+    }
   }
 
   .game-open & {
     padding-top: 0;
-  }
-
-  @media ($medium) {
-    &,
-    .not-authed & {
-      padding-top: 7.9rem;
-    }
   }
 
   //last child will be the footer.
