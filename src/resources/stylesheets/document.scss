@@ -30,6 +30,10 @@ main {
     padding-top: 6.5rem;
   }
 
+  @media ($x-large) {
+    padding-top: 7.5rem;
+  }
+
   .not-authed & {
     padding-top: 5.5rem;
 
