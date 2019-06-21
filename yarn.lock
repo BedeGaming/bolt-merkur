@@ -192,7 +192,7 @@
     undertaker-registry "^1.0.0"
     wreck "^10.0.0"
 
-"@bedegaming/bolt@^67.33.0":
+"@bedegaming/bolt@^67.34.0":
   version "67.34.0"
   resolved "https://registry.yarnpkg.com/@bedegaming/bolt/-/bolt-67.34.0.tgz#393bc285e69e5fe3b292f752f67ea73a9e6b2a75"
   integrity sha512-v6ZK+FujmJuYlUrQTdXc7WM1sogBHowKXJt/YEzCjm8IfqLCttRV2Mpfh1HV8JqPyORIDJFz1+sV1GS/cydPHg==
