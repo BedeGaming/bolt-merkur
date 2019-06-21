@@ -206,6 +206,10 @@
   "isLandingEnabled": false,
   "languageCode": "EN",
   "locale": "en_GB",
+  "login": {
+    "useValidationIcons": true,
+    "useReact": true
+  },
   "promotionBanners": [
     {
       "type": "AUTHED",

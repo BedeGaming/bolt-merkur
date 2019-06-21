@@ -1,6 +1,6 @@
 {
   "name": "@bedegaming/bolt-demo-site",
-  "version": "1.9.34",
+  "version": "1.9.35",
   "description": "Bolt demo site",
   "private": true,
   "main": "index.js",
@@ -22,7 +22,7 @@
   "author": "Bede Gaming",
   "license": "ISC",
   "dependencies": {
-    "@bedegaming/bolt": "^67.32.2",
+    "@bedegaming/bolt": "^67.34.0",
     "@bedegaming/bolt-content": "^2.0.0",
     "@bedegaming/bolt-tasks": "^18.2.0",
     "babel-polyfill": "^6.16.0",
