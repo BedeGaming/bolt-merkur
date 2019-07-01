@@ -145,38 +145,38 @@
     ],
     "complianceLinks": [
       {
-        "svgClass": "svg-logo square",
+        "className": "svg-logo square",
         "svgId": "18plus-flat",
         "viewbox": "0 0 25 25"
       },
       {
         "href": "http://www.gambleaware.co.uk/",
-        "svgClass": "svg-logo wide",
+        "className": "svg-logo wide",
         "svgId": "gambleaware-flat",
         "target": "_blank",
         "viewbox": "0 0 93.5 10.6"
       },
       {
         "href": "https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/44819",
-        "svgClass": "svg-logo wide",
+        "className": "svg-logo wide",
         "svgId": "gamblingcommision-flat",
         "target": "_blank",
         "viewbox": "0 0 32 8.69"
       },
       {
         "href": "http://www.gamcare.org.uk/",
-        "svgClass": "svg-logo square",
+        "className": "svg-logo square",
         "svgId": "gamcare-square-flat",
         "target": "_blank",
         "viewbox": "0 0 500 500"
       },
       {
         "href": "http://www.gamstop.co.uk/",
-        "svgClass": "svg-logo wide",
+        "className": "svg-logo wide",
         "svgId": "gamstop",
         "target": "_blank",
         "viewbox": "0 0 503.5 109"
-      } 
+      }
     ],
     "paymentProviders": [
       {
