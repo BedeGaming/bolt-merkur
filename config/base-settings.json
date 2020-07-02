@@ -4,13 +4,13 @@
   },
   "walletCurrency": "GBP",
   "api": {
-    "client": "bededemo",
+    "client": "merkurbedecasino",
     "url": "https://qa02-merkurbedecasino.bedegaming.net/api/v5",
     "notificationsUrl": "https://qa02-notifications.bedegaming.net",
     "bingoUrl": "https://qa01-bingo.bgs.bedegaming.net/api/v1"
   },
   "auth": {
-    "clientId": "bededemo",
+    "clientId": "merkurbedecasino",
     "scope": "spine"
   },
   "banking": {
@@ -281,7 +281,7 @@
     "useValidationIcons": true,
     "useReact": true
   },
-  "siteCode": "merkurbedecasino",
+  "siteCode": "merkurbedecasino.de",
   "siteName": "Merkur Casino",
   "siteRoot": "http://localhost:3000",
   "slider": {
