@@ -5,7 +5,7 @@
   "walletCurrency": "GBP",
   "api": {
     "client": "bededemo",
-    "url": "https://qa02-bedecasino.bedegaming.net/api/v5",
+    "url": "https://qa02-merkurbedecasino.bedegaming.net/api/v5",
     "notificationsUrl": "https://qa02-notifications.bedegaming.net",
     "bingoUrl": "https://qa01-bingo.bgs.bedegaming.net/api/v1"
   },
@@ -61,7 +61,7 @@
     "playsafe": true
   },
   "feeds": {
-    "url": "https://qa02-bedecasino.bedegaming.net/feeds/v1"
+    "url": "https://qa02-merkurbedecasino.bedegaming.net/feeds/v1"
   },
   "games": {
     "react": true,
@@ -281,8 +281,8 @@
     "useValidationIcons": true,
     "useReact": true
   },
-  "siteCode": "bedecasino",
-  "siteName": "Bede Casino",
+  "siteCode": "merkurbedecasino",
+  "siteName": "Merkur Casino",
   "siteRoot": "http://localhost:3000",
   "slider": {
     "speed": 5000,
@@ -290,28 +290,19 @@
       {
         "imgPath": "/assets/images/slider/slide-one",
         "markup": "<h1>Top prize £2 million</h1> <p>A game so big, it's giant!</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
       },
       {
         "imgPath": "/assets/images/slider/slide-two",
         "markup": "<h1>Live casino</h1> <p>Play Blackjack and Roulette</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
       },
       {
         "imgPath": "/assets/images/slider/slide-three",
         "markup": "<h1>Up to £50 new player bonus</h1> <p>Deposit between £10 - £50 to claim!</p>",
-        "states": [
-          "isUnauthenticated",
-          "isAuthenticated"
-        ],
+        "states": ["isUnauthenticated", "isAuthenticated"],
         "hideTerms": true
       }
     ]
@@ -327,10 +318,5 @@
     "rangeSlider": false
   },
   "twitterHandle": "@",
-  "notificationTypes": [
-    "default",
-    "cash",
-    "casino",
-    "bonus"
-  ]
+  "notificationTypes": ["default", "cash", "casino", "bonus"]
 }
